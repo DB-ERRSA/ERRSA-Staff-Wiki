@@ -1,0 +1,226 @@
+/* ------------------------------------------------------------
+   Visual - Permissions model
+------------------------------------------------------------ */
+
+/* Wrapper */
+.permissions-visual{
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Layout */
+.permissions-visual .role-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap:16px;
+  margin: 10px 0 0;
+  align-items: stretch;
+}
+
+/* Card */
+.permissions-visual .role-card{
+  position:relative;
+  border-radius:16px;
+  padding:16px 16px 14px;
+  background: linear-gradient(180deg, rgba(28,28,30,.92), rgba(18,18,20,.92));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.06);
+  color: rgba(255,255,255,.92);
+  overflow: visible; /* critical: prevent tooltip clipping */
+}
+
+.permissions-visual .role-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:18px;
+  background: radial-gradient(500px 120px at 20% 0%, rgba(255,255,255,.10), transparent 55%);
+  pointer-events:none;
+}
+
+/* Header */
+.permissions-visual .role-head{ margin-bottom: 10px; position: relative; z-index: 1; }
+.permissions-visual .role-kicker{
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.7;
+  margin-bottom:4px;
+}
+.permissions-visual .role-title{
+  margin:0;
+  font-size:1.05rem;
+  line-height:1.2;
+}
+
+/* Lists */
+.permissions-visual .role-list{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:10px;
+  position: relative;
+  z-index: 1;
+}
+
+.permissions-visual .role-list li{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:12px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.07);
+}
+
+.permissions-visual .role-name{
+  font-weight:700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  letter-spacing:.01em;
+}
+
+.permissions-visual .role-note{
+  opacity:.75;
+  font-size:.92rem;
+  white-space:nowrap;
+}
+
+/* Chips */
+.permissions-visual .chip-wrap{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  padding: 6px 2px 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.permissions-visual .chip{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border-radius:999px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  font-weight:700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  cursor: help;
+  user-select:none;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.permissions-visual .chip:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.18);
+}
+
+.permissions-visual .role-footnote{
+  margin: 10px 2px 0;
+  font-size:.92rem;
+  opacity:.75;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tooltip targets */
+.permissions-visual .hover,
+.permissions-visual .chip{
+  position: relative;
+  cursor: help;
+}
+
+/* Tooltip bubble */
+.permissions-visual .hover::after,
+.permissions-visual .chip::after{
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  max-width: 280px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(10,10,12,.96);
+  color: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  font-size: .92rem;
+  line-height: 1.25;
+  opacity: 0;
+  pointer-events: none;
+  white-space: normal;
+  z-index: 50;
+  transition: opacity .12s ease, transform .12s ease;
+}
+
+.permissions-visual .hover:hover::after,
+.permissions-visual .chip:hover::after{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Edge-safe positioning: first/last in each container */
+.permissions-visual .role-list li:first-child::after,
+.permissions-visual .chip-wrap .chip:first-child::after{
+  left: 0;
+  transform: translateX(0) translateY(4px);
+}
+.permissions-visual .role-list li:first-child:hover::after,
+.permissions-visual .chip-wrap .chip:first-child:hover::after{
+  transform: translateX(0) translateY(0);
+}
+
+.permissions-visual .role-list li:last-child::after,
+.permissions-visual .chip-wrap .chip:last-child::after{
+  left: auto;
+  right: 0;
+  transform: translateX(0) translateY(4px);
+}
+.permissions-visual .role-list li:last-child:hover::after,
+.permissions-visual .chip-wrap .chip:last-child:hover::after{
+  transform: translateX(0) translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 920px){
+  .permissions-visual .role-grid{ grid-template-columns: 1fr; }
+  .permissions-visual .role-list li{ justify-content:flex-start; }
+  .permissions-visual .role-note{ margin-left:auto; }
+}
+
+/* ------------------------------------------------------------
+   Wide-screen cleanup for MkDocs Material
+------------------------------------------------------------ */
+
+/* Wider + cleaner on big monitors */
+@media (min-width: 1200px){
+  .permissions-visual{
+    width: min(1280px, 100%);
+    margin: 12px auto 0;
+  }
+
+  .permissions-visual .role-grid{
+    grid-template-columns: repeat(3, minmax(270px, 1fr));
+    gap: 18px;
+  }
+
+  .permissions-visual .role-card{
+    min-height: 320px;
+  }
+
+  .permissions-visual .role-title{ font-size: 1.12rem; }
+  .permissions-visual .role-list li{ padding: 11px 13px; }
+  .permissions-visual .chip{ padding: 9px 13px; }
+
+  .permissions-visual .hover::after,
+  .permissions-visual .chip::after{
+    max-width: 320px;
+  }
+}
+
