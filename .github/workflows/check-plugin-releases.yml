@@ -67,4 +67,3 @@ jobs:
         id: deployment
         if: steps.update.outputs.changed == 'true'
         uses: actions/deploy-pages@v4
-          fi
