@@ -24,9 +24,9 @@ def on_page_markdown(markdown, page, config, files):
     if page.file.src_uri != "documentation/changelog/server.md":
         return markdown
     repository = config.extra.get("wiki_repository", "")
-   encoded = base64.b64encode(
-    Path(page.file.abs_src_path).read_bytes()
-).decode("ascii")
+    encoded = base64.b64encode(
+        Path(page.file.abs_src_path).read_bytes()
+        ).decode("ascii")
     widget = (
         '<div class="wiki-editor" id="wiki-editor" '
         f'data-repo="{html.escape(repository, quote=True)}" '
