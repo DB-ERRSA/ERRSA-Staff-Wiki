@@ -1,0 +1,7 @@
+name: ERRSAWikiSync
+version: 1.0.0
+main: edu.errsa.wikisync.PaperWikiSync
+api-version: "1.21"
+description: Publishes one wiki inventory per server startup
+
+softdepend: [LuckPerms]

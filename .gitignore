@@ -1,0 +1,23 @@
+site/
+__pycache__/
+.cache/
+
+
+# Java build files
+target/
+*.class
+
+# Minecraft server configurations
+config.yml
+config.properties
+
+# Python
+__pycache__/
+*.pyc
+
+# MkDocs generated website
+site/
+
+# Secrets
+.env
+.env.*
