@@ -40,23 +40,90 @@
     const keys = aliases[id] || [id];
     return (data.plugins || []).find(p => keys.includes(norm(p.name)) || keys.includes(norm(p.id)));
   }
-  function badge(parent, data, name, server, expanded, releases) {
-    const valid = data && data.capturedAt && Array.isArray(data.plugins);
-    const plugin = valid && lookup(data, name);
-    const txt = !valid ? 'Awaiting ' + server + ' startup sync' : !plugin ? 'No longer installed on ' + server : plugin.enabled === 'false' ? 'Installed but disabled · v' + (plugin.version || '?') : 'Installed · v' + (plugin.version || '?');
-    const span = element('span', txt, parent, 'errsa-sync-badge ' + (!valid ? 'errsa-sync-pending' : !plugin || plugin.enabled === 'false' ? 'errsa-sync-missing' : 'errsa-sync-installed'));
-    if (valid && plugin && expanded) {
-      const latest = latestLookup(releases, name, server);
-      if (latest?.version && latest?.url) {
-        const info = element('div', null, parent, 'errsa-sync-release');
-        element('span', 'Latest available for ' + (server === 'survival' ? 'Paper ' + (data.minecraftVersion || 'this server') : 'Velocity') + ': ', info);
-        const link = element('a', latest.version, info); link.href = latest.url; link.rel = 'noopener noreferrer'; link.target = '_blank';
-        if (compareVersions(plugin.version, latest.version)) element('span', ' · Newer compatible release listed', info, 'errsa-sync-update');
+
+function badge(parent, data, name, server, expanded, latest) {
+  const valid = data && data.capturedAt && Array.isArray(data.plugins);
+  const plugin = valid && lookup(data, name);
+
+  const txt = !valid
+    ? 'Awaiting ' + server + ' startup sync'
+    : !plugin
+      ? 'No longer installed on ' + server
+      : plugin.enabled === 'false'
+        ? 'Installed but disabled · v' + (plugin.version || '?')
+        : 'Installed · v' + (plugin.version || '?');
+
+  const span = element(
+    'span',
+    txt,
+    parent,
+    'errsa-sync-badge ' +
+      (!valid
+        ? 'errsa-sync-pending'
+        : !plugin || plugin.enabled === 'false'
+          ? 'errsa-sync-missing'
+          : 'errsa-sync-installed')
+  );
+
+  if (plugin && latest?.plugins?.[server]) {
+    const releases = latest.plugins[server];
+
+    const releaseKey = Object.keys(releases).find(
+      key => norm(key) === norm(name)
+    );
+
+    const release = releaseKey && releases[releaseKey];
+
+    if (release?.version) {
+      const row = element(
+        'div',
+        null,
+        parent,
+        'errsa-latest-version'
+      );
+
+      element(
+        'strong',
+        'Latest available: ',
+        row
+      );
+
+      if (release.url) {
+        const link = element('a', release.version, row);
+        link.href = release.url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      } else {
+        element('span', release.version, row);
+      }
+
+      if (
+        plugin.version &&
+        norm(plugin.version) !== norm(release.version)
+      ) {
+        element(
+          'span',
+          ' · Different release available',
+          row,
+          'errsa-update-note'
+        );
       }
     }
-    if (valid && expanded) element('small', 'Last checked on server startup: ' + new Date(data.capturedAt).toLocaleString(), parent, 'errsa-sync-time');
-    return span;
   }
+
+  if (valid && expanded) {
+    element(
+      'small',
+      'Last checked on server startup: ' +
+        new Date(data.capturedAt).toLocaleString(),
+      parent,
+      'errsa-sync-time'
+    );
+  }
+
+  return span;
+}
+
   async function render() {
     // The release cache is a static file built by GitHub Actions; no browser or server API polling.
     const rootForReleases = document.querySelector('.errsa-plugin-status, #errsa-plugin-directory');
