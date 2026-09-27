@@ -8,6 +8,8 @@ hide:
 
 Read the latest documented server releases below. Staff can update this page using the [editor](#edit-changelog) at the end.
 
+TESTING EDITOR
+
 ## Version 1.3.2 - Released 9/9/2026
 
 ### Tweaks and Changes
