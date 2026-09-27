@@ -182,3 +182,7 @@
 .errsa-sync-group { margin: 1.1rem 0; }
 .errsa-sync-group summary { font-weight: 700; cursor: pointer; }
 .errsa-plugin-status + .staff-badge { margin-top:.3rem; }
+
+/* Public release metadata is optional: absent records render no row. */
+.errsa-sync-release { margin: .45rem 0 .15rem; font-size: .88rem; }
+.errsa-sync-update { color: #b45309; font-weight: 650; }

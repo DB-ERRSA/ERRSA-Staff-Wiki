@@ -1,0 +1,11 @@
+ERRSA Staff Wiki Update - GitHub Pages
+
+1. Extract this ZIP in a separate folder (e.g. Downloads/ERRSA-Wiki-Update).
+2. Copy its files into your EXISTING Git-cloned ERRSA-Staff-Wiki repository, preserving paths.
+3. DO NOT delete or replace your existing .github/workflows/deploy.yml, docs/assets/wiki-sync/survival.json or velocity.json.
+4. Commit and push these edits to main. The Staff Permissions group order is changed in docs/javascripts/wiki-live-pages.js.
+5. GitHub -> Actions -> Check compatible plugin releases -> Run workflow -> main.
+6. After it succeeds, verify docs/assets/wiki-sync/latest.json and refresh plugin pages. Unmapped custom plugins show only installed version.
+7. No Minecraft JAR updates, configs, tokens or server restarts required.
+
+Read WIKI_UPDATE_README.md for details.

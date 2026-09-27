@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "plugin": "CoreProtect",
+      "server": "survival",
+      "provider": "modrinth",
+      "project": "coreprotect",
+      "loader": "paper"
+    },
+    {
+      "plugin": "GriefPrevention",
+      "server": "survival",
+      "provider": "modrinth",
+      "project": "griefprevention",
+      "loader": "paper"
+    },
+    {
+      "plugin": "LuckPerms",
+      "server": "survival",
+      "provider": "modrinth",
+      "project": "luckperms",
+      "loader": "paper"
+    },
+    {
+      "plugin": "LuckPerms",
+      "server": "velocity",
+      "provider": "modrinth",
+      "project": "luckperms",
+      "loader": "velocity"
+    },
+    {
+      "plugin": "ViaVersion",
+      "server": "velocity",
+      "provider": "modrinth",
+      "project": "viaversion",
+      "loader": "velocity"
+    },
+    {
+      "plugin": "Geyser",
+      "server": "velocity",
+      "provider": "modrinth",
+      "project": "geyser",
+      "loader": "velocity"
+    }
+  ]
+}

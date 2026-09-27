@@ -16,24 +16,54 @@
     }).catch(() => null));
     return snapshots.get(url);
   }
+  function latestLookup(data, name, server) {
+    const id = norm(name);
+    const aliases = {quickshophikari:'quickshop', essentialschat:'essentialsxchat', essentials:'essentialsx', simplevoicechat:'voicechat', wildernesstp:'wild'};
+    const key = (aliases[id] || id);
+    return data?.plugins?.[server]?.[key] || data?.plugins?.[server]?.[id] || null;
+  }
+  function compareVersions(installed, latest) {
+    const parse = value => {
+      const match = String(value || '').match(/^(?:v)?(\d+(?:\.\d+){1,3})(?:[-+]b?(\d+))?/i);
+      return match ? [...match[1].split('.').map(Number), Number(match[2] || 0)] : null;
+    };
+    const a = parse(installed), b = parse(latest);
+    if (!a || !b) return false;
+    for (let i = 0; i < Math.max(a.length,b.length); i++) {
+      if ((b[i] || 0) !== (a[i] || 0)) return (b[i] || 0) > (a[i] || 0);
+    }
+    return false;
+  }
   function lookup(data, name) {
     const id = norm(name);
     const aliases = { 'quickshophikari':['quickshop','quickshophikari'], 'essentialschat':['essentialsxchat','essentialschat'], 'essentials':['essentialsx','essentials'], 'simplevoicechat':['voicechat','simplevoicechat'], 'wildernesstp':['wild','wildernesstp'], 'wild':['wild','wildernesstp'], 'errsamccore':['errsamccore'], 'rankprogression':['rankprogression'] };
     const keys = aliases[id] || [id];
     return (data.plugins || []).find(p => keys.includes(norm(p.name)) || keys.includes(norm(p.id)));
   }
-  function badge(parent, data, name, server, expanded) {
+  function badge(parent, data, name, server, expanded, releases) {
     const valid = data && data.capturedAt && Array.isArray(data.plugins);
     const plugin = valid && lookup(data, name);
     const txt = !valid ? 'Awaiting ' + server + ' startup sync' : !plugin ? 'No longer installed on ' + server : plugin.enabled === 'false' ? 'Installed but disabled · v' + (plugin.version || '?') : 'Installed · v' + (plugin.version || '?');
     const span = element('span', txt, parent, 'errsa-sync-badge ' + (!valid ? 'errsa-sync-pending' : !plugin || plugin.enabled === 'false' ? 'errsa-sync-missing' : 'errsa-sync-installed'));
+    if (valid && plugin && expanded) {
+      const latest = latestLookup(releases, name, server);
+      if (latest?.version && latest?.url) {
+        const info = element('div', null, parent, 'errsa-sync-release');
+        element('span', 'Latest available for ' + (server === 'survival' ? 'Paper ' + (data.minecraftVersion || 'this server') : 'Velocity') + ': ', info);
+        const link = element('a', latest.version, info); link.href = latest.url; link.rel = 'noopener noreferrer'; link.target = '_blank';
+        if (compareVersions(plugin.version, latest.version)) element('span', ' · Newer compatible release listed', info, 'errsa-sync-update');
+      }
+    }
     if (valid && expanded) element('small', 'Last checked on server startup: ' + new Date(data.capturedAt).toLocaleString(), parent, 'errsa-sync-time');
     return span;
   }
   async function render() {
+    // The release cache is a static file built by GitHub Actions; no browser or server API polling.
+    const rootForReleases = document.querySelector('.errsa-plugin-status, #errsa-plugin-directory');
+    const releases = rootForReleases ? await load(rootForReleases.dataset.root, 'latest') : null;
     for (const root of document.querySelectorAll('.errsa-plugin-status')) {
       root.replaceChildren(); const server = root.dataset.server || 'survival';
-      badge(root, await load(root.dataset.root, server), root.dataset.plugin, server, true);
+      badge(root, await load(root.dataset.root, server), root.dataset.plugin, server, true, releases);
     }
     const directory = document.getElementById('errsa-plugin-directory');
     if (directory) {
@@ -42,7 +72,7 @@
       if (!data?.capturedAt) element('p', 'Awaiting first Survival startup sync; installed status is not yet known.', directory, 'errsa-sync-note');
       for (const item of document.querySelectorAll('.plugin-item')) {
         item.querySelectorAll('.errsa-sync-badge').forEach(n => n.remove());
-        const anchor = item.querySelector('.plugin-name'); if (anchor) badge(item, data, anchor.textContent, 'survival', false);
+        const anchor = item.querySelector('.plugin-name'); if (anchor) badge(item, data, anchor.textContent, 'survival', false, releases);
       }
     }
     const permissions = document.getElementById('errsa-staff-permissions');
@@ -51,6 +81,7 @@
       const data = await load(permissions.dataset.root, 'survival');
       if (!data?.capturedAt) { element('p', 'Awaiting first Survival startup sync. The historical export is available below.', permissions, 'errsa-sync-note'); return; }
       const groups = data.luckPermsGroups;
+      const staffOrder = ['mod', 'admin', 'dev', 'server-lead'];
       element('p', 'Survival snapshot: ' + new Date(data.capturedAt).toLocaleString(), permissions, 'errsa-sync-time');
       if (!Array.isArray(groups)) { element('p', 'This snapshot predates LuckPerms group synchronization. Restart Survival after installing the updated plugin.', permissions, 'errsa-sync-note'); return; }
       if (!groups.length) { element('p', 'No LuckPerms groups were available at server startup. The group list is not verified.', permissions, 'errsa-sync-note'); return; }
@@ -58,7 +89,7 @@
       const content=element('div',null,permissions);
       const draw=()=>{
         content.replaceChildren(); const query=search.value.toLowerCase().trim();
-        for(const group of groups.filter(g=>['mod','admin','dev','server-lead'].includes(g.name.toLowerCase()))) {
+        for(const group of groups.filter(g=>staffOrder.includes(g.name.toLowerCase())).sort((a,b)=>staffOrder.indexOf(a.name.toLowerCase())-staffOrder.indexOf(b.name.toLowerCase()))) {
           const nodes=(group.nodes||[]).filter(n => !query || [group.name,n.node,n.context].join(' ').toLowerCase().includes(query));
           if(query && !nodes.length)continue;
           const section=element('details',null,content,'errsa-sync-group');section.open=true;
