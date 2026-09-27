@@ -8,8 +8,6 @@ hide:
 
 Read the latest documented server releases below. Staff can update this page using the [editor](#edit-changelog) at the end.
 
-TESTING EDITOR
-
 ## Version 1.3.2 - Released 9/9/2026
 
 ### Tweaks and Changes
@@ -112,6 +110,6 @@ TESTING EDITOR
 
 ## Edit changelog
 
-Authorized staff can save changes to the wiki repository; GitHub Pages publishes the update after deployment.
+Authorized staff can save changes to the wiki repository. Wait about 30 seconds before refreshing page to see changes.
 
 <!-- WIKI_EDITOR -->
