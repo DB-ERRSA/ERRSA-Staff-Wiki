@@ -188,3 +188,15 @@
 .errsa-sync-update { color: #b45309; font-weight: 650; }
 
 /* Tool card vectors are inline and inherit the same icon sizing and accent color as other tools. */
+
+/* Render unmodified official SVGs from Microsoft and Tebex within consistent ERRSA tiles. */
+.md-typeset .tool-logo .tool-brand-logo,
+.md-typeset .tool-page-logo .tool-brand-logo {
+  display:block; width:1.9rem; height:1.9rem; max-width:80%; max-height:80%;
+  object-fit:contain; flex:none; filter:none;
+}
+.md-typeset .tool-page-logo .tool-brand-logo { width:2.05rem; height:2.05rem; }
+
+/* Tebex distributes a horizontal official logotype; make it wider than the Power Automate mark. */
+.md-typeset .tool-logo .tool-brand-logo[src*="tebexio/Headless-Template"],
+.md-typeset .tool-page-logo .tool-brand-logo[src*="tebexio/Headless-Template"] { width:2.35rem; height:auto; max-width:85%; }
