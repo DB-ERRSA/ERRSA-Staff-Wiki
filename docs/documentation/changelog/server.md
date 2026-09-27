@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Server changelog
 
 Read the latest documented server releases below. Staff can update this page using the [editor](#edit-changelog) at the end.
