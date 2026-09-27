@@ -187,13 +187,29 @@
 .errsa-sync-release { margin: .45rem 0 .15rem; font-size: .88rem; }
 .errsa-sync-update { color: #b45309; font-weight: 650; }
 
-
-
-/* Power Automate and Tebex now use inline SVGs like the other tool icons.
-   Tebex inherits the shared ERRSA accent color; Power Automate keeps a shifted teal gradient. */
-.md-typeset .tool-logo--power-automate svg,
-.md-typeset .tool-page-logo--power-automate svg { width:1.75rem; height:1.75rem; }
-.md-typeset .tool-page-logo--power-automate svg { width:2rem; height:2rem; }
-.md-typeset .tool-logo--tebex svg,
-.md-typeset .tool-page-logo--tebex svg { width:1.72rem; height:1.72rem; }
-.md-typeset .tool-page-logo--tebex svg { width:1.95rem; height:1.95rem; }
+/* Native vector paths served by each brand's own GitHub repository. The Power Automate
+   gradient stays intact: only its palette is shifted toward ERRSA teal. Tebex is an SVG
+   alpha mask, letting the logo inherit precisely the accent of the other tool icons. */
+.md-typeset .tool-logo .tool-brand-logo,
+.md-typeset .tool-page-logo .tool-brand-logo {
+  display:block; width:1.9rem; height:1.9rem; max-width:80%; max-height:80%;
+  object-fit:contain; flex:none;
+}
+.md-typeset .tool-page-logo .tool-brand-logo { width:2.05rem; height:2.05rem; }
+.md-typeset .tool-logo .tool-brand-logo[src*="PowerAutomate_scalable.svg"],
+.md-typeset .tool-page-logo .tool-brand-logo[src*="PowerAutomate_scalable.svg"] {
+  filter:hue-rotate(-38deg) saturate(.85) brightness(1.18);
+}
+.md-typeset .tool-brand-mask--tebex {
+  display:block; flex:none; width:2.25rem; height:1.2rem; max-width:85%;
+  background:currentColor;
+  -webkit-mask-image:url("https://raw.githubusercontent.com/tebexio/Headless-Template/main/assets/icons/tebex.svg");
+  mask-image:url("https://raw.githubusercontent.com/tebexio/Headless-Template/main/assets/icons/tebex.svg");
+  -webkit-mask-position:center;
+  mask-position:center;
+  -webkit-mask-size:contain;
+  mask-size:contain;
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+}
+.md-typeset .tool-page-logo .tool-brand-mask--tebex { width:2.4rem; height:1.4rem; }
