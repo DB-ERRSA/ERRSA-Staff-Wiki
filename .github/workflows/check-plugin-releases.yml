@@ -34,19 +34,22 @@ jobs:
           python-version: '3.12'
       - name: Check approved project releases
         run: python wiki-sync/check_releases.py
+     
       - name: Commit release snapshot only when changed
-        id: update
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add docs/assets/wiki-sync/latest.json
+
           if git diff --cached --quiet; then
-            echo 'changed=false' >> "$GITHUB_OUTPUT"
-            echo 'Release snapshot unchanged'
+            echo "No release changes"
           else
-            git commit -m 'Update checked plugin releases'
+            git commit -m "Update checked plugin releases"
             git push
-            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            echo "Release snapshot changed"
+          fi
+
       # Pushes made with GITHUB_TOKEN do NOT start the separate Pages workflow.
       # Build and deploy here when the release snapshot actually changes.
       - name: Install MkDocs
