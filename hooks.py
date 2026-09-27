@@ -4,6 +4,7 @@ import os
 
 RELEASE_FILE = "docs/documentation/changelog/server.md"
 
+from pathlib import Path
 
 def on_config(config):
     repository = os.environ.get("GITHUB_REPOSITORY", "")
@@ -23,7 +24,9 @@ def on_page_markdown(markdown, page, config, files):
     if page.file.src_uri != "documentation/changelog/server.md":
         return markdown
     repository = config.extra.get("wiki_repository", "")
-    encoded = base64.b64encode(markdown.encode("utf-8")).decode("ascii")
+   encoded = base64.b64encode(
+    Path(page.file.abs_src_path).read_bytes()
+).decode("ascii")
     widget = (
         '<div class="wiki-editor" id="wiki-editor" '
         f'data-repo="{html.escape(repository, quote=True)}" '
