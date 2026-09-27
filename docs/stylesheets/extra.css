@@ -186,3 +186,5 @@
 /* Public release metadata is optional: absent records render no row. */
 .errsa-sync-release { margin: .45rem 0 .15rem; font-size: .88rem; }
 .errsa-sync-update { color: #b45309; font-weight: 650; }
+
+/* Tool card vectors are inline and inherit the same icon sizing and accent color as other tools. */
