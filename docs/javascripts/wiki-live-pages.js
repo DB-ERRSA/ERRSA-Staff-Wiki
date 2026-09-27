@@ -128,10 +128,25 @@ function badge(parent, data, name, server, expanded, latest) {
     // The release cache is a static file built by GitHub Actions; no browser or server API polling.
     const rootForReleases = document.querySelector('.errsa-plugin-status, #errsa-plugin-directory');
     const releases = rootForReleases ? await load(rootForReleases.dataset.root, 'latest') : null;
-    for (const root of document.querySelectorAll('.errsa-plugin-status')) {
-      root.replaceChildren(); const server = root.dataset.server || 'survival';
-      badge(root, await load(root.dataset.root, server), root.dataset.plugin, server, true, releases);
-    }
+    
+for (const root of document.querySelectorAll('.errsa-plugin-status')) {
+  root.replaceChildren();
+
+  const server = root.dataset.server || 'survival';
+
+  const data = await load(root.dataset.root, server);
+  const latest = await load(root.dataset.root, 'latest');
+
+  badge(
+    root,
+    data,
+    root.dataset.plugin,
+    server,
+    true,
+    latest
+  );
+}
+
     const directory = document.getElementById('errsa-plugin-directory');
     if (directory) {
       const data = await load(directory.dataset.root, 'survival');
