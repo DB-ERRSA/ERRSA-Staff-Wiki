@@ -12,7 +12,7 @@ tags:
 
 ## ERRSA use
 
-Use staff channels for coordination and consult the compatibility bot for monitored plugin updates.
+Use staff channels for coordination and consult the compatibility bot for monitored plugin updates!
 
 ## Access
 
