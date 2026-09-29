@@ -2,7 +2,7 @@ import base64
 import html
 import os
 
-RELEASE_FILE = "docs/documentation/changelog/server.md"
+RELEASE_FILE = "docs/changelog/server.md"
 
 from pathlib import Path
 

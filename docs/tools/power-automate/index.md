@@ -1,12 +1,9 @@
 ---
-title: Power Automate
 tags:
   - ADMIN
 ---
 
-# Power Automate
-
-<span class="tool-page-logo" aria-hidden="true"><img class="tool-brand-logo" src="https://raw.githubusercontent.com/microsoft/powerplatform/master/assets/images/PowerAutomate_scalable.svg" alt=""></span>
+# :material-robot: Power Automate
 
 <p class="lead">Staff automation workflows.</p>
 
