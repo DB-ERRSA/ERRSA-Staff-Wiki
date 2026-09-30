@@ -1,6 +1,14 @@
+Common ingame system topics where questions are common: (explain the basics of how each work)
 - /menu
 - /tutorial
 - /warp
 - /wild
 - World/map navigation
-- Creative/server browser
+- server browser
+- Rank progression
+- Economy
+- Shops
+- Guilds
+- Quests
+- Plots/creative
+- Tokens/VIP
