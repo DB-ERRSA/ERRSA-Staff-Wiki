@@ -9,4 +9,4 @@
 - Which modules are expected for which roles
      - explained above 
 - overview of fundamentals section
-     - in the fundamentals section, you will learn about our server architecture
+     - in the fundamentals section, you will learn about our Server architecture, philosophy and purpose, major features. Staff expectations, rules and enforcement. When and how to help players, and escalate issues when needed, as well as what tools are available and where to find help.
