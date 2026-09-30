@@ -1,5 +1,6 @@
+- server details (version, architecture, scope)
 - Server purpose
 - Survival/economy/claiming philosophy
-- Worlds
 - Major server features
-- How players interact with the server
+- Worlds
+- How players interact with the server (survival main, events extra, potential for more modes)
