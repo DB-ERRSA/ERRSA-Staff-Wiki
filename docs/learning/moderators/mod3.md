@@ -3,3 +3,7 @@
 - Spam and advertising
 - Inappropriate chat, signs, and books
 - Handling repeated communication violations
+- Griefing and theft
+- Claim ownership and boundaries
+- Identifying responsible players/Restoring damage (escalation to admin)
+- Documenting the incident (explained in later module)
