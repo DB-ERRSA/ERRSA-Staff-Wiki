@@ -1,0 +1,6 @@
+- Server roadmap
+- Economy health
+- Community health
+- Feature planning
+- Infrastructure decisions
+- Working with the ERRSA Executive Board

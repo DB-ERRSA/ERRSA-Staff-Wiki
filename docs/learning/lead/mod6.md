@@ -1,0 +1,6 @@
+- Community Days
+- Server events
+- Competitions
+- Building projects
+- Staff coordination
+- Player engagement

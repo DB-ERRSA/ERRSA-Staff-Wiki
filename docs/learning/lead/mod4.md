@@ -1,0 +1,8 @@
+- Apex Hosting
+- Discord
+- GitHub
+- Databases
+- Power Automate
+- Website
+- Dynmap
+- Server monitoring

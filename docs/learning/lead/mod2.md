@@ -1,0 +1,7 @@
+- Applications
+- Conversations
+- Role assignment
+- Onboarding
+- Training
+- Promotions
+- Removing staff

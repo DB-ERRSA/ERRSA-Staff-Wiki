@@ -1,0 +1,6 @@
+- CoreProtect rollbacks
+- Inventory restoration
+- Recovering lost items
+- Reversing accidental damage
+- Determining when restoration is appropriate
+- Documenting restoration actions

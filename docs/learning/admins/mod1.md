@@ -1,0 +1,6 @@
+- Handling serious rule violations
+- Permanent and extended bans
+- Repeat offenders
+- Complex moderation cases
+- Moderator escalations
+- Maintaining consistent enforcement

@@ -1,0 +1,6 @@
+- /menu
+- /tutorial
+- /warp
+- /wild
+- World/map navigation
+- Creative/server browser

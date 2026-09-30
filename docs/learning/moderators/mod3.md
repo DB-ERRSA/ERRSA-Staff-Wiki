@@ -1,0 +1,5 @@
+- Inappropriate language
+- Harassment and toxicity
+- Spam and advertising
+- Inappropriate chat, signs, and books
+- Handling repeated communication violations

@@ -1,0 +1,7 @@
+- Git and GitHub
+- Branches and pull requests
+- Testing changes
+- Development environments
+- Building plugins with Maven
+- Versioning and releases
+- Changelogs and deployment

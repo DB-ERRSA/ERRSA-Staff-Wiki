@@ -1,0 +1,6 @@
+- Performance
+- Staff conflicts
+- Power abuse
+- Accountability
+- Documentation
+- Corrective action

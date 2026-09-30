@@ -1,0 +1,6 @@
+- Griefing and theft
+- Claim ownership and boundaries
+- Investigating block changes with CoreProtect
+- Identifying responsible players
+- Restoring damage when appropriate
+- Documenting the incident

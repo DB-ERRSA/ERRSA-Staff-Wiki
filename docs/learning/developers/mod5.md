@@ -1,0 +1,7 @@
+- phpMyAdmin and SQL databases
+- Power Automate integrations
+- Render services
+- Web and API integrations
+- Database connections
+- External service dependencies
+- Troubleshooting integration failures

@@ -218,7 +218,7 @@ You have completed this module if you can:
 
 -   :rocket: **Module 3 — Core Operational Plugins**  
     Learn about our core plugins that keeps the server operational
-    [:octicons-arrow-right-24: Start Module 3](../learning/mod3.md){ .md-button .md-button--primary }
+    [:octicons-arrow-right-24: Start Module 3](mod3.md){ .md-button .md-button--primary }
 
 </div>
 

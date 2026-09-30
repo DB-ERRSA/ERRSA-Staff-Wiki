@@ -1,0 +1,6 @@
+- Server console
+- Restarting and maintaining the server
+- Reading server and plugin logs
+- Checking plugin status
+- Identifying basic server issues
+- Knowing when not to make changes

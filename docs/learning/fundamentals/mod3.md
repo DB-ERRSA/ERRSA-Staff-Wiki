@@ -1,0 +1,5 @@
+- Answering common questions
+- Helping new players
+- Using the wiki
+- Finding the right tool/plugin
+- When to escalate    

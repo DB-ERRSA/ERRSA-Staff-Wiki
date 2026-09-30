@@ -1,0 +1,5 @@
+- Admin responsibilities
+- Admin permissions and limitations
+- Relationship between Moderators, Admins, Developers, and Server Lead
+- When to handle an issue directly versus escalate it
+- Overview of the admin learning path

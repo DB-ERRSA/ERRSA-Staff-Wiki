@@ -1,0 +1,7 @@
+- Installing plugins
+- Configuring plugins
+- Updating plugins
+- Plugin dependencies
+- Plugin compatibility
+- Plugin conflicts
+- Safely removing or replacing plugins

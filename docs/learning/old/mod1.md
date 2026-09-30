@@ -155,4 +155,4 @@ If you are unsure which track an issue belongs to, escalate upward rather than a
 - Know when **not** to act and escalate instead
 - Describe the difference between identity and authority
 
-<nav class="learning-nav" aria-label="Learning module navigation"><a class="learning-nav__link" href="../"><span>← Previous</span><strong>Learning paths</strong></a><a class="learning-nav__link learning-nav__link--next" href="../mod2/"><span>Next →</span><strong>Module 2: Player journey</strong></a></nav>
+<nav class="learning-nav" aria-label="Learning module navigation"><a class="learning-nav__link" href="../.."><span>← Previous</span><strong>Learning paths</strong></a><a class="learning-nav__link learning-nav__link--next" href="../mod2/"><span>Next →</span><strong>Module 2: Player journey</strong></a></nav>

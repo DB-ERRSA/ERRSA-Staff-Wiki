@@ -1,0 +1,6 @@
+- Building an evidence timeline
+- Investigating suspicious player behavior
+- Inventory investigations
+- Permission investigations
+- Reviewing server logs
+- Connecting evidence from multiple sources

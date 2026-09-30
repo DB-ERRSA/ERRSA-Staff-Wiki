@@ -1,0 +1,5 @@
+- Server purpose
+- Survival/economy/claiming philosophy
+- Worlds
+- Major server features
+- How players interact with the server

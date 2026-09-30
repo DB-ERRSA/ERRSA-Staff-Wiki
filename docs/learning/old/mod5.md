@@ -84,4 +84,4 @@ training path for ERRSA MC server leadership.
 From this point forward, learning is situational, documented,
 and responsibility-driven.
 
-<nav class="learning-nav" aria-label="Learning module navigation"><a class="learning-nav__link" href="../mod4/"><span>← Previous</span><strong>Module 4: Documentation and incidents</strong></a><a class="learning-nav__link learning-nav__link--next" href="../"><span>Finish →</span><strong>Learning paths</strong></a></nav>
+<nav class="learning-nav" aria-label="Learning module navigation"><a class="learning-nav__link" href="../mod4/"><span>← Previous</span><strong>Module 4: Documentation and incidents</strong></a><a class="learning-nav__link learning-nav__link--next" href="../.."><span>Finish →</span><strong>Learning paths</strong></a></nav>

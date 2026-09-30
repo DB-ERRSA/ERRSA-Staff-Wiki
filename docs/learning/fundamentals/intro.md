@@ -1,0 +1,5 @@
+- What ERRSA MC is
+- What staff are expected to understand
+- How the learning system works
+- What the five learning tracks are
+- Which modules are expected for which roles

@@ -1,0 +1,5 @@
+- Receiving and reviewing player reports
+- Gathering information from involved players
+- Collecting relevant evidence
+- Determining appropriate action
+- Recording and escalating incidents

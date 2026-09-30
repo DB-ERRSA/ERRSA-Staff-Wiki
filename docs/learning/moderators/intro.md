@@ -1,0 +1,5 @@
+- Moderator responsibilities
+- Moderator permissions and limitations
+- Moderation expectations
+- When to escalate to an Admin or Server Lead
+- Overview of the moderator learning path

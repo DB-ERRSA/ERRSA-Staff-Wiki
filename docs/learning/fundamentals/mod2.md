@@ -1,0 +1,5 @@
+- Player rules
+- Staff expectations
+- Enforcement philosophy
+- Common rule violations
+- When something becomes a staff issue

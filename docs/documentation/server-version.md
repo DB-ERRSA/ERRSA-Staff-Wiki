@@ -9,7 +9,7 @@ tags:
 
 ## 5.1 Version Numbers
 
-Version numbers help staff communicate the scope of a release. The [server changelog](../changelog/server.md#server-changelog){ data-preview } is the source for the latest **documented** release. Anytime an update is made, whether a large new addtion, or just a simple tweak to a config file, the server version should update and be documented in the changelog.
+Version numbers help staff communicate the scope of a release. The [server changelog](../changelog/releases.md){ data-preview } is the source for the latest **documented** release. Anytime an update is made, whether a large new addtion, or just a simple tweak to a config file, the server version should update and be documented in the changelog.
 
 | Part | When to increase it |
 | --- | --- |
@@ -23,7 +23,7 @@ For example, when updating from version `1.3.4`, a significant new plugin releas
 
 ## 5.2 Release Notes
 
-Always update the [server changelog](../changelog/server.md#server-changelog){ data-preview } when a release is approved. The version will also need to be updated in the miniMOTD plugin's config file, as that is what is displayed on the server browser. Verify the live server states the most recent version in changelog whenever an update is made.
+Always update the [server changelog](../changelog/releases.md){ data-preview } when a release is approved. The version will also need to be updated in the miniMOTD plugin's config file, as that is what is displayed on the server browser. Verify the live server states the most recent version in changelog whenever an update is made.
 
 ---
 
