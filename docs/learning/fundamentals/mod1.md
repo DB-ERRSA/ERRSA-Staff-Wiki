@@ -1,6 +1,12 @@
 - server details (version, architecture, scope)
+      - as mentioned in the introduction, ERRSA MC is (reference it). (Reference from the staff docs) -> The server is a network running paper and velocity on Minecrsft 1.21.4 Java edition. it utilizes a plugin called Geyser and Floodgate to allow bedrock edition players to join. The proxy is what allows servers to be connected the same IP. ERRSA MC has the main proxy, and 3 paper servers. the main, the backup/dev, and events. 
 - Server purpose
+     - The server was originally created as a way to engage with a wider range of people as part of ERRSAs mission to build a bigger better community on campus. that includes people who would rather stay inside and play games, then attend loud, crowded social events that ERRSA hosts.
 - Survival/economy/claiming philosophy
+    - To encourage the goals of building an easily accessible online community, ERRSA MC is a vallina focused survival server, as it is familar, and accessible to all players, unlike some more heavy mod packs. To easily enforce rules and keep a cordial community, ERRSA MC also includes various plugins(define plugin tooltip) to allow for land claiming, economy, and shops to protect players builds and items, while still easily being able to trade or collaborate with other players.
 - Major server features
+    - aside from the feautures mentioned above, other systems such as Guilds, quests, and player progression are included to promote building community, collaboration with others, and a sense of purpose. ERRSAs main goal has and always will be to build community.
 - Worlds
+    - in addition to the main survival server players connect to, ERRSA MC also features a creative plot worlds for those who would prefer to engage in a different way, or to quickly reference building techniques for use in the survival world. the legacy lake world is a tribute to previous ERRSA board members. The events server can be easily configured to host any type of event as it is entirety separate from the main server, so inventories, player data, and world's are unaffected. The backup or dev server is used by staff to test new additions, features, or bug fixes, without having to constantly restart the main server or potentially break something or cause a conflict with another plugin. 
 - How players interact with the server (survival main, events extra, potential for more modes)
+    - explained above
