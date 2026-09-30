@@ -1,5 +1,12 @@
 - What ERRSA MC is (high level, explained in more technical detail in next section)
+    - The ERRSA MC server is a an vanilla focused SMP sever exclusively for Embry-Riddle students. it is developed and maintained by the ERRSA MC committee, eith the main organization, ERRSA, providing funding and oversight of the project, much like a board of trustees. Technical details of the sever architecture will be discussed more in thr next section.
 - What staff are expected to understand
+    - as a staff member on the server, you are both a guide and enforcer. this means you must be familiar with the systems appropriate to your role not only to help players and answers questions, but to be able to enforce rules fairly and accurately.
 - How the learning system works/wiki works (tags and tabs)
+    - the learning section of this wiki is broken down into 5 modules related to each stsff role. the first section is a server fundamentals section, which is relevant to all staff members, regardless of role. it is an introduction to the server, rules, procedures, and tools we use, without getting into role specific functions or processes. the other 4 sections are specifically designed to be a nearly complete guide for that specifc role. These are sequential however, and an admin will need to read the previous moderator and fundamentals section fkr example. You may also notice some role tags displayed at the top of each page both in the learning, and other tabs. these are here to easily display what role each page is relevant to. while reading information outside of your role is not required, it is greatly encouraged as all knowledge is valuable, and is a great way to get a head start if youre looking yo get promoted to the next rank. Every section of the wiki serves as a reference to a portion of the server. The documentation section is related to stsff expectations, standard procedures, and server information. it is the singluar source of truth. similarly, the tools and plugins tabs are the source of truth, and reference for all things related to those topics. While these learning modules go over some of the information that can be found in those sections, it should only be treated as a reference for learning, not direct information.
 - What the five learning tracks are
+     - explained above
 - Which modules are expected for which roles
+     - explained above 
+- overview of fundamentals section
+     - in the fundamentals section, you will learn about our server architecture
