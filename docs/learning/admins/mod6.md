@@ -1,0 +1,6 @@
+- Multiverse world management
+- PlotSquared plots
+- WorldGuard regions
+- GriefPrevention claims
+- Protected areas
+- Managing world and building issues

@@ -1,0 +1,5 @@
+- Warning, mute, kick, and ban
+- Choosing the appropriate moderation action
+- Giving clear reasons for actions
+- De-escalating difficult situations
+- Using moderation powers appropriately

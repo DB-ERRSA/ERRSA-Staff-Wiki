@@ -1,3 +1,11 @@
+---
+tags:
+  - MOD
+  - ADMIN
+  - DEV
+  - SERVER LEAD
+---
+
 # Learning paths
 
 <p class="lead">Follow the foundation in order. Developers and Server Leads continue to the advanced systems module.</p>

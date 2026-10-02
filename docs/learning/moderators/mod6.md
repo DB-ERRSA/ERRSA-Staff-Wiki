@@ -1,0 +1,6 @@
+- Player arguments and disputes
+- Base and property disagreements
+- Ownership disagreements
+- Interpersonal drama
+- When staff should intervene
+- When to step back or escalate

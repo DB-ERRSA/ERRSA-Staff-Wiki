@@ -1,12 +1,9 @@
 ---
-title: Tebex
 tags:
   - SERVER LEAD
 ---
 
-# Tebex
-
-<span class="tool-page-logo" aria-hidden="true"><span class="tool-brand-mask tool-brand-mask--tebex" aria-hidden="true"></span></span>
+# :material-store-outline: Tebex
 
 <p class="lead">Server store management.</p>
 

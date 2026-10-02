@@ -1,0 +1,6 @@
+- Major exploits
+- Server outages
+- Data loss
+- Security incidents
+- Staff emergencies
+- Communication during incidents

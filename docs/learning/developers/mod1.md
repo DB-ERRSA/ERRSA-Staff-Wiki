@@ -1,0 +1,7 @@
+- Apex Hosting infrastructure
+- Velocity proxy
+- Paper backend servers
+- Geyser and Floodgate
+- Java versions
+- Plugin and service architecture
+- How server components communicate

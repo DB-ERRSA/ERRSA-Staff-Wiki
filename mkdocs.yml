@@ -2,10 +2,11 @@ hooks:
   - hooks.py
 
 not_in_nav: |
-  /documentation/plugins/legacy/*.md
+  /plugins/legacy/*.md
 
 site_name: ERRSA Staff Wiki
 site_description: ERRSA Minecraft staff procedures, learning, tools and troubleshooting.
+
 theme:
   name: material
   features:
@@ -23,6 +24,7 @@ theme:
     - search.highlight
     - search.share
     - content.code.copy
+
   palette:
     - scheme: slate
       primary: blue grey
@@ -36,24 +38,30 @@ theme:
       toggle:
         icon: material/weather-night
         name: Dark mode
+
 extra_javascript:
-  - javascripts/wiki-editor.js
-  - javascripts/plugin-preview.js
-  - javascripts/preview-click.js
-  - javascripts/wiki-sync.js
-  - javascripts/wiki-live-pages.js
+  - assets/javascripts/wiki-editor.js
+  - assets/javascripts/plugin-preview.js
+  - assets/javascripts/preview-click.js
+  - assets/javascripts/wiki-sync.js
+  - assets/javascripts/wiki-live-pages.js
+  - assets/javascripts/wiki-tag-colors.js
+
 extra_css:
-  - stylesheets/extra.css
-  - stylesheets/permissions-model.css
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/permissions-model.css
+
 plugins:
   - search
+  - typeset
   - tags
   - git-revision-date-localized:
       type: date
       enable_creation_date: false
-      enable_git_follow: false
+      enable_git_follow: true
       fallback_to_build_date: true
       timezone: America/New_York
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -70,289 +78,342 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
 nav:
   - Home: index.md
+
   - Documentation:
       - Overview: documentation/index.md
-      - Staff documents:
-          - Overview: documentation/staff-documents/index.md
-          - Introduction: documentation/staff-documents/introduction.md
-          - Staff Roles & Responsibilities: documentation/staff-documents/staff-roles-responsibilities.md
-          - Standard Procedures: documentation/staff-documents/standard-procedures.md
-          - Staff actions & records: documentation/staff-documents/logging-documentation.md
-          - Server versions: documentation/staff-documents/server-version.md
-      - Plugins:
-          - Directory: documentation/plugins/index.md
-          - Live server inventory: documentation/plugins/live-inventory.md
-          - Permissions and moderation:
-              - LuckPerms:
-                  - Overview: documentation/plugins/luckperms/index.md
-                  - Commands & permissions: documentation/plugins/luckperms/commands.md
-                  - References: documentation/plugins/luckperms/references.md
-              - CoreProtect:
-                  - Overview: documentation/plugins/coreprotect/index.md
-                  - Commands & permissions: documentation/plugins/coreprotect/commands.md
-                  - References: documentation/plugins/coreprotect/references.md
-              - GriefPrevention:
-                  - Overview: documentation/plugins/griefprevention/index.md
-                  - Commands & permissions: documentation/plugins/griefprevention/commands.md
-                  - References: documentation/plugins/griefprevention/references.md
-              - ChatFilter:
-                  - Overview: documentation/plugins/chatfilter/index.md
-                  - Commands & permissions: documentation/plugins/chatfilter/commands.md
-                  - References: documentation/plugins/chatfilter/references.md
-              - Themis:
-                  - Overview: documentation/plugins/themis/index.md
-                  - Commands & permissions: documentation/plugins/themis/commands.md
-                  - References: documentation/plugins/themis/references.md
-              - InventoryAudit:
-                  - Overview: documentation/plugins/inventoryaudit/index.md
-                  - Commands & permissions: documentation/plugins/inventoryaudit/commands.md
-                  - References: documentation/plugins/inventoryaudit/references.md
-              - PVPToggle:
-                  - Overview: documentation/plugins/pvptoggle/index.md
-                  - Commands & permissions: documentation/plugins/pvptoggle/commands.md
-                  - References: documentation/plugins/pvptoggle/references.md
-              - TabCompleteFilter:
-                  - Overview: documentation/plugins/tabcompletefilter/index.md
-                  - Commands & permissions: documentation/plugins/tabcompletefilter/commands.md
-                  - References: documentation/plugins/tabcompletefilter/references.md
-          - Server and infrastructure:
-              - AutoUpdateGeyser:
-                  - Overview: documentation/plugins/autoupdategeyser/index.md
-                  - Commands & permissions: documentation/plugins/autoupdategeyser/commands.md
-                  - References: documentation/plugins/autoupdategeyser/references.md
-              - ERRSACompatibilityPaper:
-                  - Overview: documentation/plugins/errsacompatibilitypaper/index.md
-                  - Commands & permissions: documentation/plugins/errsacompatibilitypaper/commands.md
-                  - References: documentation/plugins/errsacompatibilitypaper/references.md
-              - ERRSAWebBridge:
-                  - Overview: documentation/plugins/errsawebbridge/index.md
-                  - Commands & permissions: documentation/plugins/errsawebbridge/commands.md
-                  - References: documentation/plugins/errsawebbridge/references.md
-              - EventBridge:
-                  - Overview: documentation/plugins/eventbridge/index.md
-                  - Commands & permissions: documentation/plugins/eventbridge/commands.md
-                  - References: documentation/plugins/eventbridge/references.md
-              - SqlPing:
-                  - Overview: documentation/plugins/sqlping/index.md
-                  - Commands & permissions: documentation/plugins/sqlping/commands.md
-                  - References: documentation/plugins/sqlping/references.md
-              - ProtocolLib:
-                  - Overview: documentation/plugins/protocollib/index.md
-                  - Commands & permissions: documentation/plugins/protocollib/commands.md
-                  - References: documentation/plugins/protocollib/references.md
-              - PlaceholderAPI:
-                  - Overview: documentation/plugins/placeholderapi/index.md
-                  - Commands & permissions: documentation/plugins/placeholderapi/commands.md
-                  - References: documentation/plugins/placeholderapi/references.md
-              - Vault:
-                  - Overview: documentation/plugins/vault/index.md
-                  - Commands & permissions: documentation/plugins/vault/commands.md
-                  - References: documentation/plugins/vault/references.md
-              - floodgate:
-                  - Overview: documentation/plugins/floodgate/index.md
-                  - Commands & permissions: documentation/plugins/floodgate/commands.md
-                  - References: documentation/plugins/floodgate/references.md
-              - MiniMOTD:
-                  - Overview: documentation/plugins/minimotd/index.md
-                  - Commands & permissions: documentation/plugins/minimotd/commands.md
-                  - References: documentation/plugins/minimotd/references.md
-              - AutoMessage:
-                  - Overview: documentation/plugins/automessage/index.md
-                  - Commands & permissions: documentation/plugins/automessage/commands.md
-                  - References: documentation/plugins/automessage/references.md
-          - Worlds and building:
-              - Chunky:
-                  - Overview: documentation/plugins/chunky/index.md
-                  - Commands & permissions: documentation/plugins/chunky/commands.md
-                  - References: documentation/plugins/chunky/references.md
-              - ChunkyBorder:
-                  - Overview: documentation/plugins/chunkyborder/index.md
-                  - Commands & permissions: documentation/plugins/chunkyborder/commands.md
-                  - References: documentation/plugins/chunkyborder/references.md
-              - FastAsyncVoxelSniper:
-                  - Overview: documentation/plugins/fastasyncvoxelsniper/index.md
-                  - Commands & permissions: documentation/plugins/fastasyncvoxelsniper/commands.md
-                  - References: documentation/plugins/fastasyncvoxelsniper/references.md
-              - FastAsyncWorldEdit:
-                  - Overview: documentation/plugins/fastasyncworldedit/index.md
-                  - Commands & permissions: documentation/plugins/fastasyncworldedit/commands.md
-                  - References: documentation/plugins/fastasyncworldedit/references.md
-              - Multiverse-Core:
-                  - Overview: documentation/plugins/multiverse-core/index.md
-                  - Commands & permissions: documentation/plugins/multiverse-core/commands.md
-                  - References: documentation/plugins/multiverse-core/references.md
-              - Multiverse-Inventories:
-                  - Overview: documentation/plugins/multiverse-inventories/index.md
-                  - Commands & permissions: documentation/plugins/multiverse-inventories/commands.md
-                  - References: documentation/plugins/multiverse-inventories/references.md
-              - Multiverse-Portals:
-                  - Overview: documentation/plugins/multiverse-portals/index.md
-                  - Commands & permissions: documentation/plugins/multiverse-portals/commands.md
-                  - References: documentation/plugins/multiverse-portals/references.md
-              - PlotSquared:
-                  - Overview: documentation/plugins/plotsquared/index.md
-                  - Commands & permissions: documentation/plugins/plotsquared/commands.md
-                  - References: documentation/plugins/plotsquared/references.md
-              - WorldGuard:
-                  - Overview: documentation/plugins/worldguard/index.md
-                  - Commands & permissions: documentation/plugins/worldguard/commands.md
-                  - References: documentation/plugins/worldguard/references.md
-              - WorldGuardExtraFlags:
-                  - Overview: documentation/plugins/worldguardextraflags/index.md
-                  - Commands & permissions: documentation/plugins/worldguardextraflags/commands.md
-                  - References: documentation/plugins/worldguardextraflags/references.md
-              - ArmorStandTools:
-                  - Overview: documentation/plugins/armorstandtools/index.md
-                  - Commands & permissions: documentation/plugins/armorstandtools/commands.md
-                  - References: documentation/plugins/armorstandtools/references.md
-          - Gameplay and progression:
-              - Guilds:
-                  - Overview: documentation/plugins/guilds/index.md
-                  - Commands & permissions: documentation/plugins/guilds/commands.md
-                  - References: documentation/plugins/guilds/references.md
-              - PlayerQuests:
-                  - Overview: documentation/plugins/playerquests/index.md
-                  - Commands & permissions: documentation/plugins/playerquests/commands.md
-                  - References: documentation/plugins/playerquests/references.md
-              - Rank-Progression:
-                  - Overview: documentation/plugins/rank-progression/index.md
-                  - Commands & permissions: documentation/plugins/rank-progression/commands.md
-                  - References: documentation/plugins/rank-progression/references.md
-              - ERRSA-MC-Core:
-                  - Overview: documentation/plugins/errsa-mc-core/index.md
-                  - Commands & permissions: documentation/plugins/errsa-mc-core/commands.md
-                  - References: documentation/plugins/errsa-mc-core/references.md
-              - BannerBuilder:
-                  - Overview: documentation/plugins/bannerbuilder/index.md
-                  - Commands & permissions: documentation/plugins/bannerbuilder/commands.md
-                  - References: documentation/plugins/bannerbuilder/references.md
-              - HeadDB:
-                  - Overview: documentation/plugins/headdb/index.md
-                  - Commands & permissions: documentation/plugins/headdb/commands.md
-                  - References: documentation/plugins/headdb/references.md
-              - QuickShop-Hikari:
-                  - Overview: documentation/plugins/quickshop-hikari/index.md
-                  - Commands & permissions: documentation/plugins/quickshop-hikari/commands.md
-                  - References: documentation/plugins/quickshop-hikari/references.md
-              - Tebex:
-                  - Overview: documentation/plugins/tebex/index.md
-                  - Commands & permissions: documentation/plugins/tebex/commands.md
-                  - References: documentation/plugins/tebex/references.md
-              - WarpGUI:
-                  - Overview: documentation/plugins/warpgui/index.md
-                  - Commands & permissions: documentation/plugins/warpgui/commands.md
-                  - References: documentation/plugins/warpgui/references.md
-              - Wild:
-                  - Overview: documentation/plugins/wild/index.md
-                  - Commands & permissions: documentation/plugins/wild/commands.md
-                  - References: documentation/plugins/wild/references.md
-              - Essentials:
-                  - Overview: documentation/plugins/essentials/index.md
-                  - Commands & permissions: documentation/plugins/essentials/commands.md
-                  - References: documentation/plugins/essentials/references.md
-              - EssentialsChat:
-                  - Overview: documentation/plugins/essentialschat/index.md
-                  - Commands & permissions: documentation/plugins/essentialschat/commands.md
-                  - References: documentation/plugins/essentialschat/references.md
-              - EssentialsSpawn:
-                  - Overview: documentation/plugins/essentialsspawn/index.md
-                  - Commands & permissions: documentation/plugins/essentialsspawn/commands.md
-                  - References: documentation/plugins/essentialsspawn/references.md
-              - PlayerInitialization:
-                  - Overview: documentation/plugins/playerinitialization/index.md
-                  - Commands & permissions: documentation/plugins/playerinitialization/commands.md
-                  - References: documentation/plugins/playerinitialization/references.md
-              - VIPBridge:
-                  - Overview: documentation/plugins/vipbridge/index.md
-                  - Commands & permissions: documentation/plugins/vipbridge/commands.md
-                  - References: documentation/plugins/vipbridge/references.md
-              - SilkSpawners_v2:
-                  - Overview: documentation/plugins/silkspawners-v2/index.md
-                  - Commands & permissions: documentation/plugins/silkspawners-v2/commands.md
-                  - References: documentation/plugins/silkspawners-v2/references.md
-              - DragonDropElytra:
-                  - Overview: documentation/plugins/dragondropelytra/index.md
-                  - Commands & permissions: documentation/plugins/dragondropelytra/commands.md
-                  - References: documentation/plugins/dragondropelytra/references.md
-              - AutoUnlockPvPDrops:
-                  - Overview: documentation/plugins/autounlockpvpdrops/index.md
-                  - Commands & permissions: documentation/plugins/autounlockpvpdrops/commands.md
-                  - References: documentation/plugins/autounlockpvpdrops/references.md
-              - Hurricane:
-                  - Overview: documentation/plugins/hurricane/index.md
-                  - Commands & permissions: documentation/plugins/hurricane/commands.md
-                  - References: documentation/plugins/hurricane/references.md
-              - ShulkerReroute:
-                  - Overview: documentation/plugins/shulkerreroute/index.md
-                  - Commands & permissions: documentation/plugins/shulkerreroute/commands.md
-                  - References: documentation/plugins/shulkerreroute/references.md
-          - Display and media:
-              - FancyHolograms:
-                  - Overview: documentation/plugins/fancyholograms/index.md
-                  - Commands & permissions: documentation/plugins/fancyholograms/commands.md
-                  - References: documentation/plugins/fancyholograms/references.md
-              - FancyNpcs:
-                  - Overview: documentation/plugins/fancynpcs/index.md
-                  - Commands & permissions: documentation/plugins/fancynpcs/commands.md
-                  - References: documentation/plugins/fancynpcs/references.md
-              - dynmap:
-                  - Overview: documentation/plugins/dynmap/index.md
-                  - Commands & permissions: documentation/plugins/dynmap/commands.md
-                  - References: documentation/plugins/dynmap/references.md
-              - ImageFrame:
-                  - Overview: documentation/plugins/imageframe/index.md
-                  - Commands & permissions: documentation/plugins/imageframe/commands.md
-                  - References: documentation/plugins/imageframe/references.md
-              - InvisibleFrames:
-                  - Overview: documentation/plugins/invisibleframes/index.md
-                  - Commands & permissions: documentation/plugins/invisibleframes/commands.md
-                  - References: documentation/plugins/invisibleframes/references.md
-              - TAB:
-                  - Overview: documentation/plugins/tab/index.md
-                  - Commands & permissions: documentation/plugins/tab/commands.md
-                  - References: documentation/plugins/tab/references.md
-              - URLCustomDiscs:
-                  - Overview: documentation/plugins/urlcustomdiscs/index.md
-                  - Commands & permissions: documentation/plugins/urlcustomdiscs/commands.md
-                  - References: documentation/plugins/urlcustomdiscs/references.md
-              - voicechat:
-                  - Overview: documentation/plugins/voicechat/index.md
-                  - Commands & permissions: documentation/plugins/voicechat/commands.md
-                  - References: documentation/plugins/voicechat/references.md
-          - Automation:
-              - Skript:
-                  - Overview: documentation/plugins/skript/index.md
-                  - Commands & permissions: documentation/plugins/skript/commands.md
-                  - References: documentation/plugins/skript/references.md
-              - SkBee:
-                  - Overview: documentation/plugins/skbee/index.md
-                  - Commands & permissions: documentation/plugins/skbee/commands.md
-                  - References: documentation/plugins/skbee/references.md
-      - Staff permissions: documentation/staff-permissions.md
-      - Changelog:
-          - Overview: documentation/changelog/index.md
-          - Server releases: documentation/changelog/server.md
+      - 1. Introduction: documentation/introduction.md
+      - 2. Staff Roles & Responsibilities: documentation/staff-roles-responsibilities.md
+      - 3. Standard Procedures: documentation/standard-procedures.md
+      - 4. Staff Actions & Records: documentation/logging-documentation.md
+      - 5. Server Versions: documentation/server-version.md
+
   - Learning:
-      - Overview: learning/index.md
-      - Staff foundation:
-          - Module 1 · Roles: learning/mod1.md
-          - Module 2 · Player journey: learning/mod2.md
-          - Module 3 · Plugins: learning/mod3.md
-          - Module 4 · Documentation: learning/mod4.md
-      - Developer and lead:
-          - Module 5 · Systems: learning/mod5.md
+        - Overview: learning/index.md
+        - Server Fundamentals:
+              - Introduction: learning/fundamentals/intro.md
+              - Module 1 · Understanding ERRSA MC: learning/fundamentals/mod1.md
+              - Module 2 · Server Rules & Expectations: learning/fundamentals/mod2.md
+              - Module 3 · Player Support: learning/fundamentals/mod3.md
+              - Module 4 · In-Game Systems: learning/fundamentals/mod4.md
+              - Module 5 · Communication & Staff Resources: learning/fundamentals/mod5.md
+        - Moderators:
+            - Introduction: learning/moderators/intro.md
+            - Module 1 · Moderation Fundamentals: learning/moderators/mod1.md
+            - Module 2 · Handling Player Reports: learning/moderators/mod2.md
+            - Module 3 · Chat & Communication Moderation: learning/moderators/mod3.md
+            - Module 4 · Claims, Griefing & Theft: learning/moderators/mod4.md
+            - Module 5 · Cheating & Exploits: learning/moderators/mod5.md
+            - Module 6 · Player Disputes: learning/moderators/mod6.md
+            - Module 7 · Moderation Records & Disciplinary Actions: learning/moderators/mod7.md
+        - Admins:
+            - Introduction: learning/admins/intro.md
+            - Module 1 · Advanced Moderation: learning/admins/mod1.md
+            - Module 2 · Player Investigations: learning/admins/mod2.md
+            - Module 3 · Permissions & Staff Access: learning/admins/mod3.md
+            - Module 4 · Player Restoration & Recovery: learning/admins/mod4.md
+            - Module 5 · Server Administration: learning/admins/mod5.md
+            - Module 6 · Advanced Player & World Management: learning/admins/mod6.md
+            - Module 7 · Handling Major Incidents: learning/admins/mod7.md
+        - Developers:
+            - Introduction: learning/developers/intro.md
+            - Module 1 · ERRSA Server Architecture: learning/developers/mod1.md
+            - Module 2 · Plugin Management: learning/developers/mod2.md
+            - Module 3 · ERRSA Plugin Ecosystem: learning/developers/mod3.md
+            - Module 4 · Server Configuration & Files: learning/developers/mod4.md
+            - Module 5 · Databases & External Services: learning/developers/mod5.md
+            - Module 6 · Debugging & Server Troubleshooting: learning/developers/mod6.md
+            - Module 7 · Development Workflow: learning/developers/mod7.md
+        - Server Lead:
+            - Introduction: learning/lead/into.md
+            - Module 1 · Staff Leadership: learning/lead/mod1.md
+            - Module 2 · Staff Recruitment & Training: learning/lead/mod2.md
+            - Module 3 · Staff Management: learning/lead/mod3.md
+            - Module 4 · Server Operations: learning/lead/mod4.md
+            - Module 5 · Server Development & Planning: learning/lead/mod5.md
+            - Module 6 · Events & Community Management: learning/lead/mod6.md
+            - Module 7 · Major Incident Management: learning/lead/mod7.md
+            - Module 8 · Server Direction & Long-Term Planning: learning/lead/mod8.md
+        - Old Modules:
+            - Module 1 · Roles: learning/old/mod1.md
+            - Module 2 · Player journey: learning/old/mod2.md
+            - Module 3 · Plugins: learning/old/mod3.md
+            - Module 4 · Documentation: learning/old/mod4.md
+            - Module 5 · Systems: learning/old/mod5.md
+
   - Tools:
-      - Overview: tools/index.md
-      - Discord: tools/discord/index.md
-      - GitHub: tools/github/index.md
-      - Apex Hosting: tools/apex-hosting/index.md
-      - phpMyAdmin: tools/phpmyadmin/index.md
-      - Power Automate: tools/power-automate/index.md
-      - Render: tools/render/index.md
-      - Fillout: tools/fillout/index.md
-      - Tebex: tools/tebex/index.md
+        - Overview: tools/index.md
+        - tools/discord/index.md
+        - tools/github/index.md
+        - tools/apex-hosting/index.md
+        - tools/phpmyadmin/index.md
+        - tools/power-automate/index.md
+        - tools/render/index.md
+        - tools/fillout/index.md
+        - tools/tebex/index.md
+
+  - Plugins:
+      - Overview: plugins/index.md
+      - Staff Permissions: plugins/staff-permissions.md
+      - Live Server Inventory: plugins/live-inventory.md
+
+      - Permissions And Moderation:
+          - LuckPerms:
+              - Overview: plugins/luckperms/index.md
+              - Commands & Permissions: plugins/luckperms/commands.md
+              - References: plugins/luckperms/references.md
+          - CoreProtect:
+              - Overview: plugins/coreprotect/index.md
+              - Commands & Permissions: plugins/coreprotect/commands.md
+              - References: plugins/coreprotect/references.md
+          - GriefPrevention:
+              - Overview: plugins/griefprevention/index.md
+              - Commands & Permissions: plugins/griefprevention/commands.md
+              - References: plugins/griefprevention/references.md
+          - ChatFilter:
+              - Overview: plugins/chatfilter/index.md
+              - Commands & Permissions: plugins/chatfilter/commands.md
+              - References: plugins/chatfilter/references.md
+          - Themis:
+              - Overview: plugins/themis/index.md
+              - Commands & Permissions: plugins/themis/commands.md
+              - References: plugins/themis/references.md
+          - InventoryAudit:
+              - Overview: plugins/inventoryaudit/index.md
+              - Commands & Permissions: plugins/inventoryaudit/commands.md
+              - References: plugins/inventoryaudit/references.md
+          - PVPToggle:
+              - Overview: plugins/pvptoggle/index.md
+              - Commands & Permissions: plugins/pvptoggle/commands.md
+              - References: plugins/pvptoggle/references.md
+          - TabCompleteFilter:
+              - Overview: plugins/tabcompletefilter/index.md
+              - Commands & Permissions: plugins/tabcompletefilter/commands.md
+              - References: plugins/tabcompletefilter/references.md
+
+      - Server And Infrastructure:
+          - AutoUpdateGeyser:
+              - Overview: plugins/autoupdategeyser/index.md
+              - Commands & Permissions: plugins/autoupdategeyser/commands.md
+              - References: plugins/autoupdategeyser/references.md
+          - ERRSACompatibilityPaper:
+              - Overview: plugins/errsacompatibilitypaper/index.md
+              - Commands & Permissions: plugins/errsacompatibilitypaper/commands.md
+              - References: plugins/errsacompatibilitypaper/references.md
+          - ERRSAWebBridge:
+              - Overview: plugins/errsawebbridge/index.md
+              - Commands & Permissions: plugins/errsawebbridge/commands.md
+              - References: plugins/errsawebbridge/references.md
+          - EventBridge:
+              - Overview: plugins/eventbridge/index.md
+              - Commands & Permissions: plugins/eventbridge/commands.md
+              - References: plugins/eventbridge/references.md
+          - SqlPing:
+              - Overview: plugins/sqlping/index.md
+              - Commands & Permissions: plugins/sqlping/commands.md
+              - References: plugins/sqlping/references.md
+          - ProtocolLib:
+              - Overview: plugins/protocollib/index.md
+              - Commands & Permissions: plugins/protocollib/commands.md
+              - References: plugins/protocollib/references.md
+          - PlaceholderAPI:
+              - Overview: plugins/placeholderapi/index.md
+              - Commands & Permissions: plugins/placeholderapi/commands.md
+              - References: plugins/placeholderapi/references.md
+          - Vault:
+              - Overview: plugins/vault/index.md
+              - Commands & Permissions: plugins/vault/commands.md
+              - References: plugins/vault/references.md
+          - Floodgate:
+              - Overview: plugins/floodgate/index.md
+              - Commands & Permissions: plugins/floodgate/commands.md
+              - References: plugins/floodgate/references.md
+          - MiniMOTD:
+              - Overview: plugins/minimotd/index.md
+              - Commands & Permissions: plugins/minimotd/commands.md
+              - References: plugins/minimotd/references.md
+          - AutoMessage:
+              - Overview: plugins/automessage/index.md
+              - Commands & Permissions: plugins/automessage/commands.md
+              - References: plugins/automessage/references.md
+
+      - Worlds And Building:
+          - Chunky:
+              - Overview: plugins/chunky/index.md
+              - Commands & Permissions: plugins/chunky/commands.md
+              - References: plugins/chunky/references.md
+          - ChunkyBorder:
+              - Overview: plugins/chunkyborder/index.md
+              - Commands & Permissions: plugins/chunkyborder/commands.md
+              - References: plugins/chunkyborder/references.md
+          - FastAsyncVoxelSniper:
+              - Overview: plugins/fastasyncvoxelsniper/index.md
+              - Commands & Permissions: plugins/fastasyncvoxelsniper/commands.md
+              - References: plugins/fastasyncvoxelsniper/references.md
+          - FastAsyncWorldEdit:
+              - Overview: plugins/fastasyncworldedit/index.md
+              - Commands & Permissions: plugins/fastasyncworldedit/commands.md
+              - References: plugins/fastasyncworldedit/references.md
+          - Multiverse-Core:
+              - Overview: plugins/multiverse-core/index.md
+              - Commands & Permissions: plugins/multiverse-core/commands.md
+              - References: plugins/multiverse-core/references.md
+          - Multiverse-Inventories:
+              - Overview: plugins/multiverse-inventories/index.md
+              - Commands & Permissions: plugins/multiverse-inventories/commands.md
+              - References: plugins/multiverse-inventories/references.md
+          - Multiverse-Portals:
+              - Overview: plugins/multiverse-portals/index.md
+              - Commands & Permissions: plugins/multiverse-portals/commands.md
+              - References: plugins/multiverse-portals/references.md
+          - PlotSquared:
+              - Overview: plugins/plotsquared/index.md
+              - Commands & Permissions: plugins/plotsquared/commands.md
+              - References: plugins/plotsquared/references.md
+          - WorldGuard:
+              - Overview: plugins/worldguard/index.md
+              - Commands & Permissions: plugins/worldguard/commands.md
+              - References: plugins/worldguard/references.md
+          - WorldGuardExtraFlags:
+              - Overview: plugins/worldguardextraflags/index.md
+              - Commands & Permissions: plugins/worldguardextraflags/commands.md
+              - References: plugins/worldguardextraflags/references.md
+          - ArmorStandTools:
+              - Overview: plugins/armorstandtools/index.md
+              - Commands & Permissions: plugins/armorstandtools/commands.md
+              - References: plugins/armorstandtools/references.md
+
+      - Gameplay And Progression:
+          - Guilds:
+              - Overview: plugins/guilds/index.md
+              - Commands & Permissions: plugins/guilds/commands.md
+              - References: plugins/guilds/references.md
+          - PlayerQuests:
+              - Overview: plugins/playerquests/index.md
+              - Commands & Permissions: plugins/playerquests/commands.md
+              - References: plugins/playerquests/references.md
+          - Rank-Progression:
+              - Overview: plugins/rank-progression/index.md
+              - Commands & Permissions: plugins/rank-progression/commands.md
+              - References: plugins/rank-progression/references.md
+          - ERRSA-MC-Core:
+              - Overview: plugins/errsa-mc-core/index.md
+              - Commands & Permissions: plugins/errsa-mc-core/commands.md
+              - References: plugins/errsa-mc-core/references.md
+          - BannerBuilder:
+              - Overview: plugins/bannerbuilder/index.md
+              - Commands & Permissions: plugins/bannerbuilder/commands.md
+              - References: plugins/bannerbuilder/references.md
+          - HeadDB:
+              - Overview: plugins/headdb/index.md
+              - Commands & Permissions: plugins/headdb/commands.md
+              - References: plugins/headdb/references.md
+          - QuickShop-Hikari:
+              - Overview: plugins/quickshop-hikari/index.md
+              - Commands & Permissions: plugins/quickshop-hikari/commands.md
+              - References: plugins/quickshop-hikari/references.md
+          - Tebex:
+              - Overview: plugins/tebex/index.md
+              - Commands & Permissions: plugins/tebex/commands.md
+              - References: plugins/tebex/references.md
+          - WarpGUI:
+              - Overview: plugins/warpgui/index.md
+              - Commands & Permissions: plugins/warpgui/commands.md
+              - References: plugins/warpgui/references.md
+          - Wild:
+              - Overview: plugins/wild/index.md
+              - Commands & Permissions: plugins/wild/commands.md
+              - References: plugins/wild/references.md
+          - Essentials:
+              - Overview: plugins/essentials/index.md
+              - Commands & Permissions: plugins/essentials/commands.md
+              - References: plugins/essentials/references.md
+          - EssentialsChat:
+              - Overview: plugins/essentialschat/index.md
+              - Commands & Permissions: plugins/essentialschat/commands.md
+              - References: plugins/essentialschat/references.md
+          - EssentialsSpawn:
+              - Overview: plugins/essentialsspawn/index.md
+              - Commands & Permissions: plugins/essentialsspawn/commands.md
+              - References: plugins/essentialsspawn/references.md
+          - PlayerInitialization:
+              - Overview: plugins/playerinitialization/index.md
+              - Commands & Permissions: plugins/playerinitialization/commands.md
+              - References: plugins/playerinitialization/references.md
+          - VIPBridge:
+              - Overview: plugins/vipbridge/index.md
+              - Commands & Permissions: plugins/vipbridge/commands.md
+              - References: plugins/vipbridge/references.md
+          - SilkSpawners_v2:
+              - Overview: plugins/silkspawners-v2/index.md
+              - Commands & Permissions: plugins/silkspawners-v2/commands.md
+              - References: plugins/silkspawners-v2/references.md
+          - DragonDropElytra:
+              - Overview: plugins/dragondropelytra/index.md
+              - Commands & Permissions: plugins/dragondropelytra/commands.md
+              - References: plugins/dragondropelytra/references.md
+          - AutoUnlockPvPDrops:
+              - Overview: plugins/autounlockpvpdrops/index.md
+              - Commands & Permissions: plugins/autounlockpvpdrops/commands.md
+              - References: plugins/autounlockpvpdrops/references.md
+          - Hurricane:
+              - Overview: plugins/hurricane/index.md
+              - Commands & Permissions: plugins/hurricane/commands.md
+              - References: plugins/hurricane/references.md
+          - ShulkerReroute:
+              - Overview: plugins/shulkerreroute/index.md
+              - Commands & Permissions: plugins/shulkerreroute/commands.md
+              - References: plugins/shulkerreroute/references.md
+
+      - Display And Media:
+          - FancyHolograms:
+              - Overview: plugins/fancyholograms/index.md
+              - Commands & Permissions: plugins/fancyholograms/commands.md
+              - References: plugins/fancyholograms/references.md
+          - FancyNpcs:
+              - Overview: plugins/fancynpcs/index.md
+              - Commands & Permissions: plugins/fancynpcs/commands.md
+              - References: plugins/fancynpcs/references.md
+          - Dynmap:
+              - Overview: plugins/dynmap/index.md
+              - Commands & Permissions: plugins/dynmap/commands.md
+              - References: plugins/dynmap/references.md
+          - ImageFrame:
+              - Overview: plugins/imageframe/index.md
+              - Commands & Permissions: plugins/imageframe/commands.md
+              - References: plugins/imageframe/references.md
+          - InvisibleFrames:
+              - Overview: plugins/invisibleframes/index.md
+              - Commands & Permissions: plugins/invisibleframes/commands.md
+              - References: plugins/invisibleframes/references.md
+          - TAB:
+              - Overview: plugins/tab/index.md
+              - Commands & Permissions: plugins/tab/commands.md
+              - References: plugins/tab/references.md
+          - URLCustomDiscs:
+              - Overview: plugins/urlcustomdiscs/index.md
+              - Commands & Permissions: plugins/urlcustomdiscs/commands.md
+              - References: plugins/urlcustomdiscs/references.md
+          - VoiceChat:
+              - Overview: plugins/voicechat/index.md
+              - Commands & Permissions: plugins/voicechat/commands.md
+              - References: plugins/voicechat/references.md
+
+      - Automation:
+          - Skript:
+              - Overview: plugins/skript/index.md
+              - Commands & Permissions: plugins/skript/commands.md
+              - References: plugins/skript/references.md
+          - SkBee:
+              - Overview: plugins/skbee/index.md
+              - Commands & Permissions: plugins/skbee/commands.md
+              - References: plugins/skbee/references.md
+
+  - Changelog:
+      - Releases: changelog/releases.md
+
   - Troubleshooting:
       - Overview: troubleshooting/index.md
       - Common issues: troubleshooting/common-issues.md

@@ -1,0 +1,7 @@
+- Reading server logs
+- Reading stack traces
+- Identifying plugin errors
+- Reproducing issues
+- Isolating plugin conflicts
+- Investigating crashes
+- Determining when to escalate an issue

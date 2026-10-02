@@ -1,0 +1,7 @@
+- Feature requests
+- Plugin changes
+- Development priorities
+- Testing
+- Releases
+- Changelogs
+- Long-term planning

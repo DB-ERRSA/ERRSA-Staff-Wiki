@@ -1,0 +1,6 @@
+- Developer responsibilities
+- Developer permissions and access
+- ERRSA server architecture overview
+- Development expectations and workflow
+- When to coordinate with Admins or Server Lead
+- Overview of the developer learning path

@@ -21,3 +21,4 @@ site/
 # Secrets
 .env
 .env.*
+/.venv/

@@ -1,0 +1,7 @@
+- Server crashes
+- Major exploits
+- Large-scale griefing
+- Economy abuse
+- Widespread player issues
+- Coordinating with Developers
+- Escalating major incidents to the Server Lead

@@ -1,0 +1,6 @@
+- Staff structure
+- Chain of command
+- Assigning responsibilities
+- Delegation
+- Staff communication
+- Supporting staff

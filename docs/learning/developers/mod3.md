@@ -1,0 +1,8 @@
+- ERRSA MC Core
+- WarpGUI
+- Rank Progression
+- PlayerInitialization
+- ERRSACompatibilityPaper
+- ERRSAWebBridge
+- EventBridge
+- Other custom ERRSA systems

@@ -1,0 +1,7 @@
+- Server configuration files
+- Paper configuration
+- Plugin configuration
+- YAML configuration
+- Permissions configuration
+- Environment variables
+- File management and backups

@@ -1,0 +1,6 @@
+- Recognizing suspicious player behavior
+- X-ray and unauthorized movement
+- Duplication and other exploits
+- Gathering evidence before taking action
+- When to escalate suspected cheating
+- Avoiding false accusations

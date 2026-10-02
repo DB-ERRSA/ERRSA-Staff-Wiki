@@ -1,0 +1,6 @@
+- LuckPerms groups and permissions
+- Staff roles and permission levels
+- Vault and permission integration
+- TAB and staff visibility
+- Granting and removing permissions
+- Auditing staff access
