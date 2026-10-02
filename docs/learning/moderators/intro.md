@@ -1,5 +1,9 @@
 - Moderator responsibilities
+    - as a moderator on the server, you are the absolute front lines and typically will see issues before a developer or server lead who typically works more on the backend, outside kf the server. your primary purpose is to be a resource and guide for players, answering questions, clarifying rules, and point in the right direction. There are times where you must address an immediate issue or dispute.
 - Moderator permissions and limitations
+    - moderators don't have many permissions beyond what players do, however they do have the ability to kick, mute, and ban. thought with great power comes great responsibility (spider emoji). it's important to know when a situation is appropriate to use these functions, as well as how to properly document it. we will discuss more in the following modules.
 - Moderation expectations
+    - as mentioned in the fundamentals sections, moderators have a certain expectation in how to interact with players and address conduct. Review section 1.2? and section 2.2? of the staff handbook for additional details. additionally, there are certain expectations of how procedures are followed when taking action which will also be discuessed in the following module.
 - When to escalate to an Admin or Server Lead
+    - While moderators have the ability to take administrative action (ie kick ban, mute, etc) they do not have the necessary tools to conduct investigations or restore damages. in cases where this is required, an escalation would be necessary. additionally if moderators need help or unsure, it's always better to ask than to guess.
 - Overview of the moderator learning path
