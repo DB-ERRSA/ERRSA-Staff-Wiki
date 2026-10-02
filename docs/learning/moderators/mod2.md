@@ -5,5 +5,6 @@
 - Collecting relevant evidence
     - sort of explained above
 - Determining appropriate action
-   - 
+   - as mentioned in the previous module, once the full picture of a situation is identified, and the offender is identified, thr next step would be following the standard procedures to determine the next course of action
 - Recording and escalating incidents
+   - throughout the entire process from initial report, to investigation, to reaching out to players for more informstion, document or log everything. If situation requires logging more context then just what was aent in the formal email. yoy can use /staff command in discord to add a log to the database or view previous logs.
