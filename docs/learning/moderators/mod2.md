@@ -1,5 +1,9 @@
 - Receiving and reviewing player reports
+    - player reports are the primary way players communicate issues with the server. The report form can be found ingame with /report, or a direct link in the welcome channel on discord. After a report is filled out, it is sent directly to the staff channel for review. Reports can be about any topic, whether that's a player issue, rule breaking, or bug on the server, so it's important to filter these reports and make sure an appropriate rank handles it. more input is always better, and it never hurts to offer help to other staff members even if it can be handled alone, or its above your roles abilities. its also a great learning opportunity for staff of a higher role to show you their process.
 - Gathering information from involved players
+   - sometimes the information sent in a report is insufficient to provide the full details or scope of a problem. Maybe a player was grieved and simply said "ive been greifed" without providing any coordinates, screenshots, or evidence. this is generally a situstion where an escalation is going to be needed, as investigation tools are required. however, if it's at all possible, always reach out to the player to provide more information to make a more complete report. When it comes to more complicated situations, especially those involve player disputes, its important to get both sides of the story, not simply the version from the person making the report, as there may be a bias. Hear both sides, and draw conclusions from the available evidence to paint a fuller picture.
 - Collecting relevant evidence
+    - sort of explained above
 - Determining appropriate action
+   - 
 - Recording and escalating incidents
