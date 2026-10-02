@@ -1,6 +1,0 @@
-- Discord
-- Staff channels
-- Staff documentation
-- Reporting
-- Feedback
-- Communication expectations
