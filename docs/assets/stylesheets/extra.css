@@ -273,6 +273,10 @@
 .md-nav__item:has(> input#__nav_4) .md-nav--secondary {
   display: none;
 }
+/* Plugins */
+.md-nav__item:has(> input#__nav_5) .md-nav--secondary {
+  display: none;
+}
 /* Changelog */
 .md-nav__item--active > .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list {
     display: none;

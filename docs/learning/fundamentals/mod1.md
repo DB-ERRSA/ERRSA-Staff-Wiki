@@ -18,7 +18,7 @@ ERRSA MC is a Minecraft server network built around a vanilla-focused survival e
 
 !!! info "Server architecture"
     ERRSA MC currently runs **Minecraft Java Edition 1.21.4** using **Paper** servers connected through a **Velocity** proxy, and utilizes
-    [Geyser](../../plugins/geyser-spigot.md){ data-preview } and [Floodgate](../../plugins/floodgate.md){ data-preview } to allow Bedrock Edition players to connect.
+    [Geyser](../../plugins/server-and-infrastructure/geyser-spigot.md){ data-preview } and [Floodgate](../../plugins/server-and-infrastructure/floodgate.md){ data-preview } to allow Bedrock Edition players to connect.
 
 The network consists of:
 

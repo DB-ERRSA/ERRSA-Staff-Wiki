@@ -24,7 +24,7 @@ Player registration is the first major system most players encounter and is one 
 The registration process verifies that players are Embry-Riddle students though email verification before granting them normal server access.
 
 !!! tip "Learn the registration process"
-    Review the [player onboarding tutorial](https://www.youtube.com/watch?v=nrxG9c11pdo "Click here to watch the tutorial video!") and the [PlayerInitialization plugin](../../plugins/playerinitialization.md){ data-preview } documentation for more information.
+    Review the [player onboarding tutorial](https://www.youtube.com/watch?v=nrxG9c11pdo "Click here to watch the tutorial video!") and the [PlayerInitialization plugin](../../plugins/server-and-infrastructure/playerinitialization.md){ data-preview } documentation for more information.
 
 ---
 
