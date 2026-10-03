@@ -13,7 +13,7 @@ ERRSA MC contains many systems, including several that are custom-built specific
 This module provides a basic overview of the major **player-facing systems** and how players interact with them.
 
 !!! info "Reference material"
-    This module is intended to teach you the basics. For more detailed player-facing tutorials, refer players to the [ERRSA MC website handbook](https://errsa-minecraft-handbook.onrender.com/handbook.html). For more technical information on the systems, use the relevant [Plugin](../../../plugins) or [Tool](../../../tools) documentation.
+    This module is intended to teach you the basics. For more detailed player-facing tutorials, refer players to the [ERRSA MC website handbook](https://errsa-minecraft-handbook.onrender.com/handbook.html). For more technical information on the systems, use the relevant [Plugin](../../plugins/index.md) or [Tool](../../tools/index.md) documentation.
 
 ---
 
@@ -24,7 +24,7 @@ Player registration is the first major system most players encounter and is one 
 The registration process verifies that players are Embry-Riddle students though email verification before granting them normal server access.
 
 !!! tip "Learn the registration process"
-    Review the [player onboarding tutorial](https://www.youtube.com/watch?v=nrxG9c11pdo "Click here to watch the tutorial video!") and the [PlayerInitialization plugin](../../../plugins/playerinitialization.md#){ data-preview } documentation for more information.
+    Review the [player onboarding tutorial](https://www.youtube.com/watch?v=nrxG9c11pdo "Click here to watch the tutorial video!") and the [PlayerInitialization plugin](../../plugins/playerinitialization.md){ data-preview } documentation for more information.
 
 ---
 
