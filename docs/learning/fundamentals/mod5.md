@@ -60,7 +60,7 @@ The primary source of server documentation is this wiki.
 A local server backup is downloaded once per year and stored in a secure location.
 
 !!! warning "Protect sensitive information"
-    Do not place private player information, registration data, or other sensitive information in public documentation or general staff channels.
+    Do not place [private player information]("This typically includes real names, student emails, residence halls, or any other identifying information."), registration data, or other sensitive information in public documentation or general staff channels.
 
 ---
 
