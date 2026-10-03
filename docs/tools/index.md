@@ -6,7 +6,9 @@ hide:
 
 # Tools
 
-<p class="lead">Explore the tools ERRSA uses to manage, maintain, and support the server.</p>
+<p class="lead">Quick reference for the external tools ERRSA staff use to communicate, manage the server, support players, and maintain services.</p>
+
+## Communication & Staff Operations
 
 <div class="tool-grid">
 
@@ -16,7 +18,28 @@ hide:
   </span>
   <span class="tool-card__body">
     <strong>Discord</strong>
-    <small>Main source of communication, community, and staff center.</small>
+    <small>Primary hub for staff communication, player support, and community coordination.</small>
+  </span>
+  <span class="tool-arrow">Learn more →</span>
+</a>
+
+
+</div>
+
+## Server & Development
+
+<div class="tool-grid">
+
+<a class="tool-card" href="apex-hosting/">
+  <span class="tool-logo" aria-hidden="true">
+    <span class="tool-logo-fallback">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
+    </span>
+    <img class="tool-remote-logo" src="https://apexminecrafthosting.com/favicon.ico" alt="" loading="lazy">
+  </span>
+  <span class="tool-card__body">
+    <strong>Apex Hosting</strong>
+    <small>Server console, files, configuration, backups, and instance management.</small>
   </span>
   <span class="tool-arrow">Learn more →</span>
 </a>
@@ -28,46 +51,11 @@ hide:
   </span>
   <span class="tool-card__body">
     <strong>GitHub</strong>
-    <small>All dev related source code repositories.</small>
+    <small>Source code, configuration history, and development repositories.</small>
   </span>
   <span class="tool-arrow">Learn more →</span>
 </a>
 
-<a class="tool-card" href="apex-hosting/">
-  <span class="tool-logo" aria-hidden="true">
-    <span class="tool-logo-fallback">
-      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
-    </span>
-    <img class="tool-remote-logo" src="https://apexminecrafthosting.com/favicon.ico" alt="" loading="lazy">
-  </span>
-  <span class="tool-card__body">
-    <strong>Apex Hosting</strong>
-    <small>Minecraft server management and file access.</small>
-  </span>
-  <span class="tool-arrow">Learn more →</span>
-</a>
-
-<a class="tool-card" href="phpmyadmin/">
-  <span class="tool-logo" aria-hidden="true">
-    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.463 3.476C6.69 5.225 7.497 7.399 7.68 9.798a12.9 12.9 0 0 1-.672 5.254 4.3 4.3 0 0 1 2.969-1.523q.075-.005.148-.008c.08-.491.47-3.45-.977-6.68-1.068-2.386-3-3.16-3.685-3.365m1.777.037s2.406 1.066 3.326 5.547c.607 2.955.049 4.836-.402 5.773a7.35 7.35 0 0 1 4.506-1.994c.86-.065 1.695.02 2.482.233-.1-.741-.593-3.414-2.732-5.92-3.263-3.823-7.18-3.64-7.18-3.64Zm14.817 9.701-17.92 3.049a2.28 2.28 0 0 1 1.535 2.254 2.3 2.3 0 0 1-.106.61c.055-.027 2.689-1.275 6.342-2.034 3.238-.673 5.723-.36 6.285-.273a6.46 6.46 0 0 1 3.864-3.606m-6.213 4.078c-2.318 0-4.641.495-6.614 1.166-2.868.976-2.951 1.348-5.55 1.043C1.844 19.286 0 18.386 0 18.386s2.406 1.97 4.914 2.127c1.986.125 3.505-.822 5.315-1.414 2.661-.871 4.511-.97 6.253-.975C19.361 18.116 24 19.353 24 19.353s-2.11-1.044-5.033-1.72a14 14 0 0 0-3.123-.34Z"/></svg>
-  </span>
-  <span class="tool-card__body">
-    <strong>phpMyAdmin</strong>
-    <small>MySQL player and server databases and administration.</small>
-  </span>
-  <span class="tool-arrow">Learn more →</span>
-</a>
-
-<a class="tool-card" href="power-automate/">
-  <span class="tool-logo" aria-hidden="true">
-    <img class="tool-brand-logo" src="https://raw.githubusercontent.com/microsoft/powerplatform/master/assets/images/PowerAutomate_scalable.svg" alt="" loading="lazy">
-  </span>
-  <span class="tool-card__body">
-    <strong>Power Automate</strong>
-    <small>Automation workflows.</small>
-  </span>
-  <span class="tool-arrow">Learn more →</span>
-</a>
 
 <a class="tool-card" href="render/">
   <span class="tool-logo" aria-hidden="true">
@@ -75,10 +63,41 @@ hide:
   </span>
   <span class="tool-card__body">
     <strong>Render</strong>
-    <small>Public website host.</small>
+    <small>Hosting and deployment for ERRSA web services and applications.</small>
   </span>
   <span class="tool-arrow">Learn more →</span>
 </a>
+
+
+</div>
+
+## Data & Automation
+
+<div class="tool-grid">
+
+<a class="tool-card" href="phpmyadmin/">
+  <span class="tool-logo" aria-hidden="true">
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.463 3.476C6.69 5.225 7.497 7.399 7.68 9.798a12.9 12.9 0 0 1-.672 5.254 4.3 4.3 0 0 1 2.969-1.523q.075-.005.148-.008c.08-.491.47-3.45-.977-6.68-1.068-2.386-3-3.16-3.685-3.365m1.777.037s2.406 1.066 3.326 5.547c.607 2.955.049 4.836-.402 5.773a7.35 7.35 0 0 1 4.506-1.994c.86-.065 1.695.02 2.482.233-.1-.741-.593-3.414-2.732-5.92-3.263-3.823-7.18-3.64-7.18-3.64Zm14.817 9.701-17.92 3.049a2.28 2.28 0 0 1 1.535 2.254 2.3 2.3 0 0 1-.106.61c.055-.027 2.689-1.275 6.342-2.034 3.238-.673 5.723-.36 6.285-.273a6.46 6.46 0 0 1 3.864-3.606m-6.213 4.078c-2.318 0-4.641.495-6.614 1.166-2.868.976-2.951 1.348-5.55 1.043C1.844 19.286 0 18.386 0 18.386s2.406 1.97 4.914 2.127c1.986.125 3.505-.822 5.315-1.414 2.661-.871 4.511-.97 6.253-.975C19.361 18.116 24 19.353 24 19.353s-2.11-1.044-5.033-1.72a14 14 0 0 0-3.123-.34Z"/></svg>
+  </span>
+  <span class="tool-card__body">
+    <strong>phpMyAdmin</strong>
+    <small>View and manage MySQL data used by server systems and integrations.</small>
+  </span>
+  <span class="tool-arrow">Learn more →</span>
+</a>
+
+
+<a class="tool-card" href="power-automate/">
+  <span class="tool-logo" aria-hidden="true">
+    <img class="tool-brand-logo" src="https://raw.githubusercontent.com/microsoft/powerplatform/master/assets/images/PowerAutomate_scalable.svg" alt="" loading="lazy">
+  </span>
+  <span class="tool-card__body">
+    <strong>Power Automate</strong>
+    <small>Automated workflows supporting player initialization and Discord communication logs.</small>
+  </span>
+  <span class="tool-arrow">Learn more →</span>
+</a>
+
 
 <a class="tool-card" href="fillout/">
   <span class="tool-logo" aria-hidden="true">
@@ -86,10 +105,17 @@ hide:
   </span>
   <span class="tool-card__body">
     <strong>Fillout</strong>
-    <small>Forms and submissions.</small>
+    <small>ERRSA and ERRSA Minecraft forms for submissions, reports, feedback, and requests.</small>
   </span>
   <span class="tool-arrow">Learn more →</span>
 </a>
+
+
+</div>
+
+## Store & Commerce
+
+<div class="tool-grid">
 
 <a class="tool-card" href="tebex/">
   <span class="tool-logo" aria-hidden="true">
@@ -97,9 +123,10 @@ hide:
   </span>
   <span class="tool-card__body">
     <strong>Tebex</strong>
-    <small>Server store management.</small>
+    <small>Storefront, packages, purchases, and server commerce management.</small>
   </span>
   <span class="tool-arrow">Learn more →</span>
 </a>
+
 
 </div>

@@ -8,126 +8,111 @@ tags:
 
 # :fontawesome-brands-discord: Discord
 
----
-
-## What Is Discord?
-
-Discord is a communication platform built around servers, channels, direct messages, and voice communication. It allows communities to organize conversations into dedicated spaces and provides tools for text, voice, moderation, bots, and integrations.
-
-## ERRSA's use:
-
-ERRSA uses Discord as the primary communication platform for the ERRSA community and Minecraft server. It provides spaces for players to communicate, receive server updates, report issues, provide feedback, and interact with the ERRSA team.
-
-For Minecraft staff, Discord is also the primary platform for staff communication and server operations.
-
-Staff use Discord to:
-
-- Communicate and coordinate with other staff members.
-- Receive and review player reports.
-- Review and process staff actions.
-- Discuss server issues and ongoing investigations.
-- Receive player feedback and suggestions.
-- Coordinate events and other server activities.
-- Access staff resources, announcements, and important server information.
+ERRSA's primary platform for community communication, staff coordination, submissions, and Minecraft operations.
 
 ---
 
-## Access:
+## ERRSA Use
+
+### ERRSA
+
+Discord is the main communication hub for the broader ERRSA community. It is used for club announcements, member communication, committees, events, interest and feedback submissions, and coordination between ERRSA teams.
+
+Staff may encounter submissions or notifications related to things such as:
+
+- Member or committee interest.
+- Concerns and suggestions.
+- Club feedback.
+- Event or organization submissions.
+- Other ERRSA-wide forms and workflows.
+
+!!! info "ERRSA-wide server"
+    The Discord server belongs to **ERRSA as a whole**. Minecraft operates within the larger ERRSA Discord rather than as a completely separate community server.
+
+### ERRSA Minecraft
+
+ERRSA Minecraft uses Discord for both player-facing communication and internal staff operations.
+
+Minecraft staff may receive or work with:
+
+- Player reports.
+- Server feedback and suggestions.
+- Ban appeals.
+- Staff or team interest submissions.
+- Token approval requests, including custom map, custom music, and VIP catchphrase rewards.
+- Staff action and moderation records.
+- Server announcements and status information.
+- Internal staff coordination and project discussion.
+
+Some submissions originate through external forms and are automatically routed into Discord so staff can review and act on them without needing to monitor each form separately.
+
+---
+
+## Access
 
 [Open Discord ↗](https://discord.com/app){ .md-button .md-button--primary }
 
-A Discord account is required to access the ERRSA Discord server. Players can join through the server's public Discord invite.
+A Discord account is required to access the ERRSA Discord server. Public channels are available to members with the appropriate server access, while staff channels and staff tools are controlled through Discord roles.
 
-!!! warning "Access requirements"
-    Access to staff channels and tools is controlled through Discord roles. Staff members are granted the appropriate roles when they join the Minecraft staff team.
-
----
-
-## Features & Functions
-
-### Community Channels
-
-The public areas of the ERRSA Discord provide players with a place to communicate with each other and share ideas or information
-
-!!! info "Server ownership"
-    It's important to remember that this is the official ERRSA Discord server, it is not exclusive to just our Minecraft server.
-
-Our designated Minecraft channels provide functions such as:
-
-- General community discussion.
-- Server announcements and updates.
-- Player questions and support.
-- Event information.
-- Community feedback and suggestions.
+!!! warning "Staff access"
+    Staff-only channels, submissions, and tools may contain internal information. Do not share content from restricted staff areas outside of the appropriate staff spaces.
 
 ---
 
-### Staff Channels and Staff Action Center
+## Staff Areas
 
-Staff channels provide a private space for the Minecraft staff team to communicate and coordinate server operations.
+ERRSA Discord channels are organized around staff needs, but not every function has a dedicated channel. A single staff channel may be used for communication, routed reports, submissions, and coordination depending on the workflow.
 
-These channels are used for:
-
-- Discussing player issues and reports.
-- Coordinating moderation and investigations.
-- Sharing server-related information.
-- Asking other staff members for assistance.
-- Documenting decisions and actions.
-- Coordinating server projects and events.
-
-Unless a matter is sensitive or requires a private conversation, staff discussion should generally remain visible to the rest of the staff team so others can provide context or assistance.
-
-The MC Staff Action Center provides staff with tools for handling player-related actions through Discord.
-
-Staff can use it to submit actions such as warnings and other disciplinary actions. Submitted actions are processed and documented for future reference.
-
-!!! warning "Document staff actions"
-    Staff actions should always follow the procedures outlined in the [Staff Handbook](../../documentation/introduction){ data-preview }.
+| Area | Used For |
+| --- | --- |
+| **Community Channels** | General ERRSA communication, announcements, events, and member discussion. |
+| **Minecraft Channels** | Server discussion, player communication, announcements, support, and community updates. |
+| **Staff Channels** | Internal communication, coordination, planning, reports, investigations, and other staff-only information. |
+| **Submission Feeds** | Routed reports, feedback, appeals, interest submissions, token requests, and other form responses. These may appear inside existing staff channels rather than in a dedicated channel. |
+| **Staff Actions** | Formal moderation actions and records that need to be documented for future reference. |
+| **Voice Channels** | Meetings, staff discussions, events, and community voice communication. |
 
 ---
 
-### Player Feedback and Reports
+## Staff Notes
 
-Player feedback and reports submitted through the official forms are sent directly to the staff channel in Discord.
+- Keep internal staff information within authorized staff channels.
+- Use the appropriate submission or staff-action workflow when something needs to be formally recorded.
+- Avoid relying on direct messages for information that other staff members may need later.
+- Use threads when helpful to keep longer or issue-specific discussions organized.
+- Never post passwords, API keys, access tokens, database credentials, or other sensitive infrastructure information in Discord.
+- Keep staff discussions visible to the appropriate team whenever possible so other staff can provide context or assistance.
 
-Staff can use these forms to:
-
-- Review reported situations.
-- See suggestions for new features.
-- Discuss issues with other staff when necessary.
-- Investigate relevant server activity.
-- Read general comments about the server.
-
-!!! tip "Server feedback"
-    Feedback should be considered when discussing future server improvements, but submitting feedback does not guarantee that a change will be made.
+!!! warning "Document important actions"
+    Discord conversation alone should not be treated as the permanent record for a moderation action or incident. Use the appropriate staff workflow and follow the procedures in the [Staff Handbook](../../documentation/introduction.md){ data-preview }.
 
 ---
 
-### Voice Channels
+## Related Tools
 
-Discord voice channels provide staff and players with a way to communicate through voice.
+### Fillout
 
-Staff may use voice channels for:
+[Fillout](../fillout/){ data-preview } is used to collect structured submissions such as reports, feedback, appeals, interest forms, and token requests that may later be routed to staff through Discord.
 
-- Staff meetings.
-- Event coordination.
-- Community activities.
-- Situations where real-time communication is more useful than text.
+### Power Automate
 
-!!! warning "Private conversations"
-    Sensitive staff discussions should use an appropriate private channel rather than a public voice channel.
+[Power Automate](../power-automate/){ data-preview } supports automated workflows between forms, Discord, email, and other ERRSA services.
+
+### Render
+
+[Render](../render/){ data-preview } hosts ERRSA web services and supporting infrastructure, including one of the Discord bots used by the Minecraft team.
 
 ---
 
 ## Related Resources
 
-- [<Related Wiki Page>](...)
-- [<Related Plugin>](...)
-- [<External Documentation>](...)
+- [Staff Roles & Responsibilities](../../documentation/staff-roles-responsibilities.md){ data-preview }
+- [Standard Procedures](../../documentation/standard-procedures.md){ data-preview }
+- [Logging Documentation](../../documentation/logging-documentation.md){ data-preview }
 
 ---
 
 !!! tip "Need help?"
-    If you're unsure how to use this tool or something isn't working as expected, ask for help in the Discord!
+    If you're unsure where something belongs or a Discord workflow is not behaving as expected, ask another staff member in the appropriate staff channel.
 
 [← All tools](../index.md)
