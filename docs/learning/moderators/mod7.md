@@ -1,6 +1,0 @@
-- Staff action records
-- Official written warnings
-- Disciplinary action notices
-- Documenting evidence and context
-- Using the staff action process
-- Escalating serious or repeated violations

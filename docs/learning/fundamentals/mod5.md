@@ -123,5 +123,14 @@ You should now have a general understanding of:
 - Where to find additional information.
 - When to escalate an issue.
 
-!!! success "Next step"
-    You are now ready to continue into the learning track for your staff role. Remember that the role-specific tracks build on the knowledge from Server Fundamentals.
+---
+
+!!! success "Next steps"
+    You are now ready to continue into the learning tracks for your staff role. Remember, these modules are sequential and each section builds off of the last, so it's recommend to start with moderator.
+
+<nav class="handbook-next" aria-label="Continue reading">
+  <a href="../../moderators/intro">
+    <span class="handbook-next__copy"><small>Next section</small><strong>Moderators · Introduction</strong><span>Begin the moderator track to start learning how to use your tools and be successful in your role.</span></span>
+    <span class="handbook-next__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>

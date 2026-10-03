@@ -103,45 +103,41 @@ nav:
             - Introduction: learning/moderators/intro.md
             - Module 1 · Moderation Fundamentals: learning/moderators/mod1.md
             - Module 2 · Handling Player Reports: learning/moderators/mod2.md
-            - Module 3 · Chat & Communication Moderation: learning/moderators/mod3.md
-            - Module 4 · Claims, Griefing & Theft: learning/moderators/mod4.md
-            - Module 5 · Cheating & Exploits: learning/moderators/mod5.md
-            - Module 6 · Player Disputes: learning/moderators/mod6.md
-            - Module 7 · Moderation Records & Disciplinary Actions: learning/moderators/mod7.md
+            - Module 3 · Interpreting the Rules: learning/moderators/mod3.md
+            - Module 4 · Cheating & Exploits: learning/moderators/mod4.md
+            - Module 5 · Player Disputes: learning/moderators/mod5.md
+            - Module 6 · Moderation Records & Disciplinary Actions: learning/moderators/mod6.md
         - Admins:
-            - Introduction: learning/admins/intro.md
-            - Module 1 · Advanced Moderation: learning/admins/mod1.md
-            - Module 2 · Player Investigations: learning/admins/mod2.md
-            - Module 3 · Permissions & Staff Access: learning/admins/mod3.md
-            - Module 4 · Player Restoration & Recovery: learning/admins/mod4.md
-            - Module 5 · Server Administration: learning/admins/mod5.md
-            - Module 6 · Advanced Player & World Management: learning/admins/mod6.md
-            - Module 7 · Handling Major Incidents: learning/admins/mod7.md
+            - Coming Soon: learning/soon.md
+            #- Introduction: learning/admins/intro.md
+            #- Module 1 · Advanced Moderation: learning/admins/mod1.md
+            #- Module 2 · Player Investigations: learning/admins/mod2.md
+            #- Module 3 · Permissions & Staff Access: learning/admins/mod3.md
+            #- Module 4 · Player Restoration & Recovery: learning/admins/mod4.md
+            #- Module 5 · Server Administration: learning/admins/mod5.md
+            #- Module 6 · Advanced Player & World Management: learning/admins/mod6.md
+            #- Module 7 · Handling Major Incidents: learning/admins/mod7.md
         - Developers:
-            - Introduction: learning/developers/intro.md
-            - Module 1 · ERRSA Server Architecture: learning/developers/mod1.md
-            - Module 2 · Plugin Management: learning/developers/mod2.md
-            - Module 3 · ERRSA Plugin Ecosystem: learning/developers/mod3.md
-            - Module 4 · Server Configuration & Files: learning/developers/mod4.md
-            - Module 5 · Databases & External Services: learning/developers/mod5.md
-            - Module 6 · Debugging & Server Troubleshooting: learning/developers/mod6.md
-            - Module 7 · Development Workflow: learning/developers/mod7.md
+            - Coming Soon: learning/soon.md
+            #- Introduction: learning/developers/intro.md
+            #- Module 1 · ERRSA Server Architecture: learning/developers/mod1.md
+            #- Module 2 · Plugin Management: learning/developers/mod2.md
+            #- Module 3 · ERRSA Plugin Ecosystem: learning/developers/mod3.md
+            #- Module 4 · Server Configuration & Files: learning/developers/mod4.md
+            #- Module 5 · Databases & External Services: learning/developers/mod5.md
+            #- Module 6 · Debugging & Server Troubleshooting: learning/developers/mod6.md
+            #- Module 7 · Development Workflow: learning/developers/mod7.md
         - Server Lead:
-            - Introduction: learning/lead/into.md
-            - Module 1 · Staff Leadership: learning/lead/mod1.md
-            - Module 2 · Staff Recruitment & Training: learning/lead/mod2.md
-            - Module 3 · Staff Management: learning/lead/mod3.md
-            - Module 4 · Server Operations: learning/lead/mod4.md
-            - Module 5 · Server Development & Planning: learning/lead/mod5.md
-            - Module 6 · Events & Community Management: learning/lead/mod6.md
-            - Module 7 · Major Incident Management: learning/lead/mod7.md
-            - Module 8 · Server Direction & Long-Term Planning: learning/lead/mod8.md
-        - Old Modules:
-            - Module 1 · Roles: learning/old/mod1.md
-            - Module 2 · Player journey: learning/old/mod2.md
-            - Module 3 · Plugins: learning/old/mod3.md
-            - Module 4 · Documentation: learning/old/mod4.md
-            - Module 5 · Systems: learning/old/mod5.md
+            - Coming Soon: learning/soon.md
+            #- Introduction: learning/lead/into.md
+            #- Module 1 · Staff Leadership: learning/lead/mod1.md
+            #- Module 2 · Staff Recruitment & Training: learning/lead/mod2.md
+            #- Module 3 · Staff Management: learning/lead/mod3.md
+            #- Module 4 · Server Operations: learning/lead/mod4.md
+            #- Module 5 · Server Development & Planning: learning/lead/mod5.md
+            #- Module 6 · Events & Community Management: learning/lead/mod6.md
+            #- Module 7 · Major Incident Management: learning/lead/mod7.md
+            #- Module 8 · Server Direction & Long-Term Planning: learning/lead/mod8.md
 
   - Tools:
         - Overview: tools/index.md

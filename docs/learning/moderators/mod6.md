@@ -1,12 +1,6 @@
-- Player arguments and disputes
-    - There will certainly be a time where yoy come accross a player disagreement or dispute. in many cases, however, it is not yoyr job to intervene. many times players can figure out and resolve their own issues with eachother. The only time to intervene is either when requested, or when rules such as inappropriate language, harassment, toxicity, or spam start to come into play. in those cases, steer the conversation into more friendly and reasonable territory and remind players of the rules if necessary. Avoid taking sides and remain neutral unless there is a clear violation from only one person. in cases where both parties are out of line, and administrative action is required, it may be necessary to issue it to both parties.
-- Base and property disagreements
-    - Following similar principles to above, use aound judgement to determine which, or if both, parties are in the wrong. Specifically for property disagreements, it may be necessary to send formal communication to a player requesting they remove their build, or repair damages within x amount of time, before further action is taken.
-- Ownership disagreements
-    - Owenersgip disagreements follow a similar guideline and investigstion or reasoning may be required. always grt both sidss of the story and attempt to see the full picture. always remember,at the end of the day ERRSA MC operates on a "what was most likely to have happened" principle, based on the available evidence. Always document your reasoning when drawing conclusions from limited evidence
-- Interpersonal drama
-    - as mentioned above, interpersonal drama rypically does not require stsff intervention and ahouls be handeled by the players unless asked or rules are violated.
-- When staff should intervene
-   - explained above
-- When to step back or escalate
-   - if a situation is not getting resolved by communicating and reasoning alone, it may be nessicary to just step back and take action. If extra support is needed, always ask for backup on situstion, not only can it take pressure of you, but if multiple staff members agree on a resolution, it may become more clear to a player rather then them feeling targeted by just one person. If ever a situation becomes too muxh for you to handle, never feel bad about stepping away and handing it off to someone else. In heavier situations, it may need to involve the server lead who has final say on administer decions. in certain extreme situations, especially those involving direct student to student harassment, it may be necessary to bring an incident to the ERRSA asvisor, who is a stsff of Houseing and Residencd life to have formal a formal student conduct conversation, though this is very rare.
+- Staff action records
+- Official written warnings
+- Disciplinary action notices
+- Documenting evidence and context
+- Using the staff action process
+- Escalating serious or repeated violations
