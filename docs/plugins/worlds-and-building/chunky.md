@@ -10,13 +10,11 @@ Chunky is a performance utility plugin used to pre-generate world chunks, reduci
 
 ## ERRSA's Use
 
-ERRSA currently does not use the functionallity of Chunky directly, but it is a required dependency for [Chunky Border](chunkyborder.md "Click here to learn more about the plugin!").
+ERRSA currently does not use the functionality of Chunky directly, but it is a required dependency for [Chunky Border](chunkyborder.md "Click here to learn more about the plugin!").
 
 ---
 
 ??? note "Common Commands"
-
-    <Only include commands that staff or players actually use on ERRSA.>
 
     | Command | Description | Who Can Use It |
     |---------|-------------|----------------|
@@ -38,7 +36,7 @@ ERRSA currently does not use the functionallity of Chunky directly, but it is a 
     | Setting | ERRSA Value | Default | Purpose |
     |---------|---------|-------------|---------|
     | continue-on-restart: | false | true | Prevent lag upon startup |
-    | force-load-existing-chunks: | false | true | Unessicary data processing |
+    | force-load-existing-chunks: | false | true | Unnecessary data processing |
     | silent: | true | false | Reduce console spam |
 
     !!! info "Unchanged settings"
