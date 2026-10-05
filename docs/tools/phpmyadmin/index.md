@@ -1,5 +1,4 @@
 ---
-title: phpMyAdmin (SQL)
 tags:
   - DEV
   - SERVER LEAD

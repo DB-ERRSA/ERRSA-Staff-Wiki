@@ -1,5 +1,4 @@
 ---
-title: Power Automate
 tags:
   - DEV
   - SERVER LEAD
