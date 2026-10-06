@@ -1,26 +1,16 @@
-- Player arguments and disputes
-    - There will certainly be a time where yoy come accross a player disagreement or dispute. in many cases, however, it is not yoyr job to intervene. many times players can figure out and resolve their own issues with eachother. The only time to intervene is either when requested, or when rules such as inappropriate language, harassment, toxicity, or spam start to come into play. in those cases, steer the conversation into more friendly and reasonable territory and remind players of the rules if necessary. Avoid taking sides and remain neutral unless there is a clear violation from only one person. in cases where both parties are out of line, and administrative action is required, it may be necessary to issue it to both parties.
-- Base and property disagreements
-    - Following similar principles to above, use aound judgement to determine which, or if both, parties are in the wrong. Specifically for property disagreements, it may be necessary to send formal communication to a player requesting they remove their build, or repair damages within x amount of time, before further action is taken.
-- Ownership disagreements
-    - Owenersgip disagreements follow a similar guideline and investigstion or reasoning may be required. always grt both sidss of the story and attempt to see the full picture. always remember,at the end of the day ERRSA MC operates on a "what was most likely to have happened" principle, based on the available evidence. Always document your reasoning when drawing conclusions from limited evidence
-- Interpersonal drama
-    - as mentioned above, interpersonal drama rypically does not require stsff intervention and ahouls be handeled by the players unless asked or rules are violated.
-- When staff should intervene
-   - explained above
-- When to step back or escalate
-   - if a situation is not getting resolved by communicating and reasoning alone, it may be nessicary to just step back and take action. If extra support is needed, always ask for backup on situstion, not only can it take pressure of you, but if multiple staff members agree on a resolution, it may become more clear to a player rather then them feeling targeted by just one person. If ever a situation becomes too muxh for you to handle, never feel bad about stepping away and handing it off to someone else. In heavier situations, it may need to involve the server lead who has final say on administer decions. in certain extreme situations, especially those involving direct student to student harassment, it may be necessary to bring an incident to the ERRSA asvisor, who is a stsff of Houseing and Residencd life to have formal a formal student conduct conversation, though this is very rare.
-
 ---
 tags:
-- MOD
+  - MOD
+  - ADMIN
+  - DEV
+  - SERVER LEAD
 ---
 
 # Module 5 · Player Disputes
 
-Player disagreements are common on a community server. Moderators need to know when staff involvement is appropriate, when players should resolve an issue themselves, and when a situation has escalated enough to require additional support.
+Player disagreements are common on community servers. Moderators need to know when staff involvement is appropriate, when players should resolve an issue themselves, and when a situation has escalated enough to require additional support.
 
-The most important principle is to **remain neutral and focus on resolving the situation rather than taking sides**.
+The most important principle is to remain neutral and focus on resolving the situation rather than taking sides.
 
 ---
 
@@ -32,13 +22,14 @@ Players should generally be allowed to resolve their own disagreements when no s
 
 Staff intervention becomes appropriate when:
 
-- A player asks staff for help.
-- A rule violation occurs.
-- The disagreement develops into harassment or toxicity.
-- Players begin spamming or otherwise disrupting the community.
-- The situation can no longer be resolved reasonably between the players.
+- A player asks staff for help
+- A rule violation occurs
+- The disagreement develops into harassment or toxicity
+- Players begin spamming or otherwise disrupting the community
+- The situation can no longer be resolved reasonably between the players
 
 When intervening, remain neutral and avoid taking sides unless there is a clear rule violation by one party.
+Attempt to steer the conversation into more friendly and understanding territory, and remind players of relevant rules if necessary.
 
 If both players are violating the rules, administrative action may need to be taken against both parties.
 
@@ -50,11 +41,11 @@ Property disputes should be handled using the same principles of neutrality and 
 
 Determine:
 
-- What each player believes they own.
-- How the property was created or used.
-- Whether either player has violated a rule.
-- What evidence is available.
-- Whether additional investigation is necessary.
+- What each player believes they own
+- How the property was created or used
+- Whether either player has violated a rule
+- What evidence is available
+- Whether additional investigation is necessary
 
 In some situations, formal communication may be required to request that a player remove a build or repair damage within a specified period before further action is taken.
 
@@ -69,12 +60,12 @@ Ownership disputes may require additional reasoning or investigation.
 
 Always attempt to hear both sides and gather the available evidence before reaching a conclusion.
 
-ERRSA MC operates on a **"what was most likely to have happened"** principle when evidence is incomplete.
+When it comes to disputes, ERRSA MC operates on a **"what was most likely to have happened"** principle when evidence is incomplete.
 
 That means staff should use the available evidence to determine the most reasonable conclusion rather than requiring absolute proof that may not exist.
 
 !!! important "Document your reasoning"
-    When reaching a conclusion from limited evidence, document the reasoning behind the decision so other staff members can understand how the conclusion was reached.
+    When reaching a conclusion from limited evidence, always document the reasoning behind the decision so other staff members can understand how the conclusion was reached.
 
 ---
 
@@ -86,9 +77,9 @@ If players are having a personal disagreement but are not violating server rules
 
 Staff should become involved when:
 
-- A player requests assistance.
-- The situation begins violating server rules.
-- The disagreement begins affecting the wider community.
+- A player requests assistance
+- The situation begins violating server rules
+- The disagreement begins affecting the wider community
 
 ---
 
@@ -117,13 +108,17 @@ If a situation continues to escalate, it may be necessary to stop trying to medi
 When additional support is needed, ask another staff member to assist. Having multiple staff members agree on a resolution can make the decision clearer to the players and reduce the feeling that one staff member is targeting them.
 
 !!! tip "It's okay to step away"
-    If a situation becomes too difficult or stressful to handle, you can hand it off to another staff member. Escalating a situation is not a failure—it is responsible moderation.
+    If a situation becomes too difficult or stressful to handle, you can hand it off to another staff member. Escalating a situation is not a failure, it is responsible moderation.
 
-More serious situations may need to involve the **Server Lead**, who has final authority over administrative decisions.
+More serious situations may need to involve the Server Lead, who has final authority over administrative decisions.
 
-In rare and extreme situations involving direct student-to-student harassment, an incident may need to be brought to the **ERRSA advisor** for a formal student conduct conversation.
+In rare and extreme situations involving direct student-to-student harassment, an incident may need to be brought to the ERRSA advisor for a formal student conduct conversation. Refer to [Section 4.5](../../documentation/logging-documentation.md#45-student-conduct-escalation){ data-preview} of the staff documentation for additional guidance.
 
 ---
 
-!!! tip "Next module"
-    Continue to **Module 6 · Moderation Records & Disciplinary Actions** to learn how moderation actions and supporting evidence are formally documented.
+<nav class="handbook-next" aria-label="Continue reading">
+  <a href="../mod6/">
+    <span class="handbook-next__copy"><small>Next section</small><strong>Module 6 · Moderation Records & Disciplinary Actions</strong><span>Learn how moderation actions and supporting evidence are formally documented.</span></span>
+    <span class="handbook-next__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>

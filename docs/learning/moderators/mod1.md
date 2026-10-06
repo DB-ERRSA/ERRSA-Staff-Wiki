@@ -1,62 +1,14 @@
-- Warning, mute, kick, and ban
-   - taking administrative action is an important function of Moderation, and it's good to know what sections are available. A warning is simply verbal communication with a player, in relatively small cases this can be done through any direct communication (in-game chat, discord, etc). a formal warning is needed if a situation is a direct violation of the rules. Formal warnings send a formatted email directly to a player's student email. they can be issued through the ERRSA discord bot and will be discussed in module x. Kicking players can be used as a harsher alternative to an informal warning as a message can be attacked to the kick reason. They can also be used to remove afk players, temporaily stop chat spamming, or sinilar actions. A ban can be issued only when following official procedures, with the appropriate time specified from the procedure. typically ranging from 1 day to permanent. Any time a ban is issued for any reason it MUST be logged. Bans can be used outside of official procedures, only if the situation requires immediate attention, and an procedure does not cover the specific case.
-- Choosing the appropriate moderation action
-    - choosing the appropriate action is just as important as choosing to take action at all. permanently banning someone because they sent a few too many chat messages and yoy considered it "spamming" is certainty not appropriate. Section 3.2 of the staff documents directly outlines standard procedures to follow for every common rule or violation. it will provide yoy eith the exact steps to follow, what administrative action to take, and for how long. as always, make sure to log any and all sctions!
-- Giving clear reasons for actions
-    - whenever action it's import to always give clear reason, backed up by our procedures and rules. Even for a player that is committing and obvious offense, it can be extremely discouraging to get banned without any reason why, or a way to follow up. There may be cases where players are genuinely unaware they broke a rule, even if it seems obvious to someone else. a brief reason should be attached when issuing an action using `/ban <player> <reason>`. Additionally the reason should be specified in the formal communication email.
-- De-escalating difficult situations
-    - In certain situations, there may be disagreement between players, retaliation, attempted loop holes, or just general anger coming from players when it comes to moderator involvement. navigating these situations can be difficult, but its important to stay calm, follow the principles of staff communication weve already outlined, and always attempt to De-escalate a situation. avoid instigating, rage baiting, or being rude as this can only make situations worse. always remain neutral, polite, friendly, and especially professional when handling situations.
-- Using moderation powers appropriately
-   - Having access to addition powers does not mean you can use them without care. You should never use your powers for personal gain, out of spite, for trolling, or any other purposes except genuine moderator during a situation that requires it. misuse of your powers is a direct violation of our staff guidelines and can result in getting removed from the team. Additionally, staff are not immune to administrative action, or are above the rules simply because of their role. they are held not only to the same standard as other players, but a higher standard in some cases.
-
 ---
 tags:
-- MOD
+  - MOD
+  - ADMIN
+  - DEV
+  - SERVER LEAD
 ---
 
 # Module 1 · Moderation Fundamentals
 
-Moderation is not simply about taking action against players. Effective moderation means understanding **when action is necessary, which action is appropriate, and how to communicate and document that decision**.
-
----
-
-## Moderation Actions
-
-### Warnings
-
-A warning is a direct communication with a player about their behavior.
-
-For relatively minor situations, an informal warning can be given through direct communication such as in-game chat or Discord.
-
-A **formal warning** should be used when a situation is a direct violation of the rules. Formal warnings are sent to the player's student email and can be issued through the ERRSA Discord staff tools.
-
-### Mutes
-
-A mute can be used when a player's communication is disrupting others, such as continued chat violations.
-
-The appropriate duration and circumstances for a mute should follow the applicable staff procedure.
-
-### Kicks
-
-A kick is a stronger immediate response that removes a player from the server without issuing a ban.
-
-Kicks can be useful for situations such as:
-
-- Escalating an informal warning.
-- Temporarily stopping chat spam.
-- Removing an AFK player when appropriate.
-- Other situations where temporarily removing a player is useful.
-
-A reason should be included with the kick so the player understands why they were removed.
-
-### Bans
-
-A ban prevents a player from accessing the server for a specified period.
-
-Bans should only be issued when following the applicable official procedure and using the appropriate duration. Depending on the situation, ban lengths can range from one day to permanent.
-
-!!! danger "Ban documentation"
-    **Every ban must be logged.** Bans may also be issued outside an existing procedure when immediate action is required and no existing procedure adequately covers the situation.
+Moderation is not simply about taking action against players. Effective moderation means understanding when action is necessary, which action is appropriate, and how to communicate and document that decision.
 
 ---
 
@@ -64,10 +16,89 @@ Bans should only be issued when following the applicable official procedure and 
 
 Choosing the correct action is just as important as deciding whether action is necessary.
 
-A minor violation should not receive an unnecessarily severe punishment. Section 3.2 of the Staff Handbook provides standard procedures for common violations, including the steps to follow, the appropriate administrative action, and the appropriate duration.
+A minor violation should not receive an unnecessarily severe punishment, while serious or repeated violations may require stronger action. Staff should consider the severity of the violation, the player's history, whether the behavior was intentional, and whether the behavior is continuing.
+
+[Section 3.2](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview } of the staff documentation provides **standard procedures** for common violations, including the steps to follow, the appropriate administrative action, and the appropriate duration.
 
 !!! important "Follow the procedure"
     When a standard procedure applies, use it rather than determining a punishment from scratch. Always document the resulting action.
+
+When no standard procedure directly applies, use your best judgment based on the circumstances. If you are unsure which action is appropriate, consult another staff member or escalate the situation to an Admin.
+
+---
+
+## Moderation Actions
+
+### 1. Warnings
+
+A warning is simply communication with a player about their behavior.
+
+For relatively minor situations, an informal warning can be given through direct communication such as in-game chat or Discord.
+There is no official format or standard for informal warnings. It is just communication with a player that their behavior is potentially wrong and could result in further action if escalated or continued.
+
+A formal written warning should be used when a situation is a serious direct violation of the rules. Formal written warnings are sent to the player's student email and can be issued through the Discord staff tools which will be explained more in [Module 6](mod6.md#official-written-warnings){ data-preview }.
+
+<br>
+### 2. Kicks
+
+A kick is a stronger immediate warning that removes a player from the server without issuing a ban.
+
+Kicks can be useful for situations such as:
+
+- Escalating an informal warning
+- Temporarily stopping chat spam
+- Removing an [AFK]("Away From Keyboard, or in other terms, not currently at their computer") player when appropriate
+- Other situations where temporarily removing a player is useful
+
+<br>
+Kicks can be issued in-game with:
+```text
+/kick <player> <reason>
+```
+Where `<player>` is the specified username, and `<reason>` is a [string]("Strings are a data type used to represent text. It is a sequence of characters, such as 'Hello world!'").
+
+The reason should briefly explain why the player was removed. This gives the player immediate context for the action and helps avoid confusion when they reconnect.
+
+<br>
+### 3. Mutes
+
+A mute can be used when a player's communication is disrupting others, such as continued chat violations.
+
+The appropriate duration and circumstances for a mute should follow the applicable [standard procedure](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview }.
+
+<br>
+Mutes can be issued in-game with:
+```text
+/mute <player> <length> [reason]
+```
+Where `<length>` determines how long the player will remain muted.
+
+!!! tip "Duration format"
+    Durations use a number followed by a [time unit]("s = Second, m = Minute, h = Hour, d = Day, w = Week, y = Year"). Multiple units can be combined, such as '1d12h' for one day and twelve hours.
+
+<br>
+### 4. Bans
+
+A ban prevents a player from accessing the server for a specified period.
+
+Bans should only be issued when following the applicable [standard procedure](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview } and using the appropriate duration. Depending on the situation, ban lengths can range from one day to permanent.
+
+<br>
+Temporary bans can be issued in-game with:
+```text
+/tempban <player> <length> [reason]
+```
+Temporary bans use the same format as mutes for usernames, length, and reason.
+
+<br>
+Permanent Bans can be issued in-game with:
+```text
+/ban <player> [reason]
+```
+A permanent ban prevents the player from accessing the server indefinitely.
+
+!!! danger "Ban documentation"
+    Bans may also be issued when immediate action is required and no existing procedure adequately covers the situation. **Every ban must be logged!**
 
 ---
 
@@ -75,32 +106,31 @@ A minor violation should not receive an unnecessarily severe punishment. Section
 
 Whenever administrative action is taken, the player should receive a clear explanation of why.
 
-A player may genuinely be unaware that their behavior violated a rule. When issuing an action, provide a brief reason.
+A player may genuinely be unaware that their behavior violated a rule. When issuing an action, always provide a brief reason directly though the command.
 
-```text
-/ban <player> <reason>
-```
+For example `/tempban player1 7d Griefing another players build.` Would issue a temporary ban to player1 that lasts 7 days with the reason, "Griefing another players build."
 
-The reason should also be included in the formal communication associated with the action.
+However, specifying a reason in the command is not sufficient enough documentation. A formal report still needs to written and issued. [Section 4](../../documentation/logging-documentation.md){ data-preview} of the staff documentation contains more information, which will be covered in [Module 6](mod6.md){ data-preview }.
 
 ---
 
 ## De-escalating Difficult Situations
 
-Player interactions can become difficult when players disagree with staff involvement, believe another player is being treated unfairly, or become angry about an action.
+Player interactions can become difficult when players disagree with staff involvement, are attempting to bypass a rule through a loop-hole, or become angry about an action that was taken. 
+It's important to stay calm, and remember the [staff conduct expectations](../../documentation/staff-roles-responsibilities.md#22-staff-conduct-expectations){ data-preview }.
 
-Moderators should always attempt to **de-escalate** these situations.
+Moderators should always attempt to de-escalate these situations when possible.
 
-- Stay calm.
-- Remain neutral and professional.
-- Avoid arguing with the player.
-- Do not instigate or intentionally provoke them.
-- Avoid rage baiting or rude behavior.
-- Explain the applicable rule or procedure.
-- Focus on resolving the situation rather than winning an argument.
+- Remain neutral and professional
+- Avoid arguing with the player
+- Never instigate or intentionally provoke the situation
+- Avoid rage baiting or rude behavior
+- Never act like you are above them, try to be level and understanding
+- Explain the applicable rule or procedure
+- Focus on resolving the situation rather than winning an argument
 
 !!! tip "Keep the goal in mind"
-    The goal of moderation is to maintain a fun, fair, and friendly server—not to prove that a staff member is right.
+    The goal of moderation is to maintain a fun, fair, and friendly server. Not to prove that a staff member is right.
 
 ---
 
@@ -110,11 +140,11 @@ Additional permissions come with additional responsibility.
 
 Staff powers must never be used:
 
-- For personal gain.
-- Out of spite.
-- To troll players.
-- To settle personal disagreements.
-- For entertainment.
+- For personal gain
+- Out of spite
+- To troll players
+- To settle personal disagreements
+- For entertainment purposes
 
 They should only be used for legitimate moderation purposes when a situation requires them.
 
@@ -125,5 +155,9 @@ Staff members are also not immune from administrative action simply because they
 
 ---
 
-!!! tip "Next module"
-    Continue to **Module 2 · Handling Player Reports** to learn how to review reports, gather information, collect evidence, and document incidents.
+<nav class="handbook-next" aria-label="Continue reading">
+  <a href="../mod2/">
+    <span class="handbook-next__copy"><small>Next section</small><strong>Module 2 · Handling Player Reports</strong><span>Learn how to review reports, gather information, collect evidence, and document incidents.</span></span>
+    <span class="handbook-next__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
