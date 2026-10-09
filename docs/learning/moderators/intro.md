@@ -8,12 +8,12 @@ tags:
 
 # Moderators
 
-Welcome to the Moderator learning track. Moderators are the front line of the ERRSA MC staff team, helping players, addressing simple rule violations, and escalating situations that require additional tools or authority.
+Welcome to the Moderator learning section. Moderators are the front line of the ERRSA MC staff team, helping players, addressing simple rule violations, and escalating situations that require additional tools or authority.
 
-This track builds on the knowledge covered in [Server Fundamentals](../fundamentals/intro.md){ data-preview } and provides the practical knowledge needed to moderate the server effectively.
+This section builds on the knowledge covered in [Server Fundamentals](../fundamentals/intro.md){ data-preview } and provides the practical knowledge needed to moderate the server effectively.
 
 !!! warning "Complete the Fundamentals first"
-    The Moderator track assumes you understand the server's general rules, philosophy, systems, and staff expectations. Complete Server Fundamentals before beginning this track.
+    The Moderator section assumes you understand the server's general rules, philosophy, systems, and staff expectations. Complete Server Fundamentals before beginning this section.
 
 ---
 
@@ -40,7 +40,7 @@ These tools should be used carefully and only when appropriate, remember with gr
 
 ## Moderation Expectations
 
-Moderators are expected to follow the staff communication principles and server philosophy covered in the Fundamentals track.
+Moderators are expected to follow the staff communication principles and server philosophy covered in the Fundamentals section.
 
 As a general recap, when taking action:
 
@@ -75,9 +75,9 @@ Escalate to an Admin, developer or Server Lead when a situation requires:
 
 ---
 
-## Moderator Learning Path
+## Moderator Learning Section
 
-By completing the Moderator Learning Track, you should understand:
+By completing the Moderator Learning Section, you should understand:
 
 - Moderation actions & choosing the appropriate response
 - How to review reports, gather information and document incidents

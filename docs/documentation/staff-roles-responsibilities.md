@@ -58,8 +58,8 @@ The Executive Board provides oversight. The Committee Lead directs the server te
 
     **Duties include:**
 
+    - Assisting players with questions or concerns.    
     - Issuing warnings, mutes, kicks, and bans according to procedure.
-    - Assisting players with questions or concerns.
     - Monitoring gameplay and reporting larger issues to admins or developers.
 
     **Access:** No gameplay-enhancing permissions; strictly moderation tools.
@@ -73,8 +73,8 @@ The Executive Board provides oversight. The Committee Lead directs the server te
 
     **Duties include:**
 
-    - Handling escalated player issues.
-    - Using limited creative access when necessary.
+    - Handling escalated player issues and investigations.
+    - Restoring damaged property or stolen items using limited creative access.
     - Supporting developers with non-technical server management.
 
     **Access:** Inherits all Moderator permissions plus limited server management tools.
@@ -86,13 +86,14 @@ The Executive Board provides oversight. The Committee Lead directs the server te
 
     **Duties include:**
 
-    - Adding, configuring, and updating plugins.
-    - Making and editing server builds (spawn, arenas, etc.).
+    - Adding, configuring, or updating plugins & server settings.
     - Handling technical issues or exploits.
+    - Developing & maintaining new server features, external tools, and databases.
+    - Assisting in moderation issues that require restricted server or database access.
 
-    **Access:** Full permissions, including all moderation and creation tools.
+    **Access:** Full server permissions, including all moderation and creation tools.
 
-    **Additional Access:** Apex Hosting control panel for file uploads and advanced configuration.
+    **Additional Access:** Apex Hosting control panel, related tools and databases.
 
 
 ??? info "Minecraft Committee Lead"
@@ -103,18 +104,25 @@ The Executive Board provides oversight. The Committee Lead directs the server te
 
     - Responsible for the entire staff team, including recruitment, training, and removals.
     - Final say on gameplay, rule enforcement, and server direction.
-    - Works closely with developers to implement changes.
+    - Assists in developer and moderation related duties whenever possible.
+    - Works directly with the ERRSA Executive Board for communication, funding, and collaboration.
+
+    **Access:** Full server permissions, including all moderation and creation tools.
+
+    **Additional Access:** All ERRSA MC related tools and databases.
 
 
 ??? info "ERRSA Executive Board"
 
-    **Oversees the ERRSA Minecraft project as part of the Resident Student Association.**
+    **Oversees the ERRSA Minecraft project as part of the Embry-Riddle Resident Student Association.**
 
     **Duties include:**
 
     - Provides funding, oversight, and long-term guidance.
     - Led by the ERRSA club advisor.
     - Does not directly manage staff or server operations, acting more as a board of trustees.
+
+    **Access:** No direct server permissions.
 
 ---
 

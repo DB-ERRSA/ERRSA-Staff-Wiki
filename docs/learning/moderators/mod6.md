@@ -181,5 +181,5 @@ These questions provide a useful final check before completing a moderation inci
 
 ---
 
-!!! success "Moderator track complete"
-    You have completed the core Moderator learning track. Continue reviewing the Staff Documentation, Plugin and Tool references, and Troubleshooting guides as needed while working on the server.
+!!! success "Moderator section complete"
+    You have completed the core Moderator learning section. Continue reviewing the Staff Documentation, Plugin and Tool references, and Troubleshooting guides as needed while working on the server.

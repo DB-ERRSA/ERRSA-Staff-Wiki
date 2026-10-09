@@ -8,17 +8,22 @@ tags:
 
 # Introduction
 
-Welcome to the **Server Fundamentals** learning track. This section is required for all ERRSA MC staff members and provides the foundation you need before moving into role-specific training.
+Welcome to the **Server Fundamentals** learning section. This section is required for all ERRSA MC staff members and provides the foundation you need before moving into role-specific training.
 
 ---
 
 ## What is ERRSA MC?
 
-- **ERRSA MC** is a vanilla-focused SMP server exclusively for Embry-Riddle students.
+- ERRSA MC is a vanilla-focused Minecraft [SMP]("Survival Multiplayer, a specific type of gamemode for Minecraft servers, typically with a more community focus") server exclusively for Embry-Riddle students.
 - The server is developed and maintained by the ERRSA MC Committee.
-- ERRSA provides funding and oversight for the project.
+- [ERRSA]("Embry-Riddle Resident Student Association"), the parent club, provides funding and oversight for the project.
 
 More technical details of the server will be discussed in the [next module](mod1.md){ data-preview }.
+
+!!! info "ERRSA vs. ERRSA MC"
+    ERRSA is the main club, dedicated to building a bigger and better community on campus. It provides organizational oversight and funding to multiple projects, including the Minecraft server.
+
+    ERRSA MC is a committee within ERRSA that focuses specifically on the Minecraft server. The committee manages the server's development, maintenance, staff team, and day-to-day operations.
 
 ---
 

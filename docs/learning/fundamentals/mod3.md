@@ -41,7 +41,7 @@ New players are likely to have more questions than experienced players.
 The registration process used to verify **ERAU student status** is one of the most common sources of questions.
 
 !!! info "Player registration"
-    Review the [player onboarding tutorial](https://www.youtube.com/watch?v=nrxG9c11pdo "Click here to watch the tutorial video!") to familiarize yourself with the registration process.
+    Review the [player onboarding tutorial](https://www.youtube.com/watch?v=nrxG9c11pdo "Click here to watch the tutorial video!") to familiarize yourself with the registration process, or view the [Player Initialization Plugin](../../plugins/server-and-infrastructure/playerinitialization.md){ data-preview } page for technical details.
 
 New players may also be unfamiliar with Minecraft servers that use plugins and may not know commands such as `/warp`, `/wild`, and `/home`.
 

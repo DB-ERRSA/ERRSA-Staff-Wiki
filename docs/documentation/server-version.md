@@ -11,11 +11,11 @@ tags:
 
 Version numbers help staff communicate the scope of a release. The [server changelog](../changelog/releases.md){ data-preview } is the source for the latest **documented** release. Anytime an update is made, whether a large new addtion, or just a simple tweak to a config file, the server version should update and be documented in the changelog.
 
-| Part | When to increase it |
-| --- | --- |
-| Major (`X.0.0`) | Full reset or major overhaul. |
-| Minor (`0.X.0`) | Significant feature, plugin, or gameplay change. |
-| Patch (`0.0.X`) | Small bug fix or configuration adjustment. |
+| Part            | When to increase it                              |
+|-----------------|--------------------------------------------------|
+| Reset (`X.0.0`) | Full server reset.                               |
+| Major (`0.X.0`) | Significant feature, plugin, or gameplay change. |
+| Minor (`0.0.X`) | Small bug fix or configuration adjustment.       |
 
 For example, when updating from version `1.3.4`, a significant new plugin release will become `1.4.0`; but a bug fix will become `1.3.5`. 
 
@@ -28,8 +28,8 @@ Always update the [server changelog](../changelog/releases.md){ data-preview } w
 ---
 
 <nav class="handbook-next" aria-label="Continue reading">
-  <a href="/documentation/">
-    <span class="handbook-next__copy"><small>Back to</small><strong>Handbook index</strong><span>Return to all handbook sections.</span></span>
+  <a href="../6-staff-advancement-and-governance">
+    <span class="handbook-next__copy"><small>Next section</small><strong>6. Staff Advancement & Governance</strong><span>Understand staff advancement, leadership selection, and organizational oversight.</span></span>
     <span class="handbook-next__arrow" aria-hidden="true">→</span>
   </a>
 </nav>

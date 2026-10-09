@@ -13,7 +13,7 @@ This is where staff can learn how ERRSA MC works, build their knowledge of the s
 
 ## How the Learning System Works
 
-The Learning section is divided into five learning tracks:
+The Learning section is divided into five learning sections:
 
 1. [Server Fundamentals](fundamentals/intro.md){ data-preview } — Required for all staff.
 2. [Moderators](moderators/intro.md){ data-preview } — Role-specific training for Moderators.
@@ -21,9 +21,9 @@ The Learning section is divided into five learning tracks:
 4. [Developers](developers/intro.md){ data-preview } — Role-specific training for Developers.
 5. [Server Lead](lead/intro.md){ data-preview } — Role-specific training for the Server Lead.
 
-The Fundamentals track covers the server's general philosophy, rules, systems, procedures, and staff resources without focusing on role-specific responsibilities.
+The Fundamentals section covers the server's general philosophy, rules, systems, procedures, and staff resources without focusing on role-specific responsibilities.
 
-The remaining four tracks provide a nearly complete guide for their respective roles. These tracks are sequential: for example, an Admin should complete the Fundamentals and Moderator tracks before moving into Admin training.
+The remaining four sections provide a nearly complete guide for their respective roles. These sections are sequential: for example, an Admin should complete the Fundamentals and Moderator sections before moving into Admin training.
 
 !!! tip "Learning beyond your role"
     At the top of each page are role tags to show which staff role the content is relevant for. Reading material outside your current role is not required, but it is strongly encouraged. Understanding how other parts of the staff team operate can make you a more effective teammate and prepare you for potential future promotions.

@@ -16,7 +16,7 @@ ERRSA MC uses several centralized systems to make sure information is available 
 
 ## Discord
 
-The ERRSA MC Discord is the primary location for staff communication and collaboration.
+The ERRSA MC [Discord](../../tools/discord/index.md){ data-preview } is the primary location for staff communication and collaboration.
 
 Unless a conversation is intentionally private or sensitive, staff discussion should generally happen in Discord.
 
@@ -50,12 +50,12 @@ The primary source of server documentation is this wiki.
 
 ### Where Information Is Stored
 
-| Information                            | Primary location                 |
-|----------------------------------------|----------------------------------|
-| Staff procedures and server reference  | This wiki                        |
-| Server files and operational data      | Apex Hosting                     |
-| Local server backup                    | Secure local backup              |
-| Sensitive player and registration data | ERRSA Microsoft 365 / SharePoint |
+| Information                            | Primary location                                                                    |
+|----------------------------------------|-------------------------------------------------------------------------------------|
+| Staff procedures and server reference  | This wiki                                                                           |
+| Server files and operational data      | [Apex Hosting](../../tools/apex-hosting/index.md){ data-preview }                   |
+| Local server backup                    | Secure local backup                                                                 |
+| Sensitive player and registration data | ERRSA SharePoint & [SQL Databases](../../tools/phpmyadmin/index.md){ data-preview } |
 
 A local server backup is downloaded once per year and stored in a secure location.
 
@@ -66,22 +66,26 @@ A local server backup is downloaded once per year and stored in a secure locatio
 
 ## Reporting
 
-SWhile answering questions and being a helpful resource to the community is the primary function of staff members, you may also need to respond to player reports and take administrative action.
+While answering questions and being a helpful resource to the community is the primary function of staff members, you may also need to respond to player reports and take [administrative action]("Kicks, jails, mutes, bans, etc.").
 
-All official player reports should be submitted through the designated [Official Report Form](https://forms.fillout.com/t/eRqvr1KnD4us).
+All player reports should be submitted through the [Official Report Form](https://forms.fillout.com/t/eRqvr1KnD4us "Click here to view the official report form!").
 
-Reports are routed directly to the staff channel on Discord for review.
+Reports are routed directly to the staff channel on [Discord](../../tools/discord/index.md){ data-preview } for review.
 
-Administrative actions and their associated documentation are handled through the [staff action process](../../documentation/logging-documentation.md){ data-preview } using our custom Discord bot.
+These forms help keep reports organized and track their status. Standardized Discord reactions indicate whether a report is under investigation, resolved, or inconclusive.
+
+![discord_form_reactions.png](../../assets/images/discord_form_reactions.png)
+
+Administrative actions, and any additional logs or records, must follow the [staff action process](../../documentation/logging-documentation.md){ data-preview } using our custom Discord bot.
 
 !!! info "More detailed moderation training"
-    The Moderator learning track contains detailed instructions for reviewing reports, taking action, and documenting disciplinary incidents.
+    The Moderator learning module contains detailed instructions for reviewing reports, taking action, and documenting disciplinary incidents.
 
 ---
 
 ## Feedback
 
-Similar to reporting, the [Official Feedback Form](https://forms.fillout.com/t/s2oKYJtMGDus) routes submissions to the staff Discord channel so the team can review and discuss them.
+Similar to reporting, the [Official Feedback Form](https://forms.fillout.com/t/s2oKYJtMGDus "Click here to view the official feedback form!") routes submissions to the staff Discord channel so the team can review and discuss them.
 
 Feedback is also encouraged through other appropriate channels. Not every useful suggestion needs to come through the formal form.
 
@@ -102,6 +106,8 @@ As mentioned previously in [section 1.2](../../documentation/introduction.md#12-
 
 !!! warning "Document important actions!"
     If a report, feedback item, server change, or especially an administrative action occurs, it **must be documented somewhere appropriate**.
+
+    Server changes are added to the [Changelog](../../changelog/releases.md){ data-preview }. Administrative and staff items are added to the database in Discord using `/staff log`.
 
 As a general rule, the staff Discord channel is a good place to document an issue so the rest of the team has visibility.
 
@@ -126,11 +132,11 @@ You should now have a general understanding of:
 ---
 
 !!! success "Next steps"
-    You are now ready to continue into the learning tracks for your staff role. Remember, these modules are sequential and each section builds off of the last, so it's recommend to start with moderator.
+    You are now ready to continue into the learning sections for your staff role. Remember, these modules are sequential and each section builds off of the last, so it's recommend to start with moderator.
 
 <nav class="handbook-next" aria-label="Continue reading">
   <a href="../../moderators/intro">
-    <span class="handbook-next__copy"><small>Next section</small><strong>Moderators · Introduction</strong><span>Begin the moderator track to start learning how to use your tools and be successful in your role.</span></span>
+    <span class="handbook-next__copy"><small>Next section</small><strong>Moderators · Introduction</strong><span>Begin the moderator section to start learning how to use your tools and be successful in your role.</span></span>
     <span class="handbook-next__arrow" aria-hidden="true">→</span>
   </a>
 </nav>

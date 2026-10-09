@@ -49,7 +49,7 @@ Outside of reports or Themis, suspicious behavior can also come directly from pl
 
 ## X-Ray
 
-X-ray resource packs, exploits, and mods can be difficult to detect, even with a good anticheat system.
+[X-ray]("X-raying in Minecraft is the act of using custom resource packs, mods, or game glitches to make common blocks (like stone, dirt, and gravel) transparent or invisible so players can see through the ground and find ores, resources, and hidden structures with ease.") resource packs, exploits, and mods can be difficult to detect, even with a good anticheat system.
 
 The two biggest indicators to look for are unusual mining patterns, and an abundance of wealth.
 

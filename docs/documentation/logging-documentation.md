@@ -47,6 +47,35 @@ For a serious incident or suspected honor code violation, preserve the player's 
 
 ---
 
+## 4.6 Discord Bot Downtime
+
+If the ERRSA MC Bot is unavailable and formal communication cannot be sent through `/staff email`, the Server Lead or a Developer may send the email manually using the approved template pinned in the Discord staff channel.
+
+### 4.6.1 Sending the Email
+
+1. A Developer or the Server Lead retrieves the player's email address from the player registration database.
+2. Compose the email using the appropriate template pinned in the Discord staff channel.
+3. CC the Server Lead and `dberrsa@erau.edu` on the email for receipt and recordkeeping purposes.
+4. Send the email and verify that it was sent successfully.
+
+### 4.6.2 Recording the Action
+
+After sending the email, complete the following steps in the Discord staff channel:
+
+1. Send a message stating that an email was sent, followed by the **full contents of the email**.
+2. Send a separate message containing any additional incident details, evidence references, or context that should be included in the staff records.
+
+Keep these messages in the appropriate staff channel so they can be used to complete the formal records later.
+
+### 4.6.3 Restoring Records After Downtime
+
+Once the ERRSA MC Bot is available again, use the information recorded in the staff channel to enter the two recorded logs into the database. Confirm that the records have been added before considering the documentation complete.
+
+!!! warning "Duplicate emails"
+    Another email should **NOT** be sent once the bot is online. The previous email just needs to be added to the administrative actions database.
+
+---
+
 <nav class="handbook-next" aria-label="Continue reading">
   <a href="../server-version/">
     <span class="handbook-next__copy"><small>Next section</small><strong>5. Server versions</strong><span>Understand release numbers and read the changelog.</span></span>

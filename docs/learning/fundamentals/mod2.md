@@ -112,7 +112,7 @@ Players may lose:
 - Farms.
 - Other valuable items.
 
-Even when the stolen items may seem insignificant, the impact on the affected player can be substantial and extremy discouraging.
+Even when the stolen items may seem insignificant, the impact on the affected player can be substantial and extremely discouraging.
 
 !!! important "Protect the community"
     Because ERRSA MC is intended to be a welcoming community, theft and griefing should be taken seriously even when the material loss may appear small.

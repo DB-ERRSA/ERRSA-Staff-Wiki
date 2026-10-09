@@ -1,4 +1,4 @@
-Welcome to the Server Lead Track
+Welcome to the Server Lead Section
 
 Explain the difference between:
 

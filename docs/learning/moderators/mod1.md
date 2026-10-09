@@ -36,7 +36,7 @@ A warning is simply communication with a player about their behavior.
 For relatively minor situations, an informal warning can be given through direct communication such as in-game chat or Discord.
 There is no official format or standard for informal warnings. It is just communication with a player that their behavior is potentially wrong and could result in further action if escalated or continued.
 
-A formal written warning should be used when a situation is a serious direct violation of the rules. Formal written warnings are sent to the player's student email and can be issued through the Discord staff tools which will be explained more in [Module 6](mod6.md#official-written-warnings){ data-preview }.
+A formal written warning should be used when a situation is a serious direct violation of the rules. Formal written warnings are sent to the player's student email and can be issued through the [Discord](../../tools/discord/index.md){ data-preview } staff tools which will be explained more in [Module 6](mod6.md#official-written-warnings){ data-preview }.
 
 <br>
 ### 2. Kicks
@@ -81,7 +81,7 @@ Where `<length>` determines how long the player will remain muted.
 
 A ban prevents a player from accessing the server for a specified period.
 
-Bans should only be issued when following the applicable [standard procedure](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview } and using the appropriate duration. Depending on the situation, ban lengths can range from one day to permanent.
+Bans should only be issued when following the applicable [standard procedure](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview } and using the appropriate duration. Depending on the situation, ban durations can range from a brief 24-hour suspension to an indefinite, permanent suspension.
 
 <br>
 Temporary bans can be issued in-game with:

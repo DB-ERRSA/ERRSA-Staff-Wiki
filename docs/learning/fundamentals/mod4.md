@@ -24,7 +24,7 @@ Player registration is the first major system most players encounter and is one 
 The registration process verifies that players are Embry-Riddle students though email verification before granting them normal server access.
 
 !!! tip "Learn the registration process"
-    Review the [player onboarding tutorial](https://www.youtube.com/watch?v=nrxG9c11pdo "Click here to watch the tutorial video!") and the [PlayerInitialization plugin](../../plugins/server-and-infrastructure/playerinitialization.md){ data-preview } documentation for more information.
+    Review the [player onboarding tutorial](https://www.youtube.com/watch?v=nrxG9c11pdo "Click here to watch the tutorial video!") to familiarize yourself with the registration process, or view the [Player Initialization Plugin](../../plugins/server-and-infrastructure/playerinitialization.md){ data-preview } page for technical details.
 
 ---
 
@@ -69,11 +69,14 @@ Common commands include:
 | `/warp` | Open the server's warp system.                     |
 | `/home` | Manage and teleport to personal homes.             |
 
+!!! info "Resouce for players"
+    For a player-facing guide, reference the [Player Handbook](https://errsa-minecraft-handbook.onrender.com/guide.html?id=travel).
+
 ---
 
 ## World & Map Navigation
 
-ERRSA MC provides a live map that allows players to view the server world outside of Minecraft.
+ERRSA MC provides a [live map](https://errsa-minecraft-handbook.onrender.com/map.html "Click here to view the live online world map!"), using the plugin [DynMap](../../plugins/display-and-media/dynmap.md){ data-preview }, that allows players to view the server world outside of Minecraft.
 
 Players can access it through the "map" tab on the website, or get a direct link in-game by using `/map`.
 
@@ -83,13 +86,13 @@ This map automatically updates within a few minutes when it detects block change
 
 ## Server Browser & Worlds
 
-The `/servers` command opens the server browser menu that allows players to move between the different servers in the network.
+The `/servers` command opens the server browser menu which allows players to move between the different servers in the network using a custom plugin called [EventBridge](../../plugins/server-and-infrastructure/eventbridge.md){ data-preview }.
 
 The exact breakdown of servers and worlds can be seen in [Module 1](mod1.md#worlds-servers){ data-preview }.
 
-Players can access easily claim a plot from anywhere in the world with `/plot auto`, which claims the first available plot and teleports them to it.
+When on the creative plots world, players can use `/plot auto` to claim the first available plot and teleport to it.
 
-Once claimed, they can return at any time with `/plot home`.
+Once claimed, they can return at any time with `/plot home` while on the creative world.
 
 ---
 
@@ -102,6 +105,8 @@ Players can view their progression, see what ranks are available, as well as vie
 Personal playtime stats can be viewed with `/playtime` or `/pt` for short.
 
 Players can compare their playtime with the rest of the server using `/playtime leaderboard` or `/pt top`.
+
+Reference additional information and details on the plugin page: [Rank Progression](../../plugins/gameplay-and-progression/rank-progression.md){ data-preview }
 
 ---
 
@@ -120,6 +125,13 @@ Players can create shops by holding an item and interacting with a chest or barr
 !!! info "Player shops"
     Creating a shop costs money, so players will need to gather and sell some diamonds before joining the economy. This is to prevent new player's from immediately buying late-game gear at the start of the server.
 
+Reference additional information and details:
+
+ - [Essentials](../../plugins/server-and-infrastructure/essentials.md){ data-preview } - Provides the economy, functions, and related commands
+ - [Vault](../../plugins/server-and-infrastructure/vault.md){ data-preview } - An API that allows other plugins to communicate economy information
+ - [QuickShop](../../plugins/gameplay-and-progression/quickshop.md){ data-preview } - Plugin for creating and managing player shops 
+ - [ERRSA MC Core](../../plugins/server-and-infrastructure/errsa-mc-core.md){ data-preview } - Provides the `/sell` command for diamonds
+
 ---
 
 ## Guilds
@@ -131,6 +143,8 @@ All functions related to creating, managing, or viewing guilds can be seen in ga
 Players can view guild stats in-game by visiting the guild hall in spawn or typing `/warp guild_hall`.
 
 The same guild information is also available online on the [website guild page](https://errsa-minecraft-handbook.onrender.com/guilds.html).
+
+Reference additional information and details on the plugin page: [Guilds](../../plugins/gameplay-and-progression/guilds.md){ data-preview }
 
 ---
 
@@ -149,13 +163,15 @@ There are currently three token types:
 Music disc and map art requests go through an approval process.
 
 !!! info "Staff approval"
-    Requests appear in the staff channel in Discord and can be reviewed and approved or denied using the provided in-game command.
+    Requests appear in the staff channel in Discord and **MUST** be reviewed before approving or denying in-game using the provided command.
+
+Reference additional information and details on the plugin page: [VIP-Bridge](../../plugins/server-and-infrastructure/vipbridge.md){ data-preview }
 
 ---
 
 ## VIP
 
-The VIP rank is purchase with real currency and provides a way for players to directly support ERRSA MC financially. Revenue will help cover hosting costs and support events with real physical prizes.
+The VIP rank is purchase with real currency using [Tebex](../../tools/tebex/index.md){ data-preview } and provides a way for players to directly support ERRSA MC financially. Revenue will help cover hosting costs and support events with real physical prizes.
 
 To adhere to the [Minecraft EULA](https://www.minecraft.net/en-us/eula), all rewards are purely cosmetic or provide no function above other players.
 
