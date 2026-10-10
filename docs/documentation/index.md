@@ -1,3 +1,4 @@
+
 <div class="section-landing handbook-landing">
   <header class="section-hero">
     <span class="section-eyebrow">STAFF HANDBOOK</span>
@@ -5,9 +6,13 @@
     <p>Get oriented, understand your responsibilities, and find the procedure you need.</p>
     <span class="section-hero__decoration" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg></span>
   </header>
-  <div class="section-intro"><h2>Handbook index</h2><p>Section numbers can be used as an easy reference. Choose a section to begin.</p></div>
-  
-<nav class="section-card-grid" aria-label="Handbook chapters">
+
+  <div class="section-intro">
+    <h2>Handbook index</h2>
+    <p>Section numbers can be used as an easy reference. Choose a section to begin.</p>
+  </div>
+
+  <nav class="section-card-grid" aria-label="Handbook chapters">
 
     <a class="section-card" href="introduction/">
       <span class="section-card__icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 4H3a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2M3 19V6h8v13zm18 0h-8V6h8zm-7-9.5h6V11h-6zm0 2.5h6v1.5h-6zm0 2.5h6V16h-6z"/></svg></span>
@@ -22,13 +27,17 @@
     </a>
 
     <a class="section-card" href="standard-procedures/">
-      <span class="section-card__icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-4.18C14.25 1.44 12.53.64 11 1.2c-.86.3-1.5.96-1.82 1.8H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-7 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1M7 7h10V5h2v14H5V5h2zm10 4H7V9h10zm-2 4H7v-2h8z"/></svg></span>
+      <span class="section-card__icon" aria-hidden="true">
+        <img src="../assets/images/gavel.svg" alt="" />
+      </span>
       <span class="section-card__body"><strong>3. Standard Procedures</strong><span>Follow the defined steps for staff actions.</span></span>
       <span class="section-card__arrow" aria-hidden="true">↗</span>
     </a>
 
     <a class="section-card" href="logging-documentation/">
-      <span class="section-card__icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17 21-2.75-3 1.16-1.16L17 18.43l3.59-3.59 1.16 1.41M12.8 21H5c-1.11 0-2-.89-2-2V5c0-1.11.89-2 2-2h14c1.11 0 2 .89 2 2v7.8c-.61-.35-1.28-.6-2-.72V5H5v14h7.08c.12.72.37 1.39.72 2m-.8-4H7v-2h5m2.68-2H7v-2h10v1.08c-.85.14-1.63.46-2.32.92M17 9H7V7h10"/></svg></span>
+      <span class="section-card__icon" aria-hidden="true">
+        <img src="../assets/images/folder-check.svg" alt="" />
+      </span>
       <span class="section-card__body"><strong>4. Staff Actions & Records</strong><span>When, where, how, and why to take action and keep records.</span></span>
       <span class="section-card__arrow" aria-hidden="true">↗</span>
     </a>
@@ -40,7 +49,9 @@
     </a>
 
     <a class="section-card" href="6-staff-advancement-and-governance/">
-      <span class="section-card__icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 2 8v2h20V8zm-7 9v6H3v2h18v-2h-2v6h-3v-6h-2v6H9v-6H7v6H5v-6zm-3 10h20v-2H2z"/></svg></span>
+      <span class="section-card__icon" aria-hidden="true">
+        <img src="../assets/images/stairs-up.svg" alt="" />
+      </span>
       <span class="section-card__body"><strong>6. Staff Advancement & Governance</strong><span>Understand staff advancement, leadership selection, and organizational oversight.</span></span>
       <span class="section-card__arrow" aria-hidden="true">↗</span>
     </a>
