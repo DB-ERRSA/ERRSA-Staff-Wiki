@@ -1,103 +1,59 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # Multiverse-Portals
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="Multiverse-Portals" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="Multiverse-Portals" data-server="survival" aria-live="polite"></div>
 
-Multiverse-Portals provides custom portal creation and routing between worlds using Multiverse-Core. On ERRSA MC, this plugin is **installed but not currently in use**.
+## What Is Multiverse-Portals?
 
----
+Multiverse-Portals adds custom portal regions and cross-world portal routing on top of Multiverse-Core.
+
+## ERRSA's Use
+
+ERRSA has Multiverse-Portals installed for future flexibility, but no active ERRSA portals are currently documented. Existing custom portal behavior is handled through other systems.
+
 
 ## Dependencies
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot
-- **Plugins:**
-  - `Multiverse-Core`
+- [Multiverse-Core](multiverse-core.md)
 
 ---
 
-## Permissions Model
+??? note "Common Commands"
 
-!!! note "Current state"
-    No permissions are configured for Multiverse-Portals on ERRSA MC.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-- No LuckPerms integration in use
-- No player or staff access assigned
-- Plugin is effectively inactive
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="Multiverse-Portals" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Common Commands
+??? note "ERRSA Configuration"
 
-!!! note "Not in use"
-    Commands are not part of ERRSA MC workflows at this time.
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | Portal access enforcement | Enabled | Require explicit portal access when portals are used |
+    | Portal cooldown | `1000 ms` | Reduce immediate portal retriggers |
+    | Default to Nether | Disabled | Avoid automatic Nether-style routing |
+    | Nether animation | Enabled | Preserve portal visual behavior |
+    | Vehicle teleport | Disabled | Avoid moving vehicles through custom portals |
+    | Use-on-move | Enabled | Trigger portal detection from movement |
 
-Examples (unused):
-
-- `/mv create <name>` — create portal
-- `/mv modify dest <world>` — set destination
-- `/mv remove <name>` — delete portal
-
-Refer to official docs if activation is planned.
-
----
-
-## Configuration Files
-
-!!! info "Primary config locations"
-- `plugins/Multiverse-Portals/config.yml`
-- `plugins/Multiverse-Portals/portals.yml`
-
-### Current state
-- `portals.yml` is empty:
-  - `portals: {}`
-
-- No active portals are defined on ERRSA MC
+    !!! info "Current use"
+        No active Multiverse-Portals portal definitions are currently documented for ERRSA.
 
 ---
 
-## ERRSA Defaults & Settings
+??? note "Permissions"
 
-!!! note "Current configuration (inactive use)"
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-Key settings from `config.yml`:
-
-- `enforce-portal-access: true`
-- `portal-cooldown: 1000`
-- `portals-default-to-nether: false`
-- `nether-animation: true`
-- `teleport-vehicles: false`
-- `use-on-move: true` 
-
-### Important note
-Although portal access enforcement is enabled, it has **no effect** because:
-
-- No portals exist
-- No permissions are assigned
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="Multiverse-Portals" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-## ERRSA Design Intent
+## Related Resources
 
-!!! note "Why this plugin exists but is unused"
+### Official Resources
 
-- Installed for **future flexibility**
-- Could support:
-  - custom event portals
-  - lobby ↔ game world routing
-  - controlled teleport systems
-
-Currently replaced by:
-
-- Skript-based portal systems
-- Essentials / manual teleport workflows
-
----
-
-
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://modrinth.com/plugin/multiverse-portals){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://mvplugins.org/portals/){ .md-button .md-button--primary }

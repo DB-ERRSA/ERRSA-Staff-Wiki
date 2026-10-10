@@ -1,76 +1,49 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
+# Armor Stand Tools
 
-# [Armor Stand Tools](https://www.spigotmc.org/resources/armor-stand-tools.2237/)
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="ArmorStandTools" data-server="survival" aria-live="polite"></div>
 
-## Purpose
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="ArmorStandTools" data-server="survival" aria-live="polite"></div>
 
-   **Category:** `Gameplay` 
+## What Is Armor Stand Tools?
 
-   Armor Stand Tools (AST) gives trusted staff a safe, in-game GUI/toolset to pose, customize, and manage armor stands for builds, displays, and lobby setpieces—without needing summon commands or NBT editing.
+Armor Stand Tools provides in-game controls for posing and customizing armor stands without requiring raw summon commands or manual NBT editing.
 
----
+## ERRSA's Use
 
-## Dependencies
-
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot 
-- **Plugins:** _(none required)_
-
-  - `WorldGuard` - optional
-
+ERRSA uses Armor Stand Tools for decorative builds, displays, and set pieces where staff need precise control over armor stands.
 
 ---
 
-## Permissions Model
+??? note "Common Commands"
 
-!!! note "Permissions are intentionally scoped"
-    This plugin follows the **parallel permission track model**.  
-    Access is granted by role, not convenience.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-### Player permissions
-- `astools.use` — allows access to standard AST GUI
-
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="ArmorStandTools" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Common Commands
+??? note "ERRSA Configuration"
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | WorldGuard integration | Enabled | Make armor-stand editing respect protected regions |
 
-### Player controls
-- `SHIFT + RIGHT CLICK` — opens AST GUI
-
-
-
----
-
-## Configuration Files
-
-!!! info "Primary config locations"
-- `plugins/ArmorStandTools/config.yml`
-- `plugins/ArmorStandTools/language.yml`
-
-
+    !!! info "Interaction-based"
+        Much of Armor Stand Tools is used through in-game interaction rather than a large command workflow.
 
 ---
 
-## ERRSA Defaults & Settings
+??? note "Permissions"
 
-!!! note "ERRSA-specific configuration choices"
-- `integrateWithWorldGuard`: `true` — Forces AST to respect regions; prevents tampering in protected builds
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-
-This section documents **intentional deviations from plugin defaults**.
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="ArmorStandTools" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-## Common Issues & Fixes
+## Related Resources
 
-_None reported or witnessed_
+### Official Resources
 
-
----
-
-_Last verified: 2026-02-13_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://www.spigotmc.org/resources/armor-stand-tools.2237/){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://www.spigotmc.org/resources/armor-stand-tools.2237/){ .md-button .md-button--primary }

@@ -3,6 +3,7 @@ hooks:
 
 not_in_nav: |
   /plugins/legacy/*.md
+  /plugins/live-inventory.md
 
 site_name: ERRSA Staff Wiki
 site_description: ERRSA Minecraft staff procedures, learning, tools and troubleshooting.
@@ -154,8 +155,7 @@ nav:
   - Plugins:
       - Overview: plugins/index.md
       - Staff Permissions: plugins/staff-permissions.md
-      - Live Server Inventory: plugins/live-inventory.md
-      - template: plugins/template.md
+      - Plugin Page Template: plugins/template.md
 
       - Permissions And Moderation:
           - LuckPerms: plugins/permissions-and-moderation/luckperms.md
@@ -166,7 +166,6 @@ nav:
           - InventoryAudit: plugins/permissions-and-moderation/inventoryaudit.md
 
       - Server And Infrastructure:
-          - AutoUpdateGeyser: plugins/server-and-infrastructure/autoupdategeyser.md
           - ERRSA-MC-Core: plugins/server-and-infrastructure/errsa-mc-core.md
           - ERRSACompatibilityPaper: plugins/server-and-infrastructure/errsacompatibilitypaper.md
           - ERRSAWebBridge: plugins/server-and-infrastructure/errsawebbridge.md
@@ -177,11 +176,9 @@ nav:
           - ProtocolLib: plugins/server-and-infrastructure/protocollib.md
           - PlayerInitialization: plugins/server-and-infrastructure/playerinitialization.md
           - PlaceholderAPI: plugins/server-and-infrastructure/placeholderapi.md
-          - Maintenance: plugins/server-and-infrastructure/maintenance.md
           - Tebex: plugins/server-and-infrastructure/tebex.md
           - VIPBridge: plugins/server-and-infrastructure/vipbridge.md
           - Vault: plugins/server-and-infrastructure/vault.md
-          - viaVersion: plugins/server-and-infrastructure/viaversion.md
           - Hurricane: plugins/server-and-infrastructure/hurricane.md
           - Floodgate: plugins/server-and-infrastructure/floodgate.md
           - MiniMOTD: plugins/server-and-infrastructure/minimotd.md

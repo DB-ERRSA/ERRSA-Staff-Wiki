@@ -5,7 +5,7 @@ hide:
 
 # Staff permissions
 
-This page shows **direct LuckPerms group assignments** captured at the most recent Survival startup. The proxy snapshot can contribute its own group assignments when a Velocity LuckPerms integration is added. Inherited permissions are shown through group relationships; individual user overrides, wildcard resolution and contextual effective permissions are not inferred.
+See which plugins each staff rank has permissions for. Select a plugin to view its individual permissions. This overview shows permissions assigned directly to each rank, not additional permissions inherited from other ranks.
 
 <div id="errsa-staff-permissions" data-root="../../assets/wiki-sync/" aria-live="polite">Loading startup snapshots…</div>
 

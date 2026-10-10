@@ -1,119 +1,63 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # ChunkyBorder
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="ChunkyBorder" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="ChunkyBorder" data-server="survival" aria-live="polite"></div>
 
-ChunkyBorder enforces hard world boundaries using Chunky-generated regions. On ERRSA MC, it is used to **prevent players from traveling beyond defined world limits**, ensuring performance stability and keeping gameplay within designed areas.
+## What Is ChunkyBorder?
 
----
+ChunkyBorder adds persistent world boundaries that work alongside Chunky-generated regions.
+
+## ERRSA's Use
+
+ERRSA uses ChunkyBorder to keep players inside defined world limits. The main survival worlds use large borders, while controlled-purpose worlds use smaller boundaries to prevent unintended exploration and chunk generation.
+
 
 ## Dependencies
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot
-- **Plugins:**
-  - `Chunky` (used to pre-generate the same regions)
-- **External services (if any):**
-  - Optional map plugins (Dynmap, BlueMap, Squaremap, etc.)
+- [Chunky](chunky.md)
 
 ---
 
-## Permissions Model
+??? note "Common Commands"
 
-!!! note "Permissions are intentionally scoped"
-    This plugin follows the **parallel permission track model**.  
-    Access is granted by role, not convenience.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-### Dev permissions
-- Border management is done via:
-  - Config files (`borders.json`)
-  - Console/admin commands (if used)
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="ChunkyBorder" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Configuration Files
+??? note "ERRSA Configuration"
 
-!!! info "Primary config locations"
-- `plugins/ChunkyBorder/config.yml` → behavior settings (messages, effects, restrictions)
-- `plugins/ChunkyBorder/borders.json` → actual world border definitions
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Survival / Nether / End radius | `10,000` blocks | Bound the main survival dimensions |
+    | PlayerInit radius | `500` blocks | Contain the initialization world |
+    | LegacyLake radius | `500` blocks | Contain the legacy tribute world |
+    | PlotWorld radius | `796` blocks | Match the configured creative plot-world footprint |
+    | Border center | `0, 0` | Keep all configured borders centered on origin |
+    | Shape / wrap | `square` / `none` | Use hard square borders without wraparound |
+    | Teleport bypass protection | Ender pearl + chorus fruit blocked | Prevent common teleport methods from crossing the border |
+    | Mob spawns at border | Prevented | Avoid border-edge mob spawning issues |
+    | Visualizer | Enabled; range `8` | Show approaching players the configured world edge |
+    | Dynmap border layer | Enabled | Publish the border to Dynmap |
 
-## ERRSA Defaults & Settings
-
-!!! note "ERRSA-specific configuration choices"
-
-### Border Definitions (`borders.json`)
-- **Main worlds:**
-  - `world` → 10,000 block radius (square)
-  - `world_nether` → 10,000 block radius (square)
-  - `world_the_end` → 10,000 block radius (square)
-
-- **Custom worlds:**
-  - `PlayerInit` → 500 block radius (square)
-  - `LegacyLake` → 500 block radius (square)
-
-- **Center:** `(0, 0)` for all worlds
-- **Shape:** `square`
-- **Wrap:** `none` (players are stopped, not teleported to opposite side)
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
 
 ---
 
-### Border Behavior (`config.yml`)
-- `check-interval: 20` — checks every second (20 ticks)
-- `message: '&cYou have reached the edge of this world.'` — user feedback
-- `use-action-bar: true` — message shown in action bar instead of chat
-- `effect: ender_signal` — visual feedback
-- `sound: entity_enderman_teleport` — audio feedback
+??? note "Permissions"
 
-### Movement Restrictions
-- `prevent-mob-spawns: true` — mobs cannot spawn outside border
-- `prevent-enderpearl: true` — blocks teleport bypass
-- `prevent-chorus-fruit: true` — blocks teleport bypass
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-### Visual Border System
-- `visualizer-enabled: true` — shows border visually when nearby
-- `visualizer-range: 8` — activates within 8 blocks
-- `visualizer-color: 20A0FF` — light blue border
-
-### Map Integration
-- Enabled for:
-  - `bluemap`
-  - `dynmap`
-  - `pl3xmap`
-  - `squaremap`
-- `color: FF0000` — red border on maps
-- `label: World Border`
-- `hide-by-default: false`
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="ChunkyBorder" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-## ERRSA Design Intent
+## Related Resources
 
-!!! note "Why these settings exist"
+### Official Resources
 
-- **10,000 radius (main worlds):**
-  - Large enough for exploration
-  - Small enough to prevent infinite chunk generation
-
-- **500 radius (custom worlds):**
-  - Keeps controlled environments (tutorials, events)
-  - Prevents players escaping designed areas
-
-- **Square shape:**
-  - Matches Chunky generation patterns
-  - Maximizes usable area vs circle
-
-- **Teleport prevention:**
-  - Prevents bypass using:
-    - Ender pearls
-    - Chorus fruit
-
-- **Visualizer enabled:**
-  - Improves player clarity instead of “invisible wall confusion”
----
-
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://modrinth.com/plugin/chunkyborder){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/pop4959/ChunkyBorder/wiki){ .md-button .md-button--primary }

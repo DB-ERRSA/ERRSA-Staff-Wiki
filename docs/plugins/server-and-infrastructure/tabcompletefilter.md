@@ -1,61 +1,52 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # TABCompleteFilter
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="TabCompleteFilter" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Moderation`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="TabCompleteFilter" data-server="survival" aria-live="polite"></div>
 
-TABCompleteFilter controls which commands appear in tab-complete for players, helping reduce clutter and prevent exposure of sensitive or admin-only commands.
+## What Is TABCompleteFilter?
 
----
+TABCompleteFilter controls which commands and command arguments are exposed through Minecraft tab completion.
 
-## Dependencies
+## ERRSA's Use
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper  
-- **Plugins:**
-  - *(None required — integrates with all commands automatically)*
-- **External services (if any):**
-  - None
+ERRSA uses it to reduce command clutter and avoid advertising commands that players should not normally see, while actual command authorization remains controlled by permissions.
 
 ---
 
+??? note "Common Commands"
 
-## Configuration Files
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when a plugin does not expose a reliable command-permission relationship.
 
-!!! info "Primary config locations"
-- `plugins/TABCompleteFilter/config.yml`
-- `plugins/TABCompleteFilter/args.yml`
-- `plugins/TABCompleteFilter/lang.yml`
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="TabCompleteFilter" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## ERRSA Defaults & Settings
+??? note "ERRSA Configuration"
 
-!!! note "ERRSA-specific configuration choices"
+    | Setting / Behavior | ERRSA Value | Purpose |
+    |--------------------|-------------|---------|
+    | OP filter bypass | Disabled | Keep command visibility controlled consistently |
+    | Default command visibility | Curated whitelist | Show only approved player-facing commands |
+    | Custom argument suggestions | Enabled | Provide controlled suggestions for selected commands |
+    | Permission checks | Required | Visibility does not replace actual command permissions |
 
-- `op-player-filter-bypass`: `false` — OP players are still filtered (forces proper permission structure) 
-
-- `groups.default`: **Extensive curated command whitelist** — only approved commands appear in tab-complete
-  - Includes essentials commands (`/spawn`, `/home`, `/warp`, etc.)  
-  - Includes moderation commands (`/report`, `/feedback`)  
-  - Includes claim + gameplay commands  
-
-- `Command visibility is whitelist-based` — commands not listed are hidden from players  
-
-- `custom-args.enabled`: `true` — enables controlled tab suggestions
-  - `/warp` → suggests `spawn`, `tutorial`, `legacy-lake`  
-  - `/help` → limited predefined suggestions  
-
-- `Permission-based command visibility` — players must still have actual command permission even if shown  
-
-- `lang.yml customized` — consistent formatting and messaging prefix (`&6&lTCF`) 
+    !!! info "Visibility is not permission"
+        Hiding or showing a command in tab completion does not grant access. LuckPerms remains the authority for command permissions.
 
 ---
 
+??? note "Permissions"
 
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="TabCompleteFilter" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://www.spigotmc.org/resources/tabcompletefilter.75208/){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://lees-plugins.gitbook.io/tabcompletefilter){ .md-button .md-button--primary }

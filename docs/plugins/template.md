@@ -1,77 +1,47 @@
----
-tags:
-  - <CATEGORY>
----
+# Plugin Page Template (Authoring Reference)
 
-## What Is <Plugin Name>?
+This is a reference for wiki editors, not a live plugin page. Copy the example below into a new plugin Markdown file and replace the sample values before publishing. The template is available in the plugin navigation for staff editors. It is an authoring reference, not an installed plugin.
 
-<Brief explanation of what the plugin is and what it generally does, independent of ERRSA.>
+```markdown
+# ExamplePlugin
+
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="ExamplePlugin" data-server="survival" aria-live="polite"></div>
+
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="ExamplePlugin" data-server="survival" aria-live="polite"></div>
+
+## What Is ExamplePlugin?
+
+Explain what the plugin does.
 
 ## ERRSA's Use
 
-<Explain why ERRSA has the plugin and how it fits into the server.>
+Explain how ERRSA uses it.
 
-<List the major ways ERRSA uses the plugin.>
+## Dependencies
 
----
+- [Vault](../server-and-infrastructure/vault.md)
 
-## Features & Functions
+## Required By
 
-<OPTIONAL — Only include this section when the plugin has multiple important features that need explanation.>
-
-### <Feature>
-
-<What the feature does and how ERRSA uses it.>
-
- ---
-
-### <Feature>
-
-<What the feature does and how ERRSA uses it.>
+- [OtherPlugin](../server-and-infrastructure/other-plugin.md)
 
 ---
 
 ??? note "Common Commands"
 
-    <Only include commands that staff or players actually use on ERRSA.>
-
-    | Command | Description | Who Can Use It |
-    |---------|-------------|----------------|
-    | /command | <What it does> | <Rank / Role> |
-    | /command | <What it does> | <Rank / Role> |
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="ExamplePlugin" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-??? note "Plugin Configuration"
+??? note "ERRSA Configuration"
 
-    <Explain any configuration values that ERRSA has intentionally changed from the plugin's defaults.>
-
-    | Setting | Default | ERRSA Value | Purpose |
-    |---------|---------|-------------|---------|
-    | <setting> | <default> | <value> | <Why ERRSA changed it> |
-    | <setting> | <default> | <value> | <Why ERRSA changed it> |
-
-    !!! info "Unchanged settings"
-        Settings that use the plugin's default value are not listed here. This section only documents intentional ERRSA configuration changes.
+    Document relevant production configuration without secrets.
 
 ---
 
 ??? note "Permissions"
 
-    <List the relevant permissions granted by the plugin. Only include permissions that are actually used by ERRSA.>
-
-    | Permission | Description | Granted To |
-    |------------|-------------|------------|
-    | <permission> | <What it allows> | <Rank> |
-    | <permission> | <What it allows> | <Rank> |
-
-    !!! info "Permission inheritance"
-        <Explain any relevant LuckPerms inheritance or permission behavior.>
-
-        <OR>
-
-    !!! info "Permission inheritance"
-        - Chunky is controlled via [Developer wildcard permissions]("Developers inherit the wildcard, or star symbol '*', permission, which automatically grants access to all permissions.") only. 
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="ExamplePlugin" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
@@ -79,10 +49,8 @@ tags:
 
 ### Official Resources
 
-- [Plugin Download ↗](<download-url>){ .md-button .md-button--primary }
-- [Plugin Documentation ↗](<documentation-url>){ .md-button .md-button--primary }
+- [Plugin Download ↗](https://example.org/download){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://example.org/docs){ .md-button .md-button--primary }
+```
 
-### ERRSA Resources
-
-- [<Relevant Tutorial>](...)
-- [<Relevant Documentation>](...)
+**When adapting:** Keep **Dependencies** and **Required By** only when actual relationships exist. Include **Related Resources** only when you have a verified real resource URL. Keep official buttons consistently named **Plugin Download** and **Plugin Documentation**. For custom plugins without published links, omit the resources heading. Set the `data-plugin` name exactly as reported by Wiki Sync.

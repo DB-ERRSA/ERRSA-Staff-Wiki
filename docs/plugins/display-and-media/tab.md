@@ -1,113 +1,66 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # TAB
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="TAB" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Cosmetics`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="TAB" data-server="survival" aria-live="polite"></div>
 
-TAB manages the tablist, nametags, prefixes, header/footer, and player sorting to display ranks and server information cleanly on ERRSA MC.
+## What Is TAB?
 
----
+TAB manages the player tab list, nametags, rank formatting, sorting, headers, footers, and related display features.
+
+## ERRSA's Use
+
+ERRSA uses TAB to present player ranks and server information consistently. It integrates with LuckPerms and PlaceholderAPI so displayed information follows the server's live permission and placeholder data.
+
 
 ## Dependencies
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper
-- **Plugins:**
-  - `LuckPerms` (for prefixes/suffixes)
-  - `PlaceholderAPI` (for dynamic placeholders)
+- [PlaceholderAPI](../server-and-infrastructure/placeholderapi.md)
+
+
+## Required By
+
+- [Guilds](../gameplay-and-progression/guilds.md)
 
 ---
 
-## Permissions Model
+??? note "Common Commands"
 
-!!! note "Permissions are intentionally scoped"
-    This plugin follows the **parallel permission track model**.  
-    Access is granted by role, not convenience.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-### Player permissions
-- None — formatting is automatic
-
-### Mod permissions
-- `tab.staff` — used for staff grouping 
-- `tab.seevanished` — see players in tab that are /vanished
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="TAB" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Configuration Files
+??? note "ERRSA Configuration"
 
-!!! info "Primary config locations"
-- `plugins/TAB/config.yml`
-- `plugins/TAB/groups.yml`
-- `plugins/TAB/users.yml`
-- `plugins/TAB/animations.yml`
-- `plugins/TAB/messages.yml`
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | Prefix/suffix source | LuckPerms | Keep player rank formatting synchronized with permissions |
+    | Header/footer | ERRSA branded | Display server/community information in the tab list |
+    | Group sorting | Custom staff/player priority | Keep higher staff roles and configured groups ordered consistently |
+    | Scoreboard teams / nametags | Enabled | Control nametag formatting and collision behavior |
+    | Player-list objective | Enabled | Display ping information |
+    | Scoreboard | Disabled | TAB is not used for the sidebar scoreboard |
+    | Bossbar | Disabled | TAB is not used for persistent bossbar content |
+    | Layout system | Disabled | Use the normal player list rather than a custom layout |
 
----
-
-## ERRSA Defaults & Settings
-
-!!! note "ERRSA-specific configuration choices"
-
-### Rank Integration
-- Uses LuckPerms for prefixes/suffixes:  
-  `%luckperms-prefix%` and `%luckperms-suffix%` 
+    !!! info "Dependencies"
+        ERRSA's TAB presentation relies on LuckPerms and PlaceholderAPI for dynamic rank and server information.
 
 ---
 
-### Header & Footer
-- Custom branded header:
-  - ERAU + ERRSA branding
-  - Player welcome message
-  - Online player + staff count 
+??? note "Permissions"
+
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="TAB" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-### Sorting System
-- Custom group priority order:
-  - `dev → admin → mod → advisor → execboard → execcoord → hallrep → legacy → premium → errsa → user → default` 
+## Related Resources
 
----
+### Official Resources
 
-### Nametags & Tablist
-- `scoreboard-teams.enabled: true` — enables nametags  
-- `enable-collision: true` — collision control active  
-- `anti-override: true` — prevents other plugins from overriding formatting 
-
----
-
-### Playerlist Features
-- `playerlist-objective.enabled: true` — shows ping in tablist  
-- Fancy display: `"Ping: %ping%"` 
-
----
-
-### Disabled Features
-- Scoreboard: disabled  
-- Bossbar: disabled  
-- Layout system: disabled  
-
----
-
-### Animations
-- Custom animations for:
-  - Header/footer effects  
-  - Website display (`campusgroups.erau.edu/errsa`)  
-  - Time/date rotation 
-
----
-
-### User Customization
-- Example:
-  - Verified users receive suffix `"&b&lVerified"`
-
----
-
-This section documents **intentional deviations from plugin defaults**.
-
----
-
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://modrinth.com/plugin/tab-was-taken){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/NEZNAMY/TAB/wiki){ .md-button .md-button--primary }

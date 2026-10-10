@@ -1,52 +1,55 @@
----
-tags:
-  - MOD
-  - ADMIN
-  - DEV
-  - SERVER LEAD
----
+# WarpGUI
+
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="WarpGUI" data-server="survival" aria-live="polite"></div>
+
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="WarpGUI" data-server="survival" aria-live="polite"></div>
 
 ## What Is WarpGUI?
 
-Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.
+WarpGUI is a custom ERRSA plugin that provides server-specific warp and teleport interfaces.
 
 ## ERRSA's Use
 
-ERRSA documents **WarpGUI** as part of the **Gameplay And Progression** plugin group on the Survival server.
-
-!!! warning "Needs live verification"
-    The older plugin files did not document a verified ERRSA-specific purpose beyond its category and installed status. Verify behavior against the live server before changing configuration.
+ERRSA uses WarpGUI to support player and staff warp workflows through a custom interface. Administrative warp functions remain permission-controlled.
 
 ---
 
 ??? note "Common Commands"
 
-    No staff/player commands were verified in the older plugin documentation.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
+
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="WarpGUI" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-??? note "Plugin Configuration"
+??? note "ERRSA Configuration"
 
-    No intentional ERRSA-specific configuration changes were documented in the older plugin files.
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Teleport delay | `5 s` | Add a short delay before teleporting |
+    | Warp cooldown | `300 s` | Limit repeated normal warp use |
+    | Admin warp cooldown | `0 s` | Allow unrestricted administrative warp use |
+    | Home cooldown | `300 s` | Limit repeated home teleports |
+    | Warp cost | `$0` | Keep normal warp use free |
+    | Set-warp cost | `$500` | Charge for creating a warp |
+    | Set-home cost | `$0` | Keep home creation free |
+    | Home limits | Default `1`, VIP `3`, Admin `10` | Scale home capacity by role |
+    | Warp categories | `9` configured | Organize warps into curated menu categories |
 
-    !!! info "Unchanged / undocumented settings"
-        Do not assume a plugin default or live value from this page when no setting is listed. Check the live configuration first.
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
 
 ---
 
 ??? note "Permissions"
 
-    | Permission | Description | Granted To |
-    |------------|-------------|------------|
-    | `warpgui.homes.admin` | Direct LuckPerms assignment (`grant`, global) | mod |
-    | `warpgui.admindelwarp` | Direct LuckPerms assignment (`grant`, global) | admin |
-    | `warpgui.createadminwarp` | Direct LuckPerms assignment (`grant`, global) | admin |
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-    !!! info "Permission inheritance"
-        Direct group assignments were carried over from the September 26, 2026 staff permission export. Check live LuckPerms inheritance and contexts before changing access.
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="WarpGUI" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
 ## Related Resources
 
-No approved external resource URL was present in the older plugin files.
+!!! info "Documentation coming soon"
+    This is a custom ERRSA plugin. Documentation will be added here when available.

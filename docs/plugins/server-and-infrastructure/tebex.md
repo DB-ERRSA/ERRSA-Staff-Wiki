@@ -1,45 +1,58 @@
----
-tags:
-  - MOD
-  - ADMIN
-  - DEV
-  - SERVER LEAD
----
+# Tebex
+
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="Tebex" data-server="survival" aria-live="polite"></div>
+
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="Tebex" data-server="survival" aria-live="polite"></div>
 
 ## What Is Tebex?
 
-Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.
+Tebex is the server-side connector for the Tebex storefront platform, allowing configured purchases to deliver commands or rewards to a Minecraft server.
 
 ## ERRSA's Use
 
-ERRSA documents **Tebex** as part of the **Server And Infrastructure** plugin group on the Survival server.
-
-!!! warning "Needs live verification"
-    The older plugin files did not document a verified ERRSA-specific purpose beyond its category and installed status. Verify behavior against the live server before changing configuration.
+ERRSA has the server-side integration available for a future player store, including potential VIP purchases. The storefront is not currently configured for normal player purchases, so changes should be coordinated as infrastructure work.
 
 ---
 
 ??? note "Common Commands"
 
-    No staff/player commands were verified in the older plugin documentation.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when a plugin does not expose a reliable command-permission relationship.
+
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="Tebex" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-??? note "Plugin Configuration"
+??? note "ERRSA Configuration"
 
-    No intentional ERRSA-specific configuration changes were documented in the older plugin files.
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | `/buy` command | Enabled | Expose the Tebex storefront command in-game |
+    | Update checks | Enabled | Surface plugin updates |
+    | Automatic reporting | Enabled | Allow Tebex diagnostic reporting |
+    | Verbose logging | Disabled | Avoid unnecessary production logging |
+    | GUI title | `Server Shop` | Use the configured in-game store menu title |
+    | Proxy mode | Disabled | Run this instance as a normal backend server integration |
+    | Server secret | Configured — omitted | Authenticate the server to Tebex without exposing the secret |
 
-    !!! info "Unchanged / undocumented settings"
-        Do not assume a plugin default or live value from this page when no setting is listed. Check the live configuration first.
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
+
+    !!! warning "Operational note"
+        The plugin is configured for integration, but storefront/package availability is controlled from Tebex and may remain inactive.
 
 ---
 
 ??? note "Permissions"
 
-    No matching direct staff permission nodes were documented in the supplied staff group export. This does not prove the plugin has no inherited, wildcard, default, or user permissions.
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="Tebex" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
 ## Related Resources
 
-No approved external resource URL was present in the older plugin files.
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/tebex/versions){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://docs.tebex.io/creators/tebex-control-panel/game-servers/minecraft-java-edition){ .md-button .md-button--primary }

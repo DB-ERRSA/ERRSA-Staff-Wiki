@@ -1,148 +1,60 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # FastAsyncVoxelSniper
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="FastAsyncVoxelSniper" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="FastAsyncVoxelSniper" data-server="survival" aria-live="polite"></div>
 
-FastAsyncVoxelSniper (FAVS) is a high-performance terrain editing tool built on FAWE. On ERRSA MC, it is used for **advanced world shaping, terrain design, and large-scale edits** beyond what standard WorldEdit provides.
+## What Is FastAsyncVoxelSniper?
 
----
+FastAsyncVoxelSniper is a high-performance brush-based terrain editing tool built for large-scale world shaping.
+
+## ERRSA's Use
+
+ERRSA uses it for advanced terrain design and development work where brush-based editing is faster than normal block-by-block building.
+
 
 ## Dependencies
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot
-- **Plugins:**
-  - `FastAsyncWorldEdit (FAWE)`
-
+- [FastAsyncWorldEdit](fastasyncworldedit.md)
 
 ---
 
-## Permissions Model
+??? note "Common Commands"
 
-!!! note "Permissions are intentionally scoped"
-    This plugin follows the **parallel permission track model**.  
-    Access is granted by role, not convenience.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-### Dev permissions
-- Access is restricted operationally:
-  - OP status
-  - Console
-
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="FastAsyncVoxelSniper" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Common Commands
+??? note "ERRSA Configuration"
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | Session persistence | Enabled | Preserve brush settings between sessions |
+    | Default brush size | `3` | Keep the starting brush conservative |
+    | LiteSniper max brush size | `7` | Restrict lighter-use brush size |
+    | Brush warning threshold | `100` | Warn before very large edits |
+    | Copy/Paste block limit | `10,000` | Limit extremely large copy operations |
+    | Large-edit safety caps | `5,000,000` blocks | Prevent unbounded destructive edits |
+    | Restricted materials | `barrier`, `bedrock` | Reduce accidental edits to critical blocks |
 
-
-### Dev commands
-- Full brush and editing control via `/vs` system
-- `/vs` — base VoxelSniper command
-- `/b <brush>` — select brush
-- `/v <block>` — set voxel material
-- `/vr <block>` — set replace material
-- `/b <size>` — set brush size
-
-!!! warning
-    These commands can modify **millions of blocks instantly**.  
-    Do not grant access to untrusted users.
+    !!! warning "High-impact tool"
+        Large brushes can modify huge areas quickly. Test unfamiliar brushes in a safe area first.
 
 ---
 
-## Configuration Files
+??? note "Permissions"
 
-!!! info "Primary config locations"
-- `plugins/FastAsyncVoxelSniper/config.yml`
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
----
-
-## ERRSA Defaults & Settings
-
-!!! note "ERRSA-specific configuration choices"
-
-### Core Behavior
-- `persist-sessions-on-logout: true` — brush settings persist between sessions
-- `default-brush-size: 3` — safe default
-- `litesniper-max-brush-size: 7` — restricted tier limit
-- `brush-size-warning-threshold: 100` — warns on dangerous sizes
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="FastAsyncVoxelSniper" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-### Safety Limits
-- `Copy Pasta block-limit: 10000`
-- `Move max-block-count: 5000000`
-- `Set selection-size-max: 5000000`
-- `Shell Set max-size: 5000000`
-- `Stencil max-area-volume: 5000000`
+## Related Resources
 
-!!! note
-    These limits are intentionally high for development use but still prevent catastrophic edits.
+### Official Resources
 
----
-
-### Restricted Materials
-- `minecraft:barrier`
-- `minecraft:bedrock`
-
-!!! note
-    Prevents accidental or destructive edits to critical blocks.
-
----
-
-### Default Editing Behavior
-- `default-block-material: air`
-- `default-replace-block-material: air`
-- `default-voxel-height: 1`
-
----
-
-### Brush System Defaults (Important Highlights)
-Only notable ones for ERRSA MC usage:
-
-- **Copy/Paste system limited to 10k blocks**
-- **Tree generation defaults to oak**
-- **Entity brush defaults to zombie**
-- **Ocean/terrain brushes capped within safe Y ranges**
-- **Punish/utility brushes exist but should not be used in production gameplay**
-
----
-
-## ERRSA Design Intent
-
-!!! note "Why these settings exist"
-
-- Keep **default usage safe**
-- Allow **large-scale edits when needed**
-- Prevent:
-  - accidental massive edits
-  - editing bedrock/barrier
-- Maintain **performance stability**
-
----
-
-### Operational guidelines
-
-- Always:
-  - Test brushes in a safe area first
-  - Start with small sizes
-- Before large edits:
-  - Ensure FAWE undo history is available
-- Avoid:
-  - Using extremely large brush sizes (>100) unless necessary
-
----
-
-### Relationship to other plugins
-
-- **FAWE** → handles actual block changes and undo system  
-- **FAVS** → provides brush-based editing interface  
-
----
-
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://modrinth.com/plugin/fastasyncvoxelsniper){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://intellectualsites.gitbook.io/fastasyncvoxelsniper){ .md-button .md-button--primary }

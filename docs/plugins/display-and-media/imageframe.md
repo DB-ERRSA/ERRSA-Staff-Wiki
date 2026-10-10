@@ -1,45 +1,63 @@
----
-tags:
-  - MOD
-  - ADMIN
-  - DEV
-  - SERVER LEAD
----
+# ImageFrame
+
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="ImageFrame" data-server="survival" aria-live="polite"></div>
+
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="ImageFrame" data-server="survival" aria-live="polite"></div>
 
 ## What Is ImageFrame?
 
-Installed Survival plugin in display and media. Detailed purpose has not been verified yet.
+ImageFrame displays external images on Minecraft maps and item frames, allowing custom graphics to appear inside the game.
 
 ## ERRSA's Use
 
-ERRSA documents **ImageFrame** as part of the **Display And Media** plugin group on the Survival server.
+ERRSA uses ImageFrame for custom images and visual displays within server builds. Imported images can affect map IDs and world presentation, so staff should avoid deleting or replacing active image data without checking where it is used.
 
-!!! warning "Needs live verification"
-    The older plugin files did not document a verified ERRSA-specific purpose beyond its category and installed status. Verify behavior against the live server before changing configuration.
+
+## Required By
+
+- [VIPBridge](../server-and-infrastructure/vipbridge.md)
 
 ---
 
 ??? note "Common Commands"
 
-    No staff/player commands were verified in the older plugin documentation.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
+
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="ImageFrame" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-??? note "Plugin Configuration"
+??? note "ERRSA Configuration"
 
-    No intentional ERRSA-specific configuration changes were documented in the older plugin files.
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Language | `en_us` | Use English plugin messages |
+    | Empty maps required | Enabled | Require map items for image-map creation outside Creative |
+    | Maximum image-map size | `100` | Limit oversized image-map creations |
+    | Maximum image file size | `50 MiB` | Reject excessively large source images |
+    | Processing timeout | `60 s` | Stop image processing that takes too long |
+    | Parallel processing | `1` | Limit simultaneous image processing work |
+    | Creation limits | Default `10`, VIP `15`, Moderator `20` | Cap image-map ownership by permission group |
+    | Upload service | Enabled on port `8517` | Provide ImageFrame upload handling |
+    | Storage | File-based | Store ImageFrame data locally; database credentials are not used for active storage |
+    | Updater | Enabled | Check for plugin updates |
 
-    !!! info "Unchanged / undocumented settings"
-        Do not assume a plugin default or live value from this page when no setting is listed. Check the live configuration first.
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
 
 ---
 
 ??? note "Permissions"
 
-    No matching direct staff permission nodes were documented in the supplied staff group export. This does not prove the plugin has no inherited, wildcard, default, or user permissions.
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="ImageFrame" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
 ## Related Resources
 
-No approved external resource URL was present in the older plugin files.
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/imageframe){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://modrinth.com/plugin/imageframe){ .md-button .md-button--primary }

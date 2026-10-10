@@ -1,39 +1,59 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # MiniMOTD
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="MiniMOTD" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="MiniMOTD" data-server="survival" aria-live="polite"></div>
 
-MiniMOTD controls the server list display shown in the Minecraft multiplayer menu, including the MOTD text, server icon, and displayed max player count for ERRSA MC.
----
+## What Is MiniMOTD?
 
-## Configuration Files
+MiniMOTD controls how the Minecraft server appears in the multiplayer server list, including its MOTD, icon, and displayed player-count information.
 
-!!! info "Primary config locations"
-- `plugins/MiniMOTD/main.conf`
-- `plugins/MiniMOTD/icons/` (if applicable)
-- `plugins/MiniMOTD/extra-configs/` (if applicable)
+## ERRSA's Use
 
----
+ERRSA uses MiniMOTD to present consistent server-list branding and status information before a player joins.
 
-## ERRSA Defaults & Settings
 
-!!! note "ERRSA-specific configuration choices"
-- `icon-enabled: true` — server list icon is enabled  
-- `motd-enabled: true` — custom MOTD is enabled  
-- `max-players: 500` — displayed max player count is set to 500  
-- `max-players-enabled: true` — custom max player count override is active  
-- `fake-players-enabled: false` — player count is not artificially inflated  
-- `disable-player-list-hover: false` — player hover list remains visible  
-- `hide-player-count: false` — player count is shown normally  
-- `update-checker: true` — plugin checks GitHub for updates at launch  
+## Dependencies
 
-This section documents **intentional deviations from plugin defaults**.
+- [Fabric API](https://modrinth.com/mod/fabric-api)
+
+!!! note "Fabric installation only"
+    Fabric API is required when running the **Fabric version** of MiniMOTD. It is not a dependency for the Paper or Velocity versions.
 
 ---
 
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+??? note "Common Commands"
+
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when a plugin does not expose a reliable command-permission relationship.
+
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="MiniMOTD" data-server="survival" aria-live="polite">Loading synced commands…</div>
+
+---
+
+??? note "ERRSA Configuration"
+
+    | Setting / Behavior | ERRSA Value | Purpose |
+    |--------------------|-------------|---------|
+    | Server icon | Enabled | Display ERRSA server branding |
+    | Custom MOTD | Enabled | Show ERRSA server-list messaging |
+    | Displayed max players | `500` | Match ERRSA server presentation |
+    | Fake players | Disabled | Do not inflate player counts |
+    | Hide player count | Disabled | Show the normal player count |
+    | Update checker | Enabled | Surface new releases |
+
+---
+
+??? note "Permissions"
+
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="MiniMOTD" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/minimotd){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/jpenilla/MiniMOTD/wiki){ .md-button .md-button--primary }
