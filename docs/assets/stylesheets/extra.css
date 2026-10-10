@@ -427,3 +427,29 @@
     min-width: 48rem;
   }
 }
+
+/* Align synced command-table headers with their values (four shared columns). */
+.md-typeset .errsa-plugin-commands table.errsa-command-table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+.md-typeset .errsa-command-table col:nth-child(1) { width: 16%; }
+.md-typeset .errsa-command-table col:nth-child(2) { width: 38%; }
+.md-typeset .errsa-command-table col:nth-child(3) { width: 23%; }
+.md-typeset .errsa-command-table col:nth-child(4) { width: 23%; }
+.md-typeset .errsa-command-table thead { display: table-header-group; }
+.md-typeset .errsa-command-table tbody { display: table-row-group; }
+.md-typeset .errsa-command-table tr { display: table-row; }
+.md-typeset .errsa-command-table th,
+.md-typeset .errsa-command-table td {
+  display: table-cell;
+  box-sizing: border-box;
+  text-align: left;
+  vertical-align: top;
+  padding: .45rem .55rem;
+  overflow-wrap: anywhere;
+}
+.md-typeset .errsa-command-table td code { white-space: normal; overflow-wrap: anywhere; }
+.md-typeset .errsa-command-table td.errsa-command-access { min-width: 0; }
