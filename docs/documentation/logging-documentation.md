@@ -8,7 +8,7 @@ tags:
 
 # 4. Staff Actions & Records
 
-**One place to start: Discord → MC Staff Action Center.** Use `/staff log` for internal records, `/staff email` for player notices, and `/staff search` to find what happened before. The bot is the **front door** to the central staff records system; ordinary Discord messages are not a substitute for a saved record.
+**This section explains how to investigate incidents, send official player notices, and keep staff records organized.** You’ll learn which Discord bot command to use, what information to enter, where to save evidence, and how to find, update, and close existing records. Start in **Discord → MC Staff Action Center** using `/staff log`, `/staff email`, or `/staff search`.
 
 !!! tip "What should I use?"
     | What happened? | Record it here | Why? |
@@ -21,7 +21,7 @@ tags:
 
 **Rule of thumb:** Create **one main log per issue**, then add notes as work progresses. Do not create a new record for every update. Send official emails separately when required; cross-reference the related log using its existing bot record ID (if shown) or its exact title. For incidents involving multiple record types, use the shared case reference described in [4.4](#44-incident-records).
 
-The records service is designed to store staff logs and communication history centrally through Power Automate and the database. It is not a file vault: retain screenshots, exported logs, and other sensitive evidence in an **approved, staff-restricted evidence location**, then record a reference in the log. Ask the Server Lead where to store evidence if no approved location has been designated.
+**Keep the record in the bot; keep evidence in secure storage.** The bot brings staff logs and communication history together, but it does not store evidence files. Save screenshots, exported logs, and other sensitive files in an **approved location accessible only to authorized staff**. Then add a short description and a reference to that evidence in the relevant staff log. If you’re unsure where a file belongs, ask the Server Lead before uploading it.
 
 ---
 
@@ -97,6 +97,33 @@ Use [4.2](#42-send-a-written-warning) for the same delivery and approval safegua
 | Raw console output, CoreProtect data, files, screenshots, backups | **Their approved technical or restricted evidence storage** | A link, reference ID, location, and concise summary; not full dumps or confidential data |
 | Long-term how-to instructions and approved standing policy | **Staff Wiki** | Link to the relevant wiki page; logs capture individual cases and changes, not replacement procedures |
 
+### Discord bot input reference
+
+Use this table when completing `/staff email`, `/staff log`, or `/staff search`. **Only enter verified information.** The bot presents fields based on the option selected; not every field appears in every form.
+
+| Input | Used in | What to enter |
+| --- | --- | --- |
+| **Player Username** | Email: Warning, Action, Custom; Player log; Player search; Assign to Player | The player's exact Java or Bedrock username. Check spelling before submitting. |
+| **Incident** | Email: Warning, Action | A short, factual summary of what happened, including relevant context. |
+| **Relevant Action** | Email: Warning | The behavior or potential disciplinary action addressed by the written warning. |
+| **Course of Action** | Email: Warning, Action | What the player must do or change next. Keep it clear and specific. |
+| **Campus Official** | Email: Warning, Action, Custom | Name of the authorized campus official responsible for the message. |
+| **Occurrence** | Email: Action | Whether this is the first, second, third, etc. documented occurrence; check prior records. |
+| **Length of Action** | Email: Action | Exact approved punishment or restriction and its duration, such as `24-hour ban`. |
+| **Next Length of Action** | Email: Action | The stated consequence for another occurrence, if approved. |
+| **Subject** | Email: Custom | A clear, concise email subject line. |
+| **Message** | Email: Custom | The approved message to send to the player. |
+| **Record Type** | New log | Choose **Player**, **Plugin**, or **General** based on the issue. |
+| **Plugin** | Plugin log; Plugin search; Assign to Plugin | Select the affected plugin; plugin search accepts part of its name. |
+| **Title** | New log | A short, searchable summary of the issue; add a case reference when applicable. |
+| **Details** | New log | What happened, when and where, evidence references, steps taken, and next steps. |
+| **Search Query** | Plugin search | All or part of the plugin name to locate relevant records. |
+| **Note** | Add note to existing log | A dated factual update, action, decision, reference, or follow-up. |
+| **Resolution / Reopen Note** | Resolve or reopen log | Why the issue is finished or why further work is needed; this field is optional in the current bot. |
+
+!!! note "Case references are not bot input fields yet"
+    Until automatic case linking is implemented, add the shared case reference to a log's **Title**, **Details**, or **Note**. The existing `/staff email` forms do not have a dedicated case-reference field.
+
 ### Case references and related records
 
 **Goal:** Give one incident a single reference so staff can find its player, plugin, general, and email history together, even if those records stay separate.
@@ -124,14 +151,12 @@ Use [4.2](#42-send-a-written-warning) for the same delivery and approval safegua
     **Related Plugin log:** `CASE-20261010-001 — Inventory plugin exploit fix`  
     **Player log note:** `Related records: Plugin log "CASE-20261010-001 — Inventory plugin exploit fix". Warning email sent 10 Oct; see communication history.`
 
-**When upgrading the bot later:** Have the system create a unique, permanent case ID; associate multiple log IDs and communication IDs with that case; expose its status and owner; and let `/staff search` retrieve everything by case ID. Preserve existing record IDs and old case references during migration.
-
 ### Search, update, and close
 
 - Run `/staff search` → **Player**, **Plugin**, **General**, or **All Unresolved**.
 - Open an existing log, then **add notes** as the issue develops. Use **Resolve** when finished, with a short closure explanation. Use **Reopen** if new work is needed.
 - Reassign a general log to a **Player** or **Plugin** when the actual subject becomes clear.
-- Avoid scattered follow-ups in Discord channels. Chat can coordinate work, but the bot log should retain the durable outcome.
+- Use Discord channels to discuss and coordinate work, then add important updates, decisions, and final outcomes to the existing bot record so other staff can find the full history in one place.
 
 !!! note "Two types of records"
     `/staff email` records **formal communications**; `/staff log` records **internal investigation and operational work**. `/staff search` brings both into the staff search workflow. Creating a log does not send an email, and sending an email does not automatically document the full investigation.
