@@ -1,56 +1,59 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # ProtocolLib
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="ProtocolLib" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="ProtocolLib" data-server="survival" aria-live="polite"></div>
 
-ProtocolLib is a low-level packet API that allows other plugins to intercept, modify, and listen to Minecraft network packets. It does not provide gameplay features directly but is required by many advanced plugins.
+## What Is ProtocolLib?
 
----
+ProtocolLib is a low-level packet API that allows other plugins to inspect and modify Minecraft network packets without implementing that packet handling themselves.
 
-## Dependencies
+## ERRSA's Use
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper  
-- **Plugins:**
-  - *(None required — acts as a dependency for other plugins)*
-- **External services (if any):**
-  - None
+ERRSA primarily uses ProtocolLib as an infrastructure dependency for other plugins. It is not intended to provide normal player-facing functionality by itself.
 
----
 
-## Configuration Files
+## Required By
 
-!!! info "Primary config locations"
-- `plugins/ProtocolLib/config.yml`
+- [QuickShop-Hikari](../gameplay-and-progression/quickshop-hikari.md)
+- [URLCustomDiscs](../display-and-media/urlcustomdiscs.md)
 
 ---
 
-## ERRSA Defaults & Settings
+??? note "Common Commands"
 
-!!! note "ERRSA-specific configuration choices"
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when a plugin does not expose a reliable command-permission relationship.
 
-- `auto updater.notify`: `true` — alerts for new versions 
-- `auto updater.download`: `false` — prevents automatic updates (manual control)
-
-- `metrics`: `true` — allows anonymous usage stats
-
-- `chat warnings`: `true` — surfaces protocol issues to admins
-
-- `background compiler`: `true` — improves performance for packet handling
-
-- `debug`: `false` — prevents console spam  
-- `detailed error`: `false` — avoids excessive stack traces 
-
-- `script engine`: `JavaScript` — default packet filter scripting engine 
-
-- `No direct gameplay usage` — used only as a dependency layer for other plugins  
-
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="ProtocolLib" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+??? note "ERRSA Configuration"
+
+    | Setting | ERRSA Value | Purpose |
+    |---------|-------------|---------|
+    | Update notifications | Enabled | Alert maintainers to new versions |
+    | Automatic update download | Disabled | Keep production updates manual |
+    | Metrics | Enabled | Allow anonymous usage statistics |
+    | Debug | Disabled | Avoid unnecessary console output |
+    | Detailed errors | Disabled | Avoid excessive production stack traces |
+
+    !!! info "Dependency plugin"
+        Configuration changes can affect multiple plugins that rely on ProtocolLib.
+
+---
+
+??? note "Permissions"
+
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="ProtocolLib" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://hangar.papermc.io/dmulloy2/ProtocolLib){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/dmulloy2/ProtocolLib){ .md-button .md-button--primary }

@@ -12,14 +12,6 @@
 
 ---
 
-## Dependencies
-
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot
-
-
----
-
 ## Permissions Model
 
 !!! note "Permissions are intentionally scoped"
@@ -91,7 +83,6 @@
 - Command permissions restricted to `admin` group — administrative spawning and spawner editing remain staff-only
 
 This section documents **intentional deviations from plugin defaults**.
-
 
 
 ---

@@ -1,45 +1,69 @@
----
-tags:
-  - MOD
-  - ADMIN
-  - DEV
-  - SERVER LEAD
----
+# PlayerQuests
+
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="PlayerQuests" data-server="survival" aria-live="polite"></div>
+
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="PlayerQuests" data-server="survival" aria-live="polite"></div>
 
 ## What Is PlayerQuests?
 
-Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.
+PlayerQuests is a custom ERRSA plugin for server-specific quest and player progression features.
 
 ## ERRSA's Use
 
-ERRSA documents **PlayerQuests** as part of the **Gameplay And Progression** plugin group on the Survival server.
+ERRSA uses PlayerQuests for custom quest workflows on the Survival server. Quest definitions and rewards may be tied to other ERRSA systems, so production changes should be verified against the live setup.
 
-!!! warning "Needs live verification"
-    The older plugin files did not document a verified ERRSA-specific purpose beyond its category and installed status. Verify behavior against the live server before changing configuration.
+
+## Dependencies
+
+- [Vault](../server-and-infrastructure/vault.md)
+- [GriefPrevention](../permissions-and-moderation/griefprevention.md)
+- [Guilds](guilds.md)
+- [WorldGuard](../worlds-and-building/worldguard.md)
+- [Lands](https://www.spigotmc.org/resources/53313/)
+
 
 ---
 
 ??? note "Common Commands"
 
-    No staff/player commands were verified in the older plugin documentation.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
+
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="PlayerQuests" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-??? note "Plugin Configuration"
+??? note "ERRSA Configuration"
 
-    No intentional ERRSA-specific configuration changes were documented in the older plugin files.
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Quest expiration | Unclaimed `30 d`; claimed `7 d` | Remove stale quests on defined schedules |
+    | Active quest limit | `5` per player | Limit simultaneous accepted work |
+    | Posted quest limit | `10` per player | Limit outstanding player-created quests |
+    | Worker deposit | Enabled; default `5%` | Require a configurable worker deposit |
+    | Maximum quest region | `500,000` blocks | Cap region-based quest size |
+    | Guild quests | Enabled; `EQUAL` split | Support guild quest rewards with equal distribution by default |
+    | Persistent boundaries | Enabled; `500` block render distance | Keep quest boundaries visible/persistent |
+    | Server blueprint rendering | Enabled; max `6000` fake blocks | Preview blueprint quests server-side |
+    | Litematica detection | Enabled | Recognize supported blueprint inputs |
+    | Resource pack | Enabled and required; Bedrock skipped | Deliver blueprint-preview assets to Java clients |
 
-    !!! info "Unchanged / undocumented settings"
-        Do not assume a plugin default or live value from this page when no setting is listed. Check the live configuration first.
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
+
+    !!! warning "Operational note"
+        The resource-pack URL/SHA may change with releases; keep them synchronized with the current ERRSA resource-pack release.
 
 ---
 
 ??? note "Permissions"
 
-    No matching direct staff permission nodes were documented in the supplied staff group export. This does not prove the plugin has no inherited, wildcard, default, or user permissions.
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="PlayerQuests" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
 ## Related Resources
 
-No approved external resource URL was present in the older plugin files.
+!!! info "Documentation coming soon"
+    This is a custom ERRSA plugin. Documentation will be added here when available.

@@ -1,128 +1,67 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # LuckPerms
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="LuckPerms" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="LuckPerms" data-server="survival" aria-live="polite"></div>
 
-LuckPerms is the **core permission management system** for ERRSA MC. It controls all ranks, roles, and access to commands across the entire server.
+## What Is LuckPerms?
 
----
+LuckPerms is the permission-management system that controls which players and staff groups can use plugin features and commands.
 
-## Dependencies
+## ERRSA's Use
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper  
-- **Plugins:**
-  - Vault (for economy/chat integration)
-- **External services (if any):**
-  - MySQL database (Apex Hosting)
+ERRSA uses LuckPerms as the central source of staff and player permission assignments. The Staff Wiki also uses LuckPerms data from Wiki Sync to determine live role access on plugin pages.
 
----
 
-## Permissions Model
+## Required By
 
-!!! note "Permissions are intentionally scoped"
-This plugin follows the **parallel permission track model**.  
-Access is granted by role, not convenience.
- 
-
-### Dev permissions
-- `luckperms.*` — full backend control  
-- `luckperms.sync` — force network sync  
-- `luckperms.verbose` — debug permission checks  
+- [PlayerInitialization](../server-and-infrastructure/playerinitialization.md)
+- [Guilds](../gameplay-and-progression/guilds.md)
+- [VIPBridge](../server-and-infrastructure/vipbridge.md)
 
 ---
 
-## Common Commands
+??? note "Common Commands"
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-
-### Dev commands
-- `/lp user <player> info` — view player permissions  
-- `/lp user <player> parent add <group>` — promote  
-- `/lp user <player> parent remove <group>` — demote
-- `/lp editor` — open web editor  
-- `/lp group <group> permission set <node>` — assign permissions  
-- `/lp user <player> permission set <node>` — direct permission assignment  
-- `/lp sync` — sync permissions across servers  
-- `/lp verbose` — debug permission checks  
-- `/lp networksync` — force database sync  
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="LuckPerms" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Configuration Files
+??? note "ERRSA Configuration"
 
-!!! info "Primary config locations"
-- `plugins/LuckPerms/config.yml`
-- `plugins/LuckPerms/contexts.json`
-- `plugins/LuckPerms/editor-keystore.json`
-- `plugins/LuckPerms/luckperms-h2-v2.mv.db` *(fallback/local DB)*
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Server context | `main` | Use the production server-specific permission context |
+    | Storage | MySQL — credentials omitted | Store permission data in the shared database |
+    | Messaging service | `auto` | Automatically choose the available cross-instance messaging transport |
+    | Sync interval | `-1` | Rely on messaging rather than scheduled polling |
+    | Auto-push updates | Enabled | Propagate permission changes to connected instances |
+    | Primary group calculation | `parents-by-weight` | Determine primary group from weighted inheritance |
+    | Wildcards | Enabled | Support wildcard nodes used by staff roles |
+    | Bukkit OP support | Enabled | Keep Bukkit operator permissions available |
+    | Auto-OP | Disabled | Do not automatically tie operator status to LuckPerms |
 
----
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
 
-## ERRSA Defaults & Settings
-
-!!! note "ERRSA-specific configuration choices"
-
-- `server`: `survival` — enables server-specific permission contexts  
-- `storage-method`: `mysql` — centralized permission storage across servers  
-- `database`: Apex-hosted MySQL — shared across network for consistency  
-
-- `messaging-service`: `auto` — enables automatic sync (SQL-based likely)  
-- `sync-minutes`: `-1` — disables polling (rely on messaging instead)  
-
-- `auto-push-updates`: `true` — instant propagation of permission changes  
-
-- `primary-group-calculation`: `parents-by-weight` — ranks determined by weight system  
-
-- `meta-formatting.prefix`:  
-  - Tracks: `staff`, `errsa`, `main` — structured rank display system  
-
-- `apply-wildcards`: `true` — allows wildcard permissions like `essentials.*`  
-
-- `enable-ops`: `true` — OP system still active (not replaced by LP auto-op)  
-- `auto-op`: `false` — OP not tied to permissions system  
-
-- `apply-bukkit-permissions`: `true` — ensures plugin compatibility  
+    !!! warning "Operational note"
+        Database credentials are intentionally omitted. Permission changes can affect access across the server and should be reviewed for inheritance/context scope.
 
 ---
 
-## Common Issues & Fixes
+??? note "Permissions"
 
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-### Issue: Player has wrong rank or no permissions
-
-**Likely cause:**  
-- Incorrect group assignment  
-- Context mismatch (server/world)
-
-**Fix:**  
-- Check `/lp user <player> info`  
-- Verify group inheritance  
-
-**Escalate if:**  
-- Data not saving to MySQL  
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="LuckPerms" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-### Issue: Web editor changes not applying
+## Related Resources
 
-**Likely cause:**  
-- Sync not triggered  
+### Official Resources
 
-**Fix:**  
-- Click **Apply Changes** in editor  
-- Run `/lp sync`  
-
-**Escalate if:**  
-- Editor fails to generate link  
-
-
----
-
-_Last verified: 2026-02-13_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://modrinth.com/plugin/luckperms){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://luckperms.net/wiki/Home){ .md-button .md-button--primary }

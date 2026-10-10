@@ -1,111 +1,66 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # ERRSA-MC-Core
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="ERRSA-MC-Core" data-server="survival" aria-live="polite"></div>
 
-   **Category:** `Gameplay` 
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="ERRSA-MC-Core" data-server="survival" aria-live="polite"></div>
 
-   ERRSA-MC-Core is our in-house, all-in-one, plugin that provides essential server commands players actually use: selling diamonds for money, quick links to Discord/feedback/report forms, a tutorial warp command, and a reset schedule command.
+## What Is ERRSA-MC-Core?
 
----
+ERRSA-MC-Core provides ERRSA-specific commands, links, diamond selling, tutorial access, and server reset information.
+
+## ERRSA's Use
+
+ERRSA uses this custom plugin for community commands and integration with Essentials events and moderation messaging.
 
 ## Dependencies
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot - `api-version: 1.21`
-- **Plugins:**
-  - `Vault`
-  - `EssentialsX`
+- [EssentialsX](essentials.md)
+- [Vault](vault.md)
 
 
 ---
 
-## Permissions Model
+!!! note "Essentials API dependency"
+    EssentialsX is used for ban/kick-related events and Discord messaging.
 
-!!! note "Permissions are intentionally scoped"
-    This plugin follows the **parallel permission track model**.  
-    Access is granted by role, not convenience.
+---
 
-### Unregistered player permissions 
-- `errsamccore.discord` — allows viewing the Discord invite link
+??? note "Common Commands"
 
-### Player permissions
-- `errsamccore.feedback` — allows viewing the feedback form link
-- `errsamccore.report` — allows viewing the report form link
-- `errsamccore.resetschedule` — allows seeing next planned reset date
-- `errsamccore.sell` — allows selling diamonds for in-game money
-- `errsamccore.tutorial` — warps user to the tutorial area
+    Commands, permissions, and staff access are populated from Wiki Sync.
+
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="ERRSA-MC-Core" data-server="survival" aria-live="polite">Loading synced commands…</div>
+
+---
+
+??? note "ERRSA Configuration"
+
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Diamond sell price | `$50` | Set the `/sell` value for diamonds |
+    | Discord link | Configured ERRSA invite | Provide `/discord` with the current community invite |
+    | Feedback form | Configured Fillout form | Route `/feedback` to the current server feedback form |
+    | Report form | Configured Fillout form | Route `/report` to the current server report form |
+    | Website | ERRSA Minecraft Handbook | Provide the current staff/community website link |
+    | Map | ERRSA map page | Provide the current web map link |
+    | Reset date | `August 2027` | Display the currently configured reset target |
+    | Reset cycle | `3` | Display the configured reset cycle |
+
+    !!! info "Production configuration"
+        These values were verified against the current `ERRSA-MC-Core` production config. The current file does not contain the older tutorial coordinates previously documented on this page, so those coordinates were removed rather than assumed.
 
 
 ---
 
-## Common Commands
+??? note "Permissions"
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
+    Access is populated from the latest LuckPerms Wiki Sync snapshot.
 
-### Unregistered player commands
-- `/discord` — allows viewing the Discord invite link
-### Player commands
-- `/feedback` — allows viewing the feedback form link
-- `/report` — allows viewing the report form link
-- `/resetschedule` — allows seeing next planned reset date
-- `/sell` — allows selling diamonds for in-game money
-- `/tutorial` — warps user to the tutorial area
-
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="ERRSA-MC-Core" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-## Configuration Files
+## Related Resources
 
-!!! info "Primary config locations"
-- `plugins/errsa-mc-core/config.yml`
-
-
-
----
-
-## ERRSA Defaults & Settings
-
-!!! note "ERRSA-specific configuration choices"
-- `<Setting>`: `<value>` — reason
-- `<Setting>`: `<value>` — reason
-- `<Feature disabled>` — why we disable it
-
-- `sell-price`: `50.0` — sell price of diamonds
-- `discord-link`: `https://discord.com/invite/XvKYDe3pGX` — ERRSA discord invite link
-- `feedback-link`: `https://forms.fillout.com/t/s2oKYJtMGDus` — Fillout form link to collect server feedback
-- `report-link`: `https://forms.fillout.com/t/eRqvr1KnD4us` — Fillout form link to collect server reports
-- `tutorial`:    — Coordinates, rotation, world, and delay time
-  `x: -53.5
-  y: -35
-  z: 3.5
-  yaw: -180.0
-  pitch: 0.0
-  world: "world"
-  delay-seconds: 3`
-- `reset-schedule`:    — Note the date and cycle are strings, any format can be typed such as "xx/xx/xxxx" or "August of 20XX"
-  `reset_date: "August 2028"
-  reset_cycle: "3"`
-  
-
-This section documents **intentional deviations from plugin defaults**.
-
----
-
-## Common Issues & Fixes
-
-### Issue: Bedrock players can’t click links (Discord/Feedback/Report).
-**Likely cause:** Expected behavior-Bedrock is given plain text links by design.
-
-**Fix:** Tell Bedrock players to copy/paste the link into a browser; keep links short and stable.
-
-**Escalate if:** Java players also lose clickability-check chat formatting plugins that might strip click events.
-
-
-
----
-
-_Last verified: 2026-02-13_  
-_Server version: 1.21.4_
+!!! info "Documentation coming soon"
+    This is a custom ERRSA plugin. Documentation will be added here when available.

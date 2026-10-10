@@ -1,128 +1,52 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # ChatFilter
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="ChatFilter" data-server="survival" aria-live="polite"></div>
 
-   **Category:** ` Moderation / Protection`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="ChatFilter" data-server="survival" aria-live="polite"></div>
 
-Chat Filter is a chat management plugin for reducing spam, swearing, advertisement of IPs and URLs. Stop repetition in chat and add as many swear words, IPs and URLs as you want to make sure our server chat is controlled! This plugin also filters books, signs, commands and anvils.
+## What Is ChatFilter?
 
----
+ChatFilter filters unwanted chat content such as spam, advertisements, blocked words, repeated messages, and certain bypass attempts using special characters.
 
-## Dependencies
+## ERRSA's Use
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper
-
+ERRSA uses ChatFilter as part of the server's chat moderation layer. It can filter chat and other text-entry surfaces while allowing staff to review or bypass filtering according to their permissions.
 
 ---
 
-## Permissions Model
+??? note "Common Commands"
 
-!!! note "Permissions are intentionally scoped"
-    This plugin follows the **parallel permission track model**.  
-    Access is granted by role, not convenience.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-
-### Mod permissions
-- `chatfilter.view` — Allows players to to view what gets caught in the filter
-
-### Admin permissions
-- `chatfilter.bypass` — Allows the player to bypass all filters(Chat, Signs, Books, Anvils, Decaps, pause chat and repeat messages)
-
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="ChatFilter" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
+??? note "ERRSA Configuration"
 
+    ChatFilter primarily uses these files:
 
-## Configuration Files
+    - `plugins/ChatFilter/config.yml` — core filter behavior and anti-spam settings
+    - `plugins/ChatFilter/advertfilters.yml` — advertisement/IP/domain detection patterns
+    - `plugins/ChatFilter/word filters.yml` — blocked words, phrases, and replacement rules
+    - `plugins/ChatFilter/unicode.yml` — Unicode handling used to reduce filter bypasses
 
-!!! info "Primary config locations"
-- `plugins/ChatFilter/config.yml`
-- `plugins/ChatFilter/advertfilters.yml`
-- `plugins/ChatFilter/word filters.yml`
-- `plugins/ChatFilter/unicode.yml`
-
-### `config.yml`
-Controls the **core behavior of the chat filter system**.
-
-Key features configured here include:
-
-- Anti-spam and repeat message detection  
-- Uppercase message control  
-- URL blocking and advertisement detection  
-- Character spam prevention (e.g., `aaaaaaaaaaaa`)  
-- Per-word filtering behavior and preset filter rules  
-- Event priority handling for compatibility with other plugins  
-
+    !!! warning "Regex changes"
+        Filter patterns can unintentionally block legitimate messages. Test significant regex or filter changes before using them in production.
 
 ---
 
-### `advertfilters.yml`
-Contains **regex patterns that detect advertising**.
+??? note "Permissions"
 
-Examples of blocked content:
-- Server IP addresses
-- Domain names (e.g., `.com`, `.net`, `.org`)
-- Obfuscated advertisements using separators like `dot`, `-`, or spaces
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-When triggered, the filter can:
-
-- Warn staff
-- Warn the player
-- Cancel the chat message
-- Execute commands (e.g., moderation alerts)
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="ChatFilter" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-### `word filters.yml`
-Defines **specific word or phrase filters**.
+## Related Resources
 
-This file contains:
+### Official Resources
 
-- Individual word filters
-- Regex patterns to catch bypass attempts
-- Replacement rules (e.g., replacing profanity with another word)
-- Optional moderation actions like muting or alerting staff
-
-Example use cases:
-
-- Blocking profanity
-- Replacing certain words
-- Auto-muting spam bots
-
----
-
-### `unicode.yml`
-Prevents players from bypassing filters using **Unicode or special characters**.
-
-This file:
-
-- Whitelists safe Unicode blocks
-- Blacklists characters often used to bypass filters
-- Prevents “fancy text” abuse from hacked clients
-
-Example blocked characters include:
-
-- Full-width Unicode letters
-- Circled or stylized characters
-
----
-
-!!! warning
-    Changes to regex filters can unintentionally block legitimate messages.  
-    Always test modifications in a **staging server or with a test account** before deploying.
-
----
-
-
-This section documents **intentional deviations from plugin defaults**.
-
-
-
-
-
-_Last verified: 2026-03-06_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://modrinth.com/plugin/chatfilter-zepsizola){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/ZepsiZola/ChatFilter){ .md-button .md-button--primary }

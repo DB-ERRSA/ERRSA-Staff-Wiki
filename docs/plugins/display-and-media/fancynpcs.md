@@ -1,83 +1,66 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # FancyNPCs
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="FancyNpcs" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Gameplay`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="FancyNpcs" data-server="survival" aria-live="polite"></div>
 
-FancyNPCs is used to create interactive NPCs that guide players, teach mechanics, and act as immersive interfaces for server systems (economy, claims, shops, etc.) across ERRSA MC.
+## What Is FancyNPCs?
 
----
+FancyNPCs creates configurable non-player characters that can display skins, face players, send messages, and trigger configured actions.
 
-## Dependencies
+## ERRSA's Use
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper
-- **External services (if any):**
-  - MineSkin API (for skin loading)
-
----
-
-## Common Commands
-
-!!! note "Only commands relevant to ERRSA workflows are listed"
+ERRSA uses FancyNPCs as an interface for tutorials and server systems. NPCs are used to guide players through features such as economy, claims, shops, and other server mechanics.
 
 
-### Dev commands
-- `/npc create <name>` — create NPC  
-- `/npc edit <name>` — modify NPC  
-- `/npc remove <name>` — delete NPC  
-- `/npc movehere <name>` — reposition NPC  
+## Required By
+
+- [VIPBridge](../server-and-infrastructure/vipbridge.md)
+- [FancyHolograms](fancyholograms.md)
+- [Guilds](../gameplay-and-progression/guilds.md)
 
 ---
 
-## Configuration Files
+??? note "Common Commands"
 
-!!! info "Primary config locations"
-- `plugins/FancyNpcs/config.yml`
-- `plugins/FancyNpcs/npcs.yml`
-- `plugins/FancyNpcs/featureFlags.yml`
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
----
-
-## ERRSA Defaults & Settings
-
-!!! note "ERRSA-specific configuration choices"
-
-- `visibility_distance: 20` — reduces render load globally
-- `autosave_interval: 15` — prevents loss of NPC edits
-- `turn_to_player_distance: 5` — improves immersion (NPCs look at players) 
-- `player-npcs: false` — prevents players from creating NPCs
-- `blocked_commands: op, ban` — prevents dangerous execution via NPCs 
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="FancyNpcs" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-### Implementation Notes (ERRSA Usage)
+??? note "ERRSA Configuration"
 
-- NPCs are heavily used in the **Tutorial Dojo** to teach systems:
-  - Economy (`/sell`, diamonds = $50)
-  - Claims (`/trust`, `/claimlist`, `/buyclaimblocks`)
-  - PvP (`/pvp`)
-  - Shops (QuickShop flow)
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Autosave | Enabled | Persist NPC changes automatically |
+    | Autosave interval | `15 min` | Limit the amount of unsaved NPC work |
+    | NPC placeholder refresh | `30 s` | Refresh placeholder-backed skins/display names periodically |
+    | Visibility refresh | `20 ticks` | Re-evaluate NPC visibility once per second |
+    | Visibility distance | `20` blocks | Limit default NPC render distance |
+    | Turn-to-player distance | `5` blocks | Allow nearby NPCs to face players |
+    | Blocked NPC commands | `op`, `ban` | Prevent high-risk commands from being attached to NPC actions |
+    | Skin API | Configured — key omitted | Allow faster skin loading without exposing the production API key |
 
-- NPCs primarily use:
-  - `ANY_CLICK → message + sound + delay chains`
-  - `LEFT_CLICK → command execution` (e.g., sell diamonds)   
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
 
-- Example systems:
-  - **DiamondTrader** → runs `/sell` on click  
-  - **ClaimBlockTrader** → runs `/buyclaimblocks`  
-  - **Tutorial NPCs** → multi-step guided dialogue chains  
-
-- NPCs are:
-  - `turnToPlayer: true` for immersion  
-  - `collidable: true/false` depending on use  
-  - `visibility_distance: ~25–35` locally tuned 
+    !!! warning "Operational note"
+        NPC actions can execute commands. Review the action chain before changing NPCs tied to live systems.
 
 ---
 
+??? note "Permissions"
 
-_Last verified: 2026-02-13_  
-_Server version: 1.21.4_
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="FancyNpcs" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/fancynpcs){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://fancyinnovations.com/docs/minecraft-plugins/fancynpcs){ .md-button .md-button--primary }

@@ -1,43 +1,61 @@
----
-tags:
-  - DEV
-  - SERVER LEAD
----
+# PlotSquared
+
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="PlotSquared" data-server="survival" aria-live="polite"></div>
+
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="PlotSquared" data-server="survival" aria-live="polite"></div>
 
 ## What Is PlotSquared?
 
-Installed Survival plugin in worlds and building. Detailed purpose has not been verified yet.
+PlotSquared is a plot-management plugin for creating and managing protected player or builder plots.
 
 ## ERRSA's Use
 
-ERRSA documents **PlotSquared** as part of the **Worlds And Building** plugin group on the Survival server.
-
-!!! warning "Needs live verification"
-    The older plugin files did not document a verified ERRSA-specific purpose beyond its category and installed status. Verify behavior against the live server before changing configuration.
+ERRSA has PlotSquared installed as part of the worlds-and-building toolset. A verified ERRSA-specific production workflow has not yet been documented, so treat the live server configuration as the authority before using or changing it.
 
 ---
 
 ??? note "Common Commands"
 
-    No staff/player commands were verified in the older plugin documentation.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
+
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="PlotSquared" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-??? note "Plugin Configuration"
+??? note "ERRSA Configuration"
 
-    No intentional ERRSA-specific configuration changes were documented in the older plugin files.
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Debug logging | Enabled | Keep detailed PlotSquared diagnostics available |
+    | High-frequency listener | Enabled | Process relevant high-frequency events |
+    | Redstone in unoccupied plots | Disabled | Reduce unnecessary redstone activity |
+    | Redstone in offline-owned plots | Disabled | Reduce background redstone activity |
+    | WorldEdit restrictions | Enabled | Keep edits within PlotSquared permission/plot boundaries |
+    | Economy component | Disabled | Do not use PlotSquared economy features |
+    | Plot expiry | Disabled | Do not automatically expire plots |
+    | External placeholders | Enabled | Expose PlotSquared data to placeholder integrations |
+    | Default locale | `en` | Use English plugin messages |
+    | Auto-clear threshold | `-1` | Keep automatic plot clearing effectively disabled |
 
-    !!! info "Unchanged / undocumented settings"
-        Do not assume a plugin default or live value from this page when no setting is listed. Check the live configuration first.
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
+
+    !!! warning "Operational note"
+        Plot world definitions and per-world plot settings are stored separately from the main `settings.yml`; review those files before changing plot geometry or ownership behavior.
 
 ---
 
 ??? note "Permissions"
 
-    No matching direct staff permission nodes were documented in the supplied staff group export. This does not prove the plugin has no inherited, wildcard, default, or user permissions.
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="PlotSquared" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
 ## Related Resources
 
-No approved external resource URL was present in the older plugin files.
+### Official Resources
+
+- [Plugin Download ↗](https://www.spigotmc.org/resources/plotsquared-v7.77506/){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://intellectualsites.gitbook.io/plotsquared){ .md-button .md-button--primary }

@@ -1,54 +1,66 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # FancyHolograms
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="FancyHolograms" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Cosmetics`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="FancyHolograms" data-server="survival" aria-live="polite"></div>
 
-FancyHolograms is used to create advanced floating holograms (text, items, and blocks) for navigation, NPC labeling, and immersive decoration across ERRSA MC.
+## What Is FancyHolograms?
 
----
+FancyHolograms creates floating text, item, and block displays without requiring physical entities or signs.
 
-## Common Commands
+## ERRSA's Use
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
+ERRSA uses FancyHolograms for navigation, labels, instructions, decorative displays, and visual elements around server builds. Holograms may also be used alongside NPCs to make interactive areas easier to understand.
 
-### Dev commands
-- `/hologram create <name>` — create hologram  
-- `/hologram edit <name>` — modify hologram  
-- `/hologram delete <name>` — remove hologram  
-- `/hologram movehere <name>` — reposition hologram  
 
----
+## Dependencies
 
-## Configuration Files
+- [PlaceholderAPI](../server-and-infrastructure/placeholderapi.md)
+- [FancyNPCs](fancynpcs.md)
 
-!!! info "Primary config locations"
-- `plugins/FancyHolograms/config.yml`
-- `plugins/FancyHolograms/featureFlags.yml`
-- `plugins/FancyHolograms/holograms.yml`
-- `plugins/FancyHolograms/logs/`
+
+## Required By
+
+- [VIPBridge](../server-and-infrastructure/vipbridge.md)
+- [Guilds](../gameplay-and-progression/guilds.md)
 
 ---
 
-## ERRSA Defaults & Settings
+??? note "Common Commands"
 
-!!! note "ERRSA-specific configuration choices"
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-- `visibility_distance: 20` — reduces render load and improves performance 
-- `autosave_interval: 15` — prevents data loss during edits 
-- `disable-holograms-for-bedrock-players: false` — ensures cross-platform visibility
-
-### Implementation Notes
-- Extensive use of **TEXT holograms for NPC labels and instructions** (e.g., “Sensei”, “Claim Points”)
-- Use of **ITEM holograms** (tools, dyes, weapons) to visually represent systems or shops   
-- Use of **BLOCK holograms** for environmental decoration (doors, props, visual markers)   
-- Many holograms are **linked to NPC systems** using `linkedNpc`, enabling interaction workflows 
-- Custom scaling and positioning are heavily used for polished visual presentation  
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="FancyHolograms" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-_Last verified: 2026-02-13_  
-_Server version: 1.21.4_
+??? note "ERRSA Configuration"
+
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Autosave | Enabled | Persist hologram changes automatically |
+    | Autosave interval | `15 min` | Limit the amount of unsaved hologram work |
+    | Save on change | Enabled | Write hologram edits when they are changed |
+    | Visibility distance | `20` blocks | Limit default hologram render distance |
+    | Command registration | Enabled | Expose FancyHolograms management commands |
+    | Log level | `INFO` | Keep normal production logging without debug spam |
+
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
+
+---
+
+??? note "Permissions"
+
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="FancyHolograms" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/fancyholograms){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://fancyinnovations.com/docs/minecraft-plugins/fancyholograms){ .md-button .md-button--primary }

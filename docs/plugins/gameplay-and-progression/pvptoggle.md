@@ -1,89 +1,68 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # PvPToggle
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="PvPToggle" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Gameplay`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="PvPToggle" data-server="survival" aria-live="polite"></div>
 
-PvPToggle allows players to manually enable or disable PvP, preventing unwanted combat while still allowing opt-in PvP gameplay.
+## What Is PvPToggle?
 
----
+PvPToggle allows players to enable or disable PvP individually.
 
-## Permissions Model
+## ERRSA's Use
 
-!!! note "Permissions are intentionally scoped"
-This plugin follows the **parallel permission track model**.  
-Access is granted by role, not convenience.
-
-### Player permissions
-- `pvptoggle.pvp` — toggle personal PvP on/off  
-- `pvptoggle.pvpstatus` — check PvP status  
-
-
-
-### Admin permissions
-- `pvptoggle.pvp.others` — toggle PvP for other players  
-- `pvptoggle.reload` — reload plugin config  
-
-
+ERRSA uses opt-in PvP controls with cooldowns and protections.
 
 ---
 
-## Common Commands
+??? note "Common Commands"
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
+    Commands, permissions, and staff access are populated from Wiki Sync.
 
-### Player commands
-- `/pvp` — toggle PvP on/off  
-- `/pvpstatus` — view PvP state  
-
-
-### Admin commands
-- `/pvp <player>` — toggle PvP for another player  
-- `/pvptoggle reload` — reload config  
-
-
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="PvPToggle" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Configuration Files
+??? note "ERRSA Configuration"
 
-!!! info "Primary config locations"
-- `plugins/PvPToggle/config.yml`
+    !!! note "ERRSA-specific configuration choices"
 
----
+    - `default-pvp`: `false` — players are **protected by default**  
 
-## ERRSA Defaults & Settings
+    - `cooldown`: `120` seconds — prevents rapid PvP toggling 
 
-!!! note "ERRSA-specific configuration choices"
+    - `anti-abuse`: `true` — players cannot disable PvP during combat
 
-- `default-pvp`: `false` — players are **protected by default**  
+    - `protect-pets`: `true` — prevents killing pets of protected players
 
-- `cooldown`: `120` seconds — prevents rapid PvP toggling 
+    - `friendly-fire`: `false` — prevents players from hitting their own entities 
+    - `hit-self`: `true` — allows self-damage interactions (non-combat use cases) 
 
-- `anti-abuse`: `true` — players cannot disable PvP during combat
+    - `particles`: `true` — visual feedback when hits are blocked 
 
-- `protect-pets`: `true` — prevents killing pets of protected players
+    - `feedback`: `true` — players are notified when PvP is blocked 
 
-- `friendly-fire`: `false` — prevents players from hitting their own entities 
-- `hit-self`: `true` — allows self-damage interactions (non-combat use cases) 
+    - `death-status-reset`: `false` — PvP state persists through death 
 
-- `particles`: `true` — visual feedback when hits are blocked 
+    - `prefix`: `"§4PvP »"` — consistent messaging branding
 
-- `feedback`: `true` — players are notified when PvP is blocked 
-
-- `death-status-reset`: `false` — PvP state persists through death 
-
-- `prefix`: `"§4PvP »"` — consistent messaging branding
-
-- `enabled/disabled states`:
-  - Enabled = `"§cVulnerable"`  
-  - Disabled = `"§aProtected"` 
+    - `enabled/disabled states`:
+      - Enabled = `"§cVulnerable"`  
+      - Disabled = `"§aProtected"` 
 
 
 ---
 
-_Last verified: 2026-02-13_  
-_Server version: 1.21.4_
+??? note "Permissions"
+
+    Access is populated from the latest LuckPerms Wiki Sync snapshot.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="PvPToggle" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/pvptoggle){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://modrinth.com/plugin/pvptoggle){ .md-button .md-button--primary }

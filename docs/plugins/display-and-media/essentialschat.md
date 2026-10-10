@@ -1,52 +1,55 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # EssentialsX Chat
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="EssentialsChat" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="EssentialsChat" data-server="survival" aria-live="polite"></div>
 
-EssentialsX Chat handles chat formatting, prefixes/suffixes, and message structure for players on ERRSA MC, integrating with LuckPerms for rank-based chat display.
+## What Is EssentialsX Chat?
 
----
+EssentialsX Chat is the chat-formatting module for EssentialsX, handling chat structure and integrating with permission plugins for prefixes and suffixes.
+
+## ERRSA's Use
+
+ERRSA uses EssentialsX Chat with LuckPerms to display rank-based prefixes and suffixes in player chat.
+
 
 ## Dependencies
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper
-- **Plugins:**
-  - `EssentialsX`
-  - `EssentialsX Chat`
-  - `LuckPerms` (for prefixes/suffixes)
-
+- [EssentialsX](../server-and-infrastructure/essentials.md)
 
 ---
 
+??? note "Common Commands"
 
-## Configuration Files
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-!!! info "Primary config locations"
-- `plugins/Essentials/config.yml` (shared configuration)
-
-!!! note
-    EssentialsX Chat does not have its own folder.  
-    All chat formatting is configured inside the main EssentialsX configuration.
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="EssentialsChat" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## ERRSA Defaults & Settings
+??? note "ERRSA Configuration"
 
-!!! note "ERRSA-specific configuration choices"
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | Configuration location | `plugins/Essentials/config.yml` | EssentialsX Chat shares the main EssentialsX configuration |
+    | Rank formatting | LuckPerms prefixes/suffixes | Keep chat display integrated with the server permission/meta system |
 
-- Chat formatting handled via EssentialsX `config.yml`  
-- Prefixes/suffixes pulled from LuckPerms  
-- No separate chat plugin configuration files  
-
-This section documents **intentional deviations from plugin defaults**.
-
+    !!! info "Shared configuration"
+        EssentialsX Chat does not use a separate plugin configuration folder for ERRSA's chat formatting.
 
 ---
 
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+??? note "Permissions"
+
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="EssentialsChat" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/essentialsx-chat-module){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://essentialsx.net/wiki/introduction){ .md-button .md-button--primary }

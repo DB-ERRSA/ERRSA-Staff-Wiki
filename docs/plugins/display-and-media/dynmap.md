@@ -1,45 +1,54 @@
----
-tags:
-  - MOD
-  - ADMIN
-  - DEV
-  - SERVER LEAD
----
+# Dynmap
 
-## What Is dynmap?
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="dynmap" data-server="survival" aria-live="polite"></div>
 
-Installed Survival plugin in display and media. Detailed purpose has not been verified yet.
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="dynmap" data-server="survival" aria-live="polite"></div>
+
+## What Is Dynmap?
+
+Dynmap renders Minecraft worlds as a web-based map that can be viewed outside the game.
 
 ## ERRSA's Use
 
-ERRSA documents **dynmap** as part of the **Display And Media** plugin group on the Survival server.
-
-!!! warning "Needs live verification"
-    The older plugin files did not document a verified ERRSA-specific purpose beyond its category and installed status. Verify behavior against the live server before changing configuration.
+ERRSA uses Dynmap to provide a visual map of server worlds and player-accessible areas. Administrative settings affect map rendering, web access, and server resource usage.
 
 ---
 
 ??? note "Common Commands"
 
-    No staff/player commands were verified in the older plugin documentation.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
+
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="dynmap" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-??? note "Plugin Configuration"
+??? note "ERRSA Configuration"
 
-    No intentional ERRSA-specific configuration changes were documented in the older plugin files.
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Default map template | `lowres` | Use the lower-resolution template as the default render profile |
+    | Generated textures | Enabled | Use generated block textures for map rendering |
+    | Web server | Enabled on port `8123` | Serve the Dynmap web interface directly |
+    | Login requirement | Disabled | Allow the map to load without Dynmap account authentication |
+    | Player faces | Enabled | Show player faces in the player list/map UI |
+    | Banned-IP checks | Enabled | Respect server bans in Dynmap web access |
 
-    !!! info "Unchanged / undocumented settings"
-        Do not assume a plugin default or live value from this page when no setting is listed. Check the live configuration first.
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
 
 ---
 
 ??? note "Permissions"
 
-    No matching direct staff permission nodes were documented in the supplied staff group export. This does not prove the plugin has no inherited, wildcard, default, or user permissions.
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="dynmap" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
 ## Related Resources
 
-No approved external resource URL was present in the older plugin files.
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/dynmap){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/webbukkit/dynmap/wiki){ .md-button .md-button--primary }

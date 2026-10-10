@@ -381,3 +381,75 @@
     grid-template-columns:1fr;
   }
 }
+
+/* Dynamic plugin role tags / permissions */
+.errsa-plugin-role-tags { display:flex; flex-wrap:wrap; gap:.35rem; margin:.35rem 0 .65rem; }
+.errsa-plugin-role-tags .md-tag { display:inline-flex; align-items:center; padding:.14rem .45rem; border-radius:.3rem; font-size:.68rem; line-height:1.35; }
+.errsa-plugin-permissions .errsa-sync-group { margin:.55rem 0; }
+
+/* Dynamic plugin command/permission mapping */
+.errsa-command-table code { white-space: nowrap; }
+.errsa-command-access { min-width: 10rem; }
+.errsa-command-access .md-tag { display: inline-flex; margin: .08rem .18rem .08rem 0; padding: .12rem .38rem; border-radius: .28rem; font-size: .66rem; }
+.errsa-command-table td small { display: block; margin-top: .15rem; }
+.errsa-map-source { font-weight: 700; }
+
+/* Compact dynamic permission matrix used by plugin reference pages. */
+.errsa-permission-matrix { width:100%; }
+.errsa-permission-matrix th:nth-child(n+4),
+.errsa-permission-matrix td:nth-child(n+4) { text-align:center; white-space:nowrap; }
+.errsa-permission-matrix code { white-space:nowrap; }
+.errsa-permission-access { font-weight:800; }
+.errsa-permission-access.is-allowed { color:#22c55e; }
+.errsa-permission-access.is-denied { opacity:.5; }
+@media(max-width:900px) {
+  .errsa-plugin-permissions { overflow-x:auto; }
+  .errsa-permission-matrix { min-width:48rem; }
+}
+
+/* Center dynamic plugin reference tables within their callouts. */
+.errsa-plugin-commands .errsa-command-table {
+  width: min(100%, 54rem);
+  margin: .8rem auto .55rem;
+}
+
+.errsa-plugin-permissions .errsa-permission-matrix {
+  width: min(100%, 58rem);
+  margin: .8rem auto .55rem;
+}
+
+@media(max-width:900px) {
+  .errsa-plugin-commands { overflow-x:auto; }
+  .errsa-plugin-commands .errsa-command-table {
+    min-width: 46rem;
+  }
+  .errsa-plugin-permissions .errsa-permission-matrix {
+    min-width: 48rem;
+  }
+}
+
+/* Align synced command-table headers with their values (four shared columns). */
+.md-typeset .errsa-plugin-commands table.errsa-command-table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+.md-typeset .errsa-command-table col:nth-child(1) { width: 16%; }
+.md-typeset .errsa-command-table col:nth-child(2) { width: 38%; }
+.md-typeset .errsa-command-table col:nth-child(3) { width: 23%; }
+.md-typeset .errsa-command-table col:nth-child(4) { width: 23%; }
+.md-typeset .errsa-command-table thead { display: table-header-group; }
+.md-typeset .errsa-command-table tbody { display: table-row-group; }
+.md-typeset .errsa-command-table tr { display: table-row; }
+.md-typeset .errsa-command-table th,
+.md-typeset .errsa-command-table td {
+  display: table-cell;
+  box-sizing: border-box;
+  text-align: left;
+  vertical-align: top;
+  padding: .45rem .55rem;
+  overflow-wrap: anywhere;
+}
+.md-typeset .errsa-command-table td code { white-space: normal; overflow-wrap: anywhere; }
+.md-typeset .errsa-command-table td.errsa-command-access { min-width: 0; }

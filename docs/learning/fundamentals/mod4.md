@@ -129,7 +129,7 @@ Reference additional information and details:
 
  - [Essentials](../../plugins/server-and-infrastructure/essentials.md){ data-preview } - Provides the economy, functions, and related commands
  - [Vault](../../plugins/server-and-infrastructure/vault.md){ data-preview } - An API that allows other plugins to communicate economy information
- - [QuickShop](../../plugins/gameplay-and-progression/quickshop.md){ data-preview } - Plugin for creating and managing player shops 
+ - [QuickShop](../../plugins/gameplay-and-progression/quickshop-hikari.md){ data-preview } - Plugin for creating and managing player shops 
  - [ERRSA MC Core](../../plugins/server-and-infrastructure/errsa-mc-core.md){ data-preview } - Provides the `/sell` command for diamonds
 
 ---
