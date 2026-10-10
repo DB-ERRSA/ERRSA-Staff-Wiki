@@ -284,6 +284,9 @@ function badge(parent, data, name, server, expanded, latest) {
       const commands = mergeCommands(plugin, mapEntry);
       if (!commands.length) { element('p', 'No command metadata or manual mappings are available for this plugin.', root, 'errsa-sync-note'); continue; }
       const table = element('table', null, root, 'errsa-command-table');
+      // The header and data rows share one explicit column layout.
+      const columns = element('colgroup', null, table);
+      for (let i = 0; i < 4; i++) element('col', null, columns);
       const head = element('thead', null, table), hr = element('tr', null, head);
       ['Command','Description','Permission','Staff Access'].forEach(h => element('th', h, hr));
       const body = element('tbody', null, table);
