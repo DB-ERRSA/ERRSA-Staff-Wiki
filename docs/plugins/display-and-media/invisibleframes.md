@@ -1,69 +1,51 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # InvisibleFrames
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="InvisibleFrames" data-server="survival" aria-live="polite"></div>
 
-   **Category:** `Cosmetics`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="InvisibleFrames" data-server="survival" aria-live="polite"></div>
 
-   Allows players to toggle item frames between visible and invisible using a simple in-game interaction.  
-   On ERRSA MC, this is used as a small quality-of-life feature for decorating builds without requiring admin intervention.
+## What Is InvisibleFrames?
 
----
+InvisibleFrames lets players hide item-frame borders while keeping the displayed item visible, making decorative builds cleaner.
 
-## Dependencies
+## ERRSA's Use
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot
+ERRSA uses InvisibleFrames as a player-facing building quality-of-life feature. Normal use is interaction-based rather than command-based.
 
 ---
 
+??? note "Common Commands"
 
-## Permissions Model
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-!!! note "Permissions are intentionally scoped"
-    This plugin follows the **parallel permission track model**.  
-    Access is granted by role, not convenience.
-
-### Player permissions
-- `invisibleframes.toggleframes` — allows the player to shift-right-click an item frame to toggle it visible/invisible
-
-
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="InvisibleFrames" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Common Commands
+??? note "ERRSA Configuration"
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | Lock hidden frames | Enabled | Reduce accidental breaking or movement of invisible frames |
+    | Toggle empty frames | Disabled | Prevent empty invisible frames from being scattered around builds |
+    | Item blacklist | None | No item-specific restrictions are currently documented |
 
-This plugin does **not** provide normal player/admin commands for ERRSA workflows.  
-Its functionality is interaction-based.
-
-### Player actions
-- **Shift + Right Click item frame** — toggles the frame between visible and invisible
-
-
----
-
-## Configuration Files
-
-!!! info "Primary config locations"
-- `plugins/InvisibleFrames/config.yml`
+    !!! info "Player use"
+        Players with the appropriate permission can toggle supported item frames through the plugin's normal interaction behavior.
 
 ---
 
-## ERRSA Defaults & Settings
+??? note "Permissions"
 
-!!! note "ERRSA-specific configuration choices"
-- `lock-frame: true` — invisible item frames are locked while hidden so they cannot be easily broken or knocked off by accident
-- `toggle-empty: false` — prevents players from creating random invisible empty frames around the server
-- `blacklisted-items: []` — no item blacklist is currently configured
-- `Permission granted:` `invisibleframes.toggleframes` — assigned to the `user` group so normal players can use the feature for building/decorating
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="InvisibleFrames" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-_Last verified: 2026-03-10_  
-_Server version: 1.21.4_
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/mod/invisible-frames-mod){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/Roundaround/mc-invisible-frames){ .md-button .md-button--primary }

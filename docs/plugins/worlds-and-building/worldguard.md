@@ -1,61 +1,67 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # WorldGuard
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="WorldGuard" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Protection`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="WorldGuard" data-server="survival" aria-live="polite"></div>
 
-WorldGuard protects regions from griefing and controls player interactions (building, PvP, explosions, etc.) within defined areas on ERRSA MC.
+## What Is WorldGuard?
 
----
+WorldGuard protects defined regions and controls what players, entities, and game mechanics can do inside those regions.
+
+## ERRSA's Use
+
+ERRSA uses WorldGuard to protect important areas and apply region-specific behavior such as building restrictions, PvP settings, explosion rules, and other gameplay controls.
+
 
 ## Dependencies
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper
-- **Plugins:**
-  - `WorldEdit`
+- [FastAsyncWorldEdit](fastasyncworldedit.md)
 
+## Required By
 
----
-
-## Permissions Model
-
-### Dev commands
-- `//wand` — select region (via FAWE)
-- `/rg define <name>` — create region
-- `/rg flag <region> <flag> <value>` — set region behavior
-- `/rg addmember <region> <player>` — grant access
-- `/rg remove <region>` — delete region
+- [WorldGuard Extra Flags](worldguard-extraflags.md)
+- [WorldGuard Extra Flags](worldguardextraflags.md)
+- [Guilds](../gameplay-and-progression/guilds.md)
+- [PlayerQuests](../gameplay-and-progression/playerquests.md)
+- [ShulkerReroute](../gameplay-and-progression/shulkerreroute.md)
 
 ---
 
-## Configuration Files
+??? note "Common Commands"
 
-!!! info "Primary config locations"
-- `plugins/WorldGuard/config.yml`
-- `plugins/WorldGuard/worlds/` (region data per world)
-- `plugins/WorldGuard/cache/`
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
----
-
-## ERRSA Defaults & Settings
-
-!!! note "ERRSA-specific configuration choices"
-
-- `op-permissions: true` — OPs automatically bypass protection  
-- `build-permission-nodes.enable: false` — no permission-based building, region-only  
-- `max-region-count-per-player.default: 7` — limits region claims  
-- `max-claim-volume: 30000` — caps region size  
-- `nether-portal-protection: true` — prevents portal abuse  
-- `block-plugin-spawning: true` — prevents unintended mob spawning  
-
-This section documents **intentional deviations from plugin defaults**.
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="WorldGuard" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
+??? note "ERRSA Configuration"
 
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | OP permissions | Enabled | Allow authorized operators to manage protected regions |
+    | Build permission nodes | Disabled | Keep normal build control region-based |
+    | Max regions per player | `7` | Limit player-owned region count where applicable |
+    | Max claim volume | `30,000` | Limit oversized claims |
+    | Nether portal protection | Enabled | Reduce portal-related bypass or abuse |
+    | Plugin mob spawning block | Enabled | Prevent unintended plugin-driven spawning |
+
+    !!! warning "Protection changes"
+        Region and flag changes can immediately affect building, PvP, explosions, interaction, and other live gameplay behavior.
+
+---
+
+??? note "Permissions"
+
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="WorldGuard" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/worldguard){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://worldguard.enginehub.org/en/latest/){ .md-button .md-button--primary }

@@ -1,62 +1,51 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
+# DragonDropElytra2
 
-# [DragonDropElytra](https://www.spigotmc.org/resources/dragondropelytra2.71235/)
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="DragonDropElytra" data-server="survival" aria-live="polite"></div>
 
-## Purpose
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="DragonDropElytra" data-server="survival" aria-live="polite"></div>
 
-   **Category:** `Gameplay` 
+## What Is DragonDropElytra2?
 
-This plugin detects when a player kills the End Dragon, and drops an Elyta based on configuration. 
+DragonDropElytra2 controls the elytra reward dropped when the Ender Dragon is defeated.
 
----
+## ERRSA's Use
 
-## Dependencies
-
-_None_
+ERRSA configures Ender Dragon elytra drops, including a chance for a damaged elytra.
 
 ---
 
-## Permissions Model
+??? note "Common Commands"
 
-_None_
+    Commands, permissions, and staff access are populated from Wiki Sync.
 
-
----
-
-## Common Commands
-
-_None_
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="DragonDropElytra" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Configuration Files
+??? note "ERRSA Configuration"
 
-!!! info "Primary config locations"
-- `plugins/DragonDropElytra/config.yml`
+    !!! note "ERRSA-specific configuration choices"
+    - `elytra`: `false` — does not drop a **fresh** elytra
+    - `brokenelytra`: `true` — drops elytras that requires repairs
+    - `chancepercentdrop`: `0.50` — only a 50% chance of a succesful drop
 
+
+    This section documents **intentional deviations from plugin defaults**.
 
 
 ---
 
-## ERRSA Defaults & Settings
+??? note "Permissions"
 
-!!! note "ERRSA-specific configuration choices"
-- `elytra`: `false` — does not drop a **fresh** elytra
-- `brokenelytra`: `true` — drops elytras that requires repairs
-- `chancepercentdrop`: `0.50` — only a 50% chance of a succesful drop
+    Access is populated from the latest LuckPerms Wiki Sync snapshot.
 
-
-This section documents **intentional deviations from plugin defaults**.
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="DragonDropElytra" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-## Common Issues & Fixes
+## Related Resources
 
-_None known_
+### Official Resources
 
-
----
-
-_Last verified: 2026-02-13_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://www.spigotmc.org/resources/dragondropelytra2.71235/){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://www.spigotmc.org/resources/dragondropelytra2.71235/){ .md-button .md-button--primary }

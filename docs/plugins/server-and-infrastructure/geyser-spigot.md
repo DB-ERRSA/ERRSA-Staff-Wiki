@@ -11,14 +11,6 @@ Geyser allows **Bedrock Edition clients** to connect to the ERRSA MC Java server
 
 Geyser does not modify gameplay rules, permissions, or authority; it only provides protocol compatibility.
 
----
-
-## Dependencies
-
-!!! info "Required for this plugin to function"
-    - **Server:** Paper 1.21.4
-    - **Plugins:**
-      - `Floodgate`
 
 ---
 
@@ -98,4 +90,3 @@ These settings ensure Bedrock players integrate cleanly without bypassing gamepl
 
 _Last verified: 2025-12-30_  
 _Server version: 1.21.4_
-

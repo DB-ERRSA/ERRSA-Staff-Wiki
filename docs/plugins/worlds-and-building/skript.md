@@ -1,99 +1,62 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # Skript
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="Skript" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="Skript" data-server="survival" aria-live="polite"></div>
 
-Skript provides lightweight server-side automation and custom gameplay logic without requiring a compiled Java plugin. On ERRSA MC, it is currently used to run custom portal/teleport workflows, warp corrections, and other small scripted systems that would otherwise require a dedicated plugin.
+## What Is Skript?
 
----
+Skript provides lightweight server-side automation and custom gameplay logic without requiring every small feature to be compiled as a Java plugin.
 
-## Dependencies
+## ERRSA's Use
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot
-- **Plugins:**
-  - `SkBee` (used for bound/region-style event support in current ERRSA MC scripts)
-- **External services (if any):**
-  - `None required for current ERRSA MC usage`
+ERRSA uses Skript for custom portal and teleport workflows, warp corrections, and other small server behaviors. Current scripted systems include portal cooldown, portal locking, destination handling, effects, and region-triggered teleport logic.
 
-!!! note
-    The current portal script depends on **region enter/leave events** working correctly.  
-    If those events stop firing, the portal system will not function even if Skript itself is loaded.
+
+## Required By
+
+- [SkBee](skbee.md)
 
 ---
 
-## Common Commands
+??? note "Common Commands"
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-### Player commands
-- `/warp TutorialDojo` — sets temporary portal lock handling for this specific warp
-- `/warp TutorialDojoEntrance` — sets temporary portal lock handling for this specific warp
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="Skript" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Configuration Files
+??? note "ERRSA Configuration"
 
-!!! info "Primary config locations"
-- `plugins/Skript/config.sk`
-- `plugins/Skript/features.sk`
-- `plugins/Skript/variables.csv`
-- `plugins/Skript/scripts/`
-- `plugins/Skript/scripts/Custom_Portal.sk`
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | Language | `english` | Keep scripts and errors consistent for maintainers |
+    | Release channel | `stable` | Avoid prerelease builds on production |
+    | Effect commands | Disabled | Prevent high-risk ad-hoc effect execution |
+    | OP effect-command bypass | Disabled | Prevent operator status from bypassing that restriction |
+    | Player UUID variables | Enabled | Improve long-term variable stability |
+    | Verbosity | `normal` | Keep production logging readable |
+    | Plugin priority | `high` | Improve event compatibility with protection/integration plugins |
+    | Timings | Disabled | Avoid unnecessary overhead |
+    | Variable storage | CSV | Persist current Skript variables |
 
----
-
-## ERRSA Defaults & Settings
-
-!!! note "ERRSA-specific configuration choices"
-- `language: english` — standard language setting for maintainability
-- `check for new version: true` — update notices remain enabled for admin awareness
-- `release channel: stable` — avoids prerelease builds on production
-- `enable effect commands: false` — intentionally disabled for safety
-- `allow ops to use effect commands: false` — prevents bypass through operator status
-- `player variable fix: true` — helps avoid stale player object issues on reconnect
-- `use player UUIDs in variable names: true` — improves long-term variable stability
-- `verbosity: normal` — keeps logging readable without excessive spam
-- `plugin priority: high` — improves compatibility with other protection/event plugins
-- `listen to cancelled events by default: false` — preserves normal event behavior
-- `case sensitive: false` — keeps parsing flexible
-- `case-insensitive variables: true` — reduces naming mismatch issues
-- `enable timings: false` — left disabled
-- `script loader thread size: 0` — script loading stays synchronous for safety
-- `variable changes until save: 1000` — default save batching retained
-- `variables storage: CSV` — variables currently save to `plugins/Skript/variables.csv`
-- `effect commands disabled` — intentional hardening decision because effect commands can be abused heavily
-
-### Active ERRSA MC scripted systems
-- **Portal cooldown variable:** `{portal_cooldown} = 1 second`
-- **Portal lock tracking:** `{portal_lock::%player%}`
-- **Portal readiness tracking:** `{player_ready::%player%}`
-- **Custom teleport destinations:**
-  - `{tp_tutorial_dojo}`
-  - `{tp_tutorial_dojo_entrance}`
-  - `{tp_legacy_lake_interior}`
-  - `{tp_legacy_lake_exterior}`
-
-### Portal script behavior
-- Teleport regions are triggered through **region enter events**
-- Leaving a portal region before completion cancels teleport
-- Portal lock is used to prevent immediate re-trigger loops
-- Warp commands for certain destinations set portal lock manually to avoid bad portal interaction after warping
-- Teleport feedback includes:
-  - sound effects
-  - particles
-  - delayed confirmation
-  - optional player push for exit flow
-
-This section documents **intentional deviations from plugin defaults**.
-
+    !!! info "Current scripted systems"
+        ERRSA currently uses Skript for custom portal/teleport behavior and related movement/warp handling. Changes should be tested against the affected worlds before production use.
 
 ---
 
+??? note "Permissions"
 
-_Last verified: 2026-03-20_  
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="Skript" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/skript){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://docs.skriptlang.org/){ .md-button .md-button--primary }

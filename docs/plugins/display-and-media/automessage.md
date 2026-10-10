@@ -1,48 +1,51 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # AutoMessage
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="AutoMessage" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`  
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="AutoMessage" data-server="survival" aria-live="polite"></div>
 
-Automatically sends scheduled informational chat messages to players on ERRSA MC, such as server tips, Discord links, reporting links, and campus resources.
+## What Is AutoMessage?
 
----
+AutoMessage automatically broadcasts configured informational messages to online players on a schedule.
 
-## Common Commands
+## ERRSA's Use
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
-
-
-### Dev commands
-- `/automessage` — manage message list, enable/disable sending, and send notifications
-- `/am` — alias for `/automessage`
+ERRSA uses AutoMessage for recurring server information such as tips, community links, reporting information, and other reminders.
 
 ---
 
-## Configuration Files
+??? note "Common Commands"
 
-!!! info "Primary config locations"
-- `plugins/AutoMessage/configuration.yml`
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
----
-
-## ERRSA Defaults & Settings
-
-!!! note "ERRSA-specific configuration choices"
-- `checkForUpdate: false` — disables join-time update checks  
-- `autoMessagesEnabled: true` — automatic messages are currently enabled  
-- `autoMessagesDelay: 30m` — messages are sent every 30 minutes  
-- `autoMessagesMode: SEQUENTIAL` — messages rotate in order instead of randomly  
-- `autoMessageAliases: [am]` — `/am` is enabled as a shortcut  
-- `autoMessagePermission: [command.automessage]` — command access is permission-gated  
-- `autoMessagesListUseHover: true` — list output uses hover formatting  
-
-This section documents **intentional deviations from plugin defaults**. :contentReference[oaicite:0]{index=0}
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="AutoMessage" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+??? note "ERRSA Configuration"
+
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | Automatic messages | Enabled | Broadcast configured messages automatically |
+    | Message interval | `30m` | Space automated messages out during normal play |
+    | Message mode | `SEQUENTIAL` | Rotate through messages in a predictable order |
+    | Command alias | `/am` | Provide a shorter management command |
+    | Update check | Disabled | Avoid join-time update checks |
+    | Hover formatting | Enabled | Improve readability of administrative message lists |
+
+---
+
+??? note "Permissions"
+
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
+
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="AutoMessage" data-server="survival" aria-live="polite">Loading synced permissions…</div>
+
+---
+
+## Related Resources
+
+### Official Resources
+
+- [Plugin Download ↗](https://modrinth.com/plugin/automessage){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/imDMK/AutoMessage){ .md-button .md-button--primary }

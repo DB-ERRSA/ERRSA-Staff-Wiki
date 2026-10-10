@@ -1,118 +1,56 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # Simple Voice Chat
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="voicechat" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="voicechat" data-server="survival" aria-live="polite"></div>
 
-Simple Voice Chat adds proximity-based voice communication to the Minecraft server using a separate UDP voice service. On ERRSA MC, it is used to let players talk naturally in-game while keeping administrative voice controls limited to staff.
+## What Is Simple Voice Chat?
 
----
+Simple Voice Chat adds proximity and group voice communication to Minecraft for players using the compatible client mod.
 
-## Dependencies
+## ERRSA's Use
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot (Bukkit build in use on ERRSA MC)
-- **External services (if any):**
-  - Open UDP port for voice traffic (`8733` on ERRSA MC)
-  - Client-side **Simple Voice Chat mod** installed by players who want to use voice
+ERRSA uses Simple Voice Chat for optional proximity voice communication. Players are not required to install the client mod to join the server.
 
 ---
 
-## Permissions Model
+??? note "Common Commands"
 
-!!! note "Permissions are intentionally scoped"
-    This plugin follows the **parallel permission track model**.  
-    Access is granted by role, not convenience.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
 
-### Player permissions
-- `voicechat.listen` — allows players to hear nearby voice audio
-- `voicechat.speak` — allows players to transmit voice audio
-- `voicechat.groups` — allows players to join and use voice chat groups
-
-### Admin permissions
-- `voicechat.admin` — administrative access for voice chat management and testing functions
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="voicechat" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Common Commands
+??? note "ERRSA Configuration"
 
-!!! note "Only commands relevant to ERRSA workflows are listed"
+    | Setting / Area | ERRSA Value | Purpose |
+    |----------------|-------------|---------|
+    | UDP port | `8733` | Keep voice traffic separate from the Minecraft server port |
+    | Maximum voice distance | `48` | Set normal proximity voice range |
+    | Whisper distance | `24` | Keep whisper range shorter than normal speech |
+    | Codec | `VOIP` | Optimize audio for voice communication |
+    | Groups | Enabled | Allow group voice chats |
+    | Force voice chat | Disabled | Do not require the client mod to join |
+    | Spectator interaction | Disabled | Prevent spectators from freely communicating with active players |
+    | External pings | Enabled | Allow voice connectivity checks |
 
-### Player commands
-- Voice chat use is primarily handled through the client mod UI and keybinds
-- Group voice features are available to players because `voicechat.groups` is enabled
-
-### Admin commands
-- `/voicechat test <player>` — used for administrative testing and troubleshooting of voice chat connectivity
-
-
----
-
-## Configuration Files
-
-!!! info "Primary config locations"
-- `voicechat-server.properties`
-
+    !!! warning "Network dependency"
+        Voice traffic uses UDP port `8733`. Connectivity problems may be caused by hosting or firewall configuration even when the Minecraft server itself is online.
 
 ---
 
-## ERRSA Defaults & Settings
+??? note "Permissions"
 
-!!! note "ERRSA-specific configuration choices"
-- `port`: `8733` — dedicated UDP port for voice traffic; kept separate from the main Minecraft port
-- `bind_address`: blank — allows plugin to use the server IP from main server settings
-- `max_voice_distance`: `48.0` — standard local proximity range
-- `whisper_distance`: `24.0` — whisper is intentionally half normal voice range
-- `codec`: `VOIP` — optimized for voice communication
-- `mtu_size`: `1024` — stable packet size for typical hosting/network conditions
-- `keep_alive`: `1000` — standard keep-alive interval for connection stability
-- `enable_groups`: `true` — players are allowed to create/use group voice chats
-- `allow_recording`: `true` — recording support remains enabled
-- `spectator_interaction`: `false` — spectators cannot freely talk to active players
-- `spectator_player_possession`: `false` — spectators cannot talk through spectated players
-- `force_voice_chat`: `false` — players without the mod are **not** kicked from the server
-- `login_timeout`: `10000` — retained default check timeout if forced voice is ever enabled later
-- `broadcast_range`: `-1.0` — uses the normal max voice distance instead of a custom broadcast override
-- `allow_pings`: `true` — server responds to external voice chat pings for connectivity checks
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-This section documents **intentional deviations from plugin defaults**.
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="voicechat" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-## Common Issues & Fixes
+## Related Resources
 
-### Issue: Player cannot hear or speak in voice chat
+### Official Resources
 
-**Likely cause:** Player does not have the Simple Voice Chat mod installed, voice permissions are missing, or UDP voice traffic is not reaching port `8733`  
-
-**Fix:**  
-- Confirm the player has the correct client mod installed  
-- Verify the player group includes:
-  - `voicechat.listen`
-  - `voicechat.speak`
-  - `voicechat.groups`
-- Confirm the host/server firewall allows UDP on port `8733`
-
-**Escalate if:** Multiple players are affected at once, or permissions are correct but nobody can connect to voice
-
----
-
-### Issue: Voice chat plugin is installed but nobody can connect
-
-**Likely cause:** UDP port is closed, blocked, or not forwarded correctly  
-
-**Fix:**  
-- Verify `port=8733` in `voicechat-server.properties`
-- Check the hosting panel/network settings to ensure UDP `8733` is open
-- Restart the server after changes
-
-**Escalate if:** Hosting provider/network configuration may be blocking UDP traffic externally
-
----
-
-
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://modrinth.com/plugin/simple-voice-chat){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://modrepo.de/minecraft/voicechat/wiki/server_setup){ .md-button .md-button--primary }

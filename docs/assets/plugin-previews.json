@@ -1,1 +1,356 @@
-{"luckperms":{"name":"LuckPerms","summary":"LuckPerms is the core permission management system for ERRSA MC. It controls all ranks, roles, and access to commands across the entire server.","category":"Survival · Permissions and moderation","external":"https://luckperms.net/wiki/Home"},"coreprotect":{"name":"CoreProtect","summary":"CoreProtect logs player interactions with the world (block breaks, placements, container access, etc.) so staff can investigate grief, identify who made…","category":"Survival · Permissions and moderation","external":"https://docs.coreprotect.net/"},"griefprevention":{"name":"GriefPrevention","summary":"GriefPrevention allows players to claim land and protect their builds, chests, and structures from modification by other players.","category":"Survival · Permissions and moderation","external":"https://docs.griefprevention.com/"},"chatfilter":{"name":"ChatFilter","summary":"This plugin supports the listed server category.","category":"Survival · Permissions and moderation","external":null},"themis":{"name":"Themis","summary":"Themis is an anti-cheat plugin that detects and prevents common hacks such as fly, speed, reach, and combat cheats.","category":"Survival · Permissions and moderation","external":null},"inventoryaudit":{"name":"InventoryAudit","summary":"Installed Survival plugin in permissions and moderation. Detailed purpose has not been verified yet.","category":"Survival · Permissions and moderation","external":null},"pvptoggle":{"name":"PVPToggle","summary":"PvPToggle allows players to manually enable or disable PvP, preventing unwanted combat while still allowing opt-in PvP gameplay.","category":"Survival · Permissions and moderation","external":null},"tabcompletefilter":{"name":"TabCompleteFilter","summary":"TABCompleteFilter controls which commands appear in tab-complete for players, helping reduce clutter and prevent exposure of sensitive or admin-only commands.","category":"Survival · Permissions and moderation","external":null},"autoupdategeyser":{"name":"AutoUpdateGeyser","summary":"Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.","category":"Survival · Server and infrastructure","external":null},"errsacompatibilitypaper":{"name":"ERRSACompatibilityPaper","summary":"Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.","category":"Survival · Server and infrastructure","external":null},"errsawebbridge":{"name":"ERRSAWebBridge","summary":"Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.","category":"Survival · Server and infrastructure","external":null},"eventbridge":{"name":"EventBridge","summary":"Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.","category":"Survival · Server and infrastructure","external":null},"sqlping":{"name":"SqlPing","summary":"Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.","category":"Survival · Server and infrastructure","external":null},"protocollib":{"name":"ProtocolLib","summary":"ProtocolLib is a low-level packet API that allows other plugins to intercept, modify, and listen to Minecraft network packets.","category":"Survival · Server and infrastructure","external":null},"placeholderapi":{"name":"PlaceholderAPI","summary":"PlaceholderAPI provides a unified system for dynamic placeholders (e.g., %playername%, %vaultbalance%) used across plugins like TAB, scoreboards, chat, holograms, and GUIs.","category":"Survival · Server and infrastructure","external":null},"vault":{"name":"Vault","summary":"Vault acts as a bridge layer between plugins, allowing systems like economy, permissions, and chat to communicate consistently without direct dependencies.","category":"Survival · Server and infrastructure","external":null},"floodgate":{"name":"floodgate","summary":"Floodgate enables Bedrock Edition players to join the ERRSA MC Java server through Geyser.","category":"Survival · Server and infrastructure","external":null},"minimotd":{"name":"MiniMOTD","summary":"MiniMOTD controls the server list display shown in the Minecraft multiplayer menu, including the MOTD text, server icon, and displayed max player count for ERRSA MC.","category":"Survival · Server and infrastructure","external":null},"automessage":{"name":"AutoMessage","summary":"Automatically sends scheduled informational chat messages to players on ERRSA MC, such as server tips, Discord links, reporting links, and campus resources.","category":"Survival · Server and infrastructure","external":null},"chunky":{"name":"Chunky","summary":"Chunky is a performance utility plugin used to pre-generate world chunks ahead of time.","category":"Survival · Worlds and building","external":null},"chunkyborder":{"name":"ChunkyBorder","summary":"ChunkyBorder enforces hard world boundaries using Chunky-generated regions.","category":"Survival · Worlds and building","external":null},"fastasyncvoxelsniper":{"name":"FastAsyncVoxelSniper","summary":"FastAsyncVoxelSniper (FAVS) is a high-performance terrain editing tool built on FAWE.","category":"Survival · Worlds and building","external":null},"fastasyncworldedit":{"name":"FastAsyncWorldEdit","summary":"FastAsyncWorldEdit (FAWE) is the high-performance world editing engine used on ERRSA MC for large terrain edits, schematic work, mass block operations, undo…","category":"Survival · Worlds and building","external":null},"multiverse-core":{"name":"Multiverse-Core","summary":"Multiverse-Core manages multiple worlds on ERRSA MC, including world loading, world-specific gameplay rules, respawn behavior, teleport handling, and…","category":"Survival · Worlds and building","external":null},"multiverse-inventories":{"name":"Multiverse-Inventories","summary":"Installed Survival plugin in worlds and building. Detailed purpose has not been verified yet.","category":"Survival · Worlds and building","external":null},"multiverse-portals":{"name":"Multiverse-Portals","summary":"Multiverse-Portals provides custom portal creation and routing between worlds using Multiverse-Core.","category":"Survival · Worlds and building","external":null},"plotsquared":{"name":"PlotSquared","summary":"Installed Survival plugin in worlds and building. Detailed purpose has not been verified yet.","category":"Survival · Worlds and building","external":null},"worldguard":{"name":"WorldGuard","summary":"WorldGuard protects regions from griefing and controls player interactions (building, PvP, explosions, etc.) within defined areas on ERRSA MC.","category":"Survival · Worlds and building","external":null},"worldguardextraflags":{"name":"WorldGuardExtraFlags","summary":"Installed Survival plugin in worlds and building. Detailed purpose has not been verified yet.","category":"Survival · Worlds and building","external":null},"armorstandtools":{"name":"ArmorStandTools","summary":"Armor Stand Tools (AST) gives trusted staff a safe, in-game GUI/toolset to pose, customize, and manage armor stands for builds, displays, and lobby…","category":"Survival · Worlds and building","external":"https://www.spigotmc.org/resources/armor-stand-tools.2237/"},"guilds":{"name":"Guilds","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"playerquests":{"name":"PlayerQuests","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"rank-progression":{"name":"Rank-Progression","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"errsa-mc-core":{"name":"ERRSA-MC-Core","summary":"ERRSA-MC-Core is our in-house, all-in-one, plugin that provides essential server commands players actually use: selling diamonds for money, quick links to…","category":"Survival · Gameplay and progression","external":null},"bannerbuilder":{"name":"BannerBuilder","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"headdb":{"name":"HeadDB","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"quickshop-hikari":{"name":"QuickShop-Hikari","summary":"This plugin supports the listed server category.","category":"Survival · Gameplay and progression","external":null},"tebex":{"name":"Tebex","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"warpgui":{"name":"WarpGUI","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"wild":{"name":"Wild","summary":"WildernessTP allows players to teleport to a random safe location in the survival world using the /wild command.","category":"Survival · Gameplay and progression","external":null},"essentials":{"name":"Essentials","summary":"EssentialsX is the primary core plugin on ERRSA MC, handling:","category":"Survival · Gameplay and progression","external":null},"essentialschat":{"name":"EssentialsChat","summary":"EssentialsX Chat handles chat formatting, prefixes/suffixes, and message structure for players on ERRSA MC, integrating with LuckPerms for rank-based chat display.","category":"Survival · Gameplay and progression","external":null},"essentialsspawn":{"name":"EssentialsSpawn","summary":"EssentialsX Spawn handles player spawn management, including join spawn, /spawn, and respawn behavior.","category":"Survival · Gameplay and progression","external":null},"playerinitialization":{"name":"PlayerInitialization","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"vipbridge":{"name":"VIPBridge","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"silkspawners-v2":{"name":"SilkSpawners_v2","summary":"SilkSpawners allows mob spawners to be broken and picked up, then placed again later as items.","category":"Survival · Gameplay and progression","external":null},"dragondropelytra":{"name":"DragonDropElytra","summary":"This plugin detects when a player kills the End Dragon, and drops an Elyta based on configuration.","category":"Survival · Gameplay and progression","external":"https://www.spigotmc.org/resources/dragondropelytra2.71235/"},"autounlockpvpdrops":{"name":"AutoUnlockPvPDrops","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"hurricane":{"name":"Hurricane","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"shulkerreroute":{"name":"ShulkerReroute","summary":"Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.","category":"Survival · Gameplay and progression","external":null},"fancyholograms":{"name":"FancyHolograms","summary":"FancyHolograms is used to create advanced floating holograms (text, items, and blocks) for navigation, NPC labeling, and immersive decoration across ERRSA MC.","category":"Survival · Display and media","external":null},"fancynpcs":{"name":"FancyNpcs","summary":"FancyNPCs is used to create interactive NPCs that guide players, teach mechanics, and act as immersive interfaces for server systems (economy, claims, shops, etc.) across ERRSA MC.","category":"Survival · Display and media","external":null},"dynmap":{"name":"dynmap","summary":"Installed Survival plugin in display and media. Detailed purpose has not been verified yet.","category":"Survival · Display and media","external":null},"imageframe":{"name":"ImageFrame","summary":"Installed Survival plugin in display and media. Detailed purpose has not been verified yet.","category":"Survival · Display and media","external":null},"invisibleframes":{"name":"InvisibleFrames","summary":"Allows players to toggle item frames between visible and invisible using a simple in-game interaction.","category":"Survival · Display and media","external":null},"tab":{"name":"TAB","summary":"TAB manages the tablist, nametags, prefixes, header/footer, and player sorting to display ranks and server information cleanly on ERRSA MC.","category":"Survival · Display and media","external":null},"urlcustomdiscs":{"name":"URLCustomDiscs","summary":"Installed Survival plugin in display and media. Detailed purpose has not been verified yet.","category":"Survival · Display and media","external":null},"voicechat":{"name":"voicechat","summary":"Simple Voice Chat adds proximity-based voice communication to the Minecraft server using a separate UDP voice service.","category":"Survival · Display and media","external":null},"skript":{"name":"Skript","summary":"Skript provides lightweight server-side automation and custom gameplay logic without requiring a compiled Java plugin.","category":"Survival · Automation","external":null},"skbee":{"name":"SkBee","summary":"SkBee is a Skript add-on that extends Skript with modern Paper-compatible features, advanced events, NBT handling, particles, scoreboards, bounds, text…","category":"Survival · Automation","external":null}}
+{
+  "luckperms": {
+    "name": "LuckPerms",
+    "summary": "LuckPerms is the core permission management system for ERRSA MC. It controls all ranks, roles, and access to commands across the entire server.",
+    "category": "Survival · Permissions and moderation",
+    "external": "https://luckperms.net/wiki/Home"
+  },
+  "coreprotect": {
+    "name": "CoreProtect",
+    "summary": "CoreProtect logs player interactions with the world (block breaks, placements, container access, etc.) so staff can investigate grief, identify who made…",
+    "category": "Survival · Permissions and moderation",
+    "external": "https://docs.coreprotect.net/"
+  },
+  "griefprevention": {
+    "name": "GriefPrevention",
+    "summary": "GriefPrevention allows players to claim land and protect their builds, chests, and structures from modification by other players.",
+    "category": "Survival · Permissions and moderation",
+    "external": "https://docs.griefprevention.com/"
+  },
+  "chatfilter": {
+    "name": "ChatFilter",
+    "summary": "This plugin supports the listed server category.",
+    "category": "Survival · Permissions and moderation",
+    "external": null
+  },
+  "themis": {
+    "name": "Themis",
+    "summary": "Themis is an anti-cheat plugin that detects and prevents common hacks such as fly, speed, reach, and combat cheats.",
+    "category": "Survival · Permissions and moderation",
+    "external": null
+  },
+  "inventoryaudit": {
+    "name": "InventoryAudit",
+    "summary": "Installed Survival plugin in permissions and moderation. Detailed purpose has not been verified yet.",
+    "category": "Survival · Permissions and moderation",
+    "external": null
+  },
+  "pvptoggle": {
+    "name": "PVPToggle",
+    "summary": "PvPToggle allows players to manually enable or disable PvP, preventing unwanted combat while still allowing opt-in PvP gameplay.",
+    "category": "Survival · Permissions and moderation",
+    "external": null
+  },
+  "tabcompletefilter": {
+    "name": "TabCompleteFilter",
+    "summary": "TABCompleteFilter controls which commands appear in tab-complete for players, helping reduce clutter and prevent exposure of sensitive or admin-only commands.",
+    "category": "Survival · Permissions and moderation",
+    "external": null
+  },
+  "errsacompatibilitypaper": {
+    "name": "ERRSACompatibilityPaper",
+    "summary": "Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "errsawebbridge": {
+    "name": "ERRSAWebBridge",
+    "summary": "Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "eventbridge": {
+    "name": "EventBridge",
+    "summary": "Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "sqlping": {
+    "name": "SqlPing",
+    "summary": "Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "protocollib": {
+    "name": "ProtocolLib",
+    "summary": "ProtocolLib is a low-level packet API that allows other plugins to intercept, modify, and listen to Minecraft network packets.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "placeholderapi": {
+    "name": "PlaceholderAPI",
+    "summary": "PlaceholderAPI provides a unified system for dynamic placeholders (e.g., %playername%, %vaultbalance%) used across plugins like TAB, scoreboards, chat, holograms, and GUIs.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "vault": {
+    "name": "Vault",
+    "summary": "Vault acts as a bridge layer between plugins, allowing systems like economy, permissions, and chat to communicate consistently without direct dependencies.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "floodgate": {
+    "name": "floodgate",
+    "summary": "Floodgate enables Bedrock Edition players to join the ERRSA MC Java server through Geyser.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "minimotd": {
+    "name": "MiniMOTD",
+    "summary": "MiniMOTD controls the server list display shown in the Minecraft multiplayer menu, including the MOTD text, server icon, and displayed max player count for ERRSA MC.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "automessage": {
+    "name": "AutoMessage",
+    "summary": "Automatically sends scheduled informational chat messages to players on ERRSA MC, such as server tips, Discord links, reporting links, and campus resources.",
+    "category": "Survival · Server and infrastructure",
+    "external": null
+  },
+  "chunky": {
+    "name": "Chunky",
+    "summary": "Chunky is a performance utility plugin used to pre-generate world chunks ahead of time.",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "chunkyborder": {
+    "name": "ChunkyBorder",
+    "summary": "ChunkyBorder enforces hard world boundaries using Chunky-generated regions.",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "fastasyncvoxelsniper": {
+    "name": "FastAsyncVoxelSniper",
+    "summary": "FastAsyncVoxelSniper (FAVS) is a high-performance terrain editing tool built on FAWE.",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "fastasyncworldedit": {
+    "name": "FastAsyncWorldEdit",
+    "summary": "FastAsyncWorldEdit (FAWE) is the high-performance world editing engine used on ERRSA MC for large terrain edits, schematic work, mass block operations, undo…",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "multiverse-core": {
+    "name": "Multiverse-Core",
+    "summary": "Multiverse-Core manages multiple worlds on ERRSA MC, including world loading, world-specific gameplay rules, respawn behavior, teleport handling, and…",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "multiverse-inventories": {
+    "name": "Multiverse-Inventories",
+    "summary": "Installed Survival plugin in worlds and building. Detailed purpose has not been verified yet.",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "multiverse-portals": {
+    "name": "Multiverse-Portals",
+    "summary": "Multiverse-Portals provides custom portal creation and routing between worlds using Multiverse-Core.",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "plotsquared": {
+    "name": "PlotSquared",
+    "summary": "Installed Survival plugin in worlds and building. Detailed purpose has not been verified yet.",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "worldguard": {
+    "name": "WorldGuard",
+    "summary": "WorldGuard protects regions from griefing and controls player interactions (building, PvP, explosions, etc.) within defined areas on ERRSA MC.",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "worldguardextraflags": {
+    "name": "WorldGuardExtraFlags",
+    "summary": "Installed Survival plugin in worlds and building. Detailed purpose has not been verified yet.",
+    "category": "Survival · Worlds and building",
+    "external": null
+  },
+  "armorstandtools": {
+    "name": "ArmorStandTools",
+    "summary": "Armor Stand Tools (AST) gives trusted staff a safe, in-game GUI/toolset to pose, customize, and manage armor stands for builds, displays, and lobby…",
+    "category": "Survival · Worlds and building",
+    "external": "https://www.spigotmc.org/resources/armor-stand-tools.2237/"
+  },
+  "guilds": {
+    "name": "Guilds",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "playerquests": {
+    "name": "PlayerQuests",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "rank-progression": {
+    "name": "Rank-Progression",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "errsa-mc-core": {
+    "name": "ERRSA-MC-Core",
+    "summary": "ERRSA-MC-Core is our in-house, all-in-one, plugin that provides essential server commands players actually use: selling diamonds for money, quick links to…",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "bannerbuilder": {
+    "name": "BannerBuilder",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "headdb": {
+    "name": "HeadDB",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "quickshop-hikari": {
+    "name": "QuickShop-Hikari",
+    "summary": "This plugin supports the listed server category.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "tebex": {
+    "name": "Tebex",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "warpgui": {
+    "name": "WarpGUI",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "wild": {
+    "name": "Wild",
+    "summary": "WildernessTP allows players to teleport to a random safe location in the survival world using the /wild command.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "essentials": {
+    "name": "Essentials",
+    "summary": "EssentialsX is the primary core plugin on ERRSA MC, handling:",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "essentialschat": {
+    "name": "EssentialsChat",
+    "summary": "EssentialsX Chat handles chat formatting, prefixes/suffixes, and message structure for players on ERRSA MC, integrating with LuckPerms for rank-based chat display.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "essentialsspawn": {
+    "name": "EssentialsSpawn",
+    "summary": "EssentialsX Spawn handles player spawn management, including join spawn, /spawn, and respawn behavior.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "playerinitialization": {
+    "name": "PlayerInitialization",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "vipbridge": {
+    "name": "VIPBridge",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "silkspawners-v2": {
+    "name": "SilkSpawners_v2",
+    "summary": "SilkSpawners allows mob spawners to be broken and picked up, then placed again later as items.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "dragondropelytra": {
+    "name": "DragonDropElytra",
+    "summary": "This plugin detects when a player kills the End Dragon, and drops an Elyta based on configuration.",
+    "category": "Survival · Gameplay and progression",
+    "external": "https://www.spigotmc.org/resources/dragondropelytra2.71235/"
+  },
+  "autounlockpvpdrops": {
+    "name": "AutoUnlockPvPDrops",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "hurricane": {
+    "name": "Hurricane",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "shulkerreroute": {
+    "name": "ShulkerReroute",
+    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
+    "category": "Survival · Gameplay and progression",
+    "external": null
+  },
+  "fancyholograms": {
+    "name": "FancyHolograms",
+    "summary": "FancyHolograms is used to create advanced floating holograms (text, items, and blocks) for navigation, NPC labeling, and immersive decoration across ERRSA MC.",
+    "category": "Survival · Display and media",
+    "external": null
+  },
+  "fancynpcs": {
+    "name": "FancyNpcs",
+    "summary": "FancyNPCs is used to create interactive NPCs that guide players, teach mechanics, and act as immersive interfaces for server systems (economy, claims, shops, etc.) across ERRSA MC.",
+    "category": "Survival · Display and media",
+    "external": null
+  },
+  "dynmap": {
+    "name": "dynmap",
+    "summary": "Installed Survival plugin in display and media. Detailed purpose has not been verified yet.",
+    "category": "Survival · Display and media",
+    "external": null
+  },
+  "imageframe": {
+    "name": "ImageFrame",
+    "summary": "Installed Survival plugin in display and media. Detailed purpose has not been verified yet.",
+    "category": "Survival · Display and media",
+    "external": null
+  },
+  "invisibleframes": {
+    "name": "InvisibleFrames",
+    "summary": "Allows players to toggle item frames between visible and invisible using a simple in-game interaction.",
+    "category": "Survival · Display and media",
+    "external": null
+  },
+  "tab": {
+    "name": "TAB",
+    "summary": "TAB manages the tablist, nametags, prefixes, header/footer, and player sorting to display ranks and server information cleanly on ERRSA MC.",
+    "category": "Survival · Display and media",
+    "external": null
+  },
+  "urlcustomdiscs": {
+    "name": "URLCustomDiscs",
+    "summary": "Installed Survival plugin in display and media. Detailed purpose has not been verified yet.",
+    "category": "Survival · Display and media",
+    "external": null
+  },
+  "voicechat": {
+    "name": "voicechat",
+    "summary": "Simple Voice Chat adds proximity-based voice communication to the Minecraft server using a separate UDP voice service.",
+    "category": "Survival · Display and media",
+    "external": null
+  },
+  "skript": {
+    "name": "Skript",
+    "summary": "Skript provides lightweight server-side automation and custom gameplay logic without requiring a compiled Java plugin.",
+    "category": "Survival · Automation",
+    "external": null
+  },
+  "skbee": {
+    "name": "SkBee",
+    "summary": "SkBee is a Skript add-on that extends Skript with modern Paper-compatible features, advanced events, NBT handling, particles, scoreboards, bounds, text…",
+    "category": "Survival · Automation",
+    "external": null
+  }
+}

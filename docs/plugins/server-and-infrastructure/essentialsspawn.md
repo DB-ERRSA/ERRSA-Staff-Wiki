@@ -1,94 +1,52 @@
-!!! note "Guide status"
-    This guide predates the September 2026 plugin inventory. Verify commands and settings against the live server before use.
-
 # EssentialsX Spawn
 
-## Purpose
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="EssentialsSpawn" data-server="survival" aria-live="polite"></div>
 
-**Category:** `Infrastructure`
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="EssentialsSpawn" data-server="survival" aria-live="polite"></div>
 
-EssentialsX Spawn handles player spawn management, including join spawn, `/spawn`, and respawn behavior. On ERRSA MC, it is used to control where players are placed when they join the server or use spawn-related commands.
+## What Is EssentialsX Spawn?
 
----
+EssentialsX Spawn is the spawn-management module for EssentialsX, providing spawn and respawn behavior within the Essentials ecosystem.
+
+## ERRSA's Use
+
+ERRSA uses it as part of EssentialsX rather than as a separately managed system. Spawn-related access and behavior should be considered alongside the main EssentialsX configuration.
+
 
 ## Dependencies
 
-!!! info "Required for this plugin to function"
-- **Server:** Paper / Spigot
-- **Plugins:**
-  - `EssentialsX`
-
+- [EssentialsX](essentials.md)
 
 ---
 
-## Permissions Model
+??? note "Common Commands"
 
-!!! note "Managed through EssentialsX"
-    All permissions for this plugin are handled within the **EssentialsX permission structure**.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when a plugin does not expose a reliable command-permission relationship.
 
-- Permissions are **not managed separately**
-- Refer to the **EssentialsX knowledgebase page** for:
-  - Player permissions
-  - Staff permissions
-  - Admin overrides
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="EssentialsSpawn" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-## Common Commands
+??? note "ERRSA Configuration"
 
-!!! note "Merged with EssentialsX"
-    All commands related to spawn are part of the **EssentialsX command system**.
+    EssentialsX Spawn is managed through the main EssentialsX configuration rather than a separate ERRSA configuration set.
 
-Refer to the **EssentialsX knowledgebase page** for:
-
-- `/spawn`
-- Respawn behavior commands
+    !!! info "Centralized configuration"
+        Spawn behavior should be changed through the appropriate EssentialsX configuration and verified on the live server.
 
 ---
 
-## Configuration Files
+??? note "Permissions"
 
-!!! info "Configuration is integrated"
-- EssentialsX Spawn does not maintain independent configuration logic
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-All configuration is handled within:
-
-- `plugins/Essentials/config.yml`
-- Essentials spawn-related settings
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="EssentialsSpawn" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
-## ERRSA Defaults & Settings
+## Related Resources
 
-!!! note "Defined within EssentialsX"
-    All spawn behavior is configured through the main Essentials configuration.
+### Official Resources
 
-This includes:
-
-- Join spawn behavior
-- Respawn handling
-- Spawn command behavior
-
-Refer to the **EssentialsX knowledgebase page** for full details.
-
----
-
-## Notes for ERRSA MC Maintainers
-
-!!! warning "Centralized management"
-    EssentialsX Spawn is **not managed as a standalone system**.
-
-### Key points
-- All logic is centralized in EssentialsX
-- Do not attempt to configure this plugin independently
-- Always modify spawn behavior through:
-  - Essentials config
-  - Essentials commands
-
-### Best practice
-- Treat EssentialsX Spawn as a **module of Essentials**, not a separate plugin
-
----
-
-_Last verified: 2026-03-20_  
-_Server version: 1.21.4_
+- [Plugin Download ↗](https://modrinth.com/plugin/essentialsx-spawn){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://essentialsx.net/wiki/introduction){ .md-button .md-button--primary }

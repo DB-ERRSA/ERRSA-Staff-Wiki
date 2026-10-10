@@ -1,50 +1,78 @@
----
-tags:
-  - MOD
-  - ADMIN
-  - DEV
-  - SERVER LEAD
----
+# Guilds
+
+<div class="errsa-plugin-role-tags md-tags" data-root="../../../assets/wiki-sync/" data-plugin="Guilds" data-server="survival" aria-live="polite"></div>
+
+<div class="errsa-plugin-status" data-root="../../../assets/wiki-sync/" data-plugin="Guilds" data-server="survival" aria-live="polite"></div>
 
 ## What Is Guilds?
 
-Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.
+Guilds is a custom ERRSA plugin that provides the server's guild system and related gameplay features.
 
 ## ERRSA's Use
 
-ERRSA documents **Guilds** as part of the **Gameplay And Progression** plugin group on the Survival server.
+ERRSA uses Guilds to support player guilds and guild-related progression on the Survival server. The plugin is maintained internally, so live behavior and permissions are the authority for staff access.
 
-!!! warning "Needs live verification"
-    The older plugin files did not document a verified ERRSA-specific purpose beyond its category and installed status. Verify behavior against the live server before changing configuration.
+
+## Dependencies
+
+- [PlaceholderAPI](../server-and-infrastructure/placeholderapi.md)
+- [Vault](../server-and-infrastructure/vault.md)
+- [LuckPerms](../permissions-and-moderation/luckperms.md)
+- [GriefPrevention](../permissions-and-moderation/griefprevention.md)
+- [TAB](../display-and-media/tab.md)
+- [FancyNPCs](../display-and-media/fancynpcs.md)
+- [FancyHolograms](../display-and-media/fancyholograms.md)
+- [WorldGuard](../worlds-and-building/worldguard.md)
+- [BannerBuilder](bannerbuilder.md)
+
+
+## Required By
+
+- [PlayerQuests](playerquests.md)
 
 ---
 
 ??? note "Common Commands"
 
-    No staff/player commands were verified in the older plugin documentation.
+    Commands, permissions, and staff access are populated from Wiki Sync. Manual mappings are used only when the plugin does not expose a reliable command-permission relationship.
+
+    <div class="errsa-plugin-commands" data-root="../../../assets/wiki-sync/" data-plugin="Guilds" data-server="survival" aria-live="polite">Loading synced commands…</div>
 
 ---
 
-??? note "Plugin Configuration"
+??? note "ERRSA Configuration"
 
-    No intentional ERRSA-specific configuration changes were documented in the older plugin files.
+    | Setting / Area | ERRSA Value | Purpose |
+    |---|---|---|
+    | Storage | SQLite (`guilds.db`) | Store guild data locally |
+    | Guild name length | `3–24` characters | Constrain guild names |
+    | Guild tag length | `2–4` characters | Keep tags short for chat/display use |
+    | Invite expiration | `10 min` | Expire stale invitations |
+    | Guild bank | Enabled | Allow guild banking features |
+    | Guild chat | Enabled | Provide guild-only chat |
+    | Open membership default | Disabled | New guilds are invitation-only unless changed |
+    | LuckPerms integration | Enabled — context `main`, priority `350` | Publish guild tags into the live permission/meta system |
+    | Claims | Enabled; minimum `5×5` | Allow guild claim features with a minimum footprint |
+    | Leaderboard checks | Every `10 s` | Detect ranking changes for announcements |
+    | Claim-block shop | `500` blocks for `$10,000`; +`$5,000` each purchase; cap `5,000` bonus | Provide a controlled late-game claim expansion sink |
 
-    !!! info "Unchanged / undocumented settings"
-        Do not assume a plugin default or live value from this page when no setting is listed. Check the live configuration first.
+    !!! info "Production configuration"
+        Values below were verified against the current production plugin configuration. Credentials, API keys, tokens, and other secrets are intentionally omitted.
+
+    !!! warning "Operational note"
+        Guilds is authoritative for guild data; the LuckPerms prefix is an integration output, not the source of guild membership.
 
 ---
 
 ??? note "Permissions"
 
-    | Permission | Description | Granted To |
-    |------------|-------------|------------|
-    | `guilds.admin` | Direct LuckPerms assignment (`grant`, global) | admin |
+    Access shown below is derived from the latest LuckPerms snapshot. Wildcards and inherited groups are included automatically.
 
-    !!! info "Permission inheritance"
-        Direct group assignments were carried over from the September 26, 2026 staff permission export. Check live LuckPerms inheritance and contexts before changing access.
+    <div class="errsa-plugin-permissions" data-root="../../../assets/wiki-sync/" data-plugin="Guilds" data-server="survival" aria-live="polite">Loading synced permissions…</div>
 
 ---
 
 ## Related Resources
 
-No approved external resource URL was present in the older plugin files.
+!!! info "Documentation coming soon"
+    This is a custom ERRSA plugin. Documentation will be added here when available.
