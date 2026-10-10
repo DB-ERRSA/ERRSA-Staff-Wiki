@@ -49,9 +49,17 @@ Records can provide context for:
 
 ---
 
+## Determine and Apply the Appropriate Action
+
+After reviewing the player's history, follow the applicable [standard procedure](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview } to determine and carry out the appropriate action.
+
+Depending on the situation, this may involve issuing a warning, mute, jail, kick, temporary ban, or permanent ban. Follow the procedure's instructions for the appropriate action and duration, and escalate the situation when necessary.
+
+---
+
 ## Send the Appropriate Communication
 
-After reviewing the player's history and confirming the appropriate action, the next step is to formally communicate that decision to the player.
+Once the appropriate action has been selected and applied, the next step is to formally communicate that decision to the player.
 
 The ERRSA MC Bot provides several communication templates:
 
@@ -147,6 +155,15 @@ For additional information, see [Section 4.4](../../documentation/logging-docume
     Emails are for players, logs are for staff. The two are not exclusive. In simple cases, the player-facing communication may contain everything relevant. In more complicated situations, additional information should be recorded internally so that future staff members can understand the full circumstances of the incident.
 
 The goal is to create a record that another staff member can understand without needing additional input or context.
+
+---
+
+## ERRSA MC Bot Downtime
+
+If the Discord Bot is unavailable and you cannot send formal communication or add logs through the `/staff` center, refer to [Section 4.6](../../documentation/logging-documentation.md#46-discord-bot-downtime){ data-preview } of the Staff Documentation for the manual email and recordkeeping procedure.
+
+!!! warning "Duplicate emails"
+    Do not send the email again once the bot is restored. The original email and any additional incident details must instead be entered into the appropriate records, as outlined in Section 4.6.
 
 ---
 

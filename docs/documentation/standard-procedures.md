@@ -16,7 +16,7 @@ General guidelines for using moderation powers:
 
 - If a situation is covered below, follow its specific procedure.
 
-- If not, always use the least severe action necessary (warn → mute → kick → ban).
+- If not, always use the least severe action necessary (warn → mute → kick → jail → ban) and a reasonable duration.
 
 - Always provide a valid reason when taking action against a player.
 
@@ -48,9 +48,9 @@ Use these procedures to respond consistently to player reports and server incide
 
     - Immediately escalate to the Committee Lead.
 
-    - If the Committee Lead is involved, escalate to the Executive Board.
+    - If the Committee Lead is involved, escalate to the ERRSA Executive Board.
 
-    - Do not confront the staff member publicly; handle it internally.
+    - Never confront staff members publicly; always handle it internally.
 
 ### 3.2.3 Inappropriate Language { .situation-heading }
 ??? info "3.2.3 Inappropriate Language (Chat/Signs/Books)"
@@ -75,6 +75,8 @@ Use these procedures to respond consistently to player reports and server incide
 
         - Admins → If needed, create a formal student conduct report.
 
+    - Send formal communication to the player following [Section 4.2](logging-documentation.md#42-send-a-written-warning){ data-preview } or [Section 4.3](logging-documentation.md#43-send-a-disciplinary-action-notice){ data-preview }. Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
+
 ### 3.2.4 Inappropriate Behavior { .situation-heading }
 ??? info "3.2.4 Inappropriate Behavior (Harassment, Toxicity, etc.)"
 
@@ -92,7 +94,7 @@ Use these procedures to respond consistently to player reports and server incide
 
     - In severe cases, escalate to Admin for formal student conduct report.
 
-    - Document the incident thoroughly in the approved staff record location; use the Discord staff action process ([Section 4.2](logging-documentation.md#42-send-a-written-warning){ data-preview } or [Section 4.3](logging-documentation.md#43-send-a-disciplinary-action-notice){ data-preview }) for a formal notice when required.
+    - Send formal communication to the player following [Section 4.2](logging-documentation.md#42-send-a-written-warning){ data-preview } or [Section 4.3](logging-documentation.md#43-send-a-disciplinary-action-notice){ data-preview }. Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
 
 ### 3.2.5 Inappropriate Builds { .situation-heading }
 ??? info "3.2.5 Inappropriate Builds"
@@ -115,16 +117,18 @@ Use these procedures to respond consistently to player reports and server incide
 
     - In severe cases, escalate to Admin for formal student conduct report.
 
-    - Document the incident thoroughly in the approved staff record location; use the Discord staff action process ([Section 4.2](logging-documentation.md#42-send-a-written-warning){ data-preview } or [Section 4.3](logging-documentation.md#43-send-a-disciplinary-action-notice){ data-preview }) for a formal notice when required.
+    - Send formal communication to the player following [Section 4.2](logging-documentation.md#42-send-a-written-warning){ data-preview } or [Section 4.3](logging-documentation.md#43-send-a-disciplinary-action-notice){ data-preview }. Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
 
 ### 3.2.6 Cheating, Hacking, or Exploiting { .situation-heading }
 ??? info "3.2.6 Cheating, Hacking, or Exploiting"
 
     - Collect evidence whenever possible (screenshots, videos, plugin alerts).
 
+    - Once potential suspects are identified, issue a `/jail <player> void` until proven innocent or guilty while further investigation continues.
+
     - Confirm with anti-cheat logs or tools (if available).
 
-    - Issue a temporary ban:
+    - Unjail all suspoects and issue a temporary ban to any found guilty:
 
         - First offense, 1 week
 
@@ -134,16 +138,22 @@ Use these procedures to respond consistently to player reports and server incide
 
     - If the case is extreme, issue a permanent ban immediately.
 
+    - Send formal communication to the player following [Section 4.3](logging-documentation.md#43-send-a-disciplinary-action-notice){ data-preview }. Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
+
     - Always report exploits that affect server stability or fairness to a Developer.
 
 ### 3.2.7 Griefing or Theft { .situation-heading }
 ??? info "3.2.7 Griefing or Theft"
+
+    - If a player is actively griefing or stealing, issue a `/jail <player> void` while relevant information regarding previous ban history is gathered.
 
     - Admins can use investigation tools to determine who caused the damage or took the stolen items and verify claim/ownership of builds or items.
 
     - Some guess work may be necessary, use best discretion and ask, “what is most likely to have occurred?” when both parties can’t agree on the story.
 
     - Admins can restore damages or give items if possible and verifiable.
+
+    - Unjail players if they were jailed.
 
     - Issue a verbal warning first if the behavior is minor.
 
@@ -155,7 +165,7 @@ Use these procedures to respond consistently to player reports and server incide
 
         - Third offense, permanent
 
-    - Always log rollbacks and punishment actions.
+    - Send formal communication to the player following [Section 4.2](logging-documentation.md#42-send-a-written-warning){ data-preview } or [Section 4.3](logging-documentation.md#43-send-a-disciplinary-action-notice){ data-preview }. Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
 
 ### 3.2.8 Spamming or Advertising { .situation-heading }
 ??? info "3.2.8 Spamming or Advertising"
@@ -176,6 +186,8 @@ Use these procedures to respond consistently to player reports and server incide
         - Third offense, permanent
 
     - Admins may use creative or other plugin tools (such as world edit) to dismantle the machine if needed.
+
+    - Send formal communication to the player following [Section 4.2](logging-documentation.md#42-send-a-written-warning){ data-preview } or [Section 4.3](logging-documentation.md#43-send-a-disciplinary-action-notice){ data-preview }. Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
 
     - In severe cases, a server roll back may be needed, but only as a last resort.
 

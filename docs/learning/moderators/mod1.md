@@ -77,6 +77,23 @@ Where `<length>` determines how long the player will remain muted.
     Durations use a number followed by a [time unit]("s = Second, m = Minute, h = Hour, d = Day, w = Week, y = Year"). Multiple units can be combined, such as '1d12h' for one day and twelve hours.
 
 <br>
+### 4. Jailing
+
+Jailing is a temporary investigative measure used to prevent suspected players from causing further damage, disposing of evidence, or interfering with an investigation. Jailed players are confined to a box where they cannot break or place blocks, use items, or teleport away.
+
+Issue a jail to players when immediate intervention is needed. Otherwise, consider waiting until a list reasonably suspected players has been identified, as jailing too early may alert other suspects and compromise the investigation. Only jail players with a reasonable connection to the incident; release anyone found to have insufficient evidence against them.
+
+<br>
+Jails can be issued in-game with:
+```text
+/jail <player> void
+```
+Where 'void' is the name of the server's jail.
+
+!!! warning "Unjail after investigation"
+    Keep a list of everyone jailed during the investigation. Once it concludes, unjail everyone, including innocent players and those who have been banned. This applies to offline players as well, ensuring no one remains jailed when they next join the server. Remember, jailing is only a temporary measure during active investigations.
+
+<br>
 ### 4. Bans
 
 A ban prevents a player from accessing the server for a specified period.

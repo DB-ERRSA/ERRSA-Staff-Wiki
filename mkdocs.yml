@@ -64,6 +64,7 @@ plugins:
 
 markdown_extensions:
   - admonition
+  - abbr
   - attr_list
   - md_in_html
   - tables

@@ -88,7 +88,7 @@ When the situation is unclear, do not guess. Ask another staff member for help o
 
 ---
 
-## Recording Incidents
+## Player Communication and Incidents Recording 
 
 Documentation should happen throughout the entire process, not only after a final action is taken.
 
@@ -100,7 +100,7 @@ Record relevant information from:
 - Communication with involved players
 - The final decision and resulting action
 
-The `/staff` command in Discord is used for all logging and formal player communication.
+The `/staff` command in Discord is the center for all logging and formal player communication.
 
 For detailed procedures on staff records and logging, see [Staff Actions & Records](../../documentation/logging-documentation.md){ data-preview }, which will be explained in [Module 6](mod6.md#official-written-warnings){ data-preview }.
 

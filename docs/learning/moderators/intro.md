@@ -32,6 +32,7 @@ Moderators have relatively few permissions beyond those available to regular pla
 - Warning players.
 - Muting players.
 - Kicking players.
+- Jailing players.
 - Banning players.
 
 These tools should be used carefully and only when appropriate, remember with great power comes great responsibility. 🕷️🕸️

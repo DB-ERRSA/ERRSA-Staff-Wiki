@@ -45,6 +45,25 @@ The ERRSA MC server has a few simple rules to ensure we maintain a safe, respect
 
 ---
 
+## 1.4 Server Architecture
+
+ERRSA MC is a Minecraft server network built around a vanilla-focused survival experience for Embry-Riddle students.
+
+The network currently runs **Minecraft Java Edition 1.21.4** using <abbr title="High-performance server software for Minecraft">Paper</abbr> servers connected through a <abbr title="A server that connects multiple Minecraft servers under one network">proxy</abbr> running <abbr title="High-performance proxy software for Minecraft">Velocity</abbr>.
+
+The network consists of the following components:
+
+- **Proxy** — Runs Velocity software and serves as the entry point for players connecting to the network. It allows players to move between servers without disconnecting from the network.
+- **Main** — Runs Paper software and hosts the primary Survival and Creative worlds.
+- **Events** — Runs Paper software and provides a separate environment for temporary events and activities.
+- **Backup** — Runs Paper software and provides a separate environment for development, testing, and troubleshooting.
+
+The network also uses [Geyser]("../plugins/server-and-infrastructure/geyser-spigot.md"){ data-preview } and [Floodgate]("../plugins/server-and-infrastructure/floodgate.md"){ data-preview } plugins to allow players using Minecraft Bedrock Edition to connect.
+
+Players connect through the network's public server address, which directs them to the Main server by default. The server browser allows players to move between available servers while remaining connected to the network.
+
+---
+
 <nav class="handbook-next" aria-label="Continue reading">
   <a href="../staff-roles-responsibilities/">
     <span class="handbook-next__copy"><small>Next section</small><strong>2. Staff roles & responsibilities</strong><span>See who handles issues and how the team works together.</span></span>
