@@ -1,0 +1,56 @@
+/* Reusable troubleshooting hub and guided decision trees */
+.md-typeset .trouble-intro {display:flex;flex-direction:column;gap:.35rem;padding:1rem 1.2rem;border-left:3px solid var(--md-accent-fg-color);background:var(--md-code-bg-color);border-radius:.3rem;font-size:.85rem}
+.md-typeset .trouble-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:1rem 0 1.7rem}
+.md-typeset .trouble-tile{display:flex;flex-direction:column;gap:.5rem;min-height:9.5rem;padding:1.25rem;border:1px solid var(--md-default-fg-color--lightest);border-radius:.7rem;color:var(--md-default-fg-color);text-decoration:none;background:var(--md-default-bg-color);transition:border-color .15s,transform .15s}
+.md-typeset .trouble-tile:hover,.md-typeset .trouble-tile:focus-visible{border-color:var(--md-accent-fg-color);transform:translateY(-2px)}
+.md-typeset .trouble-tile__eyebrow,.md-typeset .trouble-wizard__eyebrow{color:var(--md-accent-fg-color);font-size:.66rem;font-weight:750;letter-spacing:.075em}
+.md-typeset .trouble-tile strong{font-size:1rem}.md-typeset .trouble-tile>span:nth-of-type(2){color:var(--md-default-fg-color--light);font-size:.79rem;line-height:1.5}
+.md-typeset .trouble-tile__link{margin-top:auto;font-size:.8rem;font-weight:700;color:var(--md-accent-fg-color)}
+.md-typeset .trouble-wizard{margin:1.4rem 0 2rem;border:1px solid var(--md-default-fg-color--lightest);border-radius:.8rem;overflow:hidden;background:var(--md-default-bg-color)}
+.md-typeset .trouble-wizard__top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1.25rem;background:var(--md-code-bg-color);border-bottom:1px solid var(--md-default-fg-color--lightest)}
+.md-typeset .trouble-wizard__progress{font-size:.72rem;color:var(--md-default-fg-color--light)}
+.md-typeset .trouble-wizard__content{padding:1.35rem}
+.md-typeset .trouble-wizard__content h2{margin:0 0 .5rem;font-size:1.25rem;font-weight:700}
+.md-typeset .trouble-wizard__content p{margin:.4rem 0 .9rem;font-size:.85rem}
+.md-typeset .trouble-answers{display:grid;gap:.6rem;margin-top:1.25rem}
+.md-typeset .trouble-answer{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;padding:.85rem 1rem;text-align:left;font:inherit;font-size:.84rem;font-weight:650;border:1px solid var(--md-default-fg-color--lightest);border-radius:.5rem;background:var(--md-default-bg-color);color:var(--md-default-fg-color);cursor:pointer}
+.md-typeset .trouble-answer:hover,.md-typeset .trouble-answer:focus-visible{border-color:var(--md-accent-fg-color);background:var(--md-code-bg-color);outline-offset:2px}
+.md-typeset .trouble-answer::after{content:'→';color:var(--md-accent-fg-color)}
+.md-typeset .trouble-result__label{font-size:.72rem;font-weight:750;color:var(--md-accent-fg-color);text-transform:uppercase;letter-spacing:.05em}
+.md-typeset .trouble-result ol{padding-left:1.3rem}.md-typeset .trouble-result li{margin:.5rem 0;font-size:.84rem}.md-typeset .trouble-result__owner{padding:.75rem .9rem;margin-top:1rem;border-radius:.45rem;background:var(--md-code-bg-color);font-size:.84rem}
+.md-typeset .trouble-wizard__footer{display:flex;justify-content:space-between;gap:.7rem;padding:.9rem 1.25rem;border-top:1px solid var(--md-default-fg-color--lightest)}
+.md-typeset .trouble-wizard__footer button{font:inherit;font-size:.78rem;font-weight:650;color:var(--md-accent-fg-color);cursor:pointer;background:transparent;border:0;padding:.35rem}.md-typeset .trouble-wizard__footer button:disabled{opacity:.35;cursor:not-allowed}
+@media(max-width:650px){.md-typeset .trouble-grid{grid-template-columns:1fr}.md-typeset .trouble-wizard__content{padding:1rem}.md-typeset .trouble-wizard__footer{padding:.8rem}}
+@media(prefers-reduced-motion:reduce){.md-typeset .trouble-tile{transition:none}}
+
+/* Consistent, scalable SVG for restart action (Lucide-style refresh-ccw) */
+.md-typeset .trouble-wizard__restart{display:inline-flex;align-items:center;gap:.4rem}
+.md-typeset .trouble-wizard__restart .trouble-icon{display:block;flex:none;stroke:currentColor}
+.md-typeset .trouble-wizard__footer button:focus-visible{outline:2px solid var(--md-accent-fg-color);outline-offset:3px;border-radius:.2rem}
+
+/* Always-visible navigation action: accessible in dark and light themes.
+   Use a dedicated class to avoid changing Material buttons elsewhere. */
+.md-typeset a.md-button.trouble-guide-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: .65rem 0 1rem;
+  padding: .55rem 1rem;
+  border: 1px solid #32b9ce;
+  border-radius: .35rem;
+  background-color: #176678;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color .15s ease, border-color .15s ease;
+}
+.md-typeset a.md-button.trouble-guide-back:hover,
+.md-typeset a.md-button.trouble-guide-back:focus-visible {
+  background-color: #0e4e60;
+  border-color: #68deea;
+  color: #ffffff;
+}
+.md-typeset a.md-button.trouble-guide-back:focus-visible {
+  outline: 3px solid #68deea;
+  outline-offset: 3px;
+}
