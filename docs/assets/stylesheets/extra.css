@@ -273,6 +273,7 @@
 .md-nav__item:has(> input#__nav_4) .md-nav--secondary {
   display: none;
 }
+
 /* Changelog */
 .md-nav__item--active > .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list {
     display: none;
@@ -280,9 +281,18 @@
 .md-nav__item:has(> .md-nav > .md-nav__list > .md-nav__item > .md-nav__link--active) > .md-nav__link {
     color: var(--md-typeset-a-color);
 }
+/* Plugins */
+.md-nav__item:has(> input#__nav_5) .md-nav--secondary {
+  display: none;
+}
+
+/* Troubleshooting */
+.md-nav__item:has(> input#__nav_7) .md-nav--secondary {
+  display: none;
+}
 /* Troubleshooting destination cards */
 .md-typeset .home-destinations.troubleshooting-destinations {
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 @media(max-width:900px) {

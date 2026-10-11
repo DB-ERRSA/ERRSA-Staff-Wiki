@@ -206,6 +206,10 @@ Follow the existing staff recordkeeping requirement to retain the **full email c
 
 ---
 
+### 4.7 Sending Custom Communications
+
+---
+
 <nav class="handbook-next" aria-label="Continue reading">
   <a href="../server-version/">
     <span class="handbook-next__copy"><small>Next section</small><strong>5. Server versions</strong><span>Understand release numbers and read the changelog.</span></span>

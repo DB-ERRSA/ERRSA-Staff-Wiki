@@ -10,7 +10,7 @@ tags:
 
 Cheating and exploits can have a significant impact on the server's fairness and economy. Moderators are often the first staff members to notice suspicious behavior, but they generally do not have the tools required to complete a full investigation.
 
-Your role is to **recognize potential issues, gather what information you can safely obtain, and escalate when appropriate**.
+Your role is to **recognize potential issues, not conduct investigations**. Escalate the situation to an admin or dev for proper investigation.
 
 !!! warning "Suspicion is not guilt"
     Suspicious behavior should be investigated carefully. The presence of a suspicious pattern does not automatically mean a player is cheating.
@@ -77,13 +77,14 @@ As with suspected x-ray use, these indicators should be treated as suspicion rat
 
 ---
 
-## Gathering Evidence Before Taking Action
-
-Whenever possible, always gather evidence before taking administrative action.
-
-An Admin may be able to use investigation tools to confirm what happened. Moderators can also conduct safe research based on the information available to them.
+## Player Confrontation
 
 Be cautious about confronting a player too early. If the player is actually cheating, revealing that staff are suspicious may encourage them to hide evidence or change their behavior, making the investigation more difficult.
+
+An Admin or Developer needs to conduct a formal investigation before any player communication is sent.
+
+!!! warning "Reminder"
+    Remember, your role as a moderator is to **recognize potential issues, not conduct investigations**.
 
 ---
 
