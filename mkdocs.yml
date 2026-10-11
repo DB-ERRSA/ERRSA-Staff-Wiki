@@ -47,10 +47,14 @@ extra_javascript:
   - assets/javascripts/wiki-sync.js
   - assets/javascripts/wiki-live-pages.js
   - assets/javascripts/wiki-tag-colors.js
+  - assets/javascripts/troubleshooting.js
+  
 
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/permissions-model.css
+  - assets/stylesheets/troubleshooting.css
+  
 
 plugins:
   - search
@@ -232,6 +236,9 @@ nav:
 
   - Troubleshooting:
       - Overview: troubleshooting/index.md
-      - Common issues: troubleshooting/common-issues.md
-      - Permissions: troubleshooting/permissions.md
-      - Plugin issues: troubleshooting/plugin-issues.md
+      - Player Help:
+          - Player registration: troubleshooting/player-registration.md
+          - Connection & common issues (COMING SOON): troubleshooting/common-issues.md
+      - Staff & Technical Help:
+          - Commands & permissions (COMING SOON): troubleshooting/permissions.md
+          - Plugins & integrations (COMING SOON): troubleshooting/plugin-issues.md
