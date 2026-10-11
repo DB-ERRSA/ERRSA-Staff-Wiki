@@ -10,7 +10,7 @@ tags:
 
 **Use this guide when a player is trying to join ERRSA Minecraft for the first time or is stuck during verification.** It will help you locate the step that is failing and decide what to do next. No plugin knowledge required.
 
-[← All troubleshooting guides](index.md){ .md-button }
+[← All troubleshooting guides](index.md){ .md-button .trouble-guide-back }
 
 !!! info "Before you start"
     Ask the player **what they see on their screen** and whether they play on **Java or Bedrock**. If possible, ask for the exact error text or a screenshot with private information hidden. **Do not request passwords, verification codes, or access to their university account.**
