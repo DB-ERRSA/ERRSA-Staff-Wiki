@@ -29,7 +29,7 @@ Use this section if buttons are unavailable, JavaScript is disabled, or you want
 | --- | --- | --- |
 | Cannot connect to the Minecraft server | Ask for the exact message and whether they use Java or Bedrock; check the server address/instructions in the official onboarding guide | Escalate the error and edition to a Developer or Server Lead |
 | Joined, but cannot find the next registration step | Ask them to read the instructions displayed in the initialization area; use the [official onboarding video](https://www.youtube.com/watch?v=nrxG9c11pdo) | Escalate with screenshot of their current screen |
-| Verification message or email is missing | Confirm the step was actually submitted, and ask the player to check their own inbox and spam folder | Escalate to a Developer or Server Lead for private workflow checks |
+| Verification message or email is missing | Confirm the step was actually submitted, and ask the player to check their own inbox and spam folder. Ask for exact error messages in the chat if applicable. | Escalate to a Developer or Server Lead for private workflow checks |
 | Verification is rejected or stuck | Ask for the exact on-screen error; confirm they are following official ERAU verification instructions | Escalate; do not bypass verification |
 | Player says verification succeeded, but still has restricted access | Ask them to reconnect once, then note their current location and exact access error | Escalate for initialization/status review; do not grant permissions manually |
 | Account changed, duplicate account, or Java/Bedrock switch | Stop before changing records; collect both usernames privately as appropriate | Ask a Server Lead to review the account-transfer policy |
