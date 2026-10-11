@@ -36,7 +36,7 @@ Use this section if buttons are unavailable, JavaScript is disabled, or you want
 
 ## When to escalate
 
-**Moderators and other first-line staff:** Help the player describe the issue, check the safe steps above, then ask a Developer or **Nolan or Stephen (Server Leads)** if it remains unresolved. You are not expected to inspect databases, modify LuckPerms, reset registration data, or change an automation.
+**Moderators and other first-line staff:** Help the player describe the issue, check the safe steps above, then ask a Developer or **Nolan or Stephen (Server Leads)** if it remains unresolved.
 
 **Developers and Server Leads:** Investigate the appropriate system for the confirmed failure point, using authorized access. Possible systems include [PlayerInitialization](../plugins/server-and-infrastructure/playerinitialization.md), [Power Automate](../tools/power-automate/index.md), and the player initialization database. These are investigation leads, **not confirmation of a cause**.
 
@@ -45,7 +45,8 @@ Use this section if buttons are unavailable, JavaScript is disabled, or you want
 Copy this short template into the appropriate staff channel or log. Share sensitive identifiers only in an approved staff-restricted location.
 
 ```text
-Player username (Java/Bedrock):
+Player username:
+UUID: 
 Where the player is stuck:
 Exact on-screen message (if any):
 When it happened (include time zone):
