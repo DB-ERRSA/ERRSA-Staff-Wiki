@@ -453,3 +453,18 @@
 }
 .md-typeset .errsa-command-table td code { white-space: normal; overflow-wrap: anywhere; }
 .md-typeset .errsa-command-table td.errsa-command-access { min-width: 0; }
+
+.md-typeset .section-card__icon img,
+.md-typeset .home-destination__icon img {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  background-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .section-card__icon img[src$=".svg"],
+.md-typeset .home-destination__icon img[src$=".svg"] {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(35%)
+          saturate(510%) hue-rotate(122deg) brightness(95%) contrast(90%);
+}
