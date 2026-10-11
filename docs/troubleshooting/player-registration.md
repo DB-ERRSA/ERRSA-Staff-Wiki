@@ -18,7 +18,7 @@ tags:
 <div class="trouble-wizard" data-troubleshoot="registration" aria-label="Player registration troubleshooting decision guide">
  <div class="trouble-wizard__top"><span class="trouble-wizard__eyebrow">GUIDED DIAGNOSIS</span><span class="trouble-wizard__progress" aria-live="polite">Step 1</span></div>
  <div class="trouble-wizard__content" aria-live="polite" aria-atomic="true"><h2>Where is the player stuck?</h2><p>Choose the answer that best matches what they see.</p><p><a href="#registration-quick-reference">Use the text-only troubleshooting guide ↓</a></p></div>
- <div class="trouble-wizard__footer"><button class="trouble-wizard__back" type="button" disabled>← Previous question</button><button class="trouble-wizard__restart" type="button"><svg class="trouble-icon" aria-hidden="true" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a9 9 0 1 1 2.6 6.4"/><path d="M3 4v7h7"/></svg><span>Start over</span></button></div>
+ <div class="trouble-wizard__footer"><button class="trouble-wizard__back" type="button" disabled>← Previous question</button><button class="trouble-wizard__restart" type="button"><img class="trouble-refresh-icon" src="../../assets/images/refresh.svg" alt="" aria-hidden="true" width="18" height="18"><span>Start over</span></button></div>
 </div>
 
 ## Registration quick reference
