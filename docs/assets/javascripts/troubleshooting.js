@@ -1,32 +1,365 @@
 /* Decision-tree renderer. Future guides can reuse this UI by adding a tree and data-troubleshoot ID. */
 (() => {
   const TREES = {
+
 registration: {
-    start: {q:'Where is the player stuck?', help:'Ask the player to describe what is on their screen. Select the closest match.', a:[['They cannot connect to ERRSA Minecraft','connect'],['They connected, but are stuck in the registration area','inworld'],['They are waiting for an email or verification step','email'],['They submitted verification, but it did not work','verify'],['They completed verification, but cannot play normally','access'],['They changed accounts or need to switch Java / Bedrock','accounts'],['I cannot tell what step they reached','unknown']]},
-    connect: {q:'What happens when they try to connect?', help:'Have the player read the full error. Do not assume the cause.',a:[['Minecraft shows a connection or server error','connect_error'],['Minecraft says they are not allowed / not verified','connect_block'],['They do not know how to add or reach the server','connect_setup'],['Something else or unclear','unknown']]},
-    inworld: {q:'What do they see in the registration area?',a:[['They do not understand what to do next','instructions'],['A button, prompt, or command does not respond','screen_failure'],['They followed the instructions but nothing changed','screen_failure'],['They are now being asked to check an email','email']]},
-    email: {q:'What part of the email step is failing?',a:[['No message has appeared','email_missing'],['The message arrived, but a link or instruction fails','email_link'],['The player cannot access the required university account','account_access'],['They received the message and completed the step','verify']]},
-    verify: {q:'What happened after they submitted verification?',a:[['An error or rejection appeared','verify_reject'],['The page or game is still waiting','verify_pending'],['They think it succeeded, but access is still blocked','access'],['The player is now able to play normally','done']]},
-    access: {q:'What happens after they say they were verified?',a:[['They are still in the initial registration area','access_stuck'],['They enter the server but commands / areas are restricted','access_restricted'],['They have not tried reconnecting after success','access_reconnect'],['They can play normally now','done']]},
-    accounts: {q:'What kind of account issue is this?',a:[['Moving from Bedrock to Java, or Java to Bedrock','account_swap'],['Using a different username or a second account','account_duplicate'],['Unsure which account was registered','account_duplicate']]},
-    unknown: {result:'Not enough information yet', steps:['Ask the player: “What is the last step that worked?”','Ask for the exact screen message and whether they use Java or Bedrock. A screenshot may help if it hides private details.','Use “Previous question” to choose a matching stage. If the stage still cannot be determined, hand it off rather than guessing.'],owner:'First-line staff can gather details. A Developer or Server Lead should investigate if the player remains blocked.'},
-    connect_error: {result:'Connection failed before registration', steps:['Write down the exact connection error and Java/Bedrock edition.','Confirm they are using the current address and joining instructions from the official onboarding tutorial. Do not guess an address.','If the address and instructions are correct but the error persists, escalate with the exact message and time.'],owner:'First-line staff: verify instructions and collect the error. Developer / Server Lead: review server or proxy connection issues.'},
-    connect_block: {result:'Connection blocked by access or verification',steps:['Record the precise rejection text.','Ask whether this is their first time joining and if they previously finished registration.','Do not whitelist, bypass verification, or add permissions. Escalate for an account/initialization status check.'],owner:'Developer or Server Lead for status review.'},
-    connect_setup: {result:'Player needs the joining instructions',steps:['Ask whether they are using Java or Bedrock.','Share the official player onboarding walkthrough linked below and help them follow the correct edition-specific steps.','If they still cannot reach the server, go back and select the connection error they see.'],owner:'First-line staff can help; no technical access required.'},
-    instructions: {result:'Player needs help understanding the instructions',steps:['Have the player read what is currently shown in the initialization area.','Walk through the official onboarding video with them, one step at a time.','If the same button or instruction fails after they follow it, go back and choose “button, prompt, or command does not respond.”'],owner:'First-line staff can help with directions; do not bypass a required step.'},
-    screen_failure: {result:'Registration interaction is not advancing',steps:['Record the exact button, instruction, or command that did not work and any error shown.','Ask the player to avoid repeatedly submitting the same action while the failure is being investigated.','Escalate with a screenshot (private fields hidden), their edition, and the time.'],owner:'Developer / Server Lead: investigate PlayerInitialization and related services as appropriate.'},
-    email_missing: {result:'Verification email or message not received',steps:['Confirm the player actually finished the step that requests a message. Do not ask for the full email address.','Have the player check their own inbox and spam/junk folder, including any filters.','If nothing arrived, report the approximate time and the stage where they requested it. Do not repeatedly trigger the workflow or reveal registration data.'],owner:'Developer / Server Lead: check the authorized registration / Power Automate workflow and delivery history.'},
-    email_link: {result:'Verification link or email instructions are failing',steps:['Ask which part failed and record the exact error, without collecting any link tokens or one-time codes.','Confirm that they are following the official onboarding instructions and opening the message themselves.','Escalate the error and approximate timestamp; do not forward verification links to staff.'],owner:'Developer / Server Lead for private verification workflow checks.'},
-    account_access: {result:'Player cannot access the account required for verification',steps:['Clarify whether their difficulty is signing into their university account rather than ERRSA itself.','Direct them to the university’s official account recovery or IT support route. Staff should not request passwords or sign in for them.','If their account situation does not match the current eligibility process, ask a Server Lead for a policy decision.'],owner:'University IT handles campus account access; a Server Lead handles ERRSA eligibility questions.'},
-    verify_reject: {result:'Verification was rejected or showed an error',steps:['Capture only the exact error text and the step that produced it. Hide private information.','Confirm the player used the officially documented ERAU verification process. Do not guess about eligibility.','Escalate; do not manually mark the player verified or ask for their university password.'],owner:'Developer / Server Lead for authorized registration record and workflow review.'},
-    verify_pending: {result:'Verification appears stuck or pending',steps:['Ask when they submitted and what the page or game currently says.','Avoid encouraging repeated submissions, as this could complicate investigation.','Escalate with the approximate timestamp, edition, and screenshot with sensitive details hidden.'],owner:'Developer / Server Lead: inspect the authorized workflow and initialization status.'},
-    access_stuck: {result:'Verified player is still in the initialization area',steps:['Ask whether the player saw a clear success confirmation.','Have the player reconnect once if doing so is safe and no process is still visibly running.','If they are still stuck, escalate their status and current world; do not teleport them to bypass registration.'],owner:'Developer / Server Lead: review initialization completion and player status.'},
-    access_restricted: {result:'Verified player still has restricted access',steps:['Record the exact blocked action and error message, including which server/world it happened on.','Confirm whether a single reconnect resolves it.','If not resolved, escalate rather than granting ranks or permissions manually.'],owner:'Admin / Developer / Server Lead with appropriate authorization to review access; technical changes require approval.'},
-    access_reconnect: {result:'Confirm the final access state',steps:['Ask the player to disconnect and reconnect once after verification has clearly finished.','Check whether they reach normal gameplay and can use expected player features.','If not, go back and select where access is failing.'],owner:'First-line staff can perform this check.'},
-    account_swap: {result:'Account migration needs approval',steps:['Explain that ERRSA normally permits one account; a Java–Bedrock migration is treated as a one-time swap, not routine switching.','Do not promise immediate transfer or delete the old account. Collect both usernames through an appropriate staff channel.','Refer to a Server Lead for verification and a controlled data-transfer plan.'],owner:'Server Lead; technical staff handle any approved transfer.'},
-    account_duplicate: {result:'Possible duplicate or changed account',steps:['Clarify which username the player first registered and which one they are using now.','Do not register an extra account, merge data, or edit player files to “fix” the issue.','Ask a Server Lead to review the single-account policy and correct account association.'],owner:'Server Lead for policy and any approved technical handoff.'},
-    done: {result:'Registration appears complete',steps:['Confirm that the player has reached normal gameplay and can use expected player features.','Let them know they can ask staff for help if something else fails.','No technical changes are needed if access works normally.'],owner:'First-line staff can close this support request.'}
+  start: {
+    q: "Where is the player stuck?",
+    a: [
+      ["Cannot connect to ERRSA Minecraft", "edition"],
+      ["Inside registration / cannot accept rules", "rules"],
+      ["Accepted rules but no verification email", "email_missing"],
+      ["Email submitted but verification is not progressing", "verify"],
+      ["Verified but normal access is blocked", "access"],
+      ["Changing Java / Bedrock accounts", "accounts"]
+    ]
   },
+
+  // A. CONNECTION TROUBLESHOOTING
+
+  edition: {
+    q: "What Minecraft edition are they using?",
+    a: [
+      ["Java Edition", "java_connect"],
+      ["Bedrock Edition", "bedrock_connect"]
+    ]
+  },
+
+  java_connect: {
+    q: "What happens when they connect?",
+    a: [
+      ["Outdated or incompatible version", "java_version"],
+      ["Connection timed out", "timeout_scope"],
+      ["Other error", "diagnostics"]
+    ]
+  },
+
+  bedrock_connect: {
+    q: "What error appears?",
+    a: [
+      ["Outdated server / unable to connect", "bedrock_version"],
+      ["Connection timed out", "timeout_scope"],
+      ["Other error", "diagnostics"]
+    ]
+  },
+
+  java_version: {
+    result: "Check Java and ViaVersion compatibility",
+    steps: [
+      "Confirm the player's exact Java version. If older than 1.21.4, update to 1.21.4 or newer.",
+      "For newer versions, check which versions the currently installed ViaVersion plugin on Velocity supports.",
+      "Check #staff-logs for outdated ViaVersion notifications.",
+      "If an update is necessary, notify a Developer or Server Lead to follow the approved update and restart procedure."
+    ],
+    owner: "Moderator checks compatibility; Developer / Server Lead handles updates."
+  },
+
+  bedrock_version: {
+    result: "Check Geyser / Floodgate compatibility",
+    steps: [
+      "Record the player's exact Bedrock version and connection error.",
+      "Compare the client version against the supported Geyser versions.",
+      "Check #staff-logs for outdated Geyser or Floodgate notifications.",
+      "Remember that an update may have downloaded but not yet loaded into the running proxy.",
+      "If an update is needed, notify a Developer or Server Lead to follow the approved update and restart procedure."
+    ],
+    owner: "Moderator investigates; Developer / Server Lead handles proxy updates."
+  },
+
+  timeout_scope: {
+    q: "Can other players connect?",
+    a: [
+      ["Yes, only this player is affected", "timeout_client"],
+      ["No, several players cannot connect", "timeout_server"],
+      ["Not sure", "timeout_unknown"]
+    ]
+  },
+
+  timeout_client: {
+    result: "Investigate player-specific timeout",
+    steps: [
+      "Record the exact error, timestamp, Minecraft edition and version.",
+      "Confirm the player is using the official ERRSA server address.",
+      "Have them attempt one reconnect and restart Minecraft.",
+      "If the issue persists, have them check their own internet connection.",
+      "If ERRSA alone remains inaccessible, escalate with the collected information."
+    ],
+    owner: "Moderator; Developer if unresolved."
+  },
+
+  timeout_server: {
+    result: "Possible server-side outage",
+    steps: [
+      "Record the error, timestamp, and affected editions.",
+      "Check whether staff have already reported an outage.",
+      "Confirm the issue with another player or staff member.",
+      "Escalate to a Developer or Server Lead. Do not perform an unauthorized restart."
+    ],
+    owner: "Developer / Server Lead."
+  },
+
+  timeout_unknown: {
+    result: "Determine the scope of the timeout",
+    steps: [
+      "Ask another player or staff member to test connecting.",
+      "Record the original player's error and time.",
+      "Return to the previous question once the scope is known.",
+      "Escalate if the scope cannot be determined."
+    ],
+    owner: "Moderator."
+  },
+
+  diagnostics: {
+    result: "Collect connection diagnostics",
+    steps: [
+      "Record the exact error, Minecraft edition, client version, and timestamp.",
+      "Verify the player followed the official joining instructions.",
+      "Request a screenshot with private information hidden.",
+      "Refer the issue to technical staff if unresolved."
+    ],
+    owner: "Moderator; Developer / Server Lead if unresolved."
+  },
+
+  // B. RULES AND EMAIL REGISTRATION
+
+  rules: {
+    q: "What happens at the server rules step?",
+    a: [
+      ["Player has not accepted the rules", "rules_notaccepted"],
+      ["/agree or the Agree button does not work", "rules_fail"],
+      ["Rules accepted; player must enter email", "email_entry"],
+      ["Player disconnected during registration", "quit"]
+    ]
+  },
+
+  rules_notaccepted: {
+    result: "Complete server rules acceptance",
+    steps: [
+      "Direct the player to read the server rules.",
+      "Have them select Agree or use /agree.",
+      "Explain that accepting the rules is required to continue.",
+      "If the interaction fails, follow the rules interaction failure route."
+    ],
+    owner: "Moderator."
+  },
+
+  rules_fail: {
+    result: "Rules interaction is not advancing",
+    steps: [
+      "Ask what appears after the player selects Agree or runs /agree.",
+      "Confirm they are still in the registration stage.",
+      "Record the exact error, edition, username, and timestamp.",
+      "Escalate without bypassing initialization permissions."
+    ],
+    owner: "Developer / Server Lead."
+  },
+
+  email_entry: {
+    result: "Check ERAU email entry",
+    steps: [
+      "Confirm the player entered their university email into the registration prompt.",
+      "The plugin accepts @erau.edu and @my.erau.edu addresses.",
+      "Ask the player to check spelling privately. Do not collect their full email in public chat.",
+      "If the email is already associated with an approved account, refer to the Server Lead.",
+      "If the address was accepted but no email arrived, follow the missing-email route."
+    ],
+    owner: "Moderator; Server Lead for account conflicts."
+  },
+
+  email_missing: {
+    q: "Did an error appear in Minecraft chat after email submission?",
+    a: [
+      ["Yes, there is a chat error", "chat_error"],
+      ["No chat error appeared", "no_chat_error"],
+      ["Player never submitted an email", "email_entry"]
+    ]
+  },
+
+  // C. VERIFICATION TROUBLESHOOTING
+
+  verify: {
+    q: "What best describes the verification problem?",
+    a: [
+      ["A chat error appeared", "chat_error"],
+      ["No error, but email or approval is missing", "no_chat_error"],
+      ["Approval was denied or timed out", "approval_issue"],
+      ["Player disconnected during verification", "quit"],
+      ["Approved but still restricted", "access"]
+    ]
+  },
+
+  chat_error: {
+    q: "What does the chat error indicate?",
+    a: [
+      ["Invalid or unsupported email", "invalid_email"],
+      ["Email already used or approved", "duplicate_email"],
+      ["Verification denied or timed out", "approval_issue"],
+      ["Different or unclear error", "chat_unknown"]
+    ]
+  },
+
+  invalid_email: {
+    result: "Correct the email address",
+    steps: [
+      "Have the player check the spelling of their email.",
+      "Confirm the address ends in @erau.edu or @my.erau.edu.",
+      "Have them retry through the normal registration prompt when available.",
+      "If a valid address is rejected, escalate with the exact error and timestamp."
+    ],
+    owner: "Moderator; Developer if unresolved."
+  },
+
+  duplicate_email: {
+    result: "Email already associated with an account",
+    steps: [
+      "Do not encourage registration of a second Minecraft account.",
+      "Collect the original and current Minecraft usernames through an appropriate staff channel.",
+      "Refer the situation to the Server Lead for account policy review.",
+      "Do not manually edit registration records without authorization."
+    ],
+    owner: "Server Lead."
+  },
+
+  chat_unknown: {
+    result: "Investigate the chat error",
+    steps: [
+      "Record the exact error and timestamp.",
+      "Identify whether PlayerInitialization or another component generated the message.",
+      "Do not automatically assume the problem is player-side.",
+      "Escalate with the username, edition, and registration stage."
+    ],
+    owner: "Moderator; Developer / Server Lead."
+  },
+
+  no_chat_error: {
+    q: "Did the player disconnect or time out after submitting their email?",
+    a: [
+      ["Yes, they disconnected or timed out", "quit"],
+      ["No, they remained connected", "workflow_review"],
+      ["Not sure", "connection_unclear"]
+    ]
+  },
+
+  quit: {
+    result: "Registration interrupted by disconnection",
+    steps: [
+      "Ask when the player disconnected and whether they have rejoined.",
+      "PlayerInitialization stops its active approval polling when a player quits.",
+      "If the SQL status was PENDING, missing, or empty, the quit handler attempts to change it to DENIED.",
+      "Have the player rejoin and follow the normal registration prompt.",
+      "If registration cannot restart normally, escalate with the exact error and timestamp."
+    ],
+    owner: "Moderator assists; Developer / Server Lead reviews registration state."
+  },
+
+  connection_unclear: {
+    result: "Confirm whether registration was interrupted",
+    steps: [
+      "Ask whether Minecraft returned to the server list or displayed a disconnect message.",
+      "Determine whether the player stayed connected after email submission.",
+      "If disconnected, follow the interrupted-registration path.",
+      "If continuously connected, follow the workflow-review path."
+    ],
+    owner: "Moderator."
+  },
+
+  workflow_review: {
+    result: "Check email delivery and approval workflow",
+    steps: [
+      "Have the player check their ERAU inbox and spam/junk folder.",
+      "Do not request passwords, approval links, or verification codes.",
+      "Ask an authorized Developer or Server Lead to inspect the player's registration record in MySQL.",
+      "Compare the registration status and submission time with the relevant Power Automate run.",
+      "The item-created flow uses WAITING1; the item-modified flow uses WAITING2.",
+      "Check whether Microsoft 365 profile retrieval succeeded and whether the invalid-email check was triggered.",
+      "Determine whether the approval is still pending or reached APPROVED, DENIED, INVALID, or TIMEOUT.",
+      "Investigate any mismatch between the database status, Power Automate result, and plugin polling state.",
+      "Do not manually approve accounts or edit SQL records without authorization."
+    ],
+    owner: "Developer / Server Lead."
+  },
+
+  approval_issue: {
+    result: "Review denial, invalid status, or timeout",
+    steps: [
+      "Record the exact visible result and timestamp.",
+      "INVALID may indicate an email or Microsoft 365 profile validation failure.",
+      "DENIED may indicate rejection or an interrupted registration path.",
+      "TIMEOUT means the approval process did not finish within the configured time.",
+      "Do not assume the exact cause from the status alone.",
+      "Have authorized technical staff compare the MySQL record with the Power Automate run history."
+    ],
+    owner: "Developer / Server Lead."
+  },
+
+  // D. POST-APPROVAL ACCESS
+
+  access: {
+    q: "What is blocked after verification?",
+    a: [
+      ["Still in initialization area", "access_stuck"],
+      ["Joined but normal features are restricted", "access_restricted"],
+      ["Has not reconnected after approval", "access_retry"],
+      ["Everything works normally", "done"]
+    ]
+  },
+
+  access_stuck: {
+    result: "Approved player still in registration",
+    steps: [
+      "Confirm the player received a successful approval indication.",
+      "Have the player reconnect once after approval completes.",
+      "If still blocked, compare the SQL APPROVED status with the plugin registration state.",
+      "Review relevant LuckPerms status if necessary.",
+      "Do not teleport the player around registration."
+    ],
+    owner: "Developer / Server Lead."
+  },
+
+  access_restricted: {
+    result: "Review post-approval permissions",
+    steps: [
+      "Record the world/server, blocked command or feature, and exact error.",
+      "Try one reconnect after approval.",
+      "If restrictions persist, have authorized staff review LuckPerms permissions, tracks, and contexts.",
+      "Do not grant broad permissions as a workaround."
+    ],
+    owner: "Authorized Admin / Developer / Server Lead."
+  },
+
+  access_retry: {
+    result: "Confirm registration completion",
+    steps: [
+      "Have the player reconnect once after verification clearly finishes.",
+      "Confirm they reach normal gameplay.",
+      "Check that expected player commands and features work.",
+      "If access remains blocked, select the appropriate post-approval issue."
+    ],
+    owner: "Moderator."
+  },
+
+  done: {
+    result: "Registration complete",
+    steps: [
+      "Confirm normal gameplay and player permissions work.",
+      "No technical changes are needed.",
+      "Close the support request."
+    ],
+    owner: "Moderator."
+  },
+
+  accounts: {
+    result: "Account changes require policy review",
+    steps: [
+      "ERRSA normally permits one Minecraft account per player.",
+      "Java / Bedrock migration is a one-time approved swap rather than routine dual-account access.",
+      "Collect the old and new usernames through the appropriate staff channel.",
+      "Refer the request to the Server Lead before changing player or registration data."
+    ],
+    owner: "Server Lead and authorized technical staff."
+  }
+},
+
 common: {
  start:{q:'What kind of problem does the player have?',a:[['Cannot connect or keeps disconnecting','connection'],['Lag, freezing, or low performance','performance'],['Cannot use a gameplay feature','feature'],['Something else','other']]},
  connection:{q:'What exactly happens?',a:[['Connection fails before joining','connectfail'],['Player joins but disconnects later','disconnect'],['They are blocked during first-time verification','regredirect']]},
