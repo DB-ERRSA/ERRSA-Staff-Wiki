@@ -1,4 +1,6 @@
+
 (() => {
+  const inventoryBase = new URL('../wiki-sync/', document.currentScript.src);
   const snapshots = new Map();
   const norm = value => String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
   const element = (tag, text, parent, className) => {
@@ -9,7 +11,7 @@
     return node;
   };
   async function load(root, server) {
-    const url = new URL(root + server + '.json', location.href).href;
+    const url = new URL(server + '.json', inventoryBase).href;
     if (!snapshots.has(url)) snapshots.set(url, fetch(url).then(async r => {
       if (!r.ok) throw Error('HTTP ' + r.status);
       return r.json();
@@ -41,93 +43,92 @@
     return (data.plugins || []).find(p => keys.includes(norm(p.name)) || keys.includes(norm(p.id)));
   }
 
-function badge(parent, data, name, server, expanded, latest) {
-  const valid = data && data.capturedAt && Array.isArray(data.plugins);
-  const plugin = valid && lookup(data, name);
+  function badge(parent, data, name, server, expanded, latest) {
+    const valid = data && data.capturedAt && Array.isArray(data.plugins);
+    const plugin = valid && lookup(data, name);
 
-  const txt = !valid
-    ? 'Awaiting ' + server + ' startup sync'
-    : !plugin
-      ? 'No longer installed on ' + server
-      : plugin.enabled === 'false'
-        ? 'Installed but disabled · v' + (plugin.version || '?')
-        : 'Installed · v' + (plugin.version || '?');
+    const txt = !valid
+      ? 'Awaiting ' + server + ' startup sync'
+      : !plugin
+        ? 'No longer installed on ' + server
+        : plugin.enabled === 'false'
+          ? 'Installed but disabled · v' + (plugin.version || '?')
+          : 'Installed · v' + (plugin.version || '?');
 
-  const span = element(
-    'span',
-    txt,
-    parent,
-    'errsa-sync-badge ' +
-      (!valid
-        ? 'errsa-sync-pending'
-        : !plugin || plugin.enabled === 'false'
-          ? 'errsa-sync-missing'
-          : 'errsa-sync-installed')
-  );
-
-  if (plugin && latest?.plugins?.[server]) {
-    const releases = latest.plugins[server];
-
-    const releaseKey = Object.keys(releases).find(
-      key => norm(key) === norm(name)
+    const span = element(
+      'span',
+      txt,
+      parent,
+      'errsa-sync-badge ' +
+        (!valid
+          ? 'errsa-sync-pending'
+          : !plugin || plugin.enabled === 'false'
+            ? 'errsa-sync-missing'
+            : 'errsa-sync-installed')
     );
 
-    const release = releaseKey && releases[releaseKey];
+    if (plugin && latest?.plugins?.[server]) {
+      const releases = latest.plugins[server];
 
-    if (release?.version) {
-      const row = element(
-        'div',
-        null,
-        parent,
-        'errsa-latest-version'
+      const releaseKey = Object.keys(releases).find(
+        key => norm(key) === norm(name)
       );
 
-      element(
-        'strong',
-        'Latest available: ',
-        row
-      );
+      const release = releaseKey && releases[releaseKey];
 
-      if (release.url) {
-        const link = element('a', release.version, row);
-        link.href = release.url;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-      } else {
-        element('span', release.version, row);
-      }
-
-      if (
-        plugin.version &&
-        norm(plugin.version) !== norm(release.version)
-      ) {
-        element(
-          'span',
-          ' · Different release available',
-          row,
-          'errsa-update-note'
+      if (release?.version) {
+        const row = element(
+          'div',
+          null,
+          parent,
+          'errsa-latest-version'
         );
+
+        element(
+          'strong',
+          'Latest available: ',
+          row
+        );
+
+        if (release.url) {
+          const link = element('a', release.version, row);
+          link.href = release.url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        } else {
+          element('span', release.version, row);
+        }
+
+        if (
+          plugin.version &&
+          norm(plugin.version) !== norm(release.version)
+        ) {
+          element(
+            'span',
+            ' · Different release available',
+            row,
+            'errsa-update-note'
+          );
+        }
       }
     }
+
+    if (valid && expanded) {
+      element(
+        'small',
+        'Last checked on server startup: ' +
+          new Date(data.capturedAt).toLocaleString(),
+        parent,
+        'errsa-sync-time'
+      );
+    }
+
+    return span;
   }
-
-  if (valid && expanded) {
-    element(
-      'small',
-      'Last checked on server startup: ' +
-        new Date(data.capturedAt).toLocaleString(),
-      parent,
-      'errsa-sync-time'
-    );
-  }
-
-  return span;
-}
-
 
   const commandMaps = new Map();
   async function loadCommandMap(root) {
-    const url = new URL(root + 'command-permission-map.json', location.href).href;
+    const url = new URL('command-permission-map.json', inventoryBase).href;
     if (!commandMaps.has(url)) commandMaps.set(url, fetch(url).then(async r => {
       if (!r.ok) throw Error('HTTP ' + r.status);
       return r.json();
@@ -174,9 +175,6 @@ function badge(parent, data, name, server, expanded, latest) {
     }
     return null;
   }
-  // The plugin snapshot only contains permissions registered by the plugin.
-  // LuckPerms may include additional valid nodes that the plugin never registered.
-  // Use the same prefix classification as the Staff Permissions overview.
   const permissionPrefixes = {
     essentials: ['essentials'], essentialsx: ['essentials'],
     essentialschat: ['essentialsxchat'], essentialsspawn: ['essentialsspawn'],
@@ -265,7 +263,6 @@ function badge(parent, data, name, server, expanded, latest) {
       if (!data?.capturedAt) { element('span', 'Awaiting permission sync', root, 'errsa-sync-note'); continue; }
       const { roles } = pluginRoleAccess(data, root.dataset.plugin, mapping);
       if (!roles.length) {
-        // Wiki editorial fallback: no detected access does not imply a confirmed LuckPerms grant.
         roles.push(...staffRoles.filter(role => role.group === 'dev' || role.group === 'server-lead'));
       }
       roles.forEach(role => {
@@ -284,7 +281,6 @@ function badge(parent, data, name, server, expanded, latest) {
       const commands = mergeCommands(plugin, mapEntry);
       if (!commands.length) { element('p', 'No command metadata or manual mappings are available for this plugin.', root, 'errsa-sync-note'); continue; }
       const table = element('table', null, root, 'errsa-command-table');
-      // The header and data rows share one explicit column layout.
       const columns = element('colgroup', null, table);
       for (let i = 0; i < 4; i++) element('col', null, columns);
       const head = element('thead', null, table), hr = element('tr', null, head);
@@ -317,10 +313,6 @@ function badge(parent, data, name, server, expanded, latest) {
       const mapEntry = commandMapEntry(mapping, root.dataset.plugin);
       const declared = permissionUniverse(plugin, mapEntry, data, root.dataset.plugin).sort();
       const groups = groupMap(data);
-      // Only show nodes explicitly assigned to one of the four staff groups.
-      // Regular player groups (user, survival, premium, etc.) may be inherited
-      // by staff and dev may have '*', but neither makes those player nodes
-      // staff-specific permissions for this table.
       const staffAssigned = new Set();
       for (const role of staffRoles) {
         const group = groups.get(role.group);
@@ -354,27 +346,26 @@ function badge(parent, data, name, server, expanded, latest) {
   }
 
   async function render() {
-    // The release cache is a static file built by GitHub Actions; no browser or server API polling.
     const rootForReleases = document.querySelector('.errsa-plugin-status, #errsa-plugin-directory');
     const releases = rootForReleases ? await load(rootForReleases.dataset.root, 'latest') : null;
-    
-for (const root of document.querySelectorAll('.errsa-plugin-status')) {
-  root.replaceChildren();
 
-  const server = root.dataset.server || 'survival';
+    for (const root of document.querySelectorAll('.errsa-plugin-status')) {
+      root.replaceChildren();
 
-  const data = await load(root.dataset.root, server);
-  const latest = await load(root.dataset.root, 'latest');
+      const server = root.dataset.server || 'survival';
 
-  badge(
-    root,
-    data,
-    root.dataset.plugin,
-    server,
-    true,
-    latest
-  );
-}
+      const data = await load(root.dataset.root, server);
+      const latest = await load(root.dataset.root, 'latest');
+
+      badge(
+        root,
+        data,
+        root.dataset.plugin,
+        server,
+        true,
+        latest
+      );
+    }
 
     const directory = document.getElementById('errsa-plugin-directory');
     if (directory) {
@@ -396,8 +387,6 @@ for (const root of document.querySelectorAll('.errsa-plugin-status')) {
       element('p', 'Survival snapshot: ' + new Date(data.capturedAt).toLocaleString(), permissions, 'errsa-sync-time');
       if (!Array.isArray(groups)) { element('p', 'This snapshot predates LuckPerms group synchronization. Restart Survival after installing the updated plugin.', permissions, 'errsa-sync-note'); return; }
       if (!groups.length) { element('p', 'No LuckPerms groups were available at server startup. The group list is not verified.', permissions, 'errsa-sync-note'); return; }
-      // Names and URLs here match the plugin documentation titles; this affects
-      // only the staff overview, not the individual plugin permission tables.
       const pluginDocs = {
         essentials: ['EssentialsX','server-and-infrastructure/essentials/'],
         griefprevention: ['GriefPrevention','permissions-and-moderation/griefprevention/'],
