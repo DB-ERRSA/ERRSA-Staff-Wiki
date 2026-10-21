@@ -1,4 +1,6 @@
+
 (() => {
+  const inventoryBase = new URL('../wiki-sync/', document.currentScript.src);
   function el(tag, value, parent, className) {
     const x = document.createElement(tag);
     if (value !== undefined && value !== null) x.textContent = String(value);
@@ -19,7 +21,7 @@
       const section=el('section',null,root);
       el('h2',server==='survival'?'Survival · Paper':'Velocity · Proxy',section);
       try {
-        const url=new URL(root.dataset.root+server+'.json',location.href);
+        const url=new URL(server+'.json',inventoryBase);
         const response=await fetch(url); if(!response.ok)throw Error('HTTP '+response.status);
         const data=await response.json();
         if(!data.capturedAt){el('p','Awaiting first restart sync from '+server+'.',section);continue;}
