@@ -87,10 +87,11 @@ Use these procedures to respond consistently to player reports and server incide
 
     - If the offense occurs through **proximity voice chat**:
       
-      - Follow the same disciplinary progression, but substitute temporary bans for mutes of equivalent duration, as standard mutes do not affect proximity voice chat.
+        - Follow the same disciplinary progression, but substitute temporary bans for mutes of equivalent duration, as standard mutes do not affect proximity voice chat.
 
     - **Severe cases (hate speech, slurs, etc.):**
-      - Escalate to the server lead
+        
+        - Escalate to the server lead
 
     - Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
 
