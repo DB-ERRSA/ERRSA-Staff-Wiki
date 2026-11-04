@@ -89,6 +89,8 @@ The **November 3, 2026 Survival snapshot** includes the Admin permission `spark`
 | --- | --- |
 | `/spark tps` | See TPS and tick-performance measurements when players report lag. |
 | `/spark health` | View the server's wider health report, including resource usage. |
+| `/mclogs` | Upload the current server log and generate a link for an approved investigation. |
+| `/mclogs list` | List available server logs, crash reports, and network protocol error reports. |
 | `/servers` | Open the ERRSA server menu and check which backend you can reach. |
 
 `spark` gives you useful measurements; you do not need to run a profiler or interpret CPU traces by yourself. Record the affected backend, when the problem began, and the readings while it is happening. See the [spark command guide](https://spark.lucko.me/docs/Command-Usage){ target="_blank" } for details.
@@ -102,10 +104,15 @@ The **November 3, 2026 Survival snapshot** includes the Admin permission `spark`
 
 ### Checking Logs
 
-The new snapshot confirms **mclogs 3.0.6 is installed**, but does not show the `mclogs` permission explicitly assigned to the Admin group. If your account has been given access, `/mclogs` can share a current log for an approved technical investigation. If the command denies access, ask the Server Lead or Developer; do not assume the permission is available.
+Admins have access to **mclogs** on ERRSA. It helps you collect the right log when a player reports a crash, a command error, or another technical problem.
+
+- Use `/mclogs` when you need the **current server log**. It uploads that log and gives you a link to share with the appropriate staff.
+- Use `/mclogs list` when the issue happened earlier. It shows available logs and reports so you can identify what might contain the error. **Listing a file does not upload it.**
+
+Before sharing anything, make sure you're checking the correct backend and note approximately when the problem occurred. Give the Developer the relevant time, symptoms, and log reference rather than asking them to search blindly.
 
 !!! warning "Logs may contain private information"
-    `/mclogs` uploads a log to an external website. Even if sensitive information is filtered automatically, only share logs with the appropriate staff and with approval. Never post raw logs or links in public Discord channels. If you cannot access them safely, report the time and symptoms instead.
+    `/mclogs` uploads a log to an external website. Automatic filtering does not guarantee that every sensitive detail is removed. Only upload logs when appropriate for the investigation, and share the resulting link with authorized staff—not in public Discord channels. If an older log needs to be shared, coordinate that with a Developer.
 
 ---
 
