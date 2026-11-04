@@ -93,8 +93,19 @@ Where 'void' is the name of the server's jail.
 !!! warning "Unjail after investigation"
     Keep a list of everyone jailed during the investigation. Once it concludes, unjail everyone, including innocent players and those who have been banned. This applies to offline players as well, ensuring no one remains jailed when they next join the server. Remember, jailing is only a temporary measure during active investigations.
 
+### Releasing Someone From Jail
+
+EssentialsX uses a **toggle command** for jailing and unjailing. When the investigation is over, first confirm the correct account and that the player is actually jailed. The command alias is:
+
+```text
+/essentials:unjail <player>
+```
+
+Check that the player is released before closing the record. If the command gives an error, do not keep trying different jail names or toggle commands without checking the player's state. Ask an Admin to help, especially when the player was jailed in another world or is offline. Admin training covers the supervised verification exercise.
+
+
 <br>
-### 4. Bans
+### 5. Bans
 
 A ban prevents a player from accessing the server for a specified period.
 
@@ -108,11 +119,13 @@ Temporary bans can be issued in-game with:
 Temporary bans use the same format as mutes for usernames, length, and reason.
 
 <br>
-Permanent Bans can be issued in-game with:
+Permanent bans can be issued by **Admins** with:
 ```text
 /ban <player> [reason]
 ```
-A permanent ban prevents the player from accessing the server indefinitely.
+A permanent ban prevents the player from accessing the server indefinitely. **Moderators do not currently have permanent-ban access on Survival.** If a situation requires one, escalate to an Admin with the evidence and relevant procedure rather than trying to bypass the permission.
+
+The November 3 permission snapshot grants Moderators `/tempban` but explicitly denies `essentials.ban`. Moderators also have `essentials.unban`; that access does **not** mean you should reverse a ban without the appropriate authorization.
 
 !!! danger "Ban documentation"
     Bans may also be issued when immediate action is required and no existing procedure adequately covers the situation. **Every ban must be logged!**

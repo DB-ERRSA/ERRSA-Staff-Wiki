@@ -8,7 +8,7 @@ tags:
 
 # 6. Staff Advancement & Governance
 
-This section outlines how staff promotions, demotions, inactivity, Server Lead selection, and organizational oversight are handled within ERRSA MC.
+This section outlines how staff promotions, required Admin certification, demotions, inactivity, Server Lead selection, and organizational oversight are handled within ERRSA MC.
 
 ---
 
@@ -35,6 +35,19 @@ These factors are used to determine whether a staff member is prepared to take o
 
 !!! important "Promotions are earned through readiness"
     Promotions are earned through showing readiness and team dynamics, not guaranteed by activity alone.
+
+### 6.1.1 Required Admin Certification
+
+**All Admins must complete Admin certification.** For a Moderator being considered for promotion, certification must be completed **before the promotion is approved**. This includes all six [Admin Learning modules](../learning/admins/intro.md){ data-preview }, the [practical assessment](../learning/admins/assessment.md){ data-preview }, and supervised exercises recorded on the [Admin Certification & Training Record](../learning/admins/certification.md){ data-preview }.
+
+An experienced Admin or the Server Lead may supervise the exercises and recommend approval. **The Server Lead gives final certification approval and makes the promotion decision.** Completing certification shows readiness for the required training, but does not guarantee a promotion.
+
+**Current Admins must also become certified.** Existing Admins are not exempt because they already hold the role. The Server Lead will arrange their assessments, communicate a completion deadline, and determine any supervision needed while certification is pending. They may continue assigned duties during this transition as directed by the Server Lead; an incomplete record does not automatically result in demotion.
+
+!!! warning "Restoration requires separate authorization"
+    Admin certification does **not** by itself authorize independent CoreProtect rollbacks. The Server Lead must separately approve and record that capability after supervised practice. Complex inventory recovery also requires an approved procedure and specific authorization. See the [certification record](../learning/admins/certification.md){ data-preview }.
+
+Keep completed certification records in approved internal staff storage rather than on the public wiki.
 
 ---
 
