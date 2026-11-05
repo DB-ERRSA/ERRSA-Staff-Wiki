@@ -10,7 +10,7 @@ tags:
 These situations are designed to check whether you can use the Admin modules, not whether you memorized every plugin command. Work through each scenario using the wiki. Explain what you would do, what you would check, and when you would ask for help.
 
 !!! info "How to complete this"
-    For certification, complete these with a more experienced Admin or the Server Lead. Use a test area or example results for commands that change the world, player data, or server state. Do not use live players or property for training exercises without authorization.
+    For certification, complete these with a more experienced Admin or the Server Lead. Use a test area or example results for commands that change the world, player data, or server state. If a Moderator does not have permission to run an exercise, use an approved test environment or supervised temporary access authorized by the Server Lead, then remove that access afterward. Do not use live players or property for training exercises without authorization.
 
 ---
 

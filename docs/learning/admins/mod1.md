@@ -97,7 +97,7 @@ Jailing is temporary, so finishing the investigation also means checking that ev
 
 Previous disciplinary records help determine whether a player has been warned before and whether the situation is escalating.
 
-However, do not treat every prior incident as an automatic step in the same punishment progression. A past chat violation and a new theft report may be relevant to the player's history without being the same type of repeated offense.
+However, do not treat every prior incident as an automatic step in the same punishment progression. A past chat violation and a new theft report may be relevant to the player's history without being the same type of repeated offense. **Example:** A player warned for swearing who later steals for the first time is still on their first theft offense. See [Repeated Offenses](../../documentation/standard-procedures.md#repeated-offenses){ data-preview }.
 
 When checking history, consider:
 

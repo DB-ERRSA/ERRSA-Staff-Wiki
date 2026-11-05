@@ -30,6 +30,18 @@ General guidelines for using moderation powers:
 
 Use these procedures to respond consistently to player reports and server incidents. Choose the situation below, take the least severe effective action, and record what happened. Refer to [Section 4.4](logging-documentation.md#44-incident-records){ data-preview } for viewing a player's previous warnings or actions.
 
+
+<a id="repeated-offenses"></a>
+!!! warning "Repeated Offenses"
+    For repeat-offense progression, violation types follow the numbered situations in Section 3.2. Behaviors listed together in one situation share the same progression. Violations under different situations do **not** automatically carry over.
+
+    The first, second, and third offense durations are the first, second, and third **mute or ban steps** under that situation. Informal and formal warnings do **not** advance the punishment-duration ladder, but they remain part of the player's history. Review documented warnings when deciding whether the behavior has continued; do not keep issuing warnings when the procedure calls for further action.
+
+    **Example:** A player receives a formal warning for minor theft, then steals again. If a ban is warranted, this is their **first ban step (24 hours)** under Section 3.2.7, not the second. If the player later griefs after that ban, the next action follows the **second ban step (1 week)** because griefing and theft share that category. A previous chat warning does not affect either step.
+
+    If a situation involves more than one violation, document what happened and follow the most applicable procedure. Do not stack punishments simply because multiple sections could apply. Previous incidents may still affect the severity of the current case. When unclear, ask an Admin or Server Lead.
+
+
 ### 3.2.1 Server Crashes { .situation-heading }
 ??? info "3.2.1 Server Crashes"
 
@@ -79,26 +91,29 @@ Use these procedures to respond consistently to player reports and server incide
 
         - Third offense, permanent
 
+    !!! warning "Repeated Offenses"
+        Only prior mutes or bans under this category advance the listed durations; warnings do not. **Example:** A prior griefing ban does not increase the first language mute. See [Repeated Offenses](#repeated-offenses){ data-preview }.
+
     - **Severe cases (hate speech, slurs, etc.)**
 
-        - Issue a permanent mute and escalate the situation to the Server Lead.
+        - For text chat, issue a permanent mute and escalate the situation to the Server Lead.
 
         - Server Lead → Follow [Section 4.5](logging-documentation.md#45-student-conduct-escalation){ data-preview } for reference on student conduct escalation.
 
     - If the offense occurs through **proximity voice chat**:
-      
-        - Follow the same disciplinary progression, but substitute temporary bans for mutes of equivalent duration, as standard mutes do not affect proximity voice chat.
 
-    - **Severe cases (hate speech, slurs, etc.):**
-        
-        - Escalate to the server lead
+        - Follow the same warning procedures as text chat. For minor language violations, issue at least one formal warning before considering a ban.
+
+        - Standard mutes do not restrict proximity voice chat. If the behavior continues after a warning, a temporary ban may be necessary. Keep the duration proportionate to the behavior and prior offenses of the same type; **do not automatically substitute the text-chat mute duration as a ban duration**.
+
+        - In severe cases (hate speech, slurs, etc.), staff do not need to issue a warning before stopping the behavior. Since standard mutes do not affect voice chat, staff with appropriate permissions may issue a short temporary ban when necessary to stop an ongoing violation. Notify the Server Lead immediately for review and further action. Do **not** automatically convert a permanent text-chat mute into a permanent ban.
 
     - Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
 
 ### 3.2.4 Inappropriate Behavior { .situation-heading }
 ??? info "3.2.4 Inappropriate Behavior (Harassment, Toxicity, etc.)"
 
-    - If the offense is through chat, refer to [Section 3.2.3](standard-procedures.md#323-inappropriate-language){ data-preview } for further instructions.
+    - Harassment and toxicity stay under this section even when they happen through text or proximity voice chat. Refer to [Section 3.2.3](standard-procedures.md#323-inappropriate-language){ data-preview } for chat and voice-chat restrictions, but follow this section's punishment progression. Do not treat harassment as an inappropriate-language offense just because it happened in chat.
 
     - If the behavior is minor, send a formal warning to the player following [Section 4.2](logging-documentation.md#42-send-a-written-warning){ data-preview }.
 
@@ -109,6 +124,9 @@ Use these procedures to respond consistently to player reports and server incide
         - Second offense, 1 week
 
         - Third offense, permanent
+
+    !!! warning "Repeated Offenses"
+        Only prior mutes or bans under this category advance the listed durations; warnings do not. **Example:** A language mute does not raise the first harassment ban, even if the harassment occurs in chat. See [Repeated Offenses](#repeated-offenses){ data-preview }.
 
     - In severe cases,
 
@@ -137,6 +155,9 @@ Use these procedures to respond consistently to player reports and server incide
 
         - Third offense, permanent
 
+    !!! warning "Repeated Offenses"
+        Only prior mutes or bans under this category advance the listed durations; warnings do not. **Example:** A formal warning for an inappropriate build does not skip the first ban step. See [Repeated Offenses](#repeated-offenses){ data-preview }.
+
     - In severe cases,
 
         - Issue a permanent ban and escalate the situation to the Server Lead.
@@ -163,6 +184,9 @@ Use these procedures to respond consistently to player reports and server incide
         - Second offense, 1 month
 
         - Third offense, permanent
+
+    !!! warning "Repeated Offenses"
+        Only prior mutes or bans under this category advance the listed durations; warnings do not. **Example:** A prior language mute does not make first-time confirmed cheating a second ban offense. See [Repeated Offenses](#repeated-offenses){ data-preview }.
 
     - If the case is extreme where the server's or player's data is in harm, issue a permanent ban.
 
@@ -197,6 +221,9 @@ Use these procedures to respond consistently to player reports and server incide
 
         - Third offense, permanent
 
+    !!! warning "Repeated Offenses"
+        Griefing and theft share this progression; warnings do not advance its ban durations. **Example:** A theft warning does not skip the first ban, but a prior theft ban counts toward a later griefing ban. See [Repeated Offenses](#repeated-offenses){ data-preview }.
+
     - Unjail any players, including those who got banned.
 
     - Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
@@ -204,7 +231,16 @@ Use these procedures to respond consistently to player reports and server incide
 ### 3.2.8 Spamming or Advertising { .situation-heading }
 ??? info "3.2.8 Spamming or Advertising"
 
-    - Refer to [Section 3.2.3](standard-procedures.md#323-inappropriate-language){ data-preview } for further instructions.
+    - Spamming and advertising share this offense category. They are separate from inappropriate language under Section 3.2.3.
+
+    - Follow the warning and mute procedures in [Section 3.2.3](standard-procedures.md#323-inappropriate-language){ data-preview }, including its listed durations. Use the player's **spamming/advertising history** to determine the first, second, or third mute step, not their inappropriate-language history.
+
+    - For spam or advertising through proximity voice chat, follow the voice-chat restrictions in Section 3.2.3. Standard text mutes do not restrict proximity voice chat.
+
+    !!! warning "Repeated Offenses"
+        Only prior disciplinary restrictions under this category advance its duration steps; warnings do not. **Example:** A previous language mute does not make first-time advertising a second offense. See [Repeated Offenses](#repeated-offenses){ data-preview }.
+
+    - Document the incident thoroughly following [Section 4.4](logging-documentation.md#44-incident-records){ data-preview }.
 
 ### 3.2.9 Lag Machines { .situation-heading }
 ??? info "3.2.9 Lag Machines"
@@ -218,6 +254,9 @@ Use these procedures to respond consistently to player reports and server incide
         - Second offense, 1 week
 
         - Third offense, permanent
+
+    !!! warning "Repeated Offenses"
+        Only prior mutes or bans under this category advance the listed durations; warnings do not. **Example:** A previous chat ban does not raise the first intentional lag-machine ban. See [Repeated Offenses](#repeated-offenses){ data-preview }.
 
     - Admins → Use creative or other plugin tools (such as world edit) to dismantle the machine as needed.
 

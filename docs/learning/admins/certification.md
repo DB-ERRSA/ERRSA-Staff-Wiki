@@ -36,6 +36,9 @@ Complete this record after the [Admin Practical Assessment](assessment.md){ data
 
 Mark each exercise **Demonstrated**, **Needs practice**, or **Not yet tested**. Use a controlled test area and consenting test players; never alter unrelated player property for an assessment.
 
+!!! info "Practical permissions"
+    Moderator candidates are not expected to have Admin permissions before certification. Complete restricted exercises in an approved test environment or with supervised, temporary permissions authorized by the Server Lead. Grant only the access needed for the exercise and remove it when the exercise is complete. Certification does not automatically grant permanent Admin permissions.
+
 | Exercise | Result | Evidence or notes | Reviewer / date |
 | --- | --- | --- | --- |
 | CoreProtect chest history, pages, coordinates, and evidence limits | | | |
@@ -46,6 +49,19 @@ Mark each exercise **Demonstrated**, **Needs practice**, or **Not yet tested**. 
 | `/spark tps` result and TPS/MSPT explanation | | | |
 | Jail and release a consenting test account; confirm status | | | |
 | Major-incident response and escalation explanation | | | |
+
+## Temporary Training Permissions (If Used)
+
+Complete this section when temporary permissions are granted for a supervised exercise. If no temporary access was needed, mark **Not used**.
+
+| Field | Entry |
+| --- | --- |
+| Temporary access used? (Yes / No) | |
+| Server Lead approval / date | |
+| Permissions granted and test environment | |
+| Access granted by / date and time | |
+| Access removed by / date and time | |
+| Removal verified by / date and time | |
 
 ## Certification Decision
 
