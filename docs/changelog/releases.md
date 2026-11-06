@@ -7,6 +7,36 @@ hide:
 
 Read the latest documented server releases below. Staff can update this page using the [editor](#edit-changelog) at the end.
 
+## Version 1.3.3 - Released 11/6/2026
+
+### Major Additions
+
+- Added Invsee ++ with staff permissions
+- Integrated Dyno into the Discord server
+- Added Discord webhook logging for in-game staff commands
+- Added MCLogs with staff permissions
+- Geyser updated to new Bedrock connectivity from RakNet to NetherNet, updating the Bedrock server address to tidysloth.wdn.gg:19132
+
+
+### Minor Additions
+
+- Created a new jail location
+- Expanded the Staff Wiki with server documentation, training materials, and standard procedures
+- Updated ERRSA-MC-Core to support non-player End-to-Overworld transporation which includes items and mobs dropped/moved through End portal
+
+### Tweaks and Changes
+
+- Fixed Ultimate Anti-Illegal, now prevents all custom NBT items including attribute modifiers from being stored in inventories
+- Deleted all traces of custom NBT items in both survivall and creative world
+- Tested chest shop in creative world
+- Tested event server setup
+- Fixed ExploitFixer config to decrease false flags
+- Fixed Themis config to decrease false flags
+- Updated Fillout forms to force more detail per submission
+- Fixed all custom plugins for permission based GUI interactions
+- Deleted ShulkerReroute and migrated functionality to ERRSA-MC-Core
+- Fixed ERRSA-MC-Core to be able to send admin commands through console
+
 ## Version 1.3.2 - Released 9/9/2026
 
 ### Tweaks and Changes
