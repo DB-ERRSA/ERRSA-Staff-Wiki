@@ -82,7 +82,7 @@ Use the [standard procedure](../../documentation/standard-procedures.md#32-situa
 5. What needs to be documented
 
 !!! tip "Repeated offenses"
-    The `/staff search <username>` command can be used in the Discord staff channel to view previous logs and determine if an offense is repeated.
+    Use `/staff search <username>` in the Discord staff channel to check prior disciplinary actions. Only prior mutes or bans in the same category advance the listed durations; warnings remain part of the record but do not advance the ladder. **Example:** A theft warning does not skip the first griefing/theft ban step. See [Repeated Offenses](../../documentation/standard-procedures.md#repeated-offenses){ data-preview }.
 
 When the situation is unclear, do not guess. Ask another staff member for help or escalate the situation.
 

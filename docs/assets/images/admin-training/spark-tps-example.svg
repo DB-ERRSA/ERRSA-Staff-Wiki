@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img" aria-label="Illustrative training example, not a real server screenshot">
+<rect width="1000" height="100%" rx="24" fill="#0e1728"/>
+<rect x="20" y="20" width="960" height="80" rx="12" fill="#16243a"/>
+<text x="42" y="57" fill="#eef4ff" font-family="Arial, sans-serif" font-weight="700" font-size="26">spark: Interpreting TPS and MSPT</text>
+<text x="42" y="83" fill="#f6c977" font-family="Arial, sans-serif" font-weight="700" font-size="16">ILLUSTRATIVE EXAMPLE — NOT LIVE ERRSA OUTPUT</text>
+<text x="42" y="128" fill="#a9bed4" font-family="Arial, sans-serif" font-size="17">Simplified readings for teaching; actual command formatting can differ.</text>
+<rect x="35" y="153" width="930" height="100" rx="10" fill="#08101d" stroke="#3d4e66" stroke-width="2"/>
+<text x="55" y="182" fill="#99dfaf" font-family="Consolas, monospace" font-size="18" font-weight="700">HEALTHY</text>
+<text x="145" y="182" fill="#e6effc" font-family="Consolas, monospace" font-size="17">TPS 20.0  |  MSPT ~23  | server keeping up</text>
+<text x="55" y="220" fill="#ff8f8f" font-family="Consolas, monospace" font-size="18" font-weight="700">LAGGING</text>
+<text x="145" y="220" fill="#e6effc" font-family="Consolas, monospace" font-size="17">TPS 15.0  |  MSPT ~67  | server falling behind</text>
+<circle cx="57" cy="286" r="16" fill="#4a81c4"/>
+<text x="57" y="291" font-size="15" font-family="Arial, sans-serif" fill="white" font-weight="700" text-anchor="middle">1</text>
+<text x="87" y="293" fill="#e3edf9" font-family="Arial, sans-serif" font-size="17">TPS measures completed ticks per second; the normal target is 20.</text>
+<circle cx="57" cy="334" r="16" fill="#4a81c4"/>
+<text x="57" y="339" font-size="15" font-family="Arial, sans-serif" fill="white" font-weight="700" text-anchor="middle">2</text>
+<text x="87" y="341" fill="#e3edf9" font-family="Arial, sans-serif" font-size="17">MSPT measures tick processing time; sustained values above 50 are concerning.</text>
+<circle cx="57" cy="382" r="16" fill="#4a81c4"/>
+<text x="57" y="387" font-size="15" font-family="Arial, sans-serif" fill="white" font-weight="700" text-anchor="middle">3</text>
+<text x="87" y="389" fill="#e3edf9" font-family="Arial, sans-serif" font-size="17">Use the affected backend and time of the report; a spike alone is not proof of a cause.</text>
+</svg>
