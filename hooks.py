@@ -21,7 +21,7 @@ def on_config(config):
 
 
 def on_page_markdown(markdown, page, config, files):
-    if page.file.src_uri != "documentation/changelog/server.md":
+    if page.file.src_uri != "docs/changelog/server.md":
         return markdown
     repository = config.extra.get("wiki_repository", "")
     encoded = base64.b64encode(
