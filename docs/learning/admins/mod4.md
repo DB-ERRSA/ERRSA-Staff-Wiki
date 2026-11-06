@@ -5,176 +5,89 @@ tags:
   - SERVER LEAD
 ---
 
-# Module 4 · Server Operations
+# Module 4 · Item & Inventory Recovery
 
-Admins also help with basic server health checks, connection issues, and operational incidents. The goal is to identify **what is affected** and provide usable information, not to make random changes until the issue disappears.
+A stolen item, missing shulker, or incorrect inventory may require a different investigation than a damaged build. **Verify whether the original items still exist before replacing anything**: replacement without tracking the originals can duplicate property.
 
-These responsibilities are about monitoring and supporting operations. Plugin development, configuration changes, and major infrastructure work remain Developer or Server Lead responsibilities.
-
----
-
-## Understanding the Server Environment
-
-ERRSA uses a Minecraft network with a Velocity proxy and backend servers. A problem affecting one world or backend may not be the same as a problem preventing every player from connecting.
-
-When something stops working, identify the scope before acting:
-
-- **One player:** Could be a client, account, permission, or connection issue.
-- **One command or plugin feature:** Could be a plugin, permission, or configuration issue.
-- **One world or backend:** Could be world-specific settings or a backend problem.
-- **The entire network:** May involve the proxy, hosting service, or a broader outage.
-
-Knowing the scope helps the technical team look in the right place and prevents unnecessary changes to unaffected services.
+Begin with the [evidence methods in Module 2](mod2.md){ data-preview } and apply the [griefing and theft procedure](../../documentation/standard-procedures.md#327-griefing-or-theft){ data-preview }.
 
 ---
 
-## The Server Console
+## Recovering Stolen or Missing Items
 
-The console displays live server messages, startup and shutdown activity, command output, warnings, and errors.
+Item restoration is different from rebuilding a damaged wall. Replacing an item without checking where the original went can create an unintended duplicate.
 
-Some Admins may have console or log access through [Apex Hosting](../../tools/apex-hosting/index.md){ data-preview }, depending on their assigned account access. In-game permissions do not themselves grant access to the host panel.
+First try to determine:
 
-When reviewing console output:
+- What item was lost, including quantity and relevant metadata.
+- Whether it was moved through a chest, hopper, inventory, or other container.
+- Whether the original item still exists somewhere else.
+- Who had access and whether the movement was authorized.
 
-1. Note the server you are viewing and the approximate time of the issue.
-2. Look for the first relevant warning or error, not simply the last line displayed.
-3. Identify the plugin, command, world, or player involved if the output indicates one.
-4. Compare the error time with the reported behavior.
-5. Preserve a relevant excerpt or restricted reference for the Developer if escalation is needed.
+Use container logs, relevant inventory tools, and player statements to build the clearest account available. If the original item is recoverable, prefer returning it over creating a replacement.
 
-!!! tip "One error may cause several more"
-    A single plugin or dependency failure can produce many follow-up messages. Focus on when the problem started and what happened immediately before it.
+If replacement is justified, match only what can reasonably be verified. Do not add extra items as compensation or rely solely on a player's estimated inventory value.
 
-Do not share console output containing addresses, tokens, secrets, or other private information in public channels.
+### Checking Item Details
 
----
+When an item is still available for inspection, hover over it in an inventory and check its **item type, quantity, name, enchantments, durability, and description (lore)**. For a shulker box or another container item, its contents may need separate inspection. Record screenshots of the relevant item details before making any edits.
 
-## Understanding TPS & MSPT
+CoreProtect's container logs can help verify *what type and how many* items moved, but they may not establish every enchantment or custom item property from an earlier loss. If an original item is gone and there is no reliable screenshot, matching example, or other evidence, **do not assume a normal item and a specially modified item are equivalent**. Refer complicated custom-data or offline-inventory cases to a Developer before attempting to recreate them.
 
-Minecraft runs in short updates called **ticks**. A healthy server aims for **20 ticks per second (TPS)**. **MSPT** means milliseconds per tick, or how long the server takes to process each update. To keep up with 20 TPS, a tick has a budget of about **50 milliseconds**.
+**Example: a missing pickaxe:** A log showing one netherite pickaxe moved does not verify its name and enchantments. Check screenshots, remaining copies, or other reliable evidence before reconstructing a custom item.
 
-For example:
-
-| Reading | What it means |
-| --- | --- |
-| **20 TPS, 20 MSPT** | The server is keeping up. Look for other causes if players still report a problem. |
-| **13 TPS, 75 MSPT** | The server is falling behind; there may be a server-side performance issue. |
-| **20 TPS with occasional spikes** | A short spike is not automatically a crisis. Look for repeated or sustained issues. |
-
-TPS and MSPT do not automatically tell you *what* is causing lag. Player ping, client FPS, and connection issues can also make the game feel slow even if TPS is normal.
-
-### Real ERRSA spark Example
-
-![Actual ERRSA spark profiler report showing TPS, MSPT, CPU, memory, and the performance graph on November 3, 2026](../../assets/images/admin-training/spark-profiler-survival-2026-11-03.png)
-
-*Actual ERRSA spark web profiler report from November 3, 2026. This is the report opened in a browser, not the in-game chat output from `/spark tps`.*
-
-Here's what an Admin should notice:
-
-- **TPS:** The 1-, 5-, and 15-minute readings all show **20.00 TPS**. The server was maintaining its target tick rate over those periods.
-- **MSPT:** The median is **13.7 ms**, and the 95th-percentile reading is **31 ms**, both below the 50 ms tick budget. The **137 ms maximum** indicates at least one longer tick, but does not establish ongoing lag by itself.
-- **Graph:** The green TPS line stays at 20 while the purple MSPT line changes. Look for sustained problems instead of treating one spike as the cause of a report.
-- **CPU and memory:** The report shows roughly **17% process CPU** and **3 GB of 10.4 GB process memory**. These help describe the server's condition, but do not identify which plugin or activity caused a delay.
-
-!!! tip "Reading the profiler below the graph"
-    The **Server thread 100%** entry is a percentage within the profiler's sampled work, **not** a claim that the server's CPU is running at 100%. Admins generally only need the readings above the graph and a link to the report when escalating. Developers can investigate the detailed profiler tree.
-
-The useful question is whether poor readings continue over time, not whether you can find one unusually high number. `/spark tps` is a starting point; it cannot by itself identify which plugin, farm, or player caused a problem.
-
-## Quick Server Checks
-
-The **November 3, 2026 Survival snapshot** includes the Admin permission `spark`, which supports the two main diagnostic commands below.
-
-| Command | When to use it |
-| --- | --- |
-| `/spark tps` | See TPS and tick-performance measurements when players report lag. |
-| `/spark health` | View the server's wider health report, including resource usage. |
-| `/mclogs` | Upload the current server log and generate a link for an approved investigation. |
-| `/mclogs list` | List available server logs, crash reports, and network protocol error reports. |
-| `/servers` | Open the ERRSA server menu and check which backend you can reach. |
-
-`spark` gives you useful measurements; you do not need to run a profiler or interpret CPU traces by yourself. Record the affected backend, when the problem began, and the readings while it is happening. See the [spark command guide](https://spark.lucko.me/docs/Command-Usage){ target="_blank" } for details.
-
-### Example: Players Report Severe Lag
-
-1. Ask whether everyone is affected or only one player or world. Check whether the player means low FPS, delayed interactions, or trouble connecting.
-2. Run `/spark tps` on the affected backend. If TPS is low or MSPT is consistently high, note the figures and time.
-3. Use `/spark health` for additional context and identify what changed recently (for example, an event, new farm, or many players joining).
-4. Send the findings to a Developer if the cause is unclear or the problem is serious. Do not start deleting entities or dismantling builds based only on a low-TPS reading.
-
-### Checking Logs
-
-Admins have access to **mclogs** on ERRSA. It helps you collect the right log when a player reports a crash, a command error, or another technical problem.
-
-- Use `/mclogs` when you need the **current server log**. It uploads that log and gives you a link to share with the appropriate staff.
-- Use `/mclogs list` when the issue happened earlier. It shows available logs and reports so you can identify what might contain the error. **Listing a file does not upload it.**
-
-Before sharing anything, make sure you're checking the correct backend and note approximately when the problem occurred. Give the Developer the relevant time, symptoms, and log reference rather than asking them to search blindly.
-
-!!! warning "Logs may contain private information"
-    `/mclogs` uploads a log to an external website. Automatic filtering does not guarantee that every sensitive detail is removed. Only upload logs when appropriate for the investigation, and share the resulting link with authorized staff—not in public Discord channels. If an older log needs to be shared, coordinate that with a Developer.
+!!! tip "Not everything can be proven exactly"
+    Sometimes logs confirm that items were removed but cannot establish every enchantment or exact quantity. Explain the uncertainty in the record and use reasonable judgment; involve the Server Lead when the amount or impact is significant.
 
 ---
 
-## Restarting & Maintaining Servers
+### Example: A Missing Shulker With Enchanted Tools
 
-Restarts interrupt active gameplay and may disrupt events or recovery work. **Admin permissions are not blanket restart authority.** Confirm approval and coordinate any planned maintenance with the appropriate staff.
+A player says a shulker containing enchanted tools disappeared. Before making a replacement:
 
-Before an authorized restart:
+1. Confirm the **last known location and method of loss**. Was it placed in a chest, dropped as an item, moved through a portal, or lost with the player's inventory?
+2. Follow the relevant history. Container transactions, player inventory events, and direct observation may each answer different parts of the report. The original shulker or tools could still exist elsewhere.
+3. Verify the **contents and custom properties** separately. One shulker entry in a log does not automatically prove everything the player says was inside. Ask for screenshots or other reliable records when details are missing.
+4. Escalate **offline inventory editing, unclear world inventories, and custom-item reconstruction** to the Developer or Server Lead. Do not improvise commands that could replace or duplicate player property.
+5. Record whether the original items were located, what can be verified, who approved the final correction, and how the player received it.
 
-- Confirm which server needs attention and why a restart is necessary.
-- Check whether a Developer or another staff member is already working on it.
-- Coordinate a player notice when needed.
-- Make sure no event, update, or recovery process will be interrupted.
-- Record the reason, time, and outcome when the restart is significant.
-
-Afterward, verify that players can reconnect and that the affected feature actually works.
-
-!!! warning "Avoid improvised fixes"
-    Do not run `/reload` (including plugin-specific reloads), delete plugin files, repeatedly restart a crashing server, or change live configuration in hopes of fixing an unknown error. These can make the issue harder to diagnose or cause additional damage.
+!!! warning "Complex item recovery requires authorization"
+    Custom shulkers, offline inventories, and items with unusual data need careful verification. Preserve the evidence and have a Developer or Server Lead approve any reconstruction rather than guessing at item-giving or NBT commands.
 
 ---
 
-## Recognizing Common Operational Problems
+## Inventory Editing & Limited Creative Access
 
-| Symptom | Useful first check | Next step |
-| --- | --- | --- |
-| Players cannot join | Determine whether it affects one player, one backend, or the network. | Escalate proxy or backend errors to a Developer. |
-| Server feels laggy | Note when it started, which world is affected, and whether a farm or event is involved. | Report relevant observations; do not disable systems at random. |
-| A command suddenly stops working | Compare roles, contexts, recent changes, and plugin status. | Investigate permissions or refer to the Developer. |
-| A plugin reports errors | Preserve the relevant log lines and timing. | Developer reviews the underlying issue. |
-| Server crashes | Follow the crash procedure immediately. | Developer or Server Lead coordinates recovery. |
+Admins have tools that can inspect or modify inventories and may use creative mode for appropriate repairs. These are staff recovery tools, **not conveniences for normal gameplay**.
 
-The [Troubleshooting](../../troubleshooting/index.md){ data-preview } section and tool pages provide additional reference information.
+When using them:
 
----
+- Confirm the correct player and inventory before making changes.
+- Avoid moving or deleting unrelated items.
+- Do not keep, trade, or use recovered property personally.
+- Keep staff-created items separate from normal player inventories until the recovery is verified.
+- Return to normal gameplay mode and remove temporary investigation materials afterward.
 
-## When to Stop & Escalate
-
-Some problems are beyond the intended scope of Admin access, including:
-
-- Editing plugin or network configuration files.
-- Changing databases or credentials.
-- Installing, updating, or removing plugins.
-- Restoring backups or performing server-wide rollbacks.
-- Repeated crashes, unexplained corruption, or widespread connection failures.
-
-You can still help by collecting symptoms, preserving evidence, and coordinating player communication. Under the [server crash procedure](../../documentation/standard-procedures.md#321-server-crashes){ data-preview }, a Developer or Server Lead handles the technical response and public announcement if downtime continues beyond 15 minutes.
+Use the ERRSA [InvSee++ plugin reference](../../plugins/permissions-and-moderation/invseeplusplus.md#what-is-invsee){ data-preview } for `/invsee <player>` and `/endersee <player>`. Editing access is available, but offline inventories and world-specific inventories can behave differently. Verify the context before changing items; escalate any uncertainty about where the original inventory lives.
 
 ---
+
+## Record the Item Outcome
+
+Document the reported items, what logs and inventory inspection established, whether originals were found, the approved restoration method, who made the change, and whether anything remains disputed. Never use `/give` or `/item` merely to estimate compensation.
 
 ## Check Your Understanding
 
-Two players in Survival report block delays, but another player reports only low FPS. You run `/spark tps` and see low TPS. What should you record, and what should you avoid doing?
+A player reports a lost enchanted shulker, but the log only proves one shulker was removed. What can you restore immediately?
 
 ??? tip "Suggested approach"
-    Record the affected server, time, TPS/MSPT readings, and what players experienced. The low FPS may be a separate client problem. Escalate with those findings instead of randomly clearing entities or restarting the server.
+    Nothing beyond what the evidence and approved recovery procedure justify. First establish whether the original can be located and whether its contents can be independently verified. Escalate custom-data reconstruction instead of guessing.
 
 ---
 
 <nav class="handbook-next" aria-label="Continue reading">
   <a href="../mod5/">
-    <span class="handbook-next__copy"><small>Next section</small><strong>Module 5 · Claims, Worlds & Player Management</strong><span>Learn how claims, plots, and protected worlds affect player issues.</span></span>
+    <span class="handbook-next__copy"><small>Next section</small><strong>Module 5 · Server Operations</strong><span>Learn how to evaluate server health and collect diagnostic evidence.</span></span>
     <span class="handbook-next__arrow" aria-hidden="true">→</span>
   </a>
 </nav>

@@ -169,11 +169,11 @@ Use these procedures to respond consistently to player reports and server incide
 ### 3.2.6 Cheating, Hacking, or Exploiting { .situation-heading }
 ??? info "3.2.6 Cheating, Hacking, or Exploiting"
 
-    - Mods → Immediately escaluate the situation to an Admin or above.
+    - Mods → Escalate cheating cases to an Admin or above. Temporary jailing is allowed only under the [Investigative Jailing Policy](investigative-jailing-policy.md){ data-preview }.
 
     - Admin/Dev → Use investigation tools to gather initial evidence (screenshots, videos, plugin alerts, anti-cheat logs, etc.)
 
-    - Once potential suspects are identified, issue a jail until proven innocent or guilty while further investigation continues.
+    - Staff may use temporary investigative jailing only under the [Investigative Jailing Policy](investigative-jailing-policy.md){ data-preview }, which defines role authority, evidence standards, and release conditions.
 
     - Continue the investigation, speak with involved players directly for their side of the story, and put evidence together to determine the full picture.
 
@@ -201,9 +201,9 @@ Use these procedures to respond consistently to player reports and server incide
 ### 3.2.7 Griefing or Theft { .situation-heading }
 ??? info "3.2.7 Griefing or Theft"
 
-    - If a player is actively griefing or stealing, issue a jail while relevant information regarding previous ban history is gathered.
+    - For temporary investigative jailing, follow the [Investigative Jailing Policy](investigative-jailing-policy.md){ data-preview }. A jail is not an automatic punishment.
 
-    - Mod → If the situation requires investigation, escalate to an Admin or above.
+    - Mod → Escalate investigations requiring Admin tools or decisions. Any jail must follow the [Investigative Jailing Policy](investigative-jailing-policy.md){ data-preview }.
 
     - Admins → Use investigation tools to determine who caused the damage, or took the stolen items. Verify claim and ownership of builds or items.
 

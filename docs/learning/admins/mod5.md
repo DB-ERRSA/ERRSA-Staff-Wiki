@@ -5,147 +5,184 @@ tags:
   - SERVER LEAD
 ---
 
-# Module 5 · Claims, Worlds & Player Management
+# Module 5 · Server Operations
 
-Not every building or access problem is caused by a rule violation. ERRSA uses several systems to manage land claims, plots, protected regions, and different worlds. An Admin needs to understand which system is responsible before attempting to fix the issue.
+Admins also help with basic server health checks, connection issues, and operational incidents. The goal is to identify **what is affected** and provide usable information, not to make random changes until the issue disappears.
 
-The most important distinction is that a player's permissions, the rules of the current world, and the protection placed on a specific area can all affect what they are allowed to do.
+These responsibilities are about monitoring and supporting operations. Plugin development, configuration changes, and major infrastructure work remain Developer or Server Lead responsibilities.
 
 ---
 
-## Understanding the Different Systems
+## Understanding the Server Environment
 
-| System | Primary purpose |
+ERRSA uses a Minecraft network with a Velocity proxy and backend servers. A problem affecting one world or backend may not be the same as a problem preventing every player from connecting.
+
+When something stops working, identify the scope before acting:
+
+- **One player:** Could be a client, account, permission, or connection issue.
+- **One command or plugin feature:** Could be a plugin, permission, or configuration issue.
+- **One world or backend:** Could be world-specific settings or a backend problem.
+- **The entire network:** May involve the proxy, hosting service, or a broader outage.
+
+Knowing the scope helps the technical team look in the right place and prevents unnecessary changes to unaffected services.
+
+---
+
+## The Server Console
+
+The console displays live server messages, startup and shutdown activity, command output, warnings, and errors.
+
+Some Admins may have console or log access through [Apex Hosting](../../tools/apex-hosting/index.md){ data-preview }, depending on their assigned account access. In-game permissions do not themselves grant access to the host panel.
+
+When reviewing console output:
+
+1. Note the server you are viewing and the approximate time of the issue.
+2. Look for the first relevant warning or error, not simply the last line displayed.
+3. Identify the plugin, command, world, or player involved if the output indicates one.
+4. Compare the error time with the reported behavior.
+5. Preserve a relevant excerpt or restricted reference for the Developer if escalation is needed.
+
+!!! tip "One error may cause several more"
+    A single plugin or dependency failure can produce many follow-up messages. Focus on when the problem started and what happened immediately before it.
+
+Do not share console output containing addresses, tokens, secrets, or other private information in public channels.
+
+---
+
+## What Is spark?
+
+**spark** is the performance-monitoring plugin used on ERRSA to inspect server health. `/spark tps` displays tick-rate measurements; `/spark health` provides a broader health summary. A web profiler report can show sampled activity over time, but reading its internal profiler tree is generally a Developer task. These tools diagnose performance; they do not automatically prove a particular player or plugin caused lag.
+
+---
+
+## Understanding TPS & MSPT
+
+Minecraft runs in short updates called **ticks**. A healthy server aims for **20 ticks per second (TPS)**. **MSPT** means milliseconds per tick, or how long the server takes to process each update. To keep up with 20 TPS, a tick has a budget of about **50 milliseconds**.
+
+For example:
+
+| Reading | What it means |
 | --- | --- |
-| [GriefPrevention](../../plugins/permissions-and-moderation/griefprevention.md){ data-preview } | Player land claims, trusted access, and claim protections on Survival. |
-| [WorldGuard](../../plugins/worlds-and-building/worldguard.md){ data-preview } | Protected regions and rules for building, PvP, interactions, and other behavior. |
-| [PlotSquared](../../plugins/worlds-and-building/plotsquared.md){ data-preview } | Plot ownership and building permissions in plot-based worlds. |
-| [Multiverse-Core](../../plugins/worlds-and-building/multiverse-core.md){ data-preview } | World management, teleportation, and world-specific properties. |
-| [Multiverse-Inventories](../../plugins/worlds-and-building/multiverse-inventories.md){ data-preview } | Inventory grouping and separation across configured worlds. |
+| **20 TPS, 20 MSPT** | The server is keeping up. Look for other causes if players still report a problem. |
+| **13 TPS, 75 MSPT** | The server is falling behind; there may be a server-side performance issue. |
+| **20 TPS with occasional spikes** | A short spike is not automatically a crisis. Look for repeated or sustained issues. |
 
-These systems can overlap. A player may be allowed by one plugin but restricted by another, so changing the first permission you find may not solve the problem.
+TPS and MSPT do not automatically tell you *what* is causing lag. Player ping, client FPS, and connection issues can also make the game feel slow even if TPS is normal.
+
+### Real ERRSA spark Example
+
+![Actual ERRSA spark profiler report showing TPS, MSPT, CPU, memory, and the performance graph on November 3, 2026](../../assets/images/admin-training/spark-profiler-survival-2026-11-03.png)
+
+*Actual ERRSA spark web profiler report from November 3, 2026. This is the report opened in a browser, not the in-game chat output from `/spark tps`.*
+
+Here's what an Admin should notice:
+
+- **TPS:** The 1-, 5-, and 15-minute readings all show **20.00 TPS**. The server was maintaining its target tick rate over those periods.
+- **MSPT:** The median is **13.7 ms**, and the 95th-percentile reading is **31 ms**, both below the 50 ms tick budget. The **137 ms maximum** indicates at least one longer tick, but does not establish ongoing lag by itself.
+- **Graph:** The green TPS line stays at 20 while the purple MSPT line changes. Look for sustained problems instead of treating one spike as the cause of a report.
+- **CPU and memory:** The report shows roughly **17% process CPU** and **3 GB of 10.4 GB process memory**. These help describe the server's condition, but do not identify which plugin or activity caused a delay.
+
+!!! tip "Reading the profiler below the graph"
+    The **Server thread 100%** entry is a percentage within the profiler's sampled work, **not** a claim that the server's CPU is running at 100%. Admins generally only need the readings above the graph and a link to the report when escalating. Developers can investigate the detailed profiler tree.
+
+The useful question is whether poor readings continue over time, not whether you can find one unusually high number. `/spark tps` is a starting point; it cannot by itself identify which plugin, farm, or player caused a problem.
 
 ---
 
-## GriefPrevention Claims
+## Quick Server Checks
 
-[GriefPrevention](../../plugins/permissions-and-moderation/griefprevention.md){ data-preview } protects Survival claims. A player's ability to **enter an area, open a chest, or build** may be different depending on which trust level the owner gave them.
+Admins use the following confirmed ERRSA diagnostic commands when gathering information for the technical team:
 
-### Inspecting a Claim
-
-1. Go to the reported location in Survival and hold a **stick** (the default GriefPrevention inspection tool).
-2. **Right-click** a block or the ground to check who owns the claim and display its boundary information. You may see the claim outlined with temporary markers.
-3. Stand **inside that claim** and run `/trustlist`. This shows which players have been given access and at what level.
-4. Use `/claimslist <player>` if you need to confirm the player's overall claim information. Remember that the world and exact spot matter.
-
-If the stick does nothing, confirm that you are in the intended world and that the server's configured tool is still the default. Ask a Developer rather than guessing at the claim owner.
-
-### Example: A Friend Cannot Open a Chest
-
-A player says their friend can enter their house but cannot open a chest. Start by asking **which world, which chest, and who owns the claim**. Inspect the location with the stick, then check `/trustlist` while standing inside it.
-
-| Trust level | What it generally allows |
+| Command | When to use it |
 | --- | --- |
-| `/accesstrust <player>` | Basic access such as buttons, levers, and beds. |
-| `/containertrust <player>` | Container access, along with basic access. |
-| `/trust <player>` | Building and breaking blocks as well as the lower access levels. |
+| `/spark tps` | See TPS and tick-performance measurements when players report lag. |
+| `/spark health` | View the server's wider health report, including resource usage. |
+| `/mclogs` | Upload the current server log and generate a link for an approved investigation. |
+| `/mclogs list` | List available server logs, crash reports, and network protocol error reports. |
+| `/servers` | Open the ERRSA server menu and check which backend you can reach. |
 
-A player with only **AccessTrust** may be able to use a button but **not open a protected chest**. If the owner wants to allow chest access, explain that *the owner* can use `/containertrust <friend>` while standing in the correct claim. Do not grant or remove another player's trust without their permission or an authorized reason.
+`spark` gives you useful measurements; you do not need to run a profiler or interpret CPU traces by yourself. Record the affected backend, when the problem began, and the readings while it is happening. See the [spark command guide](https://spark.lucko.me/docs/Command-Usage){ target="_blank" } for details.
 
-If the friend already has the necessary trust, check whether the chest is inside a **subdivision** or another protected region. WorldGuard can restrict interactions even when GriefPrevention allows them. Escalate region changes rather than removing protections to make the problem disappear.
+### Example: Players Report Severe Lag
 
-### Admin Claim Tools
+1. Ask whether everyone is affected or only one player or world. Check whether the player means low FPS, delayed interactions, or trouble connecting.
+2. Run `/spark tps` on the affected backend. If TPS is low or MSPT is consistently high, note the figures and time.
+3. Use `/spark health` for additional context and identify what changed recently (for example, an event, new farm, or many players joining).
+4. Send the findings to a Developer if the cause remains unclear or the problem is serious. Do not start deleting entities or dismantling builds based only on a low-TPS reading.
 
-| Command | Purpose |
-| --- | --- |
-| `/ignoreclaims` | Temporarily bypass claim protection during an approved investigation. Run it again to turn the bypass off. |
-| `/adminclaims` | Switch the claim tool into administrative-claim mode when an authorized staff claim is required. Use `/basicclaims` afterward. |
-| `/deleteclaim` | Delete the claim at your location only after verifying the correct claim and approval for removal. |
+### Checking Logs
 
-These are not normal solutions to a player-access issue. A chest-access complaint usually begins with ownership and trust checks, not claim deletion or bypass.
+Admins have access to **mclogs** on ERRSA, including `/mclogs` and `/mclogs list`. It helps you collect the right log when a player reports a crash, a command error, or another technical problem.
 
-!!! warning "Claim bypass is temporary"
-    Turn `/ignoreclaims` off after use. Claim deletion or transfer can permanently affect player property. Record the world, coordinates, previous owner, approval, and any changes made. See the [GriefPrevention command reference](https://legacy.griefprevention.com/commands/){ target="_blank" }.
+- Use `/mclogs` when you need the **current server log**. It uploads that log and gives you a link to share with the appropriate staff.
+- Use `/mclogs list` when the issue happened earlier. It shows available logs and reports so you can identify what might contain the error. **Listing a file does not upload it.**
 
----
+Before sharing anything, make sure you're checking the correct backend and note approximately when the problem occurred. Give the Developer the relevant time, symptoms, and log reference rather than asking them to search blindly.
 
-## WorldGuard Regions
-
-WorldGuard applies rules to defined regions. Depending on the region, these may control building, PvP, explosions, doors, containers, or other interactions.
-
-A problem that seems like a missing permission may actually be a region flag or membership rule.
-
-For example, if someone can build normally in Survival but cannot place a block at spawn, that restriction may be intentional. Check whether they are in a protected region before investigating their LuckPerms group.
-
-Admins should **recognize** region-related issues and collect the affected coordinates, world, action, and expected behavior. Your listed Admin permissions do not by themselves grant broad WorldGuard region-editing rights; escalate changes to protected regions rather than attempting an unsupported command.
-
-!!! warning "Protected regions serve a purpose"
-    Do not bypass or remove a protection to resolve a single player's complaint without confirming why the protection exists. Region changes may affect many players at once.
+!!! warning "Logs may contain private information"
+    `/mclogs` uploads a log to an external website. Automatic filtering does not guarantee that every sensitive detail is removed. Only upload logs when appropriate for the investigation, and share the resulting link with authorized staff, not in public Discord channels. If an older log needs to be shared, coordinate that with a Developer.
 
 ---
 
-## PlotSquared & Creative Worlds
+## Restarting & Maintaining Servers
 
-PlotSquared manages plots for building, with ownership and trust rules separate from ordinary Survival claims.
+Restarts interrupt active gameplay and may disrupt events or recovery work. **Admin permissions are not blanket restart authority.** Confirm approval and coordinate any planned maintenance with the appropriate staff.
 
-When a player cannot build on a plot, check whether:
+Before an authorized restart:
 
-- They are in the correct plot or world.
-- They own the plot or have been trusted by the owner.
-- The plot's restrictions are behaving as intended.
-- They are trying to use a feature restricted to a different role.
+- Confirm which server needs attention and why a restart is necessary.
+- Check whether a Developer or another staff member is already working on it.
+- Coordinate a player notice when needed.
+- Make sure no event, update, or recovery process will be interrupted.
+- Record the reason, time, and outcome when the restart is significant.
 
-Do not assume an Admin can clear, reassign, or merge any plot. If the issue needs a plot ownership or configuration change, escalate it with the location and evidence.
+Afterward, verify that players can reconnect and that the affected feature actually works.
 
-The **Workshop** is also a separate creative-building environment. Access to WorldEdit or another creative tool there does not mean that permission is available in Survival or can be used for unrestricted changes elsewhere.
-
----
-
-
-## Multiverse & World-Specific Behavior
-
-Multiverse controls properties of multiple worlds, including world-aware teleportation and gameplay settings. Other plugins may separately control inventory groups, permissions, or the way players move between worlds.
-
-A player who loses access to items after changing worlds may be encountering intended inventory separation rather than actual item deletion.
-
-Before attempting a recovery:
-
-1. Identify the original and destination worlds.
-2. Determine whether the inventory should carry between them.
-3. Check the player's inventory again in the appropriate world or context.
-4. Escalate any unexpected inventory transfer, duplication, or world configuration problem.
-
-!!! important "World changes are technical changes"
-    Creating, deleting, importing, or changing world properties can affect spawns, inventories, portals, and protection rules. These tasks should be coordinated with a Developer or Server Lead rather than performed as routine Admin troubleshooting.
+!!! warning "Avoid improvised fixes"
+    Do not run `/reload` (including plugin-specific reloads), delete plugin files, repeatedly restart a crashing server, or change live configuration in hopes of fixing an unknown error. These can make the issue harder to diagnose or cause additional damage.
 
 ---
 
-## Handling Building & Protection Issues
+## Recognizing Common Operational Problems
 
-For a typical building-related report, use this order:
+| Symptom | Useful first check | Next step |
+| --- | --- | --- |
+| Players cannot join | Determine whether it affects one player, one backend, or the network. | Escalate proxy or backend errors to a Developer. |
+| Server feels laggy | Note when it started, which world is affected, and whether a farm or event is involved. | Report relevant observations; do not disable systems at random. |
+| A command suddenly stops working | Compare roles, contexts, recent changes, and plugin status. | Investigate permissions or refer to the Developer. |
+| A plugin reports errors | Preserve the relevant log lines and timing. | Developer reviews the underlying issue. |
+| Server crashes | Follow the crash procedure immediately. | Developer or Server Lead coordinates recovery. |
 
-1. Confirm the world, location, and exact action that is failing.
-2. Identify the relevant protection system.
-3. Check the owner, trust or membership settings, and intended server rules.
-4. Determine whether the restriction is intentional, a player-access issue, or a technical malfunction.
-5. Apply an authorized small correction or escalate with the findings.
+The [Troubleshooting](../../troubleshooting/index.md){ data-preview } section and tool pages provide additional reference information.
 
-If the issue involves griefing or stolen property, investigate it before making permission or ownership changes. Refer to [Module 2](mod2.md){ data-preview } for evidence gathering and [Module 3](mod3.md){ data-preview } for restoration.
+---
+
+## When to Stop & Escalate
+
+Some problems are beyond the intended scope of Admin access, including:
+
+- Editing plugin or network configuration files.
+- Changing databases or credentials.
+- Installing, updating, or removing plugins.
+- Restoring backups or performing server-wide rollbacks.
+- Repeated crashes, unexplained corruption, or widespread connection failures.
+
+You can still help by collecting symptoms, preserving evidence, and coordinating player communication. Under the [server crash procedure](../../documentation/standard-procedures.md#321-server-crashes){ data-preview }, a Developer or Server Lead handles the technical response and public announcement if downtime continues beyond 15 minutes.
 
 ---
 
 ## Check Your Understanding
 
-A player says their friend cannot open a chest. The stick shows it is the player's claim, and `/trustlist` shows only AccessTrust for the friend. What should you suggest?
+Two players in Survival report block delays, but another player reports only low FPS. You run `/spark tps` and see low TPS. What should you record, and what should you avoid doing?
 
 ??? tip "Suggested approach"
-    Explain the difference between AccessTrust and ContainerTrust. If the owner approves, they can use `/containertrust <friend>` in the correct claim. Do not use `/ignoreclaims` or delete the claim to solve this.
+    Record the affected server, time, TPS/MSPT readings, and what players experienced. The low FPS may be a separate client problem. Escalate with those findings instead of randomly clearing entities or restarting the server.
 
 ---
 
 <nav class="handbook-next" aria-label="Continue reading">
   <a href="../mod6/">
-    <span class="handbook-next__copy"><small>Next section</small><strong>Module 6 · Handling Major Incidents</strong><span>Learn to contain serious issues and coordinate with the rest of the staff team.</span></span>
+    <span class="handbook-next__copy"><small>Next section</small><strong>Module 6 · Claims, Worlds & Player Management</strong><span>Learn how claims, plots, and protected worlds affect player issues.</span></span>
     <span class="handbook-next__arrow" aria-hidden="true">→</span>
   </a>
 </nav>

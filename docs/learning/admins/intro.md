@@ -39,29 +39,22 @@ Admins inherit Moderator tools and gain access to deeper investigations, item re
 
 | When you need to… | Start with… |
 | --- | --- |
-| Find out who changed a block or chest | **CoreProtect** — investigate before rolling anything back. |
-| Check a suspicious inventory | **InvSee++** — inspect first; edits are for verified corrections. |
-| Review a cheating alert | **Themis** — examine the player's alerts alongside other evidence. |
-| Fix a claim-related problem | **GriefPrevention** — confirm ownership and trust before making changes. |
-| Diagnose lag or an outage | **spark** and available server logs — gather findings for the technical team. |
+| Find out who changed a block or chest | **CoreProtect**: investigate before rolling anything back. |
+| Check a suspicious inventory | **InvSee++**: inspect first; edits are for verified corrections. |
+| Review a cheating alert | **Themis**: examine the player's alerts alongside other evidence. |
+| Fix a claim-related problem | **GriefPrevention**: confirm ownership and trust before making changes. |
+| Diagnose lag or an outage | **spark** and available server logs: gather findings for the technical team. |
 
 You will learn the relevant commands in the modules where they are actually used. The [Plugins](../../plugins/index.md){ data-preview } section contains fuller command references.
 
-!!! important "Access is not authorization"
+!!! danger "Access is not authorization"
     A working command is not automatically an approved action. Creating items, moving players with `/sudo`, editing inventories, changing server state, or bypassing protection must have a legitimate staff purpose. Some available commands can cause serious damage when used outside the correct procedure.
 
 ---
 
-## Working With Other Staff Roles
+## Escalating to the Right Role
 
-| Role | Primary responsibility |
-| --- | --- |
-| **Moderator** | First response, basic rule enforcement, player assistance, and gathering initial context. |
-| **Admin** | Escalated investigations, verified restoration, and limited operational management. |
-| **Developer** | Plugin behavior, server files, configuration, databases, and technical fixes. |
-| **Server Lead** | Final administrative decisions, staff issues, and overall server direction. |
-
-An issue does not always need to move through each role. For example, a game-breaking plugin bug should go directly to a Developer, while an allegation of staff abuse belongs with the Server Lead.
+Moderators usually handle the first player report; Admins investigate escalated cases and perform authorized corrections. Developers handle plugins, configuration, databases, and server faults. The Server Lead handles staff abuse and final administrative decisions. See [Staff Roles & Responsibilities](../../documentation/staff-roles-responsibilities.md){ data-preview } for the complete responsibilities.
 
 ---
 
@@ -81,13 +74,9 @@ If the answer is unclear, gather the missing information or involve the appropri
 
 ---
 
-!!! info "Practice before changing live player data"
-    Reading an explanation is a starting point. Before your first actual rollback, complex recovery, or jail-state correction, work through the [Admin Practical Assessment](assessment.md){ data-preview } and practice with an experienced Admin. The CoreProtect walkthroughs include real ERRSA screenshots; other diagrams may be illustrated examples. Always verify commands and results in the current server environment.
-
-
 ## Admin Learning Section
 
-By completing the six modules, you should know:
+By completing the seven modules, you should know:
 
 - How to handle serious incidents and Moderator escalations.
 - How to investigate player activity using several sources of evidence.
@@ -98,7 +87,10 @@ By completing the six modules, you should know:
 
 The [Documentation](../../documentation/index.md){ data-preview } section remains the authority for rules and procedures. These modules teach you how to apply them.
 
-Each module includes a short situation to check your understanding. **Admin certification is required for new and existing Admins.** After Module 6, complete the [Admin Practical Assessment](assessment.md){ data-preview } and supervised exercises, and have a reviewer complete the [Admin Certification & Training Record](certification.md){ data-preview }. The Server Lead gives final certification approval, and restoration requires separate authorization. The goal is not to memorize every command, but to know where to start, how to interpret what you find, and when to ask for help.
+Each module ends with a short knowledge check. After Module 7, continue to the [Admin Assessment](../assessments/admin.md){ data-preview }. The [Assessment Process](../assessments/process.md){ data-preview } explains supervised practice, the reviewer, and Server Lead approval. Completing training does not automatically grant a promotion or permission to perform independent restorations.
+
+!!! warning "Practice before changing live player data"
+    Do not use player accounts or property to test commands. Before attempting independent rollback, inventory recovery, or similar high-impact actions, complete supervised practice and obtain any separate authorization the [Assessment Process](../assessments/process.md){ data-preview } requires. The CoreProtect screenshots in these modules show actual ERRSA tests; diagrams elsewhere may be illustrative.
 
 ---
 

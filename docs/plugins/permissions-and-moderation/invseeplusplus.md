@@ -62,7 +62,7 @@ If the target is offline, confirm you are viewing the intended saved inventory b
 ## Related Resources
 
 - [Admin Module 2 — Player Investigations](../../learning/admins/mod2.md){ data-preview }
-- [Admin Module 3 — Restoration & Recovery](../../learning/admins/mod3.md){ data-preview }
+- [Admin Module 4 — Item & Inventory Recovery](../../learning/admins/mod4.md){ data-preview }
 
 ### Official Resources
 

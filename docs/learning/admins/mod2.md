@@ -36,7 +36,7 @@ Work from the smallest relevant time window and location. Widen the search only 
 
 ## Investigating With CoreProtect
 
-[CoreProtect](../../plugins/permissions-and-moderation/coreprotect.md){ data-preview } records block changes, container transactions, and other supported actions. It is the main tool for verifying griefing and theft reports. Start at the reported location instead of searching the whole server.
+[CoreProtect](../../plugins/permissions-and-moderation/coreprotect.md#what-is-coreprotect){ data-preview } records block changes, container transactions, and other supported actions. It is the main tool for verifying griefing and theft reports. Start at the reported location instead of searching the whole server.
 
 ### Using the Inspector
 
@@ -53,6 +53,24 @@ If several pages appear, use the **clickable arrows** or `/co l <page#>` to brow
 CoreProtect may also show **clickable coordinates** beside entries. They can teleport you to the logged event, but always check that it is the reported chest.
 
 Run `/co i` again when you finish to turn the inspector off. Inspector mode changes how clicks behave.
+
+### Using CoreProtect Lookup Filters
+
+Use a lookup when you need to restrict the time, action, player, or area beyond the exact block-inspector history. The main filters used below are:
+
+| Filter | Meaning |
+| --- | --- |
+| `t:2h` | Previous two hours |
+| `r:10` | Ten blocks around **your current location**, not the selected chest |
+| `u:ExamplePlayer` | Only that account's events |
+| `a:container` | Items added to or removed from containers |
+| `a:-container` | Items removed from containers |
+| `a:+container` | Items added to containers |
+| `a:block` | Block placements and breaks |
+
+A radius lookup may include nearby chests. **Confirm the exact coordinates** before claiming a transaction belongs to the reported container. Leave out `u:` when the responsible player is not yet known.
+
+---
 
 ### Example: A Chest With Missing Items
 
@@ -75,27 +93,18 @@ A player says someone took diamonds from a chest while they were offline. You ar
 
 6. **Check the explanation.** Compare the results with the owner's permissions, shared-storage arrangements, and any statements from the involved players. Record the finding before returning items or taking disciplinary action.
 
-`r:10` means **ten blocks around your current in-game position**, not ten blocks around the chest automatically. Stand near the chest before searching. `t:2h` means the previous two hours. Leave out `u:` when the responsible account is unknown.
+### Interpreting Incomplete Results
 
-The `a:` filter helps distinguish results:
+A removal entry confirms items left a container; it does **not** prove theft. Check the world, exact chest, timestamps, access permissions, and context. Use the clickable history arrows or `/co l <page#>` to view another page of the **same** result set.
 
-| Filter | Shows |
-| --- | --- |
-| `a:container` | Both items added to and removed from containers. |
-| `a:-container` | Items removed from containers. |
-| `a:+container` | Items added to containers. |
-| `a:block` | Blocks placed or broken. |
+If you get **no results**, recheck the world and chest, then evaluate whether the time window, radius, or action filter missed the incident. Widen carefully and record what was checked. A blank lookup is not proof the player's report was false.
 
-!!! tip "Reading the results"
-    A removal entry means items went out; an addition means items went in. Neither proves theft by itself. Look at the exact chest, time, and whether the storage is shared. You can use the chat arrows or `/co l <page#>` to browse the same history.
-
-!!! tip "What if nothing appears?"
-    **No results found** does not mean the report was false. You may be in the wrong world or location, the activity may be outside the time window, or the filter may not match what happened. Confirm the chest and coordinates, widen the time window if justified, and check whether you need container, block, inventory, or item history. If the result still does not make sense, record what you searched and ask for a second review.
-
-!!! important "Keep the search small"
-    A CoreProtect *lookup* without a radius can search much more broadly than expected. Start with a short time window and a location close to the report, then widen only if necessary. Do not roll back anything during the investigation.
+!!! warning "Keep lookups narrow"
+    Broad lookups can produce unrelated events. Start at the reported location with the smallest useful time window; do not roll back while gathering evidence.
 
 For the full syntax, see the [CoreProtect command reference](https://docs.coreprotect.net/commands/){ target="_blank" }.
+
+## Reading CoreProtect Results
 
 ### Reading the Container Results
 
@@ -123,14 +132,17 @@ You can also click a page number shown in chat. If you start a **new** lookup, t
 
 This is particularly helpful when a radius lookup returns records from several nearby chests. **Teleporting shows where the event occurred; it does not prove the event belongs to the chest in the original report.** Confirm the world, location, and container before treating it as evidence.
 
-??? question "Try reading the result"
-    `ExamplePlayer` removed diamonds from a chest that several guild members share. What does the log establish, and what is still missing?
+---
 
-    ??? tip "Suggested approach"
-        It establishes a recorded removal from that container. It does not establish that the removal was unauthorized. Confirm the chest, account, time, and how the guild uses shared storage before reaching a conclusion.
+### Practice: Reading a Shared Chest
+
+`ExamplePlayer` removed diamonds from a chest that several guild members share. What does the log establish, and what is still missing?
+
+??? tip "Suggested approach"
+    It establishes a recorded removal from that container, not whether it was authorized. Confirm the chest, account, time, and the guild's shared-storage rules before drawing a conclusion.
 
 
-### What a Useful Finding Looks Like
+## Writing a Useful Finding
 
 A staff record should make it clear what was **reported**, what you **verified**, and what remains **uncertain**. For example:
 
@@ -150,19 +162,20 @@ A suspected duplicate, unusual stack, or cheating alert needs more than a screen
 | `/endersee <player>` | Inspect the player's ender chest. |
 | `/themis info <player>` | View Themis violation scores and check information for that account. |
 
-InvSee++ also gives Admins editing access. **Do not move, remove, or insert items while you are still gathering evidence.** Open the right player's inventory, preserve the findings, and only edit it as part of an authorized recovery.
+### Checking a Player's Inventory
 
-!!! tip "ERRSA inventory tool: InvSee++"
-    ERRSA uses **InvSee++** for `/invsee` and `/endersee`. See the [InvSee++ plugin reference](../../plugins/permissions-and-moderation/invseeplusplus.md){ data-preview } for the commands and what to check before editing. EssentialsX also registers overlapping names, so if the interface changes unexpectedly after an update, confirm the routing with a Developer before making changes.
+Use **InvSee++** to inspect the correct player's inventory or ender chest. Compare the item types, quantities, and any unusual properties with the report. See the [InvSee++ command reference](../../plugins/permissions-and-moderation/invseeplusplus.md#what-is-invsee){ data-preview }.
 
-!!! note "Staff anticheat testing"
-    The Admin group has `themis.bypass`. Do not judge whether Themis detects cheating by testing with your own Admin account; the bypass may change what is reported. Ask a Developer to arrange a controlled non-bypass test when needed.
+Admins can also edit inventories, but an investigation begins with inspection. Record what you find before making any changes.
 
+### Reviewing Anti-Cheat Alerts
 
-An anticheat score is a lead, not a verdict. Consider lag, Bedrock/Java behavior, equipment, trades, and other legitimate explanations. Compare Themis findings with [CoreProtect](../../plugins/permissions-and-moderation/coreprotect.md){ data-preview }, activity history, and direct observation; if an actual exploit is suspected, follow the [cheating procedure](../../documentation/standard-procedures.md#326-cheating-hacking-or-exploiting){ data-preview }.
+Themis alerts help identify activity worth investigating, but an alert alone does not prove cheating. Compare the alert with player activity, [CoreProtect records](../../plugins/permissions-and-moderation/coreprotect.md#what-is-coreprotect){ data-preview }, and any available observations. Consider lag or differences between Java and Bedrock clients.
 
-!!! warning "Do not clean up first"
-    Avoid deleting items, clearing chests, or confiscating property because an alert looks suspicious. Preserve the evidence and contact a Developer if an active exploit could affect the wider server.
+Admin accounts have `themis.bypass`, so testing suspected cheats on your own Admin account is not a reliable way to check detection. Controlled tests should use an appropriate test account.
+
+!!! warning "Preserve evidence first"
+    Do not delete suspicious items, clear inventories, or confiscate property based only on an alert. If you find evidence of an active exploit, follow the [cheating procedure](../../documentation/standard-procedures.md#326-cheating-hacking-or-exploiting){ data-preview } and notify a Developer when the server itself may be affected.
 
 ---
 
@@ -170,7 +183,7 @@ An anticheat score is a lead, not a verdict. Consider lag, Bedrock/Java behavior
 
 A player who cannot open a chest or who sees a different inventory after changing worlds may be encountering a claim, region flag, or intentional world-inventory separation rather than a punishment or theft.
 
-Confirm the **world, coordinates, claim owner, player access, and expected behavior** before changing anything. [Module 5](mod5.md){ data-preview } covers claim and world checks. Actual plugin failures, permission changes, and inventory-group configuration belong with Developers.
+Confirm the **world, coordinates, claim owner, player access, and expected behavior** before changing anything. [Module 6](mod6.md){ data-preview } covers claims, protected regions, and the difference between worlds on ERRSA.
 
 ---
 
@@ -184,7 +197,7 @@ Once enough information is available, distinguish between:
 
 ERRSA uses a "what most likely happened" approach for certain property disputes, but that does not mean inventing missing evidence or treating a suspicion as certainty.
 
-Document the sources checked, findings, uncertainty, and any further work in the existing Player record. If you need to restore anything, proceed to [Module 3](mod3.md){ data-preview } after preserving the investigation results.
+Document the sources checked, findings, uncertainty, and any further work in the existing Player record. If you need to restore anything, proceed to [Module 3](mod3.md){ data-preview } for land or [Module 4](mod4.md){ data-preview } for items after preserving the investigation results.
 
 ---
 
@@ -199,7 +212,7 @@ A player reports stolen items, but you only know which chest was affected and ap
 
 <nav class="handbook-next" aria-label="Continue reading">
   <a href="../mod3/">
-    <span class="handbook-next__copy"><small>Next section</small><strong>Module 3 · Player Restoration & Recovery</strong><span>Learn how to recover verified damage or item loss without creating new problems.</span></span>
+    <span class="handbook-next__copy"><small>Next section</small><strong>Module 3 · Land & Build Restoration</strong><span>Learn how to restore verified damaged builds without affecting nearby legitimate work.</span></span>
     <span class="handbook-next__arrow" aria-hidden="true">→</span>
   </a>
 </nav>

@@ -5,148 +5,153 @@ tags:
   - SERVER LEAD
 ---
 
-# Module 6 · Handling Major Incidents
+# Module 6 · Claims, Worlds & Player Management
 
-Most player issues affect one person or a small group. Occasionally, something happens that threatens the wider community, server stability, or the integrity of player progress.
+ERRSA uses different protections for player claims, spawn areas, and Creative plots. Before helping a player, confirm which server and world they are in, then identify the protection system involved.
 
-Examples include large-scale griefing, a duplication exploit, deliberate lag, an extended outage, or a problem that affects many players at once. In these situations, an Admin's role is to help contain the problem, preserve evidence, and coordinate the response rather than trying to solve everything alone.
+## Understanding the Different Systems
 
----
-
-## Recognizing a Major Incident
-
-An issue may require a larger response when:
-
-- Several players or areas are affected at once.
-- The issue is actively spreading or causing additional damage.
-- An exploit could create or destroy large amounts of items or currency.
-- Players cannot reliably connect or the server is repeatedly crashing.
-- The cause is unknown and an attempted fix could make things worse.
-
-Not every unusual event is a major incident. First establish the scope, then involve the appropriate staff roles.
-
----
-
-## Immediate Priorities
-
-When a serious incident is discovered, focus on these steps:
-
-1. **Identify the impact.** Determine what is happening, where, when it began, and who is affected.
-2. **Limit further harm.** Take only the immediate measures authorized by the applicable procedure.
-3. **Preserve evidence.** Keep relevant logs, screenshots, locations, player information, and timestamps.
-4. **Notify the right people.** Bring technical incidents to Developers and major decisions to the Server Lead.
-5. **Coordinate the response.** Clarify who is investigating, communicating with players, and performing technical work.
-6. **Track the outcome.** Maintain an incident record until recovery and follow-up are complete.
-
-!!! important "Containment is not the same as punishment"
-    Temporarily stopping a player from causing further harm may be necessary during an investigation. That action does not establish guilt or determine the eventual disciplinary result.
-
----
-
-## Major Exploits & Economy Abuse
-
-A duplication exploit, unauthorized transfer between worlds, or another game-breaking issue can affect more than the player who discovered it.
-
-For example, duplicated items may already have been traded or placed in other containers. Simply deleting one suspicious stack may not address the underlying problem.
-
-When this occurs:
-
-- Collect the initial report and any reliable evidence of the behavior.
-- Identify the potentially affected players, items, worlds, and transactions.
-- Avoid public discussion of the exploit method while it is still active.
-- Escalate promptly to a Developer to investigate and contain the technical cause.
-- Coordinate disciplinary action under the [cheating and exploiting procedure](../../documentation/standard-procedures.md#326-cheating-hacking-or-exploiting){ data-preview }.
-
-Do not perform an unverified inventory wipe or economy-wide correction on your own. Those actions can affect legitimate progress and may require database or backup work.
-
----
-
-## Large-Scale Griefing
-
-If multiple structures have been damaged, first determine whether it is a single incident, a coordinated action, or an unrelated series of events.
-
-CoreProtect can help establish the locations, times, and responsible accounts. Preserve the results before any rollback and work with other staff to identify the boundaries of the damage.
-
-For recovery, begin with the most narrowly verified changes using the CoreProtect preview process in [Module 3](mod3.md){ data-preview }. If large WorldEdit operations, backups, or world-level restoration are required, coordinate with a Developer or Server Lead.
-
-!!! tip "Separate accountability from recovery"
-    One staff member can investigate responsibility while another checks the affected areas. The repair does not need to be delayed until every disciplinary question is settled, but it should not destroy evidence or create additional losses.
-
----
-
-## Crashes, Lag Machines & Widespread Outages
-
-Server instability may come from a plugin failure, a network issue, or something happening in-game, such as an excessively complex or intentionally disruptive machine.
-
-As an Admin:
-
-- Use `/spark tps` to check for backend performance problems when accessible, and note whether the issue affects the proxy, one backend, or a specific world.
-- Record the approximate start time and observable symptoms.
-- Preserve relevant logs or affected coordinates when available. The mclogs plugin is installed but Admin access is not explicitly confirmed by the snapshot; use `/mclogs` only if permitted and approved.
-- Notify a Developer or Server Lead immediately for crashes and major outages.
-- Do not repeatedly restart servers or attempt uncontrolled fixes.
-
-The [server crash procedure](../../documentation/standard-procedures.md#321-server-crashes){ data-preview } assigns technical response to Developers or the Server Lead and calls for a public announcement if downtime exceeds 15 minutes.
-
-For a suspected lag machine, use the [lag machine procedure](../../documentation/standard-procedures.md#329-lag-machines){ data-preview }. Distinguish between a legitimate build that causes unintended lag and a machine intended to disrupt the server.
-
----
-
-## Coordinating With Developers & the Server Lead
-
-During a major incident, different staff members may be able to help with different parts of the response.
-
-| Responsibility | Typical lead |
+| Plugin | Used for |
 | --- | --- |
-| Player reports and initial evidence | Moderator / Admin |
-| In-depth player investigation and verified restoration | Admin |
-| Plugin failures, exploits, backups, or infrastructure | Developer |
-| Major administrative decisions and overall coordination | Server Lead |
-
-Avoid several staff members making conflicting changes at once. Confirm who is responsible for the investigation, technical work, player communication, and final decision.
-
-Reports involving proximity voice chat follow the same investigation principles, but ordinary text mutes do not restrict voice chat. Check the [voice-chat language procedure](../../documentation/standard-procedures.md#323-inappropriate-language){ data-preview } rather than assuming a `/mute` solved the problem.
-
-Staff abuse, serious conduct concerns, and other matters reserved for the Server Lead must be escalated through the [chain of command](../../documentation/staff-roles-responsibilities.md#21-chain-of-command){ data-preview }.
+| [GriefPrevention](../../plugins/permissions-and-moderation/griefprevention.md#what-is-griefprevention){ data-preview } | Player claims and trust in Survival. |
+| [WorldGuard](../../plugins/worlds-and-building/worldguard.md#what-is-worldguard){ data-preview } | Protected regions such as Survival spawn and the tutorial areas. |
+| [Multiverse](../../plugins/worlds-and-building/multiverse-core.md#what-is-multiverse-core){ data-preview } | Multiple worlds on one server, including world-specific game modes and inventory separation. |
+| [PlotSquared](../../plugins/worlds-and-building/plotsquared.md#what-is-plotsquared){ data-preview } | Player plots in the Creative world (`PlotWorld`). |
 
 ---
 
-## Incident Communication & Follow-Up
+## GriefPrevention Claims
 
-Players need clear updates during major problems, but updates should not contain unverified accusations, private evidence, or technical details that could help someone reproduce an exploit.
+[GriefPrevention](../../plugins/permissions-and-moderation/griefprevention.md#what-is-griefprevention){ data-preview } protects player land in Survival. Claim ownership and trust levels determine who can build or use containers.
 
-An appropriate update explains what is affected, what players should avoid doing, and where they can look for further announcements. Do not promise an exact restoration time or outcome before it has been confirmed.
+### Inspecting a Claim
 
-For the internal record, keep a timeline that includes:
+1. Go to the reported location and use the **wooden hoe** to inspect the claim.
+2. Check the claim owner and boundaries.
+3. Stand inside the claim and run `/trustlist` to review access.
+4. Use `/claimslist <player>` when you need to review the player's other claims.
 
-- When the issue was reported and first verified.
-- What services, worlds, players, or items were affected.
-- Actions taken to contain and investigate it.
-- Staff involved, evidence references, and decisions made.
-- Recovery results and any unresolved follow-up.
+### Example: A Friend Cannot Open a Chest
 
-Use `/staff log` and `/staff search` in Discord to maintain the relevant **Player**, **Plugin**, or **General** records. Avoid duplicate records for the same issue; reference related records when different workstreams are necessary. See [Staff Actions & Records](../../documentation/logging-documentation.md#44-incident-records){ data-preview } for the authoritative process.
+A player says their friend can enter their house but cannot open a chest. Inspect the claim and check `/trustlist` to see which level of access the friend has.
 
-!!! example "A network-wide problem"
-    Players report that they cannot join the network, but there is no evidence yet of a player-caused incident. First establish which servers are unreachable and notify a Developer. Record the symptoms and help with approved communications. Do not accuse players, issue bans, or reset anything without evidence connecting it to the outage.
+| Trust level | What it allows |
+| --- | --- |
+| `/accesstrust <player>` | Basic access, such as using buttons and levers. |
+| `/containertrust <player>` | Opening protected containers. |
+| `/trust <player>` | Building and breaking blocks. |
+
+If the friend only has AccessTrust, explain that the claim owner can grant ContainerTrust. If they already have ContainerTrust, check whether the chest is in a subdivision or another protected area.
+
+### Admin Claim Tools
+
+| Command | Purpose |
+| --- | --- |
+| `/claimslist [player]` | List a player's claims. |
+| `/adminclaims` | Switch to Admin claim mode. |
+| `/adminclaimslist` | List Admin claims. |
+| `/ignoreclaims` | Toggle claim protection bypass for an investigation. |
+| `/transferclaim <player>` | Transfer ownership of the claim you are standing in. |
+| `/deleteclaim` | Delete the claim at your location. |
+| `/deleteallclaims <player>` | Delete all claims owned by a player. |
+| `/deletealladminclaims` | Delete all Admin claims. |
+| `/restorenature` | Restore terrain in a selected area. |
+
+!!! danger "Changes to player property"
+    Confirm the claim owner and exact location before transferring or removing a claim. Deleting all claims or restoring terrain can affect multiple builds. Obtain the necessary authorization and record changes to player property.
+
+---
+
+## WorldGuard Regions
+
+[WorldGuard](../../plugins/worlds-and-building/worldguard.md#what-is-worldguard){ data-preview } controls protected areas through **regions**. Each region can have **flags** that determine what players or game mechanics can do there.
+
+ERRSA uses WorldGuard in several worlds. On the Survival world, for example:
+
+| Region | Protection in use |
+| --- | --- |
+| `spawn` | PvP, mob spawning, TNT, creeper explosions, and ender pearls are blocked. |
+| `tutorial_dojo` | PvP and mob spawning are blocked, and players are protected from several forms of damage. |
+| `tj_claim_book` | Interaction is allowed in this region while other protections still apply. |
+| `legacy_lake_entrance` | PvP and mob damage are blocked. |
+
+**Example:** A player reports that they cannot use an ender pearl at spawn. That is expected because the `spawn` region blocks ender pearls. It is not automatically a player-permission problem.
+
+If someone reports a restriction, establish the world and coordinates, identify the affected region, and compare what happened with the region's intended behavior. [WorldGuard's plugin page](../../plugins/worlds-and-building/worldguard.md#what-is-worldguard){ data-preview } explains region protection and available commands.
+
+---
+
+## Multiverse & World Inventories
+
+[Multiverse-Core](../../plugins/worlds-and-building/multiverse-core.md#what-is-multiverse-core){ data-preview } allows one Minecraft backend server to contain several worlds. Worlds on the **main Survival server** are separate from worlds on the **Test server and Event server**. Multiverse manages worlds within a single server; it does not connect worlds or inventories between those separate servers.
+
+Within the main server, [Multiverse-Inventories](../../plugins/worlds-and-building/multiverse-inventories.md#what-is-multiverse-inventories){ data-preview } controls which worlds share inventories:
+
+| Worlds | Inventory behavior |
+| --- | --- |
+| `world`, `world_nether`, `world_the_end` | Share the Survival inventory. |
+| `workshop` | Has its own inventory group. |
+| `PlotWorld` | Separate from the Survival and Workshop groups. |
+
+**Example:** A player returns from Workshop to Survival and thinks their inventory has disappeared. First check which world they are in. Items in separate world-inventory groups do not automatically follow the player between those worlds.
+
+### Investigating a Missing Inventory
+
+1. Ask which backend server and world the player was in when they last saw the items.
+2. Check whether they changed to a world with a separate inventory.
+3. Review the inventory in the appropriate world before concluding items are missing.
+4. If the inventory still appears incorrect, record the worlds and approximate time of the change for further investigation.
+
+---
+
+## PlotSquared & Creative Worlds
+
+ERRSA uses [PlotSquared](../../plugins/worlds-and-building/plotsquared.md#what-is-plotsquared){ data-preview } in `PlotWorld`, the Creative plot world. It is different from Survival claims managed by GriefPrevention.
+
+`PlotWorld` uses **125 × 125 block plots** separated by **7-block roads**. Plots do not merge automatically, and automatic plot clearing is disabled. PlotSquared's in-game economy is also disabled, so its stored plot price is not a charge to players.
+
+### Example: A Player Cannot Build on a Plot
+
+1. Confirm the player is in `PlotWorld`, not Survival or Workshop.
+2. Have the player stand on the affected plot and use `/plot info` to check ownership and membership.
+3. Find out whether the player owns the plot or has been granted building access.
+4. If it belongs to someone else, explain that the owner needs to grant access. Do not treat the plot boundary as a server error.
+5. If the owner still cannot build, record the plot location and the exact action that failed.
+
+PlotSquared restricts WorldEdit to plot boundaries, so a player may be able to edit their plot without being able to change nearby roads or another player's plot.
+
+### Workshop Is a Separate Building World
+
+`workshop` is a world used by **ERRSA MC staff** for building projects and other staff work. It is separate from the public Creative plot world and does not use PlotSquared plots. For building or access questions, check the Workshop world and the relevant staff permissions rather than looking for a plot owner.
+
+---
+
+## Recap: Building and Access Reports
+
+When a player says they cannot build or open a container, use the checks from this module:
+
+1. **Where are they?** Confirm the backend server, world, and exact location.
+2. **Which system applies?** GriefPrevention claim, WorldGuard region, or PlotSquared plot.
+3. **Who owns it?** Check the relevant owner and access level.
+4. **Is the restriction expected?** Compare the behavior with the appropriate protection.
+5. **What needs to happen?** Explain the correct owner-managed action or escalate an unexplained issue with the information you gathered.
+
+For theft or griefing, use [Module 2](mod2.md){ data-preview } for the investigation, [Module 3](mod3.md){ data-preview } for land recovery, and [Module 4](mod4.md){ data-preview } for item recovery.
 
 ---
 
 ## Check Your Understanding
 
-Several players report identical unusual items appearing after a possible duplication exploit. What should happen first: clear their inventories, publish the suspected method, or preserve evidence and coordinate containment?
+A player reports that their friend cannot open a chest in Survival. The claim owner has given the friend AccessTrust only. What would you recommend?
 
 ??? tip "Suggested approach"
-    Preserve reliable evidence, identify the affected players and worlds, and notify a Developer or Server Lead. Do not wipe inventories, publish the method, or attempt a network-wide fix on your own.
+    Explain that AccessTrust does not allow access to protected containers. The claim owner can grant `/containertrust <friend>` for the correct claim.
 
 ---
 
-!!! success "Ready to practice?"
-    Complete the practical assessment below. Reading the modules is a starting point; the goal is to be able to work through common cases using the tools and procedures correctly.
-
 <nav class="handbook-next" aria-label="Continue reading">
-  <a href="../assessment/">
-    <span class="handbook-next__copy"><small>Next section</small><strong>Admin Practical Assessment</strong><span>Apply what you learned to five realistic staff situations.</span></span>
+  <a href="../mod7/">
+    <span class="handbook-next__copy"><small>Next section</small><strong>Module 7 · Handling Major Incidents</strong><span>Learn to contain serious issues and coordinate with the rest of the staff team.</span></span>
     <span class="handbook-next__arrow" aria-hidden="true">→</span>
   </a>
 </nav>
