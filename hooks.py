@@ -2,7 +2,7 @@ import base64
 import html
 import os
 
-RELEASE_FILE = "docs/changelog/server.md"
+RELEASE_FILE = "docs/changelog/releases.md"
 
 from pathlib import Path
 
@@ -21,7 +21,7 @@ def on_config(config):
 
 
 def on_page_markdown(markdown, page, config, files):
-    if page.file.src_uri != "documentation/changelog/server.md":
+    if page.file.src_uri != "changelog/releases.md":
         return markdown
     repository = config.extra.get("wiki_repository", "")
     encoded = base64.b64encode(

@@ -137,7 +137,8 @@ Several players report identical unusual items appearing after a possible duplic
 
 ---
 
-After completing these seven modules, continue to the [Admin Assessment](../assessments/admin.md){ data-preview } under **Learning → Assessments**. It checks how you apply the procedures in realistic situations.
+!!! success "You finished Admin Training!"
+    Congratulations on completing all seven modules! You have made it through the reading. Now it is time to prove you can put it into practice. Head to the [Admin Assessment](../assessments/admin.md){ data-preview } under **Learning → Assessments** to work through realistic staff situations. Yes, there is a test. No, you cannot skip it!
 
 <nav class="handbook-next" aria-label="Continue reading">
   <a href="../../assessments/admin/">

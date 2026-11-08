@@ -21,9 +21,9 @@ Restoration may be appropriate when:
 - Staff or a server issue accidentally changed player property.
 - A documented correction is necessary to repair an earlier staff action.
 
-Restoration is not automatic for ordinary gameplay losses or disputed ownership. If the complaint concerns missing inventory items, continue to [Module 4](mod4.md){ data-preview }.
+Land restoration is not intended for ordinary gameplay losses or disputed ownership. Missing inventory items are discussed in [Module 4](mod4.md){ data-preview }.
 
-For griefing and theft, use [Section 3.2.7](../../documentation/standard-procedures.md#327-griefing-or-theft){ data-preview } to determine what can reasonably be restored.
+For griefing and theft, follow the investigation and response procedure in [Section 3.2.7](../../documentation/standard-procedures.md#327-griefing-or-theft){ data-preview }. Verify the loss and obtain any required approval before deciding on restoration.
 
 !!! important "Investigate before restoring"
     Preserve the evidence first. Once blocks have been changed, it may be harder to reconstruct the original event.
@@ -32,7 +32,7 @@ For griefing and theft, use [Section 3.2.7](../../documentation/standard-procedu
 
 ## Restoring Builds With CoreProtect
 
-A **rollback** reverses logged changes. A **restore** can reapply changes that were rolled back. These tools are helpful for griefing, but the wrong time, account, or area can undo legitimate work too.
+A <abbr title="A CoreProtect operation that reverses matching logged changes within the selected time, player, action, and area filters."><strong>rollback</strong></abbr> reverses logged changes. A <abbr title="A CoreProtect operation that reapplies logged changes previously reversed by a rollback."><strong>restore</strong></abbr> can reapply changes that were rolled back. Hover over either term for a definition. These tools are helpful for griefing, but the wrong time, account, or area can undo legitimate work too.
 
 ### Example: A Damaged House
 

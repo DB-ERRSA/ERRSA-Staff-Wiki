@@ -68,7 +68,7 @@ Moderator training already explains ordinary warnings, temporary punishments, an
 | `/ban <player> [reason]` | **Permanent ban** only when the disciplinary procedure and evidence support it. |
 | `/mute <player>` | **Permanent mute** only when the applicable procedure calls for it; a text mute does not stop proximity voice. |
 | `/socialspy` | Review relevant private-message activity only for an authorized investigation; protect confidential information. |
-| `/sudo <player> <command>` | Execute a command as a player **only with a documented, authorized reason**. High-impact and easily abused. |
+| `/sudo <player> <command>` | Execute a command as a player **only with a documented, authorized reason**. This acts on behalf of another account and requires particular care and oversight. |
 | `/give <player> <item> [amount]` | Issue verified replacement/test items only for an approved purpose; keep a record. |
 | `/item <item> [amount]` | Create items in your inventory for an authorized task, not for personal use. |
 | `/gamemode <mode> [player]` | Change game mode for an authorized investigation or repair; restore the previous mode afterward. |
@@ -115,6 +115,8 @@ A player may disagree with the result even when the investigation was thorough. 
 Explain the verified behavior, the relevant rule, and the action taken. Keep the explanation neutral and avoid statements that go beyond the evidence.
 
 Formal warnings and disciplinary notices are sent using `/staff email` in the Discord **MC Staff Action Center**. Review the actual message before submission and confirm it was sent. For the full workflow, refer to [Moderator Module 6](../moderators/mod6.md){ data-preview }.
+
+A staff member can ask the Server Lead for assistance when a conversation is difficult to resolve or when they do not feel comfortable handling it alone. Players may also request that the Server Lead review a decision after discussing it with the staff member who took the action. This does not automatically reverse the action or bypass the documented appeal process.
 
 Ban appeals are handled through the [official appeal process](../../documentation/standard-procedures.md#33-ban-appeals){ data-preview }, not by negotiating punishments in public chat.
 

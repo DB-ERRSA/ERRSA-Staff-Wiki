@@ -48,7 +48,7 @@ Admins inherit Moderator tools and gain access to deeper investigations, item re
 You will learn the relevant commands in the modules where they are actually used. The [Plugins](../../plugins/index.md){ data-preview } section contains fuller command references.
 
 !!! danger "Access is not authorization"
-    A working command is not automatically an approved action. Creating items, moving players with `/sudo`, editing inventories, changing server state, or bypassing protection must have a legitimate staff purpose. Some available commands can cause serious damage when used outside the correct procedure.
+    Just because you have access to a command does not mean you can use it without a legitimate reason. A working command is not automatically an approved action. Creating items, moving players with `/sudo`, editing inventories, changing server state, or bypassing protection must have a legitimate staff purpose. Some available commands can cause serious damage when used outside the correct procedure.
 
 ---
 

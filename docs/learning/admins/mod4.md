@@ -7,9 +7,9 @@ tags:
 
 # Module 4 · Item & Inventory Recovery
 
-A stolen item, missing shulker, or incorrect inventory may require a different investigation than a damaged build. **Verify whether the original items still exist before replacing anything**: replacement without tracking the originals can duplicate property.
+A stolen item, missing shulker, or incorrect inventory may require a different investigation than a damaged build. Before issuing a replacement, check whether the original reported item still exists and where it may have gone. Creating replacement items without locating or accounting for the originals can unintentionally duplicate property.
 
-Begin with the [evidence methods in Module 2](mod2.md){ data-preview } and apply the [griefing and theft procedure](../../documentation/standard-procedures.md#327-griefing-or-theft){ data-preview }.
+Begin with the [evidence methods in Module 2](mod2.md){ data-preview } and apply the [griefing and theft procedure](../../documentation/standard-procedures.md#327-griefing-or-theft){ data-preview } if appropriate.
 
 ---
 

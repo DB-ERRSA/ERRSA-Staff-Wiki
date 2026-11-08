@@ -84,12 +84,16 @@ A player says someone took diamonds from a chest while they were offline. You ar
     /co lookup t:2h r:10 a:container
     ```
 
+    This checks the previous two hours within 10 blocks of your current location and shows items added to or removed from nearby containers. It is not limited to the reported chest.
+
 4. **Check the location on each result.** This lookup covers nearby containers, **not only the chest you clicked**. Compare coordinates before connecting an entry to the report. Click a listed location to teleport to it when you need to verify where the activity occurred.
 5. **Narrow the search.** If the records point to an account such as `ExamplePlayer`, run:
 
     ```text
     /co lookup u:ExamplePlayer t:2h r:10 a:-container
     ```
+
+    This checks the previous two hours within 10 blocks of your current location for items removed from containers by `ExamplePlayer`.
 
 6. **Check the explanation.** Compare the results with the owner's permissions, shared-storage arrangements, and any statements from the involved players. Record the finding before returning items or taking disciplinary action.
 

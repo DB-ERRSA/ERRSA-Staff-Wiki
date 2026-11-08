@@ -66,7 +66,7 @@ If the friend only has AccessTrust, explain that the claim owner can grant Conta
 
 [WorldGuard](../../plugins/worlds-and-building/worldguard.md#what-is-worldguard){ data-preview } controls protected areas through **regions**. Each region can have **flags** that determine what players or game mechanics can do there.
 
-ERRSA uses WorldGuard in several worlds. On the Survival world, for example:
+ERRSA uses WorldGuard in several worlds. The following are examples of regions and protections on the Survival world, not a complete list of regions or flags. Regions can also be used for portal areas where entering a region triggers a scripted teleport.
 
 | Region | Protection in use |
 | --- | --- |
@@ -83,7 +83,7 @@ If someone reports a restriction, establish the world and coordinates, identify 
 
 ## Multiverse & World Inventories
 
-[Multiverse-Core](../../plugins/worlds-and-building/multiverse-core.md#what-is-multiverse-core){ data-preview } allows one Minecraft backend server to contain several worlds. Worlds on the **main Survival server** are separate from worlds on the **Test server and Event server**. Multiverse manages worlds within a single server; it does not connect worlds or inventories between those separate servers.
+[Multiverse-Core](../../plugins/worlds-and-building/multiverse-core.md#what-is-multiverse-core){ data-preview } manages multiple worlds within a single Minecraft backend server. It does not connect worlds or inventories between separate backend servers. The **Test server and Event server** run their own Multiverse instances, separate from the **main Survival server**.
 
 Within the main server, [Multiverse-Inventories](../../plugins/worlds-and-building/multiverse-inventories.md#what-is-multiverse-inventories){ data-preview } controls which worlds share inventories:
 
