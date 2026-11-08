@@ -93,6 +93,7 @@ nav:
       - 1. Introduction: documentation/introduction.md
       - 2. Staff Roles & Responsibilities: documentation/staff-roles-responsibilities.md
       - 3. Standard Procedures: documentation/standard-procedures.md
+      - Investigative Jailing Policy: documentation/investigative-jailing-policy.md
       - 4. Staff Actions & Records: documentation/logging-documentation.md
       - 5. Server Versions: documentation/server-version.md
       - 6. Staff Advancement & Governance: documentation/6-staff-advancement-and-governance.md
@@ -115,15 +116,19 @@ nav:
             - Module 5 · Player Disputes: learning/moderators/mod5.md
             - Module 6 · Moderation Records & Disciplinary Actions: learning/moderators/mod6.md
         - Admins:
-            - Coming Soon: learning/soon.md
-            #- Introduction: learning/admins/intro.md
-            #- Module 1 · Advanced Moderation: learning/admins/mod1.md
-            #- Module 2 · Player Investigations: learning/admins/mod2.md
-            #- Module 3 · Permissions & Staff Access: learning/admins/mod3.md
-            #- Module 4 · Player Restoration & Recovery: learning/admins/mod4.md
-            #- Module 5 · Server Administration: learning/admins/mod5.md
-            #- Module 6 · Advanced Player & World Management: learning/admins/mod6.md
-            #- Module 7 · Handling Major Incidents: learning/admins/mod7.md
+            - Introduction: learning/admins/intro.md
+            - Module 1 · Advanced Moderation: learning/admins/mod1.md
+            - Module 2 · Player Investigations: learning/admins/mod2.md
+            - Module 3 · Land & Build Restoration: learning/admins/mod3.md
+            - Module 4 · Item & Inventory Recovery: learning/admins/mod4.md
+            - Module 5 · Server Operations: learning/admins/mod5.md
+            - Module 6 · Claims, Worlds & Player Management: learning/admins/mod6.md
+            - Module 7 · Handling Major Incidents: learning/admins/mod7.md
+        - Assessments:
+            - Moderator Assessment: learning/assessments/moderator.md
+            - Admin Assessment: learning/assessments/admin.md
+            - Developer Assessment: learning/assessments/developer.md
+            - Assessment Process: learning/assessments/process.md
         - Developers:
             - Coming Soon: learning/soon.md
             #- Introduction: learning/developers/intro.md
@@ -169,6 +174,7 @@ nav:
           - ChatFilter: plugins/permissions-and-moderation/chatfilter.md
           - Themis: plugins/permissions-and-moderation/themis.md
           - InventoryAudit: plugins/permissions-and-moderation/inventoryaudit.md
+          - InvSee++: plugins/permissions-and-moderation/invseeplusplus.md
 
       - Server And Infrastructure:
           - ERRSA-MC-Core: plugins/server-and-infrastructure/errsa-mc-core.md

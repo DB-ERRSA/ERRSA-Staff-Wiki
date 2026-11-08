@@ -37,7 +37,7 @@ Choose the relevant search option. For a player matter, select **Player** and en
 
 ## Determine and Apply the Appropriate Action
 
-Use the [staff standard procedures](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview } to determine whether a warning, mute, jail, kick, temporary ban, permanent ban, or no punishment is appropriate. An immediate risk may require prompt intervention; otherwise, when uncertain, ask an Admin or the Server Leads before applying a disruptive action. Note the action, decision-maker, and duration in the incident record.
+Use the [staff standard procedures](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview } to determine whether a warning, mute, jail, kick, temporary ban, permanent ban, or no punishment is appropriate. For any jail, also use the [Investigative Jailing Policy](../../documentation/investigative-jailing-policy.md){ data-preview } for authorization and release requirements. An immediate risk may require prompt intervention; otherwise, when uncertain, ask an Admin or the Server Leads before applying a disruptive action. Note the action, decision-maker, and duration in the incident record.
 
 ## Send the Appropriate Communication
 
@@ -186,3 +186,7 @@ Before closing your incident, check: Is the history reviewed? Are factual claims
 
 !!! success "Moderator section complete"
     You have completed the core Moderator learning section. Continue using Staff Documentation for policy, and Plugin, Tool, and Troubleshooting references as needed.
+
+---
+
+For review, see the [Moderator Assessment](../assessments/moderator.md){ data-preview }.
