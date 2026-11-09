@@ -48,13 +48,10 @@ If the friend only has AccessTrust, explain that the claim owner can grant Conta
 | Command | Purpose |
 | --- | --- |
 | `/claimslist [player]` | List a player's claims. |
-| `/adminclaims` | Switch to Admin claim mode. |
-| `/adminclaimslist` | List Admin claims. |
 | `/ignoreclaims` | Toggle claim protection bypass for an investigation. |
 | `/transferclaim <player>` | Transfer ownership of the claim you are standing in. |
 | `/deleteclaim` | Delete the claim at your location. |
 | `/deleteallclaims <player>` | Delete all claims owned by a player. |
-| `/deletealladminclaims` | Delete all Admin claims. |
 | `/restorenature` | Restore terrain in a selected area. |
 
 !!! danger "Changes to player property"
