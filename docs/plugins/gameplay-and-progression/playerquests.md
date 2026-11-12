@@ -65,5 +65,7 @@ ERRSA uses PlayerQuests for custom quest workflows on the Survival server. Quest
 
 ## Related Resources
 
-!!! info "Documentation coming soon"
-    This is a custom ERRSA plugin. Documentation will be added here when available.
+### Official Resources
+
+- [Plugin Download ↗](https://github.com/DB-ERRSA/PlayerQuests/releases){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/DB-ERRSA/PlayerQuests){ .md-button .md-button--primary }

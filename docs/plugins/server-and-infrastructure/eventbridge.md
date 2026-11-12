@@ -48,5 +48,7 @@ ERRSA uses it for server-side event integration. Staff access and available comm
 
 ## Related Resources
 
-!!! info "Documentation coming soon"
-    This is a custom ERRSA plugin. Documentation will be added here when available.
+### Official Resources
+
+- [Plugin Download ↗](https://github.com/DB-ERRSA/EventBridge/releases/tag/v0.2.0-rc.1){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/DB-ERRSA/EventBridge){ .md-button .md-button--primary }

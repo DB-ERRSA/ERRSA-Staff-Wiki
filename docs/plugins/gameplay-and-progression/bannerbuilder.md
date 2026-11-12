@@ -62,5 +62,7 @@ ERRSA uses BannerBuilder as part of the custom gameplay stack. Because it is int
 
 ## Related Resources
 
-!!! info "Documentation coming soon"
-    This is a custom ERRSA plugin. Documentation will be added here when available.
+### Official Resources
+
+- [Plugin Download ↗](https://github.com/DB-ERRSA/BannerBuilder/releases){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/DB-ERRSA/BannerBuilder){ .md-button .md-button--primary }

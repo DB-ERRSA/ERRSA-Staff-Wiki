@@ -69,5 +69,7 @@ ERRSA uses it to support the server-side VIP workflow and future store integrati
 
 ## Related Resources
 
-!!! info "Documentation coming soon"
-    This is a custom ERRSA plugin. Documentation will be added here when available.
+### Official Resources
+
+- [Plugin Download ↗](https://github.com/DB-ERRSA/VIPBridge/releases){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/DB-ERRSA/VIPBridge){ .md-button .md-button--primary }

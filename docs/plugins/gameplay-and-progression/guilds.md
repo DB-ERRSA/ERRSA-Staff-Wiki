@@ -74,5 +74,7 @@ ERRSA uses Guilds to support player guilds and guild-related progression on the 
 
 ## Related Resources
 
-!!! info "Documentation coming soon"
-    This is a custom ERRSA plugin. Documentation will be added here when available.
+### Official Resources
+
+- [Plugin Download ↗](https://github.com/DB-ERRSA/Guilds/releases){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/DB-ERRSA/Guilds){ .md-button .md-button--primary }

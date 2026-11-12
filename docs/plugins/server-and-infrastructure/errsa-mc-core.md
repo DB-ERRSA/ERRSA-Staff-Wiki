@@ -62,5 +62,7 @@ ERRSA uses this custom plugin for community commands and integration with Essent
 
 ## Related Resources
 
-!!! info "Documentation coming soon"
-    This is a custom ERRSA plugin. Documentation will be added here when available.
+### Official Resources
+
+- [Plugin Download ↗](https://github.com/DB-ERRSA/ERRSAMCCore/releases){ .md-button .md-button--primary }
+- [Plugin Documentation ↗](https://github.com/DB-ERRSA/ERRSAMCCore){ .md-button .md-button--primary }
