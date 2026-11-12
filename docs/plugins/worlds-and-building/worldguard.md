@@ -23,7 +23,7 @@ ERRSA uses WorldGuard to protect important areas and apply region-specific behav
 - [WorldGuard Extra Flags](worldguardextraflags.md)
 - [Guilds](../gameplay-and-progression/guilds.md)
 - [PlayerQuests](../gameplay-and-progression/playerquests.md)
-- [ShulkerReroute](../gameplay-and-progression/shulkerreroute.md)
+- [ShulkerReroute](../server-and-infrastructure/errsa-mc-core.md)
 
 ---
 

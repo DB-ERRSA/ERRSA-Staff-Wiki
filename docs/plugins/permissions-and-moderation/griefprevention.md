@@ -15,7 +15,7 @@ ERRSA uses GriefPrevention as the primary land-claim and anti-grief system on Su
 
 ## Required By
 
-- [AutoUnlockPvPDrops](../gameplay-and-progression/autounlockpvpdrops.md)
+- [AutoUnlockPvPDrops](../server-and-infrastructure/errsa-mc-core.md)
 - [Guilds](../gameplay-and-progression/guilds.md)
 - [PlayerQuests](../gameplay-and-progression/playerquests.md)
 
