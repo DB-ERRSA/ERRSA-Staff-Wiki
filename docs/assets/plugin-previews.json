@@ -29,12 +29,6 @@
     "category": "Survival · Permissions and moderation",
     "external": null
   },
-  "inventoryaudit": {
-    "name": "InventoryAudit",
-    "summary": "Installed Survival plugin in permissions and moderation. Detailed purpose has not been verified yet.",
-    "category": "Survival · Permissions and moderation",
-    "external": null
-  },
   "pvptoggle": {
     "name": "PVPToggle",
     "summary": "PvPToggle allows players to manually enable or disable PvP, preventing unwanted combat while still allowing opt-in PvP gameplay.",
@@ -47,26 +41,8 @@
     "category": "Survival · Permissions and moderation",
     "external": null
   },
-  "errsacompatibilitypaper": {
-    "name": "ERRSACompatibilityPaper",
-    "summary": "Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.",
-    "category": "Survival · Server and infrastructure",
-    "external": null
-  },
-  "errsawebbridge": {
-    "name": "ERRSAWebBridge",
-    "summary": "Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.",
-    "category": "Survival · Server and infrastructure",
-    "external": null
-  },
   "eventbridge": {
     "name": "EventBridge",
-    "summary": "Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.",
-    "category": "Survival · Server and infrastructure",
-    "external": null
-  },
-  "sqlping": {
-    "name": "SqlPing",
     "summary": "Installed Survival plugin in server and infrastructure. Detailed purpose has not been verified yet.",
     "category": "Survival · Server and infrastructure",
     "external": null
@@ -275,20 +251,8 @@
     "category": "Survival · Gameplay and progression",
     "external": "https://www.spigotmc.org/resources/dragondropelytra2.71235/"
   },
-  "autounlockpvpdrops": {
-    "name": "AutoUnlockPvPDrops",
-    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
-    "category": "Survival · Gameplay and progression",
-    "external": null
-  },
   "hurricane": {
     "name": "Hurricane",
-    "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
-    "category": "Survival · Gameplay and progression",
-    "external": null
-  },
-  "shulkerreroute": {
-    "name": "ShulkerReroute",
     "summary": "Installed Survival plugin in gameplay and progression. Detailed purpose has not been verified yet.",
     "category": "Survival · Gameplay and progression",
     "external": null
@@ -339,18 +303,6 @@
     "name": "voicechat",
     "summary": "Simple Voice Chat adds proximity-based voice communication to the Minecraft server using a separate UDP voice service.",
     "category": "Survival · Display and media",
-    "external": null
-  },
-  "skript": {
-    "name": "Skript",
-    "summary": "Skript provides lightweight server-side automation and custom gameplay logic without requiring a compiled Java plugin.",
-    "category": "Survival · Automation",
-    "external": null
-  },
-  "skbee": {
-    "name": "SkBee",
-    "summary": "SkBee is a Skript add-on that extends Skript with modern Paper-compatible features, advanced events, NBT handling, particles, scoreboards, bounds, text…",
-    "category": "Survival · Automation",
     "external": null
   }
 }
