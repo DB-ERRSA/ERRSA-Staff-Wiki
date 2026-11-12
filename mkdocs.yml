@@ -173,15 +173,11 @@ nav:
           - GriefPrevention: plugins/permissions-and-moderation/griefprevention.md
           - ChatFilter: plugins/permissions-and-moderation/chatfilter.md
           - Themis: plugins/permissions-and-moderation/themis.md
-          - InventoryAudit: plugins/permissions-and-moderation/inventoryaudit.md
           - InvSee++: plugins/permissions-and-moderation/invseeplusplus.md
 
       - Server And Infrastructure:
           - ERRSA-MC-Core: plugins/server-and-infrastructure/errsa-mc-core.md
-          - ERRSACompatibilityPaper: plugins/server-and-infrastructure/errsacompatibilitypaper.md
-          - ERRSAWebBridge: plugins/server-and-infrastructure/errsawebbridge.md
           - EventBridge: plugins/server-and-infrastructure/eventbridge.md
-          - SqlPing: plugins/server-and-infrastructure/sqlping.md
           - Essentials: plugins/server-and-infrastructure/essentials.md
           - EssentialsSpawn: plugins/server-and-infrastructure/essentialsspawn.md
           - ProtocolLib: plugins/server-and-infrastructure/protocollib.md
@@ -206,8 +202,6 @@ nav:
           - PlotSquared: plugins/worlds-and-building/plotsquared.md
           - WorldGuard: plugins/worlds-and-building/worldguard.md
           - WorldGuardExtraFlags: plugins/worlds-and-building/worldguardextraflags.md
-          - Skript: plugins/worlds-and-building/skript.md
-          - SkBee: plugins/worlds-and-building/skbee.md
 
       - Gameplay And Progression:
           - Guilds: plugins/gameplay-and-progression/guilds.md
@@ -220,8 +214,6 @@ nav:
           - Wild: plugins/gameplay-and-progression/wild.md
           - SilkSpawners_v2: plugins/gameplay-and-progression/silkspawners-v2.md
           - DragonDropElytra: plugins/gameplay-and-progression/dragondropelytra.md
-          - AutoUnlockPvPDrops: plugins/gameplay-and-progression/autounlockpvpdrops.md
-          - ShulkerReroute: plugins/gameplay-and-progression/shulkerreroute.md
           - PVPToggle: plugins/gameplay-and-progression/pvptoggle.md
 
       - Display And Media:
