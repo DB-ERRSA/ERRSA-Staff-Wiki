@@ -93,7 +93,6 @@ nav:
       - 1. Introduction: documentation/introduction.md
       - 2. Staff Roles & Responsibilities: documentation/staff-roles-responsibilities.md
       - 3. Standard Procedures: documentation/standard-procedures.md
-      - Investigative Jailing Policy: documentation/investigative-jailing-policy.md
       - 4. Staff Actions & Records: documentation/logging-documentation.md
       - 5. Server Versions: documentation/server-version.md
       - 6. Staff Advancement & Governance: documentation/6-staff-advancement-and-governance.md
@@ -125,10 +124,11 @@ nav:
             - Module 6 · Claims, Worlds & Player Management: learning/admins/mod6.md
             - Module 7 · Handling Major Incidents: learning/admins/mod7.md
         - Assessments:
+            - Assessment Process: learning/assessments/process.md
             - Moderator Assessment: learning/assessments/moderator.md
             - Admin Assessment: learning/assessments/admin.md
             - Developer Assessment: learning/assessments/developer.md
-            - Assessment Process: learning/assessments/process.md
+            - Server Lead Assessment: learning/assessments/server-lead.md
         - Developers:
             - Coming Soon: learning/soon.md
             #- Introduction: learning/developers/intro.md

@@ -169,11 +169,11 @@ Use these procedures to respond consistently to player reports and server incide
 ### 3.2.6 Cheating, Hacking, or Exploiting { .situation-heading }
 ??? info "3.2.6 Cheating, Hacking, or Exploiting"
 
-    - Mods → Escalate cheating cases to an Admin or above. Temporary jailing is allowed only under the [Investigative Jailing Policy](investigative-jailing-policy.md){ data-preview }.
+    - Mods → Escalate suspected cheating to an Admin. Jail only to stop an undeniable, actively occurring problem that requires immediate containment; see [Moderator jailing guidance](../learning/moderators/mod1.md#4-jailing){ data-preview }.
 
     - Admin/Dev → Use investigation tools to gather initial evidence (screenshots, videos, plugin alerts, anti-cheat logs, etc.)
 
-    - Staff may use temporary investigative jailing only under the [Investigative Jailing Policy](investigative-jailing-policy.md){ data-preview }, which defines role authority, evidence standards, and release conditions.
+    - Admins → Follow [Admin investigative jailing guidance](../learning/admins/mod1.md#temporary-investigative-jailing){ data-preview } for evidence, review, and release requirements.
 
     - Continue the investigation, speak with involved players directly for their side of the story, and put evidence together to determine the full picture.
 
@@ -201,9 +201,9 @@ Use these procedures to respond consistently to player reports and server incide
 ### 3.2.7 Griefing or Theft { .situation-heading }
 ??? info "3.2.7 Griefing or Theft"
 
-    - For temporary investigative jailing, follow the [Investigative Jailing Policy](investigative-jailing-policy.md){ data-preview }. A jail is not an automatic punishment.
+    - For immediate containment, follow the role-specific [Moderator](../learning/moderators/mod1.md#4-jailing){ data-preview } or [Admin](../learning/admins/mod1.md#temporary-investigative-jailing){ data-preview } guidance.
 
-    - Mod → Escalate investigations requiring Admin tools or decisions. Any jail must follow the [Investigative Jailing Policy](investigative-jailing-policy.md){ data-preview }.
+    - Mod → Escalate investigations requiring Admin tools or decisions. Jail only to stop an undeniable, actively occurring problem as described in [Moderator Module 1](../learning/moderators/mod1.md#4-jailing){ data-preview }.
 
     - Admins → Use investigation tools to determine who caused the damage, or took the stolen items. Verify claim and ownership of builds or items.
 

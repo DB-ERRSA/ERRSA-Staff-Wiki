@@ -39,7 +39,7 @@ When a serious incident is discovered, focus on these steps:
 6. **Track the outcome.** Maintain an incident record until recovery and follow-up are complete.
 
 !!! important "Containment is not the same as punishment"
-    Temporary containment must follow the [Investigative Jailing Policy](../../documentation/investigative-jailing-policy.md){ data-preview }. Evidence and release requirements depend on the circumstances; containment does not establish guilt.
+    Temporary containment must follow the [Admin jailing guidance](mod1.md#temporary-investigative-jailing){ data-preview }. Evidence and release requirements depend on the circumstances; containment does not establish guilt.
 
 ---
 

@@ -6,7 +6,7 @@ tags:
 
 # Developer Assessment
 
-This is a **provisional assessment outline** for the future Developer learning track. It does **not** authorize production changes or establish a new promotion requirement. The Server Lead and Developers should validate the exercises against the eventual Developer modules before using it for a formal decision.
+Complete this assessment with an assigned Developer or Server Lead reviewer before receiving the Developer role. Explain your decisions and demonstrate technical work in an approved test environment. Production access requires separate authorization.
 
 ## 1. Diagnosing a Startup Failure
 
@@ -27,8 +27,5 @@ Players report an inventory change after world teleportation. Outline evidence p
 ## 5. Communication and Handoff
 
 Describe what a Developer should include in a technical incident handoff, including logs, affected systems, changes made, testing, rollback plan, and unresolved risks.
-
-!!! warning "Requires Developer track review"
-    The Developer learning modules are not currently published in the wiki navigation. An experienced Developer and the Server Lead must approve an assessment rubric before this can become a required check.
 
 See the [Assessment Process](process.md){ data-preview } for shared review and private recordkeeping expectations.

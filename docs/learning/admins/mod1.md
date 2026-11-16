@@ -53,7 +53,15 @@ In some cases, the first action is simply to stop ongoing harm while an investig
 
 ### Temporary Investigative Jailing
 
-Admins may use reasonable judgment to temporarily jail a player when immediate containment is justified. Follow the [Investigative Jailing Policy](../../documentation/investigative-jailing-policy.md){ data-preview } for the evidence requirements, role authority, time limits, and release procedures.
+Admins may jail a player when a specific, credible concern warrants immediate containment while a case is investigated. Use reasonable judgment, explain the reason, and do not treat jail as punishment or proof of a violation.
+
+- Verify what is known: observations, relevant logs, time, location, account, and alternative explanations. A report or single Themis alert alone is not grounds to jail.
+- When evidence is **not yet sufficient**, release the player within **one hour of the first jail**, or sooner once containment is no longer necessary. Re-jailing or switching staff does not restart the clock.
+- If verified evidence establishes the violation, determine whether continued containment is still needed and proceed under [Standard Procedures](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview }. Jail does not replace the disciplinary decision or an appropriate temporary ban.
+- Review Moderator interventions promptly. For alleged cheating/exploits, investigate the alert and context rather than accepting an automated detection as a finding. Involve a Developer or Server Lead for serious technical incidents.
+- Document who authorized and issued the jail, the grounds, evidence, start time, applicable deadline, review outcome, and release. Unjail when no longer needed, including if the player has been banned, and verify release.
+
+When an Admin authorizes someone else to carry out a hold, the Admin remains responsible for explaining its purpose and arranging timely review. See [Moderator Module 1](../moderators/mod1.md#4-jailing){ data-preview } for the narrower Moderator authority.
 
 ---
 
@@ -80,7 +88,7 @@ Other useful tools include `/vanish` for quiet observation and `/tp` for reachin
 
 ### Jailing and Release: Recap
 
-Moderator training covers the basic jail commands in [Module 1](../moderators/mod1.md#4-jailing){ data-preview }. Use the [Investigative Jailing Policy](../../documentation/investigative-jailing-policy.md){ data-preview } to decide whether a jail is authorized and when the player must be released.
+Moderator training covers the basic jail commands in [Module 1](../moderators/mod1.md#4-jailing){ data-preview }. Use the [Temporary Investigative Jailing](#temporary-investigative-jailing){ data-preview } guidance above to determine authority, review, and release.
 
 ??? question "Supervised practice: containment and release"
     With another Admin and a consenting test player, practice recording a mock jail decision, jailing, releasing, and verifying the final state. Explain which parts of the policy you would check in a real incident.

@@ -62,6 +62,7 @@ The Executive Board provides oversight. The Committee Lead directs the server te
     - Issuing warnings, mutes, kicks, and bans according to procedure.
     - Monitoring gameplay and reporting larger issues to admins or developers.
 
+
     **Access:** No gameplay-enhancing permissions; strictly moderation tools.
 
     A safe, entry-level staff role suitable for community members trusted to enforce rules.
@@ -76,6 +77,7 @@ The Executive Board provides oversight. The Committee Lead directs the server te
     - Handling escalated player issues and investigations.
     - Restoring damaged property or stolen items using limited creative access.
     - Supporting developers with non-technical server management.
+
 
     **Access:** Inherits all Moderator permissions plus limited server management tools.
 

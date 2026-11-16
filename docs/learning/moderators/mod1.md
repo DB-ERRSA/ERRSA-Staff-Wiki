@@ -79,9 +79,13 @@ Where `<length>` determines how long the player will remain muted.
 <br>
 ### 4. Jailing
 
-Jailing temporarily restricts a player during an investigation. **Moderators may jail when sufficient evidence has been established or an Admin has authorized the action.** The [Investigative Jailing Policy](../../documentation/investigative-jailing-policy.md){ data-preview } explains what qualifies as evidence, when a hold is appropriate, and how long it may continue.
+A Moderator may use jail **only to stop an undeniable problem that is actively happening** when immediate intervention is needed. This may be because you cannot resolve the problem yourself or need to stop ongoing harm until an Admin can take over. Jail is a temporary containment measure, not a finding of guilt.
 
-<br>
+- **Act, then communicate.** If immediate containment is necessary, jail the player and contact an Admin right away. Include what you directly observed, when it occurred, why you intervened, and what needs a decision. Do not leave a jailed player without an identified handoff.
+- **Escalate suspected cheating and exploits.** Themis alerts, possible cheating, duping, and other suspicious activity must be escalated to an Admin. **Do not jail on alerts or suspicion alone.** Jail only if an undeniable violation is actively occurring and immediate containment is necessary.
+- **Choose the next action.** If the disruption continues after release, or a jail cannot reasonably contain it, escalate for an appropriate temporary ban under [Standard Procedures](../../documentation/standard-procedures.md#32-situation-specifics){ data-preview }. Do not repeatedly jail a player as a substitute for a temporary ban or reset a hold by re-jailing.
+- **Document and release.** Record the reason, observation, time, action, Admin contacted, and outcome. Coordinate release or the next authorized action promptly. Release the player when containment is no longer needed, including after a ban is issued.
+
 Use ERRSA's `void` jail location:
 
 ```text
@@ -90,13 +94,11 @@ Use ERRSA's `void` jail location:
 
 ### Releasing Someone From Jail
 
-Use `/unjail` when the hold ends, then check that the player was actually released:
-
 ```text
 /unjail <player>
 ```
 
-Follow the linked policy for release requirements. If the command errors, consult an Admin instead of repeatedly toggling jail commands.
+Verify release. If a command fails or the player's state is unclear, ask an Admin instead of repeatedly issuing commands.
 
 <br>
 ### 5. Bans

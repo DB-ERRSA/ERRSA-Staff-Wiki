@@ -8,7 +8,7 @@ tags:
 
 # 6. Staff Advancement & Governance
 
-This section outlines how staff promotions, required Admin assessment, demotions, inactivity, Server Lead selection, and organizational oversight are handled within ERRSA MC.
+This section outlines how staff promotions, required role assessments, demotions, inactivity, Server Lead selection, and organizational oversight are handled within ERRSA MC.
 
 ---
 
@@ -36,16 +36,14 @@ These factors are used to determine whether a staff member is prepared to take o
 !!! important "Promotions are earned through readiness"
     Promotions are earned through showing readiness and team dynamics, not guaranteed by activity alone.
 
-### 6.1.1 Required Admin Assessment
+### 6.1.1 Required Role Assessments
 
-**A prospective Admin must finish all seven [Admin Learning modules](../learning/admins/intro.md){ data-preview }, complete the [Admin Assessment](../learning/assessments/admin.md){ data-preview }, and demonstrate the supervised exercises in the [Assessment Process](../learning/assessments/process.md){ data-preview } before promotion can be approved.**
+**Candidates must complete the [assessment for the role](../learning/assessments/process.md){ data-preview } before being appointed or promoted.** This includes Moderator, Admin, and Developer. Server Lead candidates must complete the assessment and the [selection process](#64-server-lead-selection){ data-preview }.
 
-An experienced Admin or the Server Lead may supervise and recommend approval. The **Server Lead makes the final readiness and promotion decisions**. Passing an assessment does not guarantee promotion.
+Relevant learning modules and supervised exercises are part of the assessment. Reviewers provide their recommendations and record results privately; the Server Lead approves normal appointments and promotions. Completing an assessment does not guarantee selection or grant permissions.
 
-Completed evaluations are recorded in approved **private** staff storage following the [Assessment Process](../learning/assessments/process.md){ data-preview }. The standard training process applies to all new candidates; exceptional historical transition language is not part of this requirement.
-
-!!! danger "Restoration requires separate authorization"
-    Completing the Admin Assessment or receiving the Admin role does **not** by itself authorize independent CoreProtect rollbacks or complex inventory reconstruction. Independent world restoration needs a separate, recorded Server Lead authorization after supervised practice. Complex item recovery requires a documented recovery procedure and explicit authorization.
+!!! important "Restoration authorization"
+    Admin certification does not independently authorize CoreProtect rollbacks or complex item reconstruction. These require separate Server Lead authorization as described in the [Assessment Process](../learning/assessments/process.md){ data-preview }.
 
 ---
 
