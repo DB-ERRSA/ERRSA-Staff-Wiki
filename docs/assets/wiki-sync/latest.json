@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-16T19:42:35.102161+00:00",
+  "checkedAt": "2026-11-17T18:39:50.516646+00:00",
   "plugins": {
     "survival": {
       "coreprotect": {
@@ -36,8 +36,8 @@
         "gameVersion": null
       },
       "geyser": {
-        "version": "2.12.1-b1303",
-        "url": "https://modrinth.com/plugin/geyser/version/hFKoUUh2",
+        "version": "2.12.1-b1304",
+        "url": "https://modrinth.com/plugin/geyser/version/NHZrBAWC",
         "source": "Modrinth",
         "gameVersion": null
       }
