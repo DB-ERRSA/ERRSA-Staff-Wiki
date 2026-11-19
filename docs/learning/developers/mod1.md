@@ -223,7 +223,7 @@ optional.
 ---
 
 <nav class="handbook-next" aria-label="Continue reading">
-  <a href="../mod2/">
+  <a href="./mod2/">
     <span class="handbook-next__copy"><small>Next section</small><strong>Module 2 · Plugins</strong><span>Learn plugins at a high level</span></span>
     <span class="handbook-next__arrow" aria-hidden="true">→</span>
   </a>
