@@ -1,7 +1,30 @@
-- Server configuration files
-- Paper configuration
-- Plugin configuration
-- YAML configuration
-- Permissions configuration
-- Environment variables
-- File management and backups
+---
+tags:
+  - DEV
+  - SERVER LEAD
+---
+
+
+# External Tools (addmonium about token,etc. safety)
+
+---
+
+## Discord
+
+---
+
+## SQL
+
+---
+
+## Power Automate integrations
+
+---
+
+## Render services
+
+---
+
+## Web and API integrations
+
+---

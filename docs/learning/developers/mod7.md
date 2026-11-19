@@ -1,7 +1,26 @@
-- Git and GitHub
-- Branches and pull requests
-- Testing changes
-- Development environments
-- Building plugins with Maven
-- Versioning and releases
-- Changelogs and deployment
+---
+tags:
+  - DEV
+  - SERVER LEAD
+---
+
+
+# Permission Management
+
+___
+
+## Luckperms Overview (network configuration)
+
+---
+
+## Roles & Permissions
+
+---
+
+## Tracks
+
+---
+
+## Inheritence & Weight
+
+---

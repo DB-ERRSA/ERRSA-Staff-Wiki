@@ -1,7 +1,34 @@
-- Reading server logs
-- Reading stack traces
-- Identifying plugin errors
-- Reproducing issues
-- Isolating plugin conflicts
-- Investigating crashes
-- Determining when to escalate an issue
+---
+tags:
+  - DEV
+  - SERVER LEAD
+---
+
+
+# PlayerInitialization
+
+___
+
+## Overview
+
+---
+
+## Player join
+
+---
+
+## SQL Communication
+
+---
+
+## Power Automate Flow
+
+---
+
+## Plugin Status Reading
+
+---
+
+## Other cases (leave,deny,timeout,invalid)
+
+---
