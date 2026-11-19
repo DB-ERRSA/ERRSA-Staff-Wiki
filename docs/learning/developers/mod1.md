@@ -80,13 +80,13 @@ file internally if plugin data is needed - submit a ticket. Restorations will re
 data set after the backup was made, this is a last resort.
 
 - FTP File Access - provides the file system for the server where majority of server data lives. Apex provides a freindly 
-web version, but for a full usability you will need to download an FTP client like Filezilla. Follow [Module 2](../mod2.md)
+web version, but for a full usability you will need to download an FTP client like Filezilla. Follow [Module 2](./mod2.md)
 for the correct process.
 
 ### Network & Databases
 
 - Additional Ports - allows plugins to recieve dedicated port channels useful for voice chat mods & dynmap
-- MYSQL Database - Apex provided database where other plugin data may be stored. More info in [Module 4](../mod4.md)
+- MYSQL Database - Apex provided database where other plugin data may be stored. More info in [Module 4](./mod4.md)
 - Subdomains - allows configuration of the server address (currently errsa.mc.gg), this is only useful in the "Proxy Server"
 
 ### Support & Monetization
@@ -153,17 +153,78 @@ logs, and permissions. On the ERRSA MC Network we have three servers: Primary Se
 Paper is the software that is running on the backend servers. The developers of Paper also created the Velocity software
 making them completely compatible. Paper servers are very common due to the lightweight functionality. 
 
+### General Structure
+
+- Config Folder
+  - General paper configs
+- Crash Reports Folder
+- World Folder
+- World 2 Folder
+  - Each world has seperate folder with respective files
+- Plugins folder
+  - specific plugin folder
+  - specific plugin jar
+- Logs Folder
+  - Console log for every server restart
+- bukkit.yml
+- paper.jar
+- server.properties
+- spigot.yml
+
 ---
 
-## Plugins & Cross Server Communication (External Communication too)
+## Plugins & Cross Server Communication
+
+Plugins extend what a Minecraft server can do without changing Minecraft's original source code. There are plugins for
+both Proxy Servers and Paper Servers. Plugins generally are written in Java, and compiled into .jar files. For example:
+
+> - [EssentialsX](../../plugins/server-and-infrastructure/essentials.md) provides commands such as mute, ban, and kick.
+> - [CoreProtect](../../plugins/permissions-and-moderation/coreprotect.md) records block changes and container interactions. 
+> - [GriefPrevention](../../plugins/permissions-and-moderation/griefprevention.md) manages land claims. 
+> - [LuckPerms](../../plugins/permissions-and-moderation/luckperms.md) manages permissions.
+
+Each plugin handles different aspects of the server.
+
+Although servers have seperate file system plugins have the ability to communicate with other plugins, other server, and
+even external Minecraft tools like [Discord](../../tools/discord), [SQL](../../tools/phpmyadmin), and
+[Power Automate](../../tools/power-automate).
 
 ---
 
-## Java versions (ViaVersion)
+## Java versions 
+
+Our [Apex Hosting](../../tools/apex-hosting) Servers are natively running the Java version of Minecraft. The server version
+is determined by the Paper jar file. Although the server is natively running a certain version of Minecraft, we still want 
+to allow newer versions to be able to join.
+
+ViaVersion is a plugin that translates newer versions of Minecraft to server-native version. Anytime, Java requires an update
+so does to handle translating/blocking the newer features. ViaVersion must run on wherever the authentication
+is handled, so for us, ViaVersion runs in the Velocity Proxy, where it lives in the FTP.  For example:
+
+> Server running Java 1.21.4, player joins with Java 1.21.5, the player will be directly interfacing through ViaVersion
+
+!!!Note "Player running newer version of Java" If a player is running a newer version of Minecraft and experiences issues
+joining or another bug. The most likely cause is an outdated or bug with ViaVersion.
 
 ---
 
-## Geyser and Floodgate
+## Bedrock versions
+
+Bedrock players are able to join our java-native server using two plugins: Floodgate and Geyser. Floodgate bypasses the 
+Java authentication in the proxy, allowing them to authenticate with their Microsoft account instead. Geyser handles the 
+translation from Bedrock to Java. For context
+
+> Player is running Bedrock so they will authenticate with the proxy using Floodgate. When they start playing, Geyser will
+> translate their Bedrock mechanics into Java.
+
+Both of these plugins live in the proxy. We also have a paper version of Floodgate for extra functionality, but this is 
+optional. 
 
 ---
-  
+
+<nav class="handbook-next" aria-label="Continue reading">
+  <a href="../mod2/">
+    <span class="handbook-next__copy"><small>Next section</small><strong>Module 2 · Plugins</strong><span>Learn plugins at a high level</span></span>
+    <span class="handbook-next__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
