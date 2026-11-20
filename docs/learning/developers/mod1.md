@@ -376,7 +376,7 @@ You should now understand where ERRSA's major systems live, how they connect, an
 Apex. The next module covers plugins in more detail, including compatibility, dependencies, configuration, 
 file transfers, and safe updates.
 <nav class="handbook-next" aria-label="Continue reading">
-  <a href="../mod2/">
+  <a href="../mod2.md">
     <span class="handbook-next__copy"><small>Next section</small><strong>Module 2 · Plugins</strong><span>Learn how 
 plugins fit together and how to manage them safely.</span></span>
     <span class="handbook-next__arrow" aria-hidden="true">→</span>
