@@ -130,15 +130,14 @@ nav:
             - Developer Assessment: learning/assessments/developer.md
             - Server Lead Assessment: learning/assessments/server-lead.md
         - Developers:
-            - Coming Soon: learning/soon.md
-            #- Introduction: learning/developers/intro.md
-            #- Module 1 · ERRSA Server Architecture: learning/developers/mod1.md
-            #- Module 2 · Plugin Management: learning/developers/mod2.md
-            #- Module 3 · ERRSA Plugin Ecosystem: learning/developers/mod3.md
-            #- Module 4 · Server Configuration & Files: learning/developers/mod4.md
-            #- Module 5 · Databases & External Services: learning/developers/mod5.md
-            #- Module 6 · Debugging & Server Troubleshooting: learning/developers/mod6.md
-            #- Module 7 · Development Workflow: learning/developers/mod7.md
+            - Introduction: learning/developers/intro.md
+            - Module 1 · ERRSA Server Architecture: learning/developers/mod1.md
+            - Module 2 · Plugin Management: learning/developers/mod2.md
+            - Module 3 · ERRSA Plugin Ecosystem: learning/developers/mod3.md
+            - Module 4 · Server Configuration & Files: learning/developers/mod4.md
+            - Module 5 · Databases & External Services: learning/developers/mod5.md
+            - Module 6 · Debugging & Server Troubleshooting: learning/developers/mod6.md
+            - Module 7 · Development Workflow: learning/developers/mod7.md
         - Server Lead:
             - Coming Soon: learning/soon.md
             #- Introduction: learning/lead/into.md
