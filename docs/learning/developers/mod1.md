@@ -15,9 +15,9 @@ will use regularly. It is not a guide to installing plugins, modifying databases
 are covered in later modules.
 
 !!! info "Before you begin"
-You should already have completed [Server Fundamentals](../fundamentals/intro.md){ data-preview }, including the basic
-overview of ERRSA's worlds, servers, and player-facing systems. You do not need to have completed Admin training 
-to follow this module.
+    You should already have completed [Server Fundamentals](../fundamentals/intro.md){ data-preview }, including the basic
+    overview of ERRSA's worlds, servers, and player-facing systems. You do not need to have completed Admin training 
+    to follow this module.
 
 By the end, you should be able to:
 - Identify the proxy and three Paper backends, and explain what each one does.
@@ -76,9 +76,9 @@ supports the main player activity, while Events and Testing generally need fewer
 in New York while the other instances are hosted in Miami. Packages, resource allocations, and locations may change.
 
 !!! tip "Apex resource graphs"
-The panel will show memory and CPU information. These help you observe whether a server is running and how it is using 
-its allocated resources, but high usage alone does not tell you which plugin or player caused a problem. 
-More detailed diagnosis is in [Module 5](mod5.md).
+    The panel will show memory and CPU information. These help you observe whether a server is running and how it is using 
+    its allocated resources, but high usage alone does not tell you which plugin or player caused a problem. 
+    More detailed diagnosis is in [Module 5](mod5.md).
 
 ### Understanding the Server Panel
 
@@ -100,9 +100,9 @@ and server settings.
 | **Game File** | The server software                                                      | Changing it will change the Minecraft version and/or server behavior.                                                                            |
 
 !!! danger "Not everyday settings"
-Do not change the server location, IP/port, default world, game file, or advanced startup settings without explicit 
-approval from the Server Lead. Some are normally changed only when setting up, migrating, or resetting a server. 
-A wrong change can prevent players from joining, corrupt current files, or make a server start with unexpected files.
+    Do not change the server location, IP/port, default world, game file, or advanced startup settings without explicit 
+    approval from the Server Lead. Some are normally changed only when setting up, migrating, or resetting a server. 
+    A wrong change can prevent players from joining, corrupt current files, or make a server start with unexpected files.
 
 ### Server Management
 
@@ -123,8 +123,8 @@ meaningful error, or observe a command's result. A console command may have more
 in-game, and should be used only when needed.
 
 !!! warning "Console and audit data may be sensitive"
-Logs, command output, and panel records can expose player information or internal infrastructure. 
-Do not post them in public channels. Use approved staff communication and redact credentials or private information.
+    Logs, command output, and panel records can expose player information or internal infrastructure. 
+    Do not post them in public channels. Use approved staff communication and redact credentials or private information.
 
 ### Server Configuration:
 
@@ -160,14 +160,14 @@ and world folders. The proxy has its own files and plugins; uploading a Paper pl
 on the Paper backends.
 
 !!! warning "Backups are not interchangeable"
-Check what a backup actually contains before relying on it. ERRSA's existing procedure describes routine Apex panel 
-backups as world-focused, rather than full copies of all plugin data. Do not assume the selected backup also contains 
-plugins/, databases, or every configuration file. ERRSA has previously needed Apex support to recover additional server 
-files; such recovery is not guaranteed (especially with large files). A restore will overwrite newer data, so use this 
-as last option if the risk is justifiable.
+    Check what a backup actually contains before relying on it. ERRSA's existing procedure describes routine Apex panel 
+    backups as world-focused, rather than full copies of all plugin data. Do not assume the selected backup also contains 
+    plugins/, databases, or every configuration file. ERRSA has previously needed Apex support to recover additional server 
+    files; such recovery is not guaranteed (especially with large files). A restore will overwrite newer data, so use this 
+    as last option if the risk is justifiable.
 
 !!! danger "Production file access"
-Deleting a plugin folder, replacing a world, resetting server files, or restoring a backup may permanently remove player progress or configuration. Do not use production as a practice environment. Make approved changes in Testing first and coordinate any production deployment.
+    Deleting a plugin folder, replacing a world, resetting server files, or restoring a backup may permanently remove player progress or configuration. Do not use production as a practice environment. Make approved changes in Testing first and coordinate any production deployment.
 
 ### Network & Databases
 
@@ -187,8 +187,8 @@ and certain recovery requests; coordinate important tickets with the Server Lead
 requested. Other account and monetization features are **not** general Developer responsibilities.
 
 !!! info "What you should know about Apex after this module"
-You should be able to find the right server, read its status and console, identify where files and backups are managed, 
-and recognize which settings could impact production. Knowing where a button is does not authorize pressing it.
+    You should be able to find the right server, read its status and console, identify where files and backups are managed, 
+    and recognize which settings could impact production. Knowing where a button is does not authorize pressing it.
 
 ---
 
@@ -219,9 +219,9 @@ Velocity uses forwarding secrets which is highly sensitive and must not be share
 | Velocity executable `.jar` | Starts the proxy process; the actual filename may vary. |
 
 !!! tip "Why the proxy matters during an outage"
-If players can join Primary but cannot transfer to Events, some parts of the connection path are already working. If
-nobody can reach any backend, the proxy and shared network components become more relevant. This does not identify the 
-cause by itself; it tells you where to start looking.
+    If players can join Primary but cannot transfer to Events, some parts of the connection path are already working. If
+    nobody can reach any backend, the proxy and shared network components become more relevant. This does not identify the 
+    cause by itself; it tells you where to start looking.
 
 ---
 
@@ -246,9 +246,9 @@ A backend server is not the same as a world:
 | Paper executable `.jar` | The backend software; the selected version controls the Minecraft server version. |
 
 !!! example "Why Testing exists"
-A trainee Developer changes a plugin on Testing and the server fails to start. If Testing is properly isolated, 
-Primary should remain running and its local files should be untouched. But if Testing points at a production database or 
-shared service, the change could still affect live data. Always check dependencies before assuming a test is harmless.
+    A trainee Developer changes a plugin on Testing and the server fails to start. If Testing is properly isolated, 
+    Primary should remain running and its local files should be untouched. But if Testing points at a production database or 
+    shared service, the change could still affect live data. Always check dependencies before assuming a test is harmless.
 
 ---
 
@@ -281,9 +281,9 @@ Developers only need to recognize that an in-game feature can depend on componen
 PlayerInitialization flow comes in [Module 6](mod6.md); plugin dependencies and configuration are covered in [Module 2](mod2.md).
 
 !!! important "Check the actual connection before changing data"
-Never assume a database belongs only to Testing or that LuckPerms permissions apply only to the backend where you are 
-standing. Verify the applicable server, storage configuration, and permission context first. Permission management is 
-covered in [Module 7](mod7.md).
+    Never assume a database belongs only to Testing or that LuckPerms permissions apply only to the backend where you are 
+    standing. Verify the applicable server, storage configuration, and permission context first. Permission management is 
+    covered in [Module 7](mod7.md).
 
 ---
 
@@ -320,9 +320,9 @@ needed. The precise placement matters when using backend integrations or Floodga
 identity system, not just a version converter.
 
 !!! note "Compatibility has limits"
-ViaVersion, Geyser, and Floodgate make cross-version or cross-edition connections possible, but they cannot guarantee 
-identical behavior for every mechanic, item, skin, plugin feature, or client release. Investigate the affected connection 
-path before assuming Paper itself is broken.
+    ViaVersion, Geyser, and Floodgate make cross-version or cross-edition connections possible, but they cannot guarantee 
+    identical behavior for every mechanic, item, skin, plugin feature, or client release. Investigate the affected connection 
+    path before assuming Paper itself is broken.
 
 ---
 
@@ -341,8 +341,8 @@ Architecture matters because a Developer can accidentally affect more than the s
 Before changing anything, establish which instance you are accessing, what the change touches, whether it depends on shared resources, and who has approved it.
 
 !!! danger "Access is not authorization"
-A Developer's technical permissions may allow broad changes, but production actions still require judgment and the 
-approvals defined by ERRSA leadership. Protect credentials, document approved changes, and stop to ask when the impact is uncertain.
+    A Developer's technical permissions may allow broad changes, but production actions still require judgment and the 
+    approvals defined by ERRSA leadership. Protect credentials, document approved changes, and stop to ask when the impact is uncertain.
 
 ---
 
@@ -352,29 +352,29 @@ approvals defined by ERRSA leadership. Protect credentials, document approved ch
 Is the entire ERRSA network necessarily offline? What systems would you investigate first?
 
 ??? tip "Suggested approach"
-No. The player reached the proxy and at least one backend. Begin with the Events backend's status and logs, Velocity's 
-Events routing configuration, and relevant connection or permission errors. Do not restart Primary without evidence that it is involved.
+    No. The player reached the proxy and at least one backend. Begin with the Events backend's status and logs, Velocity's 
+    Events routing configuration, and relevant connection or permission errors. Do not restart Primary without evidence that it is involved.
 
 2. Separate servers, shared data. You are testing a LuckPerms change on Testing. The Testing server has its own plugin 
 files. Does that guarantee the change cannot affect Primary?
 
 ??? tip "Suggested approach"
-No. Local files are separate, but storage, proxy permissions, and other dependencies may be shared. Check the actual
-storage configuration, contexts, and scope before modifying permissions.
+    No. Local files are separate, but storage, proxy permissions, and other dependencies may be shared. Check the actual
+    storage configuration, contexts, and scope before modifying permissions.
 
 3. The Apex panel. You open the wrong server in Apex and see a configuration option that might fix a reported issue. 
 What should you do before using it?
 
 ??? tip "Suggested approach"
-Confirm the correct instance and impact, identify the relevant file or setting, check authorization and the required 
-backup/test plan, and coordinate with the Server Lead as appropriate. Knowing how to use the setting does not make an 
-unapproved production change safe.
+    Confirm the correct instance and impact, identify the relevant file or setting, check authorization and the required 
+    backup/test plan, and coordinate with the Server Lead as appropriate. Knowing how to use the setting does not make an 
+    unapproved production change safe.
 ___
 
 !!! success "Module 1 complete"
-You should now understand where ERRSA's major systems live, how they connect, and what a Developer can affect through 
-Apex. The next module covers plugins in more detail, including compatibility, dependencies, configuration, 
-file transfers, and safe updates.
+    You should now understand where ERRSA's major systems live, how they connect, and what a Developer can affect through 
+    Apex. The next module covers plugins in more detail, including compatibility, dependencies, configuration, 
+    file transfers, and safe updates.
 <nav class="handbook-next" aria-label="Continue reading">
   <a href="../mod2.md">
     <span class="handbook-next__copy"><small>Next section</small><strong>Module 2 · Plugins</strong><span>Learn how 
