@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-20T17:53:38.539395+00:00",
+  "checkedAt": "2026-11-21T16:50:55.705721+00:00",
   "plugins": {
     "survival": {
       "coreprotect": {
@@ -30,8 +30,8 @@
         "gameVersion": null
       },
       "viaversion": {
-        "version": "5.12.3-SNAPSHOT+1119",
-        "url": "https://modrinth.com/plugin/viaversion/version/OKm4Zi14",
+        "version": "5.12.3-SNAPSHOT+1121",
+        "url": "https://modrinth.com/plugin/viaversion/version/NY1ajSO7",
         "source": "Modrinth",
         "gameVersion": null
       },
