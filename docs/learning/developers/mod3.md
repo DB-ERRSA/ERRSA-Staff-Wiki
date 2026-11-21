@@ -5,411 +5,713 @@ tags:
 ---
 
 
-# Plugin Development
+# Module 3 · Plugin Development
 
-Plugin development can be the most difficult part in a developers responsibility. Due to this, we encourage developers to
-choose existing made and maintained plugins whenever possible. ERRSA owns several plugins which the developers will be in 
-charge of updating, maintaining documentation, and bug fixes. 
+Plugin development is one of the more technical responsibilities of an ERRSA Developer. Our network uses several 
+custom plugins to provide features that existing software either cannot provide or cannot support in the way ERRSA needs.
 
-It is critical that developers understand how to create a plugin, how to update our custom plugins, where to download
-and upload current plugin file structures, and ultimately how each plugin is intended to work.
+As discussed in [Module 2 · Plugin Management](mod2.md){ data-preview }, **existing, maintained plugins should be 
+evaluated before creating new software**. Custom plugins offer more control, but ERRSA becomes responsible for their 
+compatibility, security, testing, documentation, and long-term maintenance.
 
-## ERRSA Owned Plugins:
+This module introduces ERRSA's custom plugin ecosystem, the responsibilities associated with maintaining it, the 
+development environment, and a **self-guided, 11-stage learning path** from Java fundamentals to a complete Paper plugin.
 
-Each of the following plugins are an ERRSA custom-made plugin. If there will be any additional plugins in the future, 
-they should be added to this list following the same format.  It is the Developer teams role to have every plugin source code
-uploaded to the ERRSA Github with up to date documentation. Remember, you will not be the last person to update these plugins
-so proper communication is critical
+!!! info "Prerequisites"
+        Complete [Module 1 · Server Architecture](mod1.md){ data-preview } and 
+        [Module 2 · Plugin Management](mod2.md){ data-preview } first. You should already understand the roles of Paper and 
+        Velocity, where plugins operate, basic plugin dependencies, configuration, and the requirement to test changes before 
+        production deployment.
 
-### [ERRSA MC Core]()
+**Learning objectives**
 
-Purpose: A combination of a variety of different small features that would just add to plugin clutter if they were seperated.
+By the end of this module and its learning path, you should be able to:
 
-Key Features: Diamond selling, form commands, compatibilty discord bot for geyser, floodgate, and viaversion, webhook for server handook,
-inventory auditer to check for dupes, combat logger to detect reach hacks among other exploits, and end portal reroute, and portals for spawn
-
-Link to documentation: https://github.com/DB-ERRSA/ERRSAMCCore
-
-### [Rank Progression]()
-
-Purpose: Inentivize longer playime per player to help our overall playtime per player goal
-
-Key Features: Introduces ranks that you gain depending on time played which rewards you with cosmetic items and commands
-
-Link to documentation: NOLAN NEEDS TO MAKE DOCUMENTATION
-
-### [PlayerInitialization]()
-
-Purpose: Housing & Residence Life set a requirement that for special conduct cases, we must be able to match a student name
-to the player
-
-Key Features: Connection to SQL database, and powerautomate, with student email validation and verification.
-
-Link to documentation: NOLAN NEEDS TO MAKE DOCUMENTATION
-
-### [EventBridge]()
-
-Purpose: To simplify network access/mmanagement for ERRSA MC Staff
-
-Key Features: Ability to manage server and world transportation access, whitelists & permissions, automatic event running and cleanup
-
-Link to documentation: https://github.com/DB-ERRSA/EventBridge
-
-### [VIPBridge]()
-
-Purpose: Single system that handles VIP rank perks automatically
-
-Key Features: Automatic promotion, shoutout from purchase, Custom token handling and distribution, token shop, token logic, and forms connection
-
-Link to documentation: https://github.com/DB-ERRSA/VIPBridge
-
-### [Guilds]()
-
-Purpose: To help our goal of making player play together in a community
-
-Key Features: Guilds creation, management, leveling, season competitions, guild claims
-
-Link to documentation:https://github.com/DB-ERRSA/Guilds/releases
-
-### [BannerBuilder]()
-
-Purpose: Cosmetic feature enhance that other plugins werent able to offer our need
-
-Key Features: Make banners over vanilla limit, copy banner, custom config to dictate how limits work with sho
-
-Link to documentation:https://github.com/DB-ERRSA/BannerBuilder/releases
-
-### [PlayerQuests]()
-
-Purpose: Feature requested by many in community in order to pay others with in-game currency to do variety of tasks for them
-
-Key Features: Quest creation, auto sync with litematica, bedrock version display for blueprints, non-litematica for java blueprints, quest rating, guilds tie in
-
-Link to documentation:https://github.com/DB-ERRSA/PlayerQuests
+- Identify the purpose of ERRSA's major custom plugins and locate their documentation and source repositories.
+- Explain the Developer team's responsibilities for maintenance, compatibility updates, bug fixes, and approved features.
+- Set up IntelliJ IDEA, a suitable JDK, and a Java build tool.
+- Navigate an existing Java plugin project, build a `.jar`, and test it on a local Paper server.
+- Develop plugins using Java, the Paper API, commands, events, configurations, and data storage.
+- Recognize integration, performance, testing, and security considerations.
+- Submit reproducible work with source code, documentation, and evidence of testing.
 
 ---
 
-## Developer Responsibility 
+## ERRSA-Owned Plugins
 
-Developers are responsible for creating new custom plugins when there is a good purpose and have recieved approval. Developers
-must maintain all custom plugins fixing bugs & providing patch updates, adding generic simple feature development. When it 
-comes time for Server Reset the developers are responsible for updating all custom plugins to work in the newer server versions.
-If newer server versions require updating to a new java syntax they will be responsible for that update while making sure it functions the
-same for the player. Developers should aim to make UI as easy as possible. Plugins should maintain documentation for the 
-newset version and add any new player-facing features to the server handbook https://errsa-minecraft-handbook.onrender.com/handbook.html
+ERRSA maintains custom plugins to support its community, gameplay, administration, and integrations. The Developer 
+team is responsible for keeping their **source code, release artifacts, and technical documentation** organized and 
+up to date in ERRSA's GitHub organization.
 
-Remember documentation is by far one of the most important tasks for a developer assume you will not be the last person to touch 
-the plugin and players will want to be able to learn without asking questions if possible they should be able to easily find
-all features.
+!!! tip "Learn their roles before their code"
+        You do not need to memorize every command or understand every class immediately. Start by learning what 
+        each plugin does, which server or service it interacts with, where its source is located, and how it affects other 
+        ERRSA systems.
+
+
+
+### Core Systems and Integrations
+
+#### [ERRSA-MC-Core](../../plugins/server-and-infrastructure/errsa-mc-core.md){ data-preview }
+
+**Purpose:** Combines smaller ERRSA-specific functions into a shared plugin instead of maintaining many separate 
+plugins for simple features.
+
+**Key features documented in the draft:** Diamond selling, form commands, Discord-bot compatibility related to 
+Geyser/Floodgate/ViaVersion, server-handbook webhooks, inventory auditing for possible duplication, exploit-related 
+logging, End-portal rerouting, and spawn portals.
+
+**References:** [ERRSA-MC-Core documentation](https://github.com/DB-ERRSA/ERRSAMCCore)
+
+#### [PlayerInitialization](../../plugins/server-and-infrastructure/playerinitialization.md)
+
+**Purpose:** Supports the player verification process, including the ability to associate a player with a student 
+identity when required for conduct-related cases.
+
+**Key features:** SQL integration, Power Automate communication, student email validation, and verification status handling.
+
+**References:**  · [**Module 6 · PlayerInitialization**](mod6.md) · NOLAN MAKE DOCUMENTATION
+
+#### [EventBridge](../../plugins/server-and-infrastructure/eventbridge.md){ data-preview }
+
+**Purpose:** Simplifies network access and event management for ERRSA MC staff.
+
+**Key features:** Server/world travel access, whitelists, permissions, automated event operation, and cleanup.
+
+**References:** [EventBridge documentation](https://github.com/DB-ERRSA/EventBridge)
+
+#### [VIPBridge](../../plugins/server-and-infrastructure/vipbridge.md){ data-preview }
+
+**Purpose:** Automates VIP-related perks and purchase workflows.
+
+**Key features:** VIP promotion, purchase announcements, custom tokens, token distribution and redemption, token 
+shop logic, and form integrations.
+
+**References:** [VIPBridge documentation](https://github.com/DB-ERRSA/VIPBridge)
+
+### Gameplay and Progression
+
+#### [Rank Progression](../../plugins/gameplay-and-progression/rank-progression.md){ data-preview }
+
+**Purpose:** Encourages longer-term participation through playtime-based progression.
+
+**Key features:** Earnable ranks based on playtime, cosmetics, and additional commands.
+
+**References:** NOLAN MAKE DOCUMENTATION
+
+#### [Guilds](../../plugins/gameplay-and-progression/guilds.md){ data-preview }
+
+**Purpose:** Encourages players to collaborate and participate in community activities.
+
+**Key features:** Guild creation and management, leveling, seasonal competition, and guild claims.
+
+**References:** [Guilds documentation](https://github.com/DB-ERRSA/Guilds)
+
+#### [PlayerQuests](../../plugins/gameplay-and-progression/playerquests.md){ data-preview }
+
+**Purpose:** Allows players to offer in-game currency in exchange for tasks completed by other players.
+
+**Key features:** Quest creation, Litematica-related blueprint integration, Bedrock blueprint display, 
+Java blueprint support without Litematica, ratings, and Guilds integration.
+
+**References:** [PlayerQuests documentation](https://github.com/DB-ERRSA/PlayerQuests)
+
+#### [BannerBuilder](../../plugins/gameplay-and-progression/bannerbuilder.md){ data-preview }
+
+**Purpose:** Extends banner customization beyond vanilla limits.
+
+**Key features:** Expanded banner patterns, banner copying, and configurable limits and shop-related behavior.
+
+**References:** [BannerBuilder documentation](https://github.com/DB-ERRSA/BannerBuilder)
+
+!!! note "Keeping the inventory current"
+        This list reflects the eight principal projects in the Module 3 draft; it is not necessarily a complete 
+        inventory of every custom component installed across ERRSA. Add new owned plugins when approved and document their 
+        purpose, repository, supported platform, dependencies, configuration, and current maintainer. Verify feature descriptions 
+        against the current release before making major changes.
 
 ---
 
-## IDE 
+## Developer Responsibilities
 
-Integrated Developement Environment (IDE) is a software that combines essential tools for wriuting, testing, and debugging
-code into a single interface. Basically IDE is text editor, compiler, debugger, and allows automatic git pushes all in one
-unified application.
+ERRSA Developers maintain and improve existing custom plugins and may build new features 
+**when there is an approved need**. Having access to development tools does not automatically authorize changes 
+to production.
 
-We recommend using IntelliJ for IDE for it's simplicity, and user friendly tools. 
+| Responsibility | Typical work | Important consideration |
+| --- | --- | --- |
+| **Bug fixes and patches** | Reproduce a reported issue, change a small piece of code, and validate the fix. | Avoid introducing unrelated changes. |
+| **Routine maintenance** | Review dependencies, address warnings, and keep code/documentation current. | Assess compatibility and security before updating. |
+| **Minecraft and Java compatibility** | Adapt plugins after Paper, Minecraft, API, or Java runtime changes. | A newer runtime does not always require new Java syntax; APIs and dependencies may be the real issue. |
+| **Approved feature development** | Implement a focused feature or adjust an existing workflow. | Clarify requirements and obtain authorization first. |
+| **Server resets and upgrades** | Prepare and test custom plugins for an approved server reset or major version upgrade. | Coordinate with Server Leads; never treat this as an unsupervised beginner task. |
+| **Documentation and releases** | Update READMEs, configuration notes, changelogs, and player instructions. | Assume another developer will maintain the plugin later. |
 
-In order to be able to start making plugins you will want a JDK (Java Development Kit) which provides java libraries, runtime tools,
-and a coompiler needed to build and run java code. We recommend using Maven  for build automation and project manaement.
+### A Typical Development Task
+
+1. **Define the problem.** Understand the expected behavior and gather the relevant information.
+2. **Coordinate.** Confirm scope, priorities, and any required Server Lead approval.
+3. **Investigate.** Read the existing code, documentation, logs, and relevant APIs.
+4. **Make a focused change.** Work in a branch and avoid changing unrelated features.
+5. **Build and test.** Start locally; use an isolated shared test environment when appropriate and authorized.
+6. **Review.** Document what changed, evidence of testing, and possible risks.
+7. **Release and document.** Follow the approved deployment process and update technical and player-facing documentation.
+
+### Documentation Is Part of Development
+
+Every maintained plugin should have documentation appropriate to its complexity, including:
+
+- **README:** What the plugin does, where it runs, how to build it, and basic setup.
+- **Dependencies:** Required and optional plugins, APIs, Java versions, and services.
+- **Configuration:** Important settings, examples, and any migration considerations.
+- **Build/release instructions:** How a developer produces the correct `.jar` and identifies its version.
+- **Changelog:** Important player-facing changes, fixes, and compatibility updates.
+- **Troubleshooting notes:** Known issues, expected logs, and common failure modes.
+
+Update the [ERRSA Minecraft Player Handbook](https://errsa-minecraft-handbook.onrender.com/handbook.html) 
+when an approved change introduces or changes player-facing functionality. Keep implementation details and 
+maintenance instructions in technical documentation rather than requiring players to read source code.
+
+!!! warning "Do not deploy solely because the plugin builds"
+        A successful build proves that a compilation step completed; it does **not** prove the plugin behaves correctly, preserves player data, or is safe on the production network.
 
 ---
 
-## Learning to build plugins
+## Development Environment
 
-Custom Plugin Development — Self-Guided Training Syllabus
+An **Integrated Development Environment (IDE)** combines a code editor with tools for navigating projects, compiling, 
+debugging, and interacting with version control.
 
-This will be a self-guided curriculum, not a traditional training manual. ERRSA will provide developers with a structured sequence of online resources, practical exercises, and assessments. Developers will be responsible for learning the material and demonstrating competency before advancing.
+ERRSA recommends **IntelliJ IDEA** for Java plugin development. IntelliJ can *help you commit, fetch, pull, and push 
+Git changes*, but it does **not** automatically push every file change to GitHub.
 
-The syllabus will assume no prior programming experience, but developers with existing Java knowledge can move through the early material more quickly by demonstrating proficiency.
-How the program works
-Every learning module follows the same process:
-1. Study — Complete the assigned external tutorials, documentation, or exercises.
-2. Practice — Apply the concepts independently through small coding challenges.
-3. Build — Complete a practical project that combines the module's concepts.
-4. Verify — Demonstrate the project works and explain the implementation.
-5. Advance — Continue only after meeting the module's completion requirements.
+### Tools You Will Need
 
-ERRSA's existing developer onboarding and server architecture modules should come first. This syllabus will focus on learning Java and developing custom plugins, rather than repeating your Apex Hosting, server management, and plugin administration lessons.
-Curriculum overview
-Module	Subject	Estimated study time
-1	Java Programming Fundamentals	12–20 hours
-2	Object-Oriented Java & Collections	8–12 hours
-3	Development Tools & Git	4–6 hours
-4	First Paper Plugin	4–6 hours
-5	Events, Commands & Permissions	6–10 hours
-6	Configurations & Data Persistence	6–10 hours
-7	Scheduling, Async & Performance	6–10 hours
-8	Plugin Integrations & APIs	6–10 hours
-9	Databases & Advanced Systems	8–12 hours
-10	Testing, Security & Release Workflow	6–10 hours
-11	Final ERRSA Plugin Project	10–20 hours
+| Tool | Purpose | Where to start |
+| --- | --- | --- |
+| IntelliJ IDEA | Write, navigate, build, and debug code. | [JetBrains IDEA documentation](https://www.jetbrains.com/help/idea/getting-started.html) |
+| Java Development Kit (JDK) | Compile Java source and provide development tools. | [Dev.java — Getting Started](https://dev.java/learn/getting-started/) |
+| Gradle | Manage dependencies and build practice projects. | [Gradle Getting Started](https://docs.gradle.org/current/userguide/getting_started.html) |
+| Git | Track and compare source changes. | [Git — Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) |
+| GitHub | Host repositories and collaborate through branches and pull requests. | [GitHub Skills](https://skills.github.com/) |
+| Local Paper server | Safely test practice plugins without affecting ERRSA production. | [Paper downloads](https://papermc.io/downloads/paper) |
 
-Times are planning estimates for beginners, not deadlines. The syllabus is competency-based.
-Module 1 — Java Programming Fundamentals
-Beginner · 12–20 hours
-Objective: Learn the fundamentals of Java before working with Minecraft APIs.
+**For the training projects, use Gradle** so new developers can follow a consistent set of exercises. 
+Existing ERRSA repositories may use **Gradle or Maven**; when maintaining those projects, use the build tool already 
+configured rather than converting the project unnecessarily. Paper's project setup guide supports both approaches.
 
-Required online learning
-- Dev.java — Your First Steps and Language Basics
-- W3Schools Java Tutorial — supplementary exercises
-  Study topics
-- Variables, primitive types, and strings
-- Operators and conditional statements
-- Loops (for, while)
-- Methods, parameters, and return values
-- Arrays and basic input handling
-  Practice exercises
-1. Write a program that checks whether a player has enough currency to purchase an item.
-2. Create a method that calculates a player's reward based on their activity.
+### Getting Set Up
+
+1. Install IntelliJ IDEA and a JDK compatible with your target Paper version.
+2. Create a separate workspace for development and practice projects.
+3. Open a Java project in IntelliJ and confirm the project SDK/JDK is configured.
+4. Open the project's Gradle or Maven build file and allow dependencies to load.
+5. Run the build task and locate the resulting `.jar` when the project produces one.
+6. Start a **local, isolated Paper server** for practice, following Paper's official setup requirements.
+7. Make sure Git can track your project and that generated build artifacts and credentials are excluded using `.gitignore`.
+
+!!! info "Choose versions based on the project"
+        Do not assume the most recent Java runtime or Paper API is appropriate for every existing ERRSA plugin. 
+        Check the target server version, project build file, and plugin's documented requirements.
+
+### Reading a Plugin Project
+
+A small Gradle-based Java Paper plugin might look like this:
+
+```text
+DeveloperUtilities/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── org/example/developerutilities/
+│   │   │       ├── DeveloperUtilities.java
+│   │   │       ├── commands/
+│   │   │       └── listeners/
+│   │   └── resources/
+│   │       ├── plugin.yml
+│   │       └── config.yml
+│   └── test/
+│       └── java/
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradlew
+├── gradlew.bat
+└── README.md
+```
+
+This is an **illustrative** layout, not a guarantee about ERRSA's actual repositories. Some projects use `build.gradle` 
+instead of `build.gradle.kts`, `pom.xml` instead of Gradle, or `paper-plugin.yml` instead of `plugin.yml`.
+
+| Component | Purpose |
+| --- | --- |
+| Main Java class | Starts the plugin and manages its lifecycle. |
+| Command classes | Process commands issued by players or the console. |
+| Listener classes | Respond to events, such as a player joining. |
+| `plugin.yml` / `paper-plugin.yml` | Declares plugin metadata and, depending on the format, related registration details. |
+| `config.yml` | Provides configurable defaults, when the plugin uses it. |
+| Build file | Declares dependencies, Java settings, and how to build the plugin. |
+| Tests | Check behavior without relying only on manual gameplay testing. |
+
+**Before editing an existing project**, find its main class, build file, configuration resources, and any classes 
+related to the feature you are investigating. Trace how a command or event reaches the logic that performs the action.
+
+---
+
+## Self-Guided Plugin Development Learning Path
+
+This curriculum assumes **no previous programming experience**, but experienced Java developers may demonstrate 
+proficiency and advance faster. It is a sequence of independent study, exercises, practical projects, and review 
+checkpoints - not a requirement to finish every external website or tutorial.
+
+The lessons below are called **Stages 1–11 which are all within Module 3**.
+
+### How Each Stage Works
+
+1. **Study:** Complete the assigned documentation or tutorial sections.
+2. **Practice:** Implement the exercises independently.
+3. **Build:** Complete a practical project or extend the ongoing project.
+4. **Verify:** Demonstrate functionality and explain your choices.
+5. **Advance:** Move on after satisfying the completion requirements.
+
+!!! tip "Competency matters more than hours"
+        The times below are planning estimates for beginners, not deadlines. If you already know a subject, 
+        demonstrate the completion requirements rather than repeating introductory exercises unnecessarily.
+
+### Curriculum Overview
+
+| Stage | Subject | Estimated time |
+| --- | --- | --- |
+| 1 | Java Programming Fundamentals | 12–20 hours |
+| 2 | Object-Oriented Java & Collections | 8–12 hours |
+| 3 | Development Tools & Git | 4–6 hours |
+| 4 | Your First Paper Plugin | 4–6 hours |
+| 5 | Events, Commands & Permissions | 6–10 hours |
+| 6 | Configurations & Data Persistence | 6–10 hours |
+| 7 | Scheduling, Async & Performance | 6–10 hours |
+| 8 | Plugin Integrations & APIs | 6–10 hours |
+| 9 | Databases & Advanced Systems | 8–12 hours |
+| 10 | Testing, Security & Release Workflow | 6–10 hours |
+| 11 | Final ERRSA Plugin Project | 10–20 hours |
+
+**Estimated total:** 80–126 hours for a beginner. Actual time depends on experience and the scope of the final project.
+
+### Stage 1 — Java Programming Fundamentals
+
+**Level:** Beginner · **Estimated time:** 12–20 hours
+
+**Objective:** Learn Java fundamentals before working with Minecraft APIs.
+
+**Required learning:**
+
+- [Dev.java — Learn Java](https://dev.java/learn/) — start with getting started and language basics.
+- [Dev.java — Java Language Basics](https://dev.java/learn/language-basics/) — review variables, control flow, 
+methods, and related language concepts.
+
+**Optional practice:** [W3Schools Java Tutorial](https://www.w3schools.com/java/)
+
+**Study topics:** Variables, primitive types, strings, operators, conditionals, `for`/`while` loops, methods, 
+parameters, return values, arrays, and basic input handling.
+
+**Practice exercises:**
+
+1. Write a program that checks whether a player has enough currency to buy an item.
+2. Create a method that calculates a player's reward based on activity.
 3. Simulate a command cooldown using timestamps.
-   Module project: Build a console-based Minecraft currency calculator with a menu for checking balances, earning currency, and making purchases.
 
-Completion requirements: The program compiles, handles invalid input, and demonstrates methods, loops, and conditional logic. The developer can explain how their code works without relying on a tutorial.
+**Stage project:** Build a console-based **Minecraft currency calculator** with a menu for checking balances, 
+earning currency, and making purchases.
 
-Module 2 — Object-Oriented Java & Collections
-Beginner–Intermediate · 8–12 hours
-Required online learning
-- Dev.java — Object-Oriented Programming
-- Dev.java — Collections and Exceptions
-  Study topics
-- Classes, objects, and constructors
-- Encapsulation and access modifiers
-- Inheritance and interfaces
-- List, Set, and Map
-- Generics and enums
-- Exceptions and error handling
-  Practice exercises
-1. Create a PlayerProfile class with a UUID, balance, and activity statistics.
-2. Store multiple profiles in a HashMap.
+**Completion requirements:** The program compiles, handles invalid input, and demonstrates methods, loops, and 
+conditional logic. You can explain your implementation without following a tutorial line by line.
+
+**Submit:** Source code, instructions for running the program, and sample input/output.
+
+### Stage 2 — Object-Oriented Java & Collections
+
+**Level:** Beginner–Intermediate · **Estimated time:** 8–12 hours
+
+**Objective:** Organize the currency program using classes and reusable behaviors.
+
+**Required learning:**
+
+- [Dev.java — Classes and Objects](https://dev.java/learn/classes-objects/)
+- [Dev.java — Collections Framework](https://dev.java/learn/api/collections-framework/)
+- [Dev.java — Exceptions](https://dev.java/learn/exceptions/)
+
+**Study topics:** Classes, objects, constructors, encapsulation, access modifiers, inheritance, 
+interfaces, `List`, `Set`, `Map`, generics, enums, and exception handling.
+
+**Practice exercises:**
+
+1. Create a `PlayerProfile` class with a UUID, balance, and activity statistics.
+2. Store multiple player profiles in a `HashMap`.
 3. Create an interface for different reward calculation strategies.
-4. Handle invalid transactions using exceptions.
-   Module project: Extend the currency calculator into a multi-player economy simulator with separate classes for players, accounts, and transactions.
+4. Handle invalid transactions using appropriate validation and exceptions.
 
-Completion requirements: The code uses appropriate object-oriented design, avoids unnecessary duplication, and correctly handles invalid operations.
+**Stage project:** Extend the calculator into a **multiplayer economy simulator**, separating players, accounts, 
+and transactions into suitable classes.
 
-Module 3 — Development Tools & Version Control
-4–6 hours
-Required online learning
-- IntelliJ IDEA Getting Started
-- Gradle Getting Started
-- GitHub Getting Started
-  Study topics
-- IntelliJ project navigation
-- JDK and Gradle configuration
-- Dependencies and build tasks
-- Git repositories, commits, and branches
-- Pull requests and merge conflicts
-- .gitignore and repository organization
-  Practice exercises
-1. Import the previous Java project into IntelliJ.
-2. Configure a Gradle build.
-3. Create a GitHub repository and push the project.
-4. Make changes on a separate branch.
+**Completion requirements:** The code uses understandable object-oriented design, avoids unnecessary duplication, 
+and handles invalid operations correctly.
+
+**Submit:** Updated source code and a short explanation of the main classes and how they interact.
+
+### Stage 3 — Development Tools & Git
+
+**Estimated time:** 4–6 hours
+
+**Objective:** Build, track, and share Java projects in a reproducible way.
+
+**Required learning:**
+
+- [IntelliJ IDEA — Getting Started](https://www.jetbrains.com/help/idea/getting-started.html)
+- [Gradle — Getting Started](https://docs.gradle.org/current/userguide/getting_started.html)
+- [GitHub Skills](https://skills.github.com/) — focus on introductions to GitHub and pull requests.
+
+**Study topics:** IntelliJ navigation, configuring a JDK, Gradle dependencies and tasks, Git repositories, commits, 
+branches, pull requests, merge conflicts, `.gitignore`, and repository organization.
+
+**Practice exercises:**
+
+1. Open the existing Java project in IntelliJ.
+2. Configure a Gradle build for it.
+3. Create a practice GitHub repository and push the project.
+4. Make a change on a separate branch.
 5. Open a pull request and review the differences.
-   Completion requirements: Submit a GitHub repository containing the working project, a README, meaningful commits, and a pull request.
 
-Module 4 — Your First Paper Plugin
-4–6 hours
-Required online learning
-- Paper — Project Setup
-- How Plugins Work
-- Understanding plugin.yml
-  Study topics
-- Paper API dependencies
-- Plugin project structure
-- JavaPlugin
-- onEnable() and onDisable()
-- plugin.yml
-- Building and loading a plugin JAR
-- Reading startup errors
-  Practice exercises
+**Completion requirements:** Produce a GitHub repository with the working project, a README, meaningful commits, and 
+a pull request.
+
+**Submit:** Repository link and pull request link. **Module 8 · Documentation & Version Control** covers ERRSA's 
+complete collaboration and release procedures; this stage teaches only what you need to complete the coding exercises.
+
+### Stage 4 — Your First Paper Plugin
+
+**Estimated time:** 4–6 hours
+
+**Objective:** Create and load a basic Paper plugin on a local server.
+
+**Required learning:**
+
+- [Paper — Project Setup](https://docs.papermc.io/paper/dev/project-setup/)
+- [Paper — How Plugins Work](https://docs.papermc.io/paper/dev/how-do-plugins-work/)
+- [Paper — plugin.yml](https://docs.papermc.io/paper/dev/plugin-yml/)
+
+**Study topics:** Paper API dependencies, plugin structure, `JavaPlugin`, `onEnable()`, `onDisable()`, 
+plugin metadata, building a JAR, and interpreting startup errors.
+
+**Practice exercises:**
+
 1. Create a Paper plugin project from scratch.
 2. Log a message when the plugin enables and disables.
-3. Add metadata to plugin.yml.
-4. Compile the plugin and install it on a local Paper server.
-5. Intentionally introduce an error and diagnose the resulting stack trace.
-   Module project: Create DeveloperUtilities, a plugin that loads successfully and reports its version and startup status.
+3. Register the required metadata using the plugin descriptor appropriate to your project.
+4. Build the plugin and install it on a **local Paper server**.
+5. Intentionally introduce a safe error in your practice project and learn to identify it from logs.
 
-Completion requirements: The plugin builds, loads without errors, and shuts down cleanly.
+**Stage project:** Create **DeveloperUtilities**, a plugin that starts successfully and reports its 
+version and startup status.
 
-Module 5 — Events, Commands & Permissions
-6–10 hours
-Required online learning
-- Paper API Guides
-- Paper Command API
-- Command and Permission Registration
-  Study topics
-- Event listeners and @EventHandler
-- Event cancellation and priorities
-- Command arguments and suggestions
-- Player versus console command senders
-- Permission nodes
-- Validation and error messages
-  Practice exercises
-1. Send a custom message when a player joins.
-2. Implement /devinfo.
-3. Create /devreward <amount> with input validation.
+**Completion requirements:** The plugin builds, loads without errors, and shuts down cleanly.
+
+**Submit:** Source repository, compiled JAR, and a short startup log excerpt.
+
+### Stage 5 — Events, Commands & Permissions
+
+**Estimated time:** 6–10 hours
+
+**Objective:** Make your plugin respond to player activity and authorized commands.
+
+**Required learning:**
+
+- [Paper — Event Listeners](https://docs.papermc.io/paper/dev/event-listeners/)
+- [Paper — Command API](https://docs.papermc.io/paper/dev/command-api/basics/introduction/)
+- [Paper — plugin.yml command and permission metadata](https://docs.papermc.io/paper/dev/plugin-yml/)
+
+**Study topics:** `@EventHandler`, event cancellation and priority, command arguments, command suggestions, 
+console versus player command senders, permission nodes, validation, and user-facing error messages.
+
+**Practice exercises:**
+
+1. Send a custom welcome message when a player joins.
+2. Implement `/devinfo`.
+3. Create `/devreward <amount>` with numerical input validation.
 4. Restrict reward commands to authorized users.
-5. Test the commands as a player without permission.
-   Module project: Extend DeveloperUtilities with commands, event listeners, and permissions.
+5. Test behavior for an ordinary player, a player without permission, and the console.
 
-Completion requirements: All commands handle valid and invalid inputs, permissions are enforced, and listeners behave correctly.
+**Stage project:** Extend **DeveloperUtilities** with commands, listeners, and permissions.
 
-Module 6 — Configurations & Data Persistence
-6–10 hours
-Required online learning
-- Paper — Plugin Configurations
-- Persistent Data Container
-  Study topics
-- YAML configuration
-- Default values and validation
-- Reloading settings safely
-- Player UUIDs
-- PersistentDataContainer
-- Saving data across restarts
-- Choosing between configuration and data storage
-  Practice exercises
-1. Move join messages and reward amounts into config.yml.
-2. Create a configuration reload command.
-3. Store a player's reward total.
-4. Verify data survives a restart.
-5. Handle missing or malformed configuration values.
-   Module project: Create a configurable activity reward system with persistent player statistics.
+**Completion requirements:** Valid and invalid inputs are handled safely, permissions are enforced, and 
+listeners perform their intended actions.
 
-Completion requirements: Settings work without recompilation, data persists correctly, and invalid configurations fail safely.
+**Submit:** Updated JAR, command examples, and evidence of permission testing.
 
-Module 7 — Scheduling, Async & Performance
-6–10 hours
-Required online learning
-- Paper Scheduling API
-- Paper Plugin Lifecycle
-  Study topics
-- Server ticks
-- Delayed and repeating tasks
-- Synchronous versus asynchronous operations
-- Main-thread safety
-- Task cancellation
-- Expensive event handlers
-- Resource cleanup
-  Practice exercises
+### Stage 6 — Configurations & Data Persistence
+
+**Estimated time:** 6–10 hours
+
+**Objective:** Build configurable behavior and preserve selected data between restarts.
+
+**Required learning:**
+
+- [Paper — Plugin Configuration](https://docs.papermc.io/paper/dev/plugin-configurations/)
+- [Paper — Persistent Data Container](https://docs.papermc.io/paper/dev/pdc/)
+
+**Study topics:** YAML defaults and validation, safe configuration reloads, player UUIDs, `PersistentDataContainer`, 
+file-based persistence, and choosing where data should live.
+
+**Practice exercises:**
+
+1. Move welcome messages and reward amounts into `config.yml`.
+2. Create a configuration reload command with suitable permissions and validation.
+3. Store a player's reward total in an appropriate persistent location.
+4. Verify data survives a full server restart.
+5. Handle missing or malformed configuration values without corrupting data.
+
+**Stage project:** Create a configurable **activity reward system** with persistent player statistics.
+
+**Completion requirements:** Settings can be changed without recompiling, data survives restarts, and bad 
+configuration values are handled safely.
+
+**Submit:** JAR, example configuration, and before/after restart evidence.
+
+### Stage 7 — Scheduling, Async & Performance
+
+**Estimated time:** 6–10 hours
+
+**Objective:** Schedule work without freezing the game server or accessing unsafe APIs from background threads.
+
+**Required learning:**
+
+- [Paper — Scheduling](https://docs.papermc.io/paper/dev/scheduler/)
+- [Paper — Plugin Lifecycle](https://docs.papermc.io/paper/dev/how-do-plugins-work/)
+
+**Study topics:** Server ticks, delayed and repeating tasks, synchronous versus asynchronous execution, 
+main-thread safety, cooldowns, cancellation, expensive event handlers, and resource cleanup.
+
+**Practice exercises:**
+
 1. Schedule a delayed player message.
 2. Create a repeating activity timer.
-3. Implement a cooldown without blocking the server.
-4. Move a simulated slow data operation off the main thread.
-5. Cancel outstanding tasks when the plugin disables.
-   Module project: Implement a timed reward system with cooldowns and asynchronous data handling.
+3. Implement a cooldown without blocking the server thread.
+4. Move a simulated slow data operation off the main thread, using safe task coordination.
+5. Cancel or clean up tasks when the plugin disables.
 
-Completion requirements: The plugin does not block the main thread, uses thread-safe patterns, and cleans up its resources.
+**Stage project:** Implement a timed reward system with cooldowns and appropriate asynchronous data handling.
 
-Module 8 — Plugin Integrations & APIs
-6–10 hours
-Required online learning
-- Plugin Dependencies
-- LuckPerms Documentation
-- PlaceholderAPI Wiki
-- Velocity Plugin Messaging
-  Study topics
-- Hard and soft dependencies
-- Plugin API integration
-- Dependency version compatibility
-- LuckPerms integration
-- PlaceholderAPI expansions
-- Cross-server communication fundamentals
-- Safe handling of unavailable integrations
-  Practice exercises
+**Completion requirements:** The plugin avoids blocking the main thread, does not access thread-unsafe server 
+APIs asynchronously, and cleans up its resources.
+
+**Submit:** Code showing task scheduling and a short explanation of which operations run synchronously or 
+asynchronously and why.
+
+### Stage 8 — Plugin Integrations & APIs
+
+**Estimated time:** 6–10 hours
+
+**Objective:** Use another plugin's public API without making your plugin fragile when integrations are unavailable.
+
+**Required learning:**
+
+- [Paper — Plugin Development Documentation](https://docs.papermc.io/paper/dev/)
+- [LuckPerms Developer Wiki](https://luckperms.net/wiki/Developer-API)
+- [PlaceholderAPI Wiki](https://wiki.placeholderapi.com/)
+- [Velocity — Plugin Messaging](https://docs.papermc.io/velocity/dev/plugin-messaging/)
+
+**Study topics:** Hard and soft dependencies, plugin APIs, version compatibility, LuckPerms integration, 
+PlaceholderAPI expansions, cross-server communication fundamentals, and graceful failure.
+
+**Practice exercises:**
+
 1. Detect whether an optional dependency is installed.
-2. Integrate an API from another plugin.
+2. Use a documented API from another plugin.
 3. Expose a custom PlaceholderAPI placeholder.
-4. Disable an optional feature gracefully when its dependency is missing.
-   Module project: Integrate the activity reward plugin with at least one supported external API.
+4. Disable an optional integration gracefully when its dependency is missing.
 
-Completion requirements: Integration works when the dependency is available, fails safely when absent, and does not introduce unnecessary coupling.
+**Stage project:** Integrate your activity reward plugin with at least one supported external API.
 
-Module 9 — Databases & Advanced Systems
-8–12 hours
-Required online learning
-- Paper — Using Databases
-- MySQL Documentation
-- Java SQL API
-  Study topics
-- SQL fundamentals
-- SQLite versus MySQL
-- JDBC and prepared statements
-- Connection pooling
-- Database schemas and migrations
-- Asynchronous database operations
-- Caching and data consistency
-- Secure credential management
-  Practice exercises
-1. Create a player statistics table.
-2. Insert and retrieve player data using prepared statements.
-3. Perform database operations asynchronously.
-4. Handle a temporary database outage.
-5. Test how data behaves after restarting the server.
-   Module project: Replace the activity tracker’s simple persistence system with database-backed storage.
+**Completion requirements:** Integration works when its dependency is available, fails safely when absent, 
+and avoids unnecessary coupling between plugins.
 
-Completion requirements: Data remains consistent, queries are parameterized, database failures are handled, and credentials are excluded from Git.
+**Submit:** Integration code and test results both **with** and **without** the optional dependency.
 
-Module 10 — Testing, Security & Release Workflow
-6–10 hours
-Required online learning
-- Paper — Debugging and Stack Traces
-- GitHub Pull Requests
-- GitHub Actions
-  Study topics
-- Debugging and logging
-- Unit and integration testing
-- Permission and input validation
-- Dependency and security review
-- Performance testing
-- Semantic versioning
-- GitHub Actions builds
-- Release notes and rollback procedures
-  Practice exercises
+!!! warning "Cross-server communication"
+        Network messages and integrations can cross security boundaries. Never trust client-originated or 
+        unverified messages as though they came from the proxy. More detailed integration architecture belongs in Module 4.
+
+### Stage 9 — Databases & Advanced Systems
+
+**Estimated time:** 8–12 hours
+
+**Objective:** Persist larger amounts of data while keeping queries safe and gameplay responsive.
+
+**Required learning:**
+
+- [Paper — Using Databases](https://docs.papermc.io/paper/dev/using-databases/)
+- [MySQL Reference Manual](https://dev.mysql.com/doc/refman/8.4/en/)
+- [Java JDBC — Basics](https://docs.oracle.com/javase/tutorial/jdbc/basics/)
+
+**Study topics:** SQL fundamentals, SQLite versus MySQL, JDBC, parameterized statements, connection pooling, 
+schemas, migrations, asynchronous operations, caching, consistency, and secure credentials.
+
+**Practice exercises:**
+
+1. Create a player statistics table in a **local database**.
+2. Insert and retrieve data using prepared statements.
+3. Perform database operations without blocking the server thread.
+4. Handle temporary connection failures.
+5. Verify data consistency after a restart.
+
+**Stage project:** Replace the activity tracker's simple data storage with database-backed persistence.
+
+**Completion requirements:** Queries are parameterized, data remains consistent, temporary failures are 
+handled safely, and credentials never enter Git history.
+
+**Submit:** Database schema, safe sample configuration without real credentials, and evidence of restart and failure testing.
+
+!!! danger "Use practice credentials and isolated databases"
+        Never connect practice plugins to ERRSA's production databases, live verification systems, payment 
+        workflows, or other real user data. Module 4 covers ERRSA's external tools and services in greater detail.
+
+### Stage 10 — Testing, Security & Release Workflow
+
+**Estimated time:** 6–10 hours
+
+**Objective:** Make code changes reproducible, reviewable, and safer to deploy.
+
+**Required learning:**
+
+- [Paper — Development Documentation](https://docs.papermc.io/paper/dev/)
+- [GitHub — About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+- [GitHub Actions — Quickstart](https://docs.github.com/en/actions/get-started/quickstart)
+
+**Study topics:** Debugging and logging, unit/integration tests, input validation, permissions, 
+dependency review, performance testing, versioning, CI builds, release notes, and rollback planning.
+
+**Practice exercises:**
+
 1. Write automated tests for reward calculations.
-2. Test malformed command arguments.
+2. Test malformed command arguments and unauthorized access.
 3. Create a GitHub Actions workflow that builds the plugin.
 4. Prepare a release JAR and changelog.
-5. Document how to install, configure, and remove the plugin.
-   Completion requirements: The project builds automatically, tests pass, documentation is complete, and the release is reproducible.
+5. Document installation, configuration, updating, and removal.
 
-Module 11 — Final ERRSA Developer Assessment
-Capstone · 10–20 hours
-Developers must independently design and implement a custom plugin that demonstrates their understanding of the learning path.
+**Completion requirements:** The project builds reproducibly, relevant tests pass, the README is complete, 
+and the release process can be followed by another developer.
 
-Project requirements
-- At least one custom command and event listener
-- Permission enforcement
-- Configurable behavior
-- Persistent data
-- Appropriate scheduling or asynchronous processing
-- Error handling and logging
-- Integration with another plugin, where relevant
-- Clear project structure and documentation
-- GitHub repository and pull request
-- Demonstration on an isolated test server
-  Developers should submit their source code, compiled JAR, README, configuration example, and testing evidence.
-  Assessment rubric
-  Category	Weight
-  Functionality and requirements	25%
-  Java code quality and organization	20%
-  Safety, security, and performance	20%
-  Testing and debugging	15%
-  Documentation and Git workflow	10%
-  Ability to explain implementation	10%
-  Total	100%
+**Submit:** CI workflow, test results, a draft release, and complete installation documentation.
+
+!!! info "Module 8 covers ERRSA's Git workflow"
+        This stage gives you practical experience with branches, pull requests, and releases. 
+        Follow **Module 8 · Documentation & Version Control** for the team's official repository 
+        practices, review requirements, versioning, and deployment workflow.
+
+### Stage 11 — Final ERRSA Plugin Project
+
+**Level:** Capstone · **Estimated time:** 10–20 hours
+
+**Objective:** Independently demonstrate the knowledge from the learning path through a custom plugin developed 
+and tested outside production.
+
+**Project requirements:**
+
+- At least one custom command and event listener.
+- Permission enforcement.
+- Configurable behavior.
+- Persistent data.
+- Appropriate scheduling or asynchronous processing.
+- Error handling and useful logs.
+- An integration with another plugin, **where relevant**.
+- Clear code structure and technical documentation.
+- A GitHub repository and pull request.
+- A demonstration on an isolated test server.
+
+The project should have an approved, achievable scope. It does not need to become a feature on ERRSA's production network.
+
+**Submit:** Source code, compiled JAR, README, example configuration, pull request, and testing evidence. 
+Be prepared to explain the architecture, dependencies, security choices, and any limitations.
+
+**Assessment rubric:**
+
+| Category | Weight |
+| --- | ---: |
+| Functionality and requirements | 25% |
+| Java code quality and organization | 20% |
+| Safety, security, and performance | 20% |
+| Testing and debugging | 15% |
+| Documentation and Git workflow | 10% |
+| Ability to explain implementation | 10% |
+| **Total** | **100%** |
+
+!!! success "Completing the learning path"
+        Finishing the capstone demonstrates a foundation in Paper plugin development. It does not automatically 
+        grant authorization to deploy changes or modify every ERRSA system. Production responsibilities and access 
+        remain subject to staff leadership and review.
 
 ---
 
-## Reference Mod.8 (Github)
+## Transitioning to ERRSA Development
 
-Reference Mod 8 for the process of Github. Everything owned by github should be published/updated there.
+After demonstrating the learning path's competencies, developers should begin with smaller supervised tasks in an 
+existing ERRSA-owned repository.
+
+A sensible progression is:
+
+1. Read the plugin's README, configuration, and build file.
+2. Build its current source code without changing functionality.
+3. Locate one command, event handler, or feature and explain how it works.
+4. Investigate a small assigned bug or documentation issue.
+5. Propose a focused fix on a separate branch.
+6. Test the change and submit it for review.
+7. Take on larger tasks as experience and authorization increase.
+
+The goal is to maintain plugins that **future developers can understand and support**, not simply to produce a 
+working JAR once.
+
+---
+
+## Check Your Understanding
+
+1. Why might ERRSA choose to use an existing maintained plugin instead of writing a custom replacement?
+2. Where would you look to identify a custom plugin's dependencies, build process, and main class?
+3. What is the difference between a successful build and a successful integration test?
+4. Why should a Developer avoid changing a production plugin simply because they can access its files?
+5. If a Paper update breaks an ERRSA plugin, what factors besides Java syntax might need investigation?
+6. Why must database credentials and live integration tokens be excluded from public or shared repositories?
+7. What evidence should accompany a proposed plugin change before another developer reviews it?
 
 ---
 
 ## Resources
 
+### ERRSA Documentation
+
+- [Module 1 · Server Architecture](mod1.md){ data-preview }
+- [Module 2 · Plugin Management](mod2.md){ data-preview }
+- [Module 4 · External Tools](mod4.md){ data-preview } — Discord, databases, APIs, and other services.
+- [Module 5 · Troubleshooting](mod5.md){ data-preview } — Logs, reproducing issues, crashes, and testing.
+- [Module 6 · PlayerInitialization](mod6.md){ data-preview } — A detailed ERRSA integration case study.
+- [Module 7 · Permission Management](mod7.md){ data-preview } — LuckPerms groups, inheritance, weights, and tracks.
+- [Module 8 · Documentation & Version Control](mod8.md){ data-preview } — GitHub, branches, reviews, releases, and documentation.
+- [ERRSA-MC-Core documentation](../../plugins/server-and-infrastructure/errsa-mc-core.md){ data-preview }
+- [PlayerInitialization documentation](../../plugins/server-and-infrastructure/playerinitialization.md){ data-preview }
+- [VIPBridge documentation](../../plugins/server-and-infrastructure/vipbridge.md){ data-preview }
+
+### External Development Resources
+
+- [Dev.java — Learn Java](https://dev.java/learn/)
+- [IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/)
+- [Gradle User Manual](https://docs.gradle.org/current/userguide/userguide.html)
+- [PaperMC Plugin Development](https://docs.papermc.io/paper/dev/)
+- [PaperMC Velocity Development](https://docs.papermc.io/velocity/dev/)
+- [GitHub Skills](https://skills.github.com/)
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)
+
 ---
+
+<nav class="handbook-next" aria-label="Continue reading">
+  <a href="../mod4/">
+    <span class="handbook-next__copy"><small>Next section</small><strong>Module 4 · External Tools</strong>
+<   <span>Learn how ERRSA plugins communicate with databases, Discord, APIs, and other systems.</span></span>
+    <span class="handbook-next__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>

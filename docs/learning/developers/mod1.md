@@ -78,7 +78,7 @@ in New York while the other instances are hosted in Miami. Packages, resource al
 !!! tip "Apex resource graphs"
     The panel will show memory and CPU information. These help you observe whether a server is running and how it is using 
     its allocated resources, but high usage alone does not tell you which plugin or player caused a problem. 
-    More detailed diagnosis is in [Module 5](mod5.md).
+    More detailed diagnosis is in [Module 5](mod5.md){ data-preview }.
 
 ### Understanding the Server Panel
 
@@ -153,7 +153,7 @@ affect live worlds, plugin data, or the server's ability to start.
 
 The Apex file manager is convenient for inspecting individual files. For larger transfers, an approved desktop 
 file-transfer client such as FileZilla can be easier to use. The connection protocol and credentials must match what 
-Apex provides. Detailed file editing, safe transfers, and plugin changes are located in [Module 2](mod2.md).
+Apex provides. Detailed file editing, safe transfers, and plugin changes are located in [Module 2](mod2.md){ data-preview }.
 
 A Paper server commonly includes files such as server.properties, bukkit.yml, spigot.yml, config/, plugins/, logs/, 
 and world folders. The proxy has its own files and plugins; uploading a Paper plugin to the proxy does not make it run 
@@ -178,7 +178,7 @@ on the Paper backends.
 | **Subdomains** | Manages server address configuration only matters for the proxy where it's set at ```errsa.mc.gg```        |
 
 These tools connect Apex to the wider architecture. A database can be used by more than one server or service. 
-The details of SQL and external integrations are located in [Module 4](mod4.md).
+The details of SQL and external integrations are located in [Module 4](mod4.md){ data-preview }.
 
 ### Support & Monetization
 
@@ -278,12 +278,12 @@ separating plugin folders does not automatically isolate their databases.
 
 For example, ERRSA's PlayerInitialization system interacts with external registration services. At this stage, 
 Developers only need to recognize that an in-game feature can depend on components outside the Paper server. The complete 
-PlayerInitialization flow comes in [Module 6](mod6.md); plugin dependencies and configuration are covered in [Module 2](mod2.md).
+PlayerInitialization flow comes in [Module 6](mod6.md){ data-preview }; plugin dependencies and configuration are covered in [Module 2](mod2.md){ data-preview }.
 
 !!! important "Check the actual connection before changing data"
     Never assume a database belongs only to Testing or that LuckPerms permissions apply only to the backend where you are 
     standing. Verify the applicable server, storage configuration, and permission context first. Permission management is 
-    covered in [Module 7](mod7.md).
+    covered in [Module 7](mod7.md){ data-preview }.
 
 ---
 
@@ -298,7 +298,7 @@ There are three different kinds of 'Java version' that Developers should keep di
 | **Java runtime (JVM) version** | The programming runtime used to execute Paper, Velocity, and many plugins. This has its own version requirements. |
 
 A plugin can be compatible with the Minecraft server version but incompatible with its Java runtime, or vice versa. More 
-detailed compatibility checks come in [Module 2](mod2.md).
+detailed compatibility checks come in [Module 2](mod2.md){ data-preview }.
 
 ### Java Edition: ViaVersion
 

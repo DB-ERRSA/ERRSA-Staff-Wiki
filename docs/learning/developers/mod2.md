@@ -25,7 +25,7 @@ This module introduces how plugins function, how to evaluate changes, and how to
 It is not intended to teach custom plugin development or advanced troubleshooting. Those topics are covered in later modules.
 
 !!! info "Before you begin"
-        You should have completed [Module 1 · Server Architecture](mod1.md), including an understanding of ERRSA's Velocity 
+        You should have completed [Module 1 · Server Architecture](mod1.md){ data-preview }, including an understanding of ERRSA's Velocity 
         proxy, Paper backend servers, and Apex Hosting infrastructure.
 
 By the end of this module, you should be able to:
@@ -186,7 +186,7 @@ Custom development may be preferable when:
 Custom development also creates long-term responsibilities. ERRSA must maintain the code, address bugs, and evaluate 
 compatibility during future server updates.
 
-These responsibilities are introduced further in [Module 3](mod3.md).
+These responsibilities are introduced further in [Module 3](mod3.md){ data-preview }.
 
 ### Researching Plugins
 
@@ -355,7 +355,7 @@ For example:
 >
 > However, a plugin installed on Paper must still be compatible with the server software and its underlying Minecraft version.
 
-For more information about where these tools operate, review [Module 1](mod1.md).
+For more information about where these tools operate, review [Module 1](mod1.md){ data-preview }.
 
 ---
 
@@ -1103,8 +1103,8 @@ The goal is not simply to add more functionality to ERRSA. It is to maintain a r
 
 ### ERRSA Documentation
 
-- [Module 1 · Server Architecture](mod1.md)
-- [Module 3 · Plugin Development](mod3.md)
+- [Module 1 · Server Architecture](mod1.md){ data-preview }
+- [Module 3 · Plugin Development](mod3.md){ data-preview }
 - [LuckPerms](../../plugins/permissions-and-moderation/luckperms.md){ data-preview }
 - [GriefPrevention](../../plugins/permissions-and-moderation/griefprevention.md){ data-preview }
 - [Vault](../../plugins/server-and-infrastructure/vault.md){ data-preview }
