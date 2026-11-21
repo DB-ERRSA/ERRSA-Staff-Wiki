@@ -29,7 +29,7 @@ ___
 
 ---
 
-## Documentation (custom plugin, READMEs on git pages, assume you are not the last)
+## Documentation (custom plugin, READMEs on git pages, assume you are not the last, server handbook)
 
 ---
 
