@@ -67,11 +67,11 @@ Changes to environment values can affect a live service. Confirm what a variable
 
 ### GitHub
 
-[GitHub](../github/){ data-preview } stores the source code that Render deploys for ERRSA web services and applications.
+[GitHub](../github/index.md){ data-preview } stores the source code that Render deploys for ERRSA web services and applications.
 
 ### Discord
 
-[Discord](../discord/){ data-preview } is the platform used by the Discord bot that runs through Render.
+[Discord](../discord/index.md){ data-preview } is the platform used by the Discord bot that runs through Render.
 
 ---
 

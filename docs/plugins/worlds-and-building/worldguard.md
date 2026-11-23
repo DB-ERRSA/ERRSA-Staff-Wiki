@@ -19,7 +19,6 @@ ERRSA uses WorldGuard to protect important areas and apply region-specific behav
 
 ## Required By
 
-- [WorldGuard Extra Flags](worldguard-extraflags.md)
 - [WorldGuard Extra Flags](worldguardextraflags.md)
 - [Guilds](../gameplay-and-progression/guilds.md)
 - [PlayerQuests](../gameplay-and-progression/playerquests.md)

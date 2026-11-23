@@ -72,7 +72,7 @@ Some forms may feed other ERRSA systems, so avoid changing field names or expect
 
 ### Discord
 
-[Discord](../discord/){ data-preview } is where selected Fillout submissions and notifications can be delivered for staff review and communication.
+[Discord](../discord/index.md){ data-preview } is where selected Fillout submissions and notifications can be delivered for staff review and communication.
 
 ---
 

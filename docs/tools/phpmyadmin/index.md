@@ -57,11 +57,11 @@ phpMyAdmin access is limited to **Developers** and **Server Leads** because chan
 
 ### Apex Hosting
 
-[Apex Hosting](../apex-hosting/){ data-preview } provides the hosted Minecraft environment and MySQL resources that plugins and services can connect to.
+[Apex Hosting](../apex-hosting/index.md){ data-preview } provides the hosted Minecraft environment and MySQL resources that plugins and services can connect to.
 
 ### Power Automate
 
-[Power Automate](../power-automate/){ data-preview } may interact with data-driven workflows or services that ultimately depend on information stored in ERRSA systems.
+[Power Automate](../power-automate/index.md){ data-preview } may interact with data-driven workflows or services that ultimately depend on information stored in ERRSA systems.
 
 ---
 

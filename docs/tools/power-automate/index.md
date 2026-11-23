@@ -58,15 +58,15 @@ Changes to an existing flow can affect other ERRSA systems that depend on its cu
 
 ### Discord
 
-[Discord](../discord/){ data-preview } is used by staff-facing communication systems that may interact with Power Automate workflows.
+[Discord](../discord/index.md){ data-preview } is used by staff-facing communication systems that may interact with Power Automate workflows.
 
 ### phpMyAdmin
 
-[phpMyAdmin](../phpmyadmin/){ data-preview } provides access to MySQL data that may be used by automated workflows.
+[phpMyAdmin](../phpmyadmin/index.md){ data-preview } provides access to MySQL data that may be used by automated workflows.
 
 ### Render
 
-[Render](../render/){ data-preview } hosts services such as the ERRSA Minecraft Discord bot that may interact with Power Automate.
+[Render](../render/index.md){ data-preview } hosts services such as the ERRSA Minecraft Discord bot that may interact with Power Automate.
 
 ---
 

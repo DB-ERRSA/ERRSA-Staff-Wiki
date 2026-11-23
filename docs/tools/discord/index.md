@@ -92,15 +92,15 @@ ERRSA Discord channels are organized around staff needs, but not every function 
 
 ### Fillout
 
-[Fillout](../fillout/){ data-preview } is used to collect structured submissions such as reports, feedback, appeals, interest forms, and token requests that may later be routed to staff through Discord.
+[Fillout](../fillout/index.md){ data-preview } is used to collect structured submissions such as reports, feedback, appeals, interest forms, and token requests that may later be routed to staff through Discord.
 
 ### Power Automate
 
-[Power Automate](../power-automate/){ data-preview } supports automated workflows between forms, Discord, email, and other ERRSA services.
+[Power Automate](../power-automate/index.md){ data-preview } supports automated workflows between forms, Discord, email, and other ERRSA services.
 
 ### Render
 
-[Render](../render/){ data-preview } hosts ERRSA web services and supporting infrastructure, including one of the Discord bots used by the Minecraft team.
+[Render](../render/index.md){ data-preview } hosts ERRSA web services and supporting infrastructure, including one of the Discord bots used by the Minecraft team.
 
 ---
 

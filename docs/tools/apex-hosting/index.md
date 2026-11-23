@@ -90,26 +90,26 @@ All ERRSA Minecraft staff may receive an Apex account, but the controls visible 
 
 ### GitHub
 
-[GitHub](../github/){ data-preview } stores source code and version-controlled resources that may later be deployed or uploaded to servers hosted through Apex.
+[GitHub](../github/index.md){ data-preview } stores source code and version-controlled resources that may later be deployed or uploaded to servers hosted through Apex.
 
 ### phpMyAdmin
 
-[phpMyAdmin](../phpmyadmin/){ data-preview } is used to view and manage MySQL database content associated with ERRSA services and plugins.
+[phpMyAdmin](../phpmyadmin/index.md){ data-preview } is used to view and manage MySQL database content associated with ERRSA services and plugins.
 
 ### Tebex
 
-[Tebex](../tebex/){ data-preview } manages the Minecraft store and packages that connect back into the hosted servers.
+[Tebex](../tebex/index.md){ data-preview } manages the Minecraft store and packages that connect back into the hosted servers.
 
 ### Discord
 
-[Discord](../discord/){ data-preview } is where staff coordinate incidents, maintenance, reports, and operational work that may require action in Apex.
+[Discord](../discord/index.md){ data-preview } is where staff coordinate incidents, maintenance, reports, and operational work that may require action in Apex.
 
 ---
 
 ## Related Resources
 
-- [Plugin Documentation](../../plugins/){ data-preview }
-- [Troubleshooting](../../troubleshooting/){ data-preview }
+- [Plugin Documentation](../../plugins/index.md){ data-preview }
+- [Troubleshooting](../../troubleshooting/index.md){ data-preview }
 - [Staff Roles & Responsibilities](../../documentation/staff-roles-responsibilities.md){ data-preview }
 
 ---

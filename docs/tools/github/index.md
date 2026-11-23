@@ -91,23 +91,23 @@ GitHub repositories serve different purposes across ERRSA Minecraft. A single pr
 
 ### Render
 
-[Render](../render/){ data-preview } hosts some ERRSA services whose source code is stored in GitHub, including supporting web services and Discord bot infrastructure.
+[Render](../render/index.md){ data-preview } hosts some ERRSA services whose source code is stored in GitHub, including supporting web services and Discord bot infrastructure.
 
 ### Discord
 
-[Discord](../discord/){ data-preview } is used for staff communication and may be the user-facing interface for bots whose source code is maintained in GitHub.
+[Discord](../discord/index.md){ data-preview } is used for staff communication and may be the user-facing interface for bots whose source code is maintained in GitHub.
 
 ### Power Automate
 
-[Power Automate](../power-automate/){ data-preview } supports workflows that may interact with ERRSA-developed services, forms, Discord, email, and other systems whose supporting code or documentation is maintained in GitHub.
+[Power Automate](../power-automate/index.md){ data-preview } supports workflows that may interact with ERRSA-developed services, forms, Discord, email, and other systems whose supporting code or documentation is maintained in GitHub.
 
 ---
 
 ## Related Resources
 
-- [Plugin Documentation](../../plugins/){ data-preview }
+- [Plugin Documentation](../../plugins/index.md){ data-preview }
 - [Staff Roles & Responsibilities](../../documentation/staff-roles-responsibilities.md){ data-preview }
-- [Troubleshooting](../../troubleshooting/){ data-preview }
+- [Troubleshooting](../../troubleshooting/index.md){ data-preview }
 
 ---
 
