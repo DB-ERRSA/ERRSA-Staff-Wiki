@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-25T19:26:16.705973+00:00",
+  "checkedAt": "2026-11-26T19:09:01.663498+00:00",
   "plugins": {
     "survival": {
       "coreprotect": {
@@ -30,14 +30,14 @@
         "gameVersion": null
       },
       "viaversion": {
-        "version": "5.12.4-SNAPSHOT+1136",
-        "url": "https://modrinth.com/plugin/viaversion/version/9iJiFoFk",
+        "version": "5.12.4-SNAPSHOT+1137",
+        "url": "https://modrinth.com/plugin/viaversion/version/flwRqO1J",
         "source": "Modrinth",
         "gameVersion": null
       },
       "geyser": {
-        "version": "2.12.1-b1310",
-        "url": "https://modrinth.com/plugin/geyser/version/oPguRIlb",
+        "version": "2.12.1-b1312",
+        "url": "https://modrinth.com/plugin/geyser/version/L8lE4z2q",
         "source": "Modrinth",
         "gameVersion": null
       }
